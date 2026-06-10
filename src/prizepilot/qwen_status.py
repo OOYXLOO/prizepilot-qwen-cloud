@@ -67,7 +67,10 @@ def parse_ledger_fields(text: str) -> dict[str, str]:
     return fields
 
 def is_yes(value: str) -> bool:
-    return value.strip().lower() in {"yes", "y", "true", "done", "submitted", "published"}
+    normalized = value.strip().lower()
+    return normalized in {"yes", "y", "true", "done", "submitted", "published"} or normalized.startswith(
+        ("yes -", "done -", "submitted -", "published -")
+    )
 
 def public_gate_next_action(gate: str, status: str, default_action: str) -> str:
     normalized = status.strip().lower()
@@ -130,6 +133,10 @@ def build_status(root: Path, ledger_path: Path, now: datetime | None = None) -> 
         phase = "local_package_incomplete"
         severity = "FIX_LOCAL"
         next_action = "Restore or regenerate missing local Qwen submission artifacts before public/account work."
+    elif final_submitted and incomplete_public_gates:
+        phase = "submitted_can_still_improve"
+        severity = "OK_WITH_EVIDENCE_GAPS"
+        next_action = "Strengthen evidence before judging: complete Qwen/Alibaba Cloud account verification, run a live Qwen/DashScope check with a user-provided API key at action time, and add stronger live Alibaba Cloud endpoint proof if available."
     elif final_submitted:
         phase = "submitted_waiting_for_results"
         severity = "OK"

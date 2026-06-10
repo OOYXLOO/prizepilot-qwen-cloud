@@ -20,6 +20,6 @@
 - [x] Dockerfile for cloud deployment
 - [x] Alibaba Cloud deployment evidence runbook
 - [x] Public GitHub repository
-- [ ] Public demo video
+- [x] Public demo video
 - [ ] Alibaba Cloud deployment proof
-- [ ] Devpost final submission
+- [x] Devpost final submission

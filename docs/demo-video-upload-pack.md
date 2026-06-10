@@ -22,7 +22,7 @@ PrizePilot Qwen Cloud Hackathon Demo
 
 PrizePilot is a Qwen-ready Track 4 Autopilot Agent for turning hackathon and bounty prize pages into ranked execution plans, public artifact drafts, and human approval checkpoints.
 
-The demo shows a cash-prize portfolio ranking, the Qwen Blog Post Award / Honorable Mention route, the local dashboard, and the integrity boundary for API keys, deployment proof, public posts, and final Devpost submission.
+The demo shows a cash-prize portfolio ranking, the Qwen Blog Post Award / Honorable Mention route, the local dashboard, and the integrity boundary for API keys, deployment proof, public posts, and Devpost evidence updates.
 
 Public repository:
 https://github.com/OOYXLOO/prizepilot-qwen-cloud
@@ -34,16 +34,16 @@ https://ooyxloo.github.io/prizepilot-qwen-cloud/blog/
 
 Qwen Cloud, hackathon, AI agent, autopilot agent, Devpost, Alibaba Cloud, PrizePilot
 
-## Devpost Field After Upload
+## Devpost Video Field
 
-Paste the accepted video URL into the required Qwen Devpost Project details video field:
+Accepted public Vimeo URL:
 
 ```text
-https://devpost.com/submit-to/29966-global-ai-hackathon-series-with-qwen-cloud/manage/submissions/1046103-prizepilot-qwen-cloud/project_details
+https://vimeo.com/1200124146
 ```
 
-Then record the same URL in `docs/qwen-route-ledger.md` under `Demo video URL`.
+The same URL is recorded in `docs/qwen-route-ledger.md` under `Demo video URL` and accepted by the submitted Devpost project.
 
 ## Do Not Claim
 
-Do not claim live Qwen API usage, Alibaba Cloud deployment, or final Devpost submission from the video alone. Those gates need separate evidence.
+Do not claim live Qwen API usage or Alibaba Cloud deployment from the video alone. Those gates need separate evidence.

@@ -45,4 +45,4 @@ Expected result:
 
 ## Integrity Boundary
 
-This live check can prove Qwen model usage for the project story, but it does not by itself prove Alibaba Cloud deployment. Deployment proof, public repo publishing, public blog/video posting, and final Devpost submission still require separate user confirmation.
+This live check can prove Qwen model usage for the project story, but it does not by itself prove Alibaba Cloud deployment. Deployment proof and any new public Devpost evidence claim still require separate verification before they are added to the submitted project.

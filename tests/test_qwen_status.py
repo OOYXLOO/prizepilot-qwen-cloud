@@ -54,6 +54,29 @@ class QwenStatusTests(unittest.TestCase):
 
         self.assertEqual(fields["public github repository"], "yes")
 
+    def test_yes_status_accepts_explanatory_suffixes(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            root = Path(temp_dir)
+            write_required_artifacts(root)
+            ledger = write_ledger(
+                root,
+                joined="yes - joined on Devpost",
+                portfolio_project="yes - imported from public repo",
+                additional_info="yes - architecture.png uploaded",
+                account_ready="yes - console reached",
+                live_check="yes - safe smoke test passed",
+                deployment="yes - endpoint proof recorded",
+                repo="yes - public",
+                video="yes - Vimeo URL accepted",
+                blog="yes - public URL",
+                submitted="yes - Devpost confirmation displayed",
+            )
+
+            status = build_status(root, ledger, now=datetime(2026, 6, 20, tzinfo=timezone.utc))
+
+        self.assertEqual(status["phase"], "submitted_waiting_for_results")
+        self.assertEqual(len(status["incomplete_public_gates"]), 0)
+
     def test_reports_missing_local_artifacts_first(self) -> None:
         with tempfile.TemporaryDirectory() as temp_dir:
             root = Path(temp_dir)
@@ -154,6 +177,31 @@ class QwenStatusTests(unittest.TestCase):
         self.assertEqual(status["phase"], "submitted_waiting_for_results")
         self.assertEqual(status["severity"], "OK")
         self.assertEqual(len(status["incomplete_public_gates"]), 0)
+
+    def test_submitted_with_evidence_gaps_can_still_improve(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            root = Path(temp_dir)
+            write_required_artifacts(root)
+            ledger = write_ledger(
+                root,
+                joined="yes",
+                portfolio_project="yes",
+                additional_info="yes",
+                account_ready="partial - email verification pending",
+                live_check="no",
+                deployment="partial - manifest prepared but live endpoint not verified",
+                repo="yes",
+                video="yes",
+                blog="yes",
+                submitted="yes",
+            )
+
+            status = build_status(root, ledger, now=datetime(2026, 6, 20, tzinfo=timezone.utc))
+
+        self.assertEqual(status["phase"], "submitted_can_still_improve")
+        self.assertEqual(status["severity"], "OK_WITH_EVIDENCE_GAPS")
+        self.assertIn("Strengthen evidence", status["next_action"])
+        self.assertEqual(len(status["incomplete_public_gates"]), 3)
 
     def test_markdown_includes_gates_and_references(self) -> None:
         with tempfile.TemporaryDirectory() as temp_dir:

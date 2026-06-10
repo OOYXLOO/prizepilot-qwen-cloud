@@ -2,7 +2,23 @@
 
 PrizePilot is a Qwen Cloud hackathon submission for Track 4, Autopilot Agent. It turns hackathon and bounty opportunities into ranked execution plans, public artifact drafts, and human approval checkpoints.
 
-The project is intentionally conservative: it records public repository and blog publication after verification, but it does not claim final Devpost submission, live Alibaba Cloud deployment, Qwen API usage, or payout eligibility until those events actually happen.
+The project is intentionally conservative: it records public repository, blog, video, and Devpost submission status only after verification, while keeping live Alibaba Cloud deployment proof, live Qwen API usage, payout eligibility, tax, and KYC outside the repository until those events actually happen.
+
+## Current Public Status
+
+- Devpost project: https://devpost.com/software/prizepilot-qwen-cloud
+- Public demo video: https://vimeo.com/1200124146
+- Public build journal: https://ooyxloo.github.io/prizepilot-qwen-cloud/blog/
+- Public repository: https://github.com/OOYXLOO/prizepilot-qwen-cloud
+- Submission state: submitted to Devpost; still editable until the Qwen Cloud hackathon deadline.
+- Evidence gaps: live Qwen/DashScope refinement and a verified live Alibaba Cloud endpoint still need to be captured before judging if account access is available.
+
+## Judge Quickstart
+
+The fastest review path is:
+
+1. Open the Devpost project and demo video above.
+2. Run the local dashboard:
 
 ## Local Use
 
@@ -13,6 +29,9 @@ python -m prizepilot plan samples/mindtheproduct_world_product_day.json
 python -m prizepilot portfolio samples/splunk_agentic_ops.json samples/qwen_hackathon.json samples/mindtheproduct_world_product_day.json samples/uipath_agenthack.json samples/algora_onyx_bounty.json samples/arm_ai_optimization.json
 python -m prizepilot.webapp --host 127.0.0.1 --port 8000
 ```
+
+3. Inspect the machine-readable planning payload at `http://127.0.0.1:8000/api/plan`.
+4. Review `docs/submission-story.md`, `docs/qwen-route-status.md`, and `docs/validation-report.md` for the evidence boundary.
 
 Live Qwen refinement is optional and requires `DASHSCOPE_API_KEY` or `QWEN_API_KEY` at action time only.
 The Mind the Product route additionally requires Novus email verification and official Novus installation before final Devpost submission. The web service exposes `/api/novus-readiness` so that gate can be tracked without claiming completion early.

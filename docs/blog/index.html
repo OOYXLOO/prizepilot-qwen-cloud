@@ -223,10 +223,12 @@
     <div class="wrap hero">
       <p class="eyebrow">Qwen Cloud Hackathon build journal</p>
       <h1>Building PrizePilot: an accountable autopilot for hackathon execution</h1>
-      <p class="dek">PrizePilot turns prize pages into ranked execution plans, public artifact drafts, and human approval checkpoints. This post documents the current Qwen Cloud hackathon build path, what is already working, and what proof still has to be captured before final submission.</p>
+      <p class="dek">PrizePilot turns prize pages into ranked execution plans, public artifact drafts, and human approval checkpoints. This post documents the submitted Qwen Cloud hackathon build, what is already public, and what proof still has to be captured before judging.</p>
       <div class="meta" aria-label="Project metadata">
         <span class="tag">Track 4: Autopilot Agent</span>
+        <span class="tag">Devpost submitted</span>
         <span class="tag">Public repo ready</span>
+        <span class="tag">Vimeo demo live</span>
         <span class="tag">Qwen-ready client</span>
         <span class="tag">Evidence-first workflow</span>
       </div>
@@ -260,7 +262,7 @@
 
         <section>
           <h2>Current planning behavior</h2>
-          <p>The local deterministic planner ranks opportunities by prize value, number of winners, deadline pressure, and blockers. In the current sample portfolio, a near-deadline Splunk feedback route stays first because it is a multi-winner, low-friction prize. The Qwen Cloud route is the higher-upside second wave because it requires a qualified Devpost project, public repository, public video, blog/social URL, Qwen Cloud usage, and Alibaba Cloud deployment proof.</p>
+          <p>The local deterministic planner ranks opportunities by prize value, number of winners, deadline pressure, and blockers. In the current sample portfolio, a near-deadline Splunk feedback route stays first because it is a multi-winner, low-friction prize. The Qwen Cloud route is the higher-upside project route and is now submitted publicly; the remaining improvement path is live Qwen usage evidence and Alibaba Cloud endpoint proof.</p>
           <p>That distinction is the core of PrizePilot: it does not chase the largest pool if the evidence cannot be produced. It chooses the route that can be completed honestly.</p>
         </section>
 
@@ -288,7 +290,7 @@
         <section>
           <h2>What the demo shows</h2>
           <p>The demo starts with a portfolio containing several hackathon and bounty routes. PrizePilot ranks them and explains why a small multi-winner feedback prize can be the urgent first target while Qwen Cloud is the stronger second-wave project route.</p>
-          <p>Then the demo opens the Qwen project plan. The agent targets the Blog Post Award and Honorable Mention route instead of over-optimizing for a single-winner grand prize. It generates publication and approval checkpoints for Devpost joining, Qwen and Alibaba account work, public repository creation, video and blog publication, and final submission.</p>
+          <p>Then the demo opens the Qwen project plan. The agent targets the Blog Post Award and Honorable Mention route instead of over-optimizing for a single-winner grand prize. It generates publication and approval checkpoints for Devpost updates, Qwen and Alibaba account work, public repository maintenance, video and blog publication, and deployment evidence.</p>
           <p>The final section shows the dashboard and <code>/api/plan</code> output so both people and tools can inspect the decision.</p>
         </section>
 
@@ -297,9 +299,8 @@
           <ol>
             <li>Run a live Qwen Cloud refinement pass with a runtime key.</li>
             <li>Deploy the web/API service on Alibaba Cloud and capture deployment proof.</li>
-            <li>Publish the demo video on a Devpost-supported video host.</li>
-            <li>Add the public video URL and this blog URL to the Devpost draft.</li>
-            <li>Submit the final Devpost project only after the required evidence is complete.</li>
+            <li>Update the submitted Devpost project only after the new live evidence exists.</li>
+            <li>Refresh screenshots or demo assets if the dashboard changes materially.</li>
           </ol>
           <p>The public build record is deliberately conservative. PrizePilot should move fast where preparation is reversible and slow down where the action becomes public, costly, or account-bound.</p>
         </section>
@@ -309,8 +310,9 @@
         <h2>Build status</h2>
         <ul class="status-list">
           <li>Public repository<span>Published at <a href="https://github.com/OOYXLOO/prizepilot-qwen-cloud">github.com/OOYXLOO/prizepilot-qwen-cloud</a></span></li>
+          <li>Devpost project<span>Submitted at <a href="https://devpost.com/software/prizepilot-qwen-cloud">devpost.com/software/prizepilot-qwen-cloud</a></span></li>
           <li>Hackathon route<span>Qwen Cloud Track 4: Autopilot Agent</span></li>
-          <li>Demo asset<span>Local WebM generated; supported video host still required</span></li>
+          <li>Demo asset<span>Public Vimeo demo published at <a href="https://vimeo.com/1200124146">vimeo.com/1200124146</a></span></li>
           <li>Qwen live check<span>Prepared but not claimed complete</span></li>
           <li>Alibaba Cloud proof<span>Runbook prepared; deployment proof still required</span></li>
           <li>Integrity rule<span>No secrets, payout data, or private identity documents are stored in this repo</span></li>

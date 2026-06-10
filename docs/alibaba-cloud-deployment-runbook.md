@@ -17,11 +17,11 @@ Expected local checks:
 
 - `http://localhost:8000/` renders the PrizePilot dashboard.
 - `http://localhost:8000/api/plan` returns JSON with the Qwen plan and portfolio ranking.
-- The dashboard explicitly states that API keys, public publishing, deployment proof, and final Devpost submission remain user-approved actions.
+- The dashboard explicitly states that API keys, deployment proof, payout, tax, KYC, and new public evidence claims remain user-approved actions.
 
 ## Alibaba Cloud Deployment Options
 
-Use the simplest user-approved Alibaba Cloud route available in the account at submission time:
+Use the simplest user-approved Alibaba Cloud route available in the account before judging:
 
 - Function Compute custom container using `deploy/alibaba-cloud/s.yaml`.
 - Container Registry + Serverless App Engine.

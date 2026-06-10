@@ -1,16 +1,16 @@
 {
-  "checked_at": "2026-06-10T09:14:33.832793+00:00",
-  "phase": "ready_for_user_publication_steps",
-  "severity": "ACTION_NEEDED",
-  "next_action": "Upload `architecture.png` through the current Devpost Additional info page's file picker, then click `Save & continue` and verify Devpost confirms the step saved.",
+  "checked_at": "2026-06-10T15:23:42.705951+00:00",
+  "phase": "submitted_can_still_improve",
+  "severity": "OK_WITH_EVIDENCE_GAPS",
+  "next_action": "Strengthen evidence before judging: complete Qwen/Alibaba Cloud account verification, run a live Qwen/DashScope check with a user-provided API key at action time, and add stronger live Alibaba Cloud endpoint proof if available.",
   "deadline_utc": "2026-07-09T21:00:00+00:00",
-  "hours_until_deadline": 707.76,
+  "hours_until_deadline": 701.6,
   "artifact_checks": [
     {
       "path": "README.md",
       "description": "Project README",
       "exists": true,
-      "size": 1306
+      "size": 2611
     },
     {
       "path": "LICENSE",
@@ -76,7 +76,7 @@
       "path": "docs/blog/index.html",
       "description": "Public blog page for Blog Post Award",
       "exists": true,
-      "size": 11788
+      "size": 11986
     },
     {
       "path": "docs/blog-draft.md",
@@ -88,7 +88,7 @@
       "path": "docs/demo-video-script.md",
       "description": "Demo video script",
       "exists": true,
-      "size": 478
+      "size": 2013
     },
     {
       "path": "docs/demo-video/prizepilot-demo.webm",
@@ -106,7 +106,7 @@
       "path": "docs/demo-video-upload-pack.md",
       "description": "Demo video host upload metadata",
       "exists": true,
-      "size": 1910
+      "size": 1745
     },
     {
       "path": "tools/record_demo_webm.mjs",
@@ -118,25 +118,25 @@
       "path": "docs/devpost-project-fields.md",
       "description": "Devpost field draft",
       "exists": true,
-      "size": 3330
+      "size": 3304
     },
     {
       "path": "docs/qwen-start-handoff-template.md",
       "description": "User launch handoff template",
       "exists": true,
-      "size": 4883
+      "size": 4301
     },
     {
       "path": "docs/qwen-cloud-live-check.md",
       "description": "Live Qwen check runbook",
       "exists": true,
-      "size": 2306
+      "size": 2309
     },
     {
       "path": "docs/alibaba-cloud-deployment-runbook.md",
       "description": "Alibaba Cloud deployment runbook",
       "exists": true,
-      "size": 2229
+      "size": 2226
     },
     {
       "path": "docs/alibaba-cloud-deployment-proof-template.md",
@@ -160,7 +160,7 @@
       "path": "docs/validation-report.md",
       "description": "Validation report",
       "exists": true,
-      "size": 2424
+      "size": 2646
     },
     {
       "path": "docs/screenshots/prizepilot-dashboard-desktop.png",
@@ -184,11 +184,6 @@
   "missing_artifacts": [],
   "incomplete_public_gates": [
     {
-      "gate": "devpost additional info saved",
-      "status": "partial - browser page fields are filled, but architecture.png upload and Save & continue are still pending",
-      "next_action": "Upload `architecture.png` through the current Devpost Additional info page's file picker, then click `Save & continue` and verify Devpost confirms the step saved."
-    },
-    {
       "gate": "qwen/alibaba cloud account ready",
       "status": "partial - GitHub OAuth authorized for qwencloud.com and verification code sent to registered email; Qwen verification must be reopened or restored before entering the current email code",
       "next_action": "Open or restore the Qwen Cloud email verification page, enter the current email code, then confirm whether the account reaches the benefits/console page."
@@ -202,16 +197,6 @@
       "gate": "alibaba cloud deployment proof",
       "status": "partial - Function Compute custom-container manifest prepared at deploy/alibaba-cloud/s.yaml; live Alibaba Cloud endpoint not verified",
       "next_action": "Use the prepared Function Compute manifest with the user's Alibaba Cloud account, then record the live URL and proof evidence."
-    },
-    {
-      "gate": "public demo video",
-      "status": "partial - generated local WebM at docs/demo-video/prizepilot-demo.webm; Devpost rejected GitHub raw WebM; Qwen official requirements call for a public YouTube, Facebook Video, or Vimeo URL",
-      "next_action": "Upload the generated WebM to a Qwen-compliant public video host: YouTube, Facebook Video, or Vimeo."
-    },
-    {
-      "gate": "devpost final submitted",
-      "status": "no",
-      "next_action": "Submit final Devpost project after review and explicit confirmation."
     }
   ],
   "ledger_path": "C:\\Users\\YXL\\.codex\\tmp\\hks-yxl\\money-goal-200usd\\qwen-prizepilot\\docs\\qwen-route-ledger.md",

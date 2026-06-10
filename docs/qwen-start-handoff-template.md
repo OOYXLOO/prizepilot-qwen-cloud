@@ -1,7 +1,7 @@
 # Qwen Start Handoff Template
 
 Created: 2026-06-10
-Purpose: collect only the minimum user decisions needed to move PrizePilot from local package to a real Qwen Cloud hackathon submission.
+Purpose: collect only the minimum user decisions needed to strengthen the already-submitted PrizePilot Qwen Cloud hackathon project with live sponsor evidence.
 
 Do not paste passwords, OTPs, API keys, recovery codes, payment data, tax data, KYC data, or cloud billing details into chat.
 
@@ -11,17 +11,18 @@ Do not paste passwords, OTPs, API keys, recovery codes, payment data, tax data, 
 - Primary prize target: Blog Post Award, USD 500 cash + USD 500 cloud credits, 10 winners.
 - Secondary prize target: Top 10 Honorable Mention Projects, USD 500 cash + USD 500 cloud credits, 10 winners.
 - Project: PrizePilot, an Autopilot Agent for turning prize/hackathon pages into executable submission plans and human action queues.
-- Current account state: Qwen Devpost registration complete as `OOYXLOO`; Devpost portfolio project and Qwen submission draft are created; Qwen Cloud GitHub OAuth reached email verification, but the verification page may need to be reopened and a current email code entered.
+- Current Devpost state: Qwen Devpost project is submitted as `OOYXLOO` at https://devpost.com/software/prizepilot-qwen-cloud and can still be edited before the deadline.
+- Current account state: Qwen Cloud GitHub OAuth reached email verification, but the verification page may need to be reopened and a current email code entered.
 - Current repository state: public GitHub repository is published at https://github.com/OOYXLOO/prizepilot-qwen-cloud.
 - Current blog state: public build journal is published at https://ooyxloo.github.io/prizepilot-qwen-cloud/blog/.
 - Current Alibaba proof state: Function Compute custom-container manifest is prepared at `deploy/alibaba-cloud/s.yaml`, but no live cloud endpoint is verified.
-- Current video state: local silent WebM exists at `docs/demo-video/prizepilot-demo.webm`, but Qwen official requirements call for a public YouTube, Facebook Video, or Vimeo URL for the demo video.
+- Current video state: public Vimeo demo is published at https://vimeo.com/1200124146; local rebuild assets remain in `docs/demo-video/`.
 
 The blog prize is not standalone. It still requires a qualified Devpost project submission, public repo, demo/video, blog or social post, and Alibaba Cloud deployment proof.
 
 ## Reply To Send Codex Later
 
-Use this only after the Splunk feedback route is either submitted or no longer viable, or if you want to start Qwen in parallel.
+Use this if live Qwen/Alibaba evidence becomes available and the submitted Devpost project should be strengthened before judging.
 
 ```text
 Qwen PrizePilot launch fields:
@@ -38,7 +39,7 @@ Eligibility confirmation:
 I confirm I am eligible for the Qwen Cloud Global AI Hackathon under the official rules, including age, location, employment/conflict, and non-sanctioned-region requirements. I understand that if selected as a potential winner, identity, qualification, tax, and payment verification may be required before any prize is delivered.
 
 Preparation authorization:
-Please prepare the Qwen PrizePilot public package, live-check commands, deployment checklist, demo video metadata, and Devpost submission fields. Do not store passwords, OTPs, API keys, payment, tax, KYC, or recovery details.
+Please strengthen the submitted Qwen PrizePilot project with live-check commands, deployment proof, and Devpost update copy. Do not store passwords, OTPs, API keys, payment, tax, KYC, or recovery details.
 ```
 
 ## Current Two-Minute Unblock Prompt
@@ -49,19 +50,9 @@ Use this after the Qwen Cloud verification code arrives in the registered email 
 The Qwen Cloud verification code is available in the browser/email inbox. Reopen or restore the Qwen Cloud verification page if needed, enter the current code, and continue account setup. Do not store the code in files or ledgers.
 ```
 
-Use this after you upload the generated WebM to a supported video host:
-
-```text
-I uploaded the PrizePilot demo video. The accepted video URL is: <paste URL>. Continue the Qwen PrizePilot submission flow from the current browser and local repo state.
-```
-
 ## Separate Confirmations Needed
 
 These are separate because each one creates a public or account-side effect:
-
-```text
-Please confirm I should upload or publish the generated PrizePilot demo video to the approved video host. This will make the video public and may associate it with my account.
-```
 
 ```text
 Please confirm I should run the Qwen/DashScope live check using the API key I provide at action time. The key must not be stored in files, docs, command history, or the ledger.
@@ -72,14 +63,13 @@ Please confirm I should deploy PrizePilot to the approved Alibaba Cloud service 
 ```
 
 ```text
-Please confirm I should submit PrizePilot to the Qwen Cloud Devpost hackathon using the approved public repository, demo video, blog/social post, and Alibaba Cloud deployment proof. This is a public contest submission eligible for judging and possible USD 500 prize consideration.
+Please confirm I should update the already-submitted Devpost project with newly verified Qwen/Alibaba Cloud evidence. This will make the new evidence public.
 ```
 
 ## Minimum Evidence Ladder
 
 1. Local package and tests pass.
-2. Qwen/DashScope live check succeeds without storing the API key.
-3. Alibaba Cloud deployment proof exists.
-4. Public GitHub repo and blog are live and clean.
-5. Demo video is public on a supported host.
-6. Devpost submission is reviewed and explicitly submitted.
+2. Public GitHub repo, blog, Vimeo demo, and Devpost submission are live and clean.
+3. Qwen/DashScope live check succeeds without storing the API key.
+4. Alibaba Cloud deployment proof exists.
+5. Devpost is updated only after the new evidence exists.
