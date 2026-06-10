@@ -10,7 +10,7 @@ Latest inspection on 2026-06-10 after adding demo recording assets:
 - Entries: 55
 - Missing required entries: 0
 - Forbidden cache/private entries: 0
-- Size at latest inspection: 482,488 bytes
+- Exact byte count is not a gate.
 - Exact byte count is not a gate.
 
 Optional presentation deck is not currently included and is not a package gate.
