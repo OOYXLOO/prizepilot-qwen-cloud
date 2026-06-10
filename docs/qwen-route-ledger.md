@@ -43,10 +43,11 @@ Use this as the non-sensitive recovery record for the Qwen backup route. Do not 
 
 - Qwen Devpost registration was completed in browser for Devpost user `OOYXLOO`.
 - Created public GitHub repository shell: https://github.com/OOYXLOO/prizepilot-qwen-cloud
-- Local repository commit prepared at `10870dd` with 45 public-package files and no real credentials.
+- Latest local repository commit prepared at `a0e9055` with 53 public-package entries in `qwen-prizepilot-public.zip` and no forbidden cache/private entries.
 - Git push to GitHub is blocked by missing HTTPS credentials/Git Credential Manager authorization.
 - Devpost portfolio project creation at `https://devpost.com/software/new` accepted project name `PrizePilot` but returned `Please complete the reCAPTCHA to submit this form.`
 - Next action after user completes CAPTCHA: save Devpost portfolio project, fill project fields, import it into the Qwen hackathon, and continue public submission gates.
+- Generated local demo GIF: `docs/screenshots/prizepilot-demo.gif`.
 
 ## Update Rules
 
