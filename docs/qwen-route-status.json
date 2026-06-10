@@ -1,10 +1,10 @@
 {
-  "checked_at": "2026-06-10T07:44:29.720245+00:00",
+  "checked_at": "2026-06-10T07:46:23.051892+00:00",
   "phase": "ready_for_user_publication_steps",
   "severity": "ACTION_NEEDED",
   "next_action": "Upload the generated WebM demo to YouTube, Facebook Video, Vimeo, or Youku, then add that accepted video URL to the Qwen Devpost draft.",
   "deadline_utc": "2026-07-09T21:00:00+00:00",
-  "hours_until_deadline": 709.26,
+  "hours_until_deadline": 709.23,
   "artifact_checks": [
     {
       "path": "README.md",
