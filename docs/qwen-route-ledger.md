@@ -13,7 +13,7 @@ Use this as the non-sensitive recovery record for the Qwen backup route. Do not 
 - Secondary target: Top 10 Honorable Mention Projects, USD 500 x10
 - Project: PrizePilot
 - Deadline: July 10, 2026 5:00 AM GMT+8 / July 9, 2026 9:00 PM UTC
-- Current status: local package prepared; Qwen Devpost joined; GitHub public repository shell created; Devpost portfolio project creation is blocked by reCAPTCHA.
+- Current status: local package prepared; Qwen Devpost joined; public GitHub repository published; Devpost portfolio project creation is blocked by reCAPTCHA.
 
 ## Gate Status
 
@@ -22,7 +22,7 @@ Use this as the non-sensitive recovery record for the Qwen backup route. Do not 
 - Qwen/Alibaba Cloud account ready: no/unknown
 - Qwen live check completed: no
 - Alibaba Cloud deployment proof: no
-- Public GitHub repository: partial - empty repository created, code push still blocked by GitHub HTTPS authorization
+- Public GitHub repository: yes
 - Public demo video: no
 - Public blog/social post: no
 - Devpost final submitted: no
@@ -44,8 +44,8 @@ Use this as the non-sensitive recovery record for the Qwen backup route. Do not 
 
 - Qwen Devpost registration was completed in browser for Devpost user `OOYXLOO`.
 - Created public GitHub repository shell: https://github.com/OOYXLOO/prizepilot-qwen-cloud
-- Local repository has a committed public package; run `git rev-parse --short HEAD` in this directory for the current exact commit. The latest rebuilt `qwen-prizepilot-public.zip` has 53 public-package entries and no forbidden cache/private entries.
-- Git push to GitHub is blocked by missing HTTPS credentials/Git Credential Manager authorization.
+- Local repository has a committed public package at remote `main` commit `adb9a43`. The latest rebuilt `qwen-prizepilot-public.zip` has 55 public-package entries and no forbidden cache/private entries.
+- GitHub publication status: `git push -u origin main` completed with `Everything up-to-date` and set local `main` to track `origin/main`.
 - Devpost portfolio project creation at `https://devpost.com/software/new` accepted project name `PrizePilot` but returned `Please complete the reCAPTCHA to submit this form.` Reconfirmed on 2026-06-10 from `https://devpost.com/software`: the form still contains `software[name]=PrizePilot`, `g-recaptcha-response`, and the `Save and continue` submit control, so no portfolio project URL exists yet.
 - Next action after user completes CAPTCHA: save Devpost portfolio project, fill project fields, import it into the Qwen hackathon, and continue public submission gates.
 - Generated local demo GIF: `docs/screenshots/prizepilot-demo.gif`.

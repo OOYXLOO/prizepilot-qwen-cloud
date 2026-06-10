@@ -1,6 +1,6 @@
 # Qwen PrizePilot Route Status
 
-Generated: 2026-06-10T06:42:24.613879+00:00
+Generated: 2026-06-10T07:09:24.936990+00:00
 Phase: **ready_for_user_publication_steps**
 Severity: **ACTION_NEEDED**
 
@@ -9,7 +9,7 @@ Next action: Complete the Devpost reCAPTCHA and save the PrizePilot portfolio pr
 ## Deadline
 
 - Deadline UTC: `2026-07-09T21:00:00+00:00`
-- Hours until deadline: `710.29`
+- Hours until deadline: `709.84`
 
 ## Local Artifact Gate
 
@@ -17,12 +17,11 @@ Next action: Complete the Devpost reCAPTCHA and save the PrizePilot portfolio pr
 
 ## Public/Account Gates
 
-- Incomplete public/account gates: `8`
+- Incomplete public/account gates: `7`
 - `devpost portfolio project created`: `blocked by Devpost reCAPTCHA after project name entry; reconfirmed on 2026-06-10 in the active browser session with PrizePilot typed into the project-name field and g-recaptcha-response present after save attempt` - Complete the visible Devpost reCAPTCHA, save the PrizePilot portfolio project, then continue the Qwen import/submission flow.
 - `qwen/alibaba cloud account ready`: `no/unknown` - Create/access Qwen or Alibaba Cloud account.
 - `qwen live check completed`: `no` - Run Qwen/DashScope live check with user-provided API key at action time.
 - `alibaba cloud deployment proof`: `no` - Deploy or otherwise produce approved Alibaba Cloud proof.
-- `public github repository`: `partial - empty repository created, code push still blocked by GitHub HTTPS authorization` - Authorize GitHub push/publication, then run `git push -u origin main` to publish the prepared package.
 - `public demo video`: `no` - Publish approved public demo video.
 - `public blog/social post`: `no` - Publish approved blog/social post for Blog Post Award.
 - `devpost final submitted`: `no` - Submit final Devpost project after review and explicit confirmation.
