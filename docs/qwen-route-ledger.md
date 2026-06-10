@@ -18,6 +18,7 @@ Use this as the non-sensitive recovery record for the Qwen backup route. Do not 
 ## Gate Status
 
 - Devpost hackathon joined: yes
+- Devpost portfolio project created: blocked by Devpost reCAPTCHA after project name entry
 - Qwen/Alibaba Cloud account ready: no/unknown
 - Qwen live check completed: no
 - Alibaba Cloud deployment proof: no

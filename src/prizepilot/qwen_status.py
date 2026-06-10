@@ -24,18 +24,21 @@ REQUIRED_ARTIFACTS = {
     "docs/qwen-cloud-live-check.md": "Live Qwen check runbook",
     "docs/alibaba-cloud-deployment-runbook.md": "Alibaba Cloud deployment runbook",
     "docs/alibaba-cloud-deployment-proof-template.md": "Deployment proof template",
+    "docs/publication-action-card.md": "Publication action card",
     "docs/public-package-checklist.md": "Public package checklist",
     "docs/validation-report.md": "Validation report",
     "docs/screenshots/prizepilot-dashboard-desktop.png": "Desktop dashboard screenshot",
     "docs/screenshots/prizepilot-dashboard-mobile.png": "Mobile dashboard screenshot",
+    "docs/screenshots/prizepilot-demo.gif": "Demo GIF",
 }
 
 PUBLIC_GATES = {
     "devpost hackathon joined": "Join Qwen Devpost hackathon.",
+    "devpost portfolio project created": "Complete the Devpost reCAPTCHA, save the PrizePilot portfolio project, and import it into the Qwen submission flow.",
     "qwen/alibaba cloud account ready": "Create/access Qwen or Alibaba Cloud account.",
     "qwen live check completed": "Run Qwen/DashScope live check with user-provided API key at action time.",
     "alibaba cloud deployment proof": "Deploy or otherwise produce approved Alibaba Cloud proof.",
-    "public github repository": "Publish approved public GitHub repository.",
+    "public github repository": "Publish approved code to the existing public GitHub repository.",
     "public demo video": "Publish approved public demo video.",
     "public blog/social post": "Publish approved blog/social post for Blog Post Award.",
     "devpost final submitted": "Submit final Devpost project after review and explicit confirmation.",
@@ -55,6 +58,14 @@ def parse_ledger_fields(text: str) -> dict[str, str]:
 
 def is_yes(value: str) -> bool:
     return value.strip().lower() in {"yes", "y", "true", "done", "submitted", "published"}
+
+def public_gate_next_action(gate: str, status: str, default_action: str) -> str:
+    normalized = status.strip().lower()
+    if gate == "public github repository" and "partial" in normalized:
+        return "Authorize GitHub push/publication, then run `git push -u origin main` to publish the prepared package."
+    if gate == "devpost portfolio project created" and ("recaptcha" in normalized or "captcha" in normalized):
+        return "Complete the visible Devpost reCAPTCHA, save the PrizePilot portfolio project, then continue the Qwen import/submission flow."
+    return default_action
 
 def inspect_artifacts(root: Path) -> list[dict[str, object]]:
     checks = []
@@ -86,7 +97,7 @@ def build_status(root: Path, ledger_path: Path, now: datetime | None = None) -> 
         {
             "gate": gate,
             "status": fields.get(gate, ""),
-            "next_action": action,
+            "next_action": public_gate_next_action(gate, fields.get(gate, ""), action),
         }
         for gate, action in PUBLIC_GATES.items()
         if not is_yes(fields.get(gate, ""))
@@ -112,7 +123,12 @@ def build_status(root: Path, ledger_path: Path, now: datetime | None = None) -> 
     else:
         phase = "ready_for_user_publication_steps"
         severity = "ACTION_NEEDED"
-        next_action = "Use docs/qwen-start-handoff-template.md when the user wants to start Qwen in parallel or after Splunk."
+        if not is_yes(fields.get("devpost portfolio project created", "")):
+            next_action = "Complete the Devpost reCAPTCHA and save the PrizePilot portfolio project, then import it into the Qwen submission flow."
+        elif "partial" in fields.get("public github repository", "").lower():
+            next_action = "Authorize GitHub publication and push the prepared local package to the existing public repository."
+        else:
+            next_action = "Use docs/qwen-start-handoff-template.md for the remaining Qwen/Alibaba, deployment, blog/video, and final submission gates."
 
     return {
         "checked_at": current.isoformat(),

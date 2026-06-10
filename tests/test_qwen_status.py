@@ -12,6 +12,7 @@ LEDGER_TEXT = """# Ledger
 ## Gate Status
 
 - Devpost hackathon joined: {joined}
+- Devpost portfolio project created: {portfolio_project}
 - Qwen/Alibaba Cloud account ready: {account_ready}
 - Qwen live check completed: {live_check}
 - Alibaba Cloud deployment proof: {deployment}
@@ -30,6 +31,7 @@ def write_required_artifacts(root: Path) -> None:
 def write_ledger(root: Path, **overrides: str) -> Path:
     values = {
         "joined": "no/unknown",
+        "portfolio_project": "no",
         "account_ready": "no/unknown",
         "live_check": "no",
         "deployment": "no",
@@ -71,8 +73,21 @@ class QwenStatusTests(unittest.TestCase):
 
         self.assertEqual(status["phase"], "ready_for_user_publication_steps")
         self.assertEqual(status["severity"], "ACTION_NEEDED")
+        self.assertIn("reCAPTCHA", status["next_action"])
         self.assertEqual(len(status["missing_artifacts"]), 0)
         self.assertGreater(len(status["incomplete_public_gates"]), 0)
+
+    def test_partial_github_repo_gets_push_specific_next_action(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            root = Path(temp_dir)
+            write_required_artifacts(root)
+            ledger = write_ledger(root, joined="yes", portfolio_project="yes", repo="partial - empty repository created")
+
+            status = build_status(root, ledger, now=datetime(2026, 6, 20, tzinfo=timezone.utc))
+
+        self.assertIn("Authorize GitHub", status["next_action"])
+        github_gate = next(item for item in status["incomplete_public_gates"] if item["gate"] == "public github repository")
+        self.assertIn("git push", github_gate["next_action"])
 
     def test_urgent_near_deadline(self) -> None:
         with tempfile.TemporaryDirectory() as temp_dir:
@@ -92,6 +107,7 @@ class QwenStatusTests(unittest.TestCase):
             ledger = write_ledger(
                 root,
                 joined="yes",
+                portfolio_project="yes",
                 account_ready="yes",
                 live_check="yes",
                 deployment="yes",

@@ -1,10 +1,10 @@
 {
-  "checked_at": "2026-06-10T05:39:47.634019+00:00",
+  "checked_at": "2026-06-10T05:43:46.852636+00:00",
   "phase": "ready_for_user_publication_steps",
   "severity": "ACTION_NEEDED",
-  "next_action": "Use docs/qwen-start-handoff-template.md when the user wants to start Qwen in parallel or after Splunk.",
+  "next_action": "Complete the Devpost reCAPTCHA and save the PrizePilot portfolio project, then import it into the Qwen submission flow.",
   "deadline_utc": "2026-07-09T21:00:00+00:00",
-  "hours_until_deadline": 711.34,
+  "hours_until_deadline": 711.27,
   "artifact_checks": [
     {
       "path": "README.md",
@@ -91,6 +91,12 @@
       "size": 225
     },
     {
+      "path": "docs/publication-action-card.md",
+      "description": "Publication action card",
+      "exists": true,
+      "size": 1542
+    },
+    {
       "path": "docs/public-package-checklist.md",
       "description": "Public package checklist",
       "exists": true,
@@ -113,10 +119,21 @@
       "description": "Mobile dashboard screenshot",
       "exists": true,
       "size": 85665
+    },
+    {
+      "path": "docs/screenshots/prizepilot-demo.gif",
+      "description": "Demo GIF",
+      "exists": true,
+      "size": 279896
     }
   ],
   "missing_artifacts": [],
   "incomplete_public_gates": [
+    {
+      "gate": "devpost portfolio project created",
+      "status": "blocked by Devpost reCAPTCHA after project name entry",
+      "next_action": "Complete the visible Devpost reCAPTCHA, save the PrizePilot portfolio project, then continue the Qwen import/submission flow."
+    },
     {
       "gate": "qwen/alibaba cloud account ready",
       "status": "no/unknown",
@@ -135,7 +152,7 @@
     {
       "gate": "public github repository",
       "status": "partial - empty repository created, code push still blocked by GitHub HTTPS authorization",
-      "next_action": "Publish approved public GitHub repository."
+      "next_action": "Authorize GitHub push/publication, then run `git push -u origin main` to publish the prepared package."
     },
     {
       "gate": "public demo video",
