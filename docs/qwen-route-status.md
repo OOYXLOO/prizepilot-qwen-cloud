@@ -1,15 +1,15 @@
 # Qwen PrizePilot Route Status
 
-Generated: 2026-06-10T08:25:47.248300+00:00
+Generated: 2026-06-10T08:33:30.057100+00:00
 Phase: **ready_for_user_publication_steps**
 Severity: **ACTION_NEEDED**
 
-Next action: Upload the generated WebM demo to YouTube, Facebook Video, Vimeo, or Youku, then add that accepted video URL to the Qwen Devpost draft.
+Next action: Enter the Qwen Cloud email verification code in the active browser, then continue account setup until benefits/console access is verified.
 
 ## Deadline
 
 - Deadline UTC: `2026-07-09T21:00:00+00:00`
-- Hours until deadline: `708.57`
+- Hours until deadline: `708.44`
 
 ## Local Artifact Gate
 
@@ -18,7 +18,7 @@ Next action: Upload the generated WebM demo to YouTube, Facebook Video, Vimeo, o
 ## Public/Account Gates
 
 - Incomplete public/account gates: `5`
-- `qwen/alibaba cloud account ready`: `no/unknown` - Create/access Qwen or Alibaba Cloud account.
+- `qwen/alibaba cloud account ready`: `partial - GitHub OAuth authorized for qwencloud.com and verification code sent to registered email; browser is waiting for the email code` - Enter the Qwen Cloud email verification code in the active browser, then confirm whether the account reaches the benefits/console page.
 - `qwen live check completed`: `no` - Run Qwen/DashScope live check with user-provided API key at action time.
 - `alibaba cloud deployment proof`: `partial - Function Compute custom-container manifest prepared at deploy/alibaba-cloud/s.yaml; live Alibaba Cloud endpoint not verified` - Use the prepared Function Compute manifest with the user's Alibaba Cloud account, then record the live URL and proof evidence.
 - `public demo video`: `partial - generated local WebM at docs/demo-video/prizepilot-demo.webm; Devpost rejected GitHub raw WebM and requires YouTube, Facebook Video, Vimeo, or Youku URL` - Upload the generated WebM to a Devpost-supported video host: YouTube, Facebook Video, Vimeo, or Youku.

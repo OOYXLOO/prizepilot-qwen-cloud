@@ -73,6 +73,10 @@ def public_gate_next_action(gate: str, status: str, default_action: str) -> str:
         return "Authorize GitHub push/publication, then run `git push -u origin main` to publish the prepared package."
     if gate == "devpost portfolio project created" and ("recaptcha" in normalized or "captcha" in normalized):
         return "Complete the visible Devpost reCAPTCHA, save the PrizePilot portfolio project, then continue the Qwen import/submission flow."
+    if gate == "qwen/alibaba cloud account ready" and "partial" in normalized:
+        if "verification code" in normalized or "email" in normalized:
+            return "Enter the Qwen Cloud email verification code in the active browser, then confirm whether the account reaches the benefits/console page."
+        return "Finish the remaining Qwen/Alibaba account verification step, then record the non-sensitive account-ready status."
     if gate == "public demo video" and "partial" in normalized:
         return "Upload the generated WebM to a Devpost-supported video host: YouTube, Facebook Video, Vimeo, or Youku."
     if gate == "public blog/social post" and "partial" in normalized:
@@ -139,6 +143,8 @@ def build_status(root: Path, ledger_path: Path, now: datetime | None = None) -> 
         severity = "ACTION_NEEDED"
         if not is_yes(fields.get("devpost portfolio project created", "")):
             next_action = "Complete the Devpost reCAPTCHA and save the PrizePilot portfolio project, then import it into the Qwen submission flow."
+        elif "partial" in fields.get("qwen/alibaba cloud account ready", "").lower():
+            next_action = "Enter the Qwen Cloud email verification code in the active browser, then continue account setup until benefits/console access is verified."
         elif "partial" in fields.get("public github repository", "").lower():
             next_action = "Authorize GitHub publication and push the prepared local package to the existing public repository."
         elif "partial" in fields.get("public demo video", "").lower():

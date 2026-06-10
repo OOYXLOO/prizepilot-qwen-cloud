@@ -13,13 +13,13 @@ Use this as the non-sensitive recovery record for the Qwen backup route. Do not 
 - Secondary target: Top 10 Honorable Mention Projects, USD 500 x10
 - Project: PrizePilot
 - Deadline: July 10, 2026 5:00 AM GMT+8 / July 9, 2026 9:00 PM UTC
-- Current status: local package prepared; Qwen Devpost joined; public GitHub repository published; GitHub Pages blog published; Devpost portfolio project created; Qwen submission draft created; project details are blocked by Devpost-supported video-host URL.
+- Current status: local package prepared; Qwen Devpost joined; public GitHub repository published; GitHub Pages blog published; Devpost portfolio project created; Qwen submission draft created; Qwen Cloud GitHub OAuth reached email verification; project details are blocked by Devpost-supported video-host URL.
 
 ## Gate Status
 
 - Devpost hackathon joined: yes
 - Devpost portfolio project created: yes
-- Qwen/Alibaba Cloud account ready: no/unknown
+- Qwen/Alibaba Cloud account ready: partial - GitHub OAuth authorized for qwencloud.com and verification code sent to registered email; browser is waiting for the email code
 - Qwen live check completed: no
 - Alibaba Cloud deployment proof: partial - Function Compute custom-container manifest prepared at deploy/alibaba-cloud/s.yaml; live Alibaba Cloud endpoint not verified
 - Public GitHub repository: yes
@@ -57,6 +57,7 @@ Use this as the non-sensitive recovery record for the Qwen backup route. Do not 
 - Enabled GitHub Pages for `main` / `docs` and verified the public Qwen build journal at https://ooyxloo.github.io/prizepilot-qwen-cloud/blog/ with HTTP 200 and the expected title `Building PrizePilot for the Qwen Cloud Hackathon`.
 - Prepared an Alibaba Cloud Function Compute custom-container manifest at `deploy/alibaba-cloud/s.yaml` and linked it from the deployment runbook/proof template. This is only a code proof path, not live deployment proof.
 - Checked the YouTube upload path. The browser showed Google sign-in for YouTube upload, so no usable YouTube upload session is currently available. Video remains blocked on a supported video-host login/session.
+- Started Qwen Cloud account setup from https://home.qwencloud.com/benefits using GitHub OAuth for Devpost/GitHub user `OOYXLOO`. GitHub OAuth authorized `qwencloud.com` read-only profile access, then Qwen Cloud required an email because GitHub did not return one. Entered the registered email and clicked `Send Code`; the page showed `Resend in 59s` and is waiting for the email verification code. Do not store or paste the code into local files.
 
 ## Update Rules
 

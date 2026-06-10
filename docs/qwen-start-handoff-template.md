@@ -11,7 +11,7 @@ Do not paste passwords, OTPs, API keys, recovery codes, payment data, tax data, 
 - Primary prize target: Blog Post Award, USD 500 cash + USD 500 cloud credits, 10 winners.
 - Secondary prize target: Top 10 Honorable Mention Projects, USD 500 cash + USD 500 cloud credits, 10 winners.
 - Project: PrizePilot, an Autopilot Agent for turning prize/hackathon pages into executable submission plans and human action queues.
-- Current account state: Qwen Devpost registration complete as `OOYXLOO`; Devpost portfolio project and Qwen submission draft are created.
+- Current account state: Qwen Devpost registration complete as `OOYXLOO`; Devpost portfolio project and Qwen submission draft are created; Qwen Cloud GitHub OAuth reached email verification and is waiting for the email code.
 - Current repository state: public GitHub repository is published at https://github.com/OOYXLOO/prizepilot-qwen-cloud.
 - Current blog state: public build journal is published at https://ooyxloo.github.io/prizepilot-qwen-cloud/blog/.
 - Current Alibaba proof state: Function Compute custom-container manifest is prepared at `deploy/alibaba-cloud/s.yaml`, but no live cloud endpoint is verified.
@@ -42,6 +42,12 @@ Please prepare the Qwen PrizePilot public package, live-check commands, deployme
 ```
 
 ## Current Two-Minute Unblock Prompt
+
+Use this after the Qwen Cloud verification code arrives in the registered email inbox:
+
+```text
+The Qwen Cloud verification code is available in the browser/email inbox. Continue account setup from the active Qwen Cloud verification page. Do not store the code in files or ledgers.
+```
 
 Use this after you upload the generated WebM to a supported video host:
 
