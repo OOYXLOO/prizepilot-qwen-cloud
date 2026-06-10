@@ -25,6 +25,7 @@ REQUIRED_ARTIFACTS = {
     "docs/demo-video-script.md": "Demo video script",
     "docs/demo-video/prizepilot-demo.webm": "Generated silent demo WebM",
     "docs/demo-video-url-candidates.md": "Demo video URL candidate notes",
+    "docs/demo-video-upload-pack.md": "Demo video host upload metadata",
     "tools/record_demo_webm.mjs": "Automated WebM recording script",
     "docs/devpost-project-fields.md": "Devpost field draft",
     "docs/qwen-start-handoff-template.md": "User launch handoff template",

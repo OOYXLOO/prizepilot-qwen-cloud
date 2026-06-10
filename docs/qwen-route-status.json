@@ -1,10 +1,10 @@
 {
-  "checked_at": "2026-06-10T08:10:54.686026+00:00",
+  "checked_at": "2026-06-10T08:24:00.447158+00:00",
   "phase": "ready_for_user_publication_steps",
   "severity": "ACTION_NEEDED",
   "next_action": "Upload the generated WebM demo to YouTube, Facebook Video, Vimeo, or Youku, then add that accepted video URL to the Qwen Devpost draft.",
   "deadline_utc": "2026-07-09T21:00:00+00:00",
-  "hours_until_deadline": 708.82,
+  "hours_until_deadline": 708.6,
   "artifact_checks": [
     {
       "path": "README.md",
@@ -94,7 +94,13 @@
       "path": "docs/demo-video-url-candidates.md",
       "description": "Demo video URL candidate notes",
       "exists": true,
-      "size": 959
+      "size": 1693
+    },
+    {
+      "path": "docs/demo-video-upload-pack.md",
+      "description": "Demo video host upload metadata",
+      "exists": true,
+      "size": 1685
     },
     {
       "path": "tools/record_demo_webm.mjs",
@@ -106,13 +112,13 @@
       "path": "docs/devpost-project-fields.md",
       "description": "Devpost field draft",
       "exists": true,
-      "size": 1498
+      "size": 1754
     },
     {
       "path": "docs/qwen-start-handoff-template.md",
       "description": "User launch handoff template",
       "exists": true,
-      "size": 4431
+      "size": 4489
     },
     {
       "path": "docs/qwen-cloud-live-check.md",
@@ -142,7 +148,7 @@
       "path": "docs/public-package-checklist.md",
       "description": "Public package checklist",
       "exists": true,
-      "size": 1123
+      "size": 1147
     },
     {
       "path": "docs/validation-report.md",
