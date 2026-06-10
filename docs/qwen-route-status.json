@@ -1,10 +1,10 @@
 {
-  "checked_at": "2026-06-10T05:36:10.236181+00:00",
+  "checked_at": "2026-06-10T05:39:47.634019+00:00",
   "phase": "ready_for_user_publication_steps",
   "severity": "ACTION_NEEDED",
   "next_action": "Use docs/qwen-start-handoff-template.md when the user wants to start Qwen in parallel or after Splunk.",
   "deadline_utc": "2026-07-09T21:00:00+00:00",
-  "hours_until_deadline": 711.4,
+  "hours_until_deadline": 711.34,
   "artifact_checks": [
     {
       "path": "README.md",
