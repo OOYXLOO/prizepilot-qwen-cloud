@@ -1,10 +1,10 @@
 {
-  "checked_at": "2026-06-10T06:29:55.942263+00:00",
+  "checked_at": "2026-06-10T06:31:36.651731+00:00",
   "phase": "ready_for_user_publication_steps",
   "severity": "ACTION_NEEDED",
   "next_action": "Complete the Devpost reCAPTCHA and save the PrizePilot portfolio project, then import it into the Qwen submission flow.",
   "deadline_utc": "2026-07-09T21:00:00+00:00",
-  "hours_until_deadline": 710.5,
+  "hours_until_deadline": 710.47,
   "artifact_checks": [
     {
       "path": "README.md",
@@ -100,13 +100,13 @@
       "path": "docs/public-package-checklist.md",
       "description": "Public package checklist",
       "exists": true,
-      "size": 1065
+      "size": 1056
     },
     {
       "path": "docs/validation-report.md",
       "description": "Validation report",
       "exists": true,
-      "size": 2462
+      "size": 2424
     },
     {
       "path": "docs/screenshots/prizepilot-dashboard-desktop.png",
