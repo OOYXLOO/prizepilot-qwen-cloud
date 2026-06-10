@@ -1,10 +1,10 @@
 {
-  "checked_at": "2026-06-10T08:02:28.333097+00:00",
+  "checked_at": "2026-06-10T08:09:38.656113+00:00",
   "phase": "ready_for_user_publication_steps",
   "severity": "ACTION_NEEDED",
   "next_action": "Upload the generated WebM demo to YouTube, Facebook Video, Vimeo, or Youku, then add that accepted video URL to the Qwen Devpost draft.",
   "deadline_utc": "2026-07-09T21:00:00+00:00",
-  "hours_until_deadline": 708.96,
+  "hours_until_deadline": 708.84,
   "artifact_checks": [
     {
       "path": "README.md",
@@ -23,6 +23,18 @@
       "description": "Deployment container file",
       "exists": true,
       "size": 352
+    },
+    {
+      "path": "deploy/alibaba-cloud/README.md",
+      "description": "Alibaba Cloud deployment adapter notes",
+      "exists": true,
+      "size": 1560
+    },
+    {
+      "path": "deploy/alibaba-cloud/s.yaml",
+      "description": "Alibaba Cloud Function Compute deployment manifest",
+      "exists": true,
+      "size": 1071
     },
     {
       "path": "pyproject.toml",
@@ -112,13 +124,13 @@
       "path": "docs/alibaba-cloud-deployment-runbook.md",
       "description": "Alibaba Cloud deployment runbook",
       "exists": true,
-      "size": 2048
+      "size": 2229
     },
     {
       "path": "docs/alibaba-cloud-deployment-proof-template.md",
       "description": "Deployment proof template",
       "exists": true,
-      "size": 225
+      "size": 333
     },
     {
       "path": "docs/publication-action-card.md",
@@ -130,7 +142,7 @@
       "path": "docs/public-package-checklist.md",
       "description": "Public package checklist",
       "exists": true,
-      "size": 1079
+      "size": 1113
     },
     {
       "path": "docs/validation-report.md",
@@ -171,8 +183,8 @@
     },
     {
       "gate": "alibaba cloud deployment proof",
-      "status": "no",
-      "next_action": "Deploy or otherwise produce approved Alibaba Cloud proof."
+      "status": "partial - Function Compute custom-container manifest prepared at deploy/alibaba-cloud/s.yaml; live Alibaba Cloud endpoint not verified",
+      "next_action": "Use the prepared Function Compute manifest with the user's Alibaba Cloud account, then record the live URL and proof evidence."
     },
     {
       "gate": "public demo video",

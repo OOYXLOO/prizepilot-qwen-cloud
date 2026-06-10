@@ -23,6 +23,7 @@ Expected local checks:
 
 Use the simplest user-approved Alibaba Cloud route available in the account at submission time:
 
+- Function Compute custom container using `deploy/alibaba-cloud/s.yaml`.
 - Container Registry + Serverless App Engine.
 - Container Registry + Elastic Container Instance.
 - ECS instance running the Docker image.
@@ -37,6 +38,7 @@ Do not fill these until the deployment actually exists.
 - Region:
 - Deployment URL:
 - Deployment timestamp:
+- Public code proof: https://github.com/OOYXLOO/prizepilot-qwen-cloud/blob/main/deploy/alibaba-cloud/s.yaml
 - Screenshot of dashboard:
 - Screenshot or response from `/api/plan`:
 - Commit/package hash or ZIP filename used:

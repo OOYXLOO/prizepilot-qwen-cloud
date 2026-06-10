@@ -1,0 +1,40 @@
+edition: 3.0.0
+name: prizepilot-qwen-cloud
+access: ${env('ALIBABA_CLOUD_ACCESS_ALIAS')}
+
+resources:
+  prizepilotApi:
+    component: fc3
+    props:
+      region: ${env('ALIBABA_CLOUD_REGION')}
+      functionName: prizepilot-qwen-cloud
+      description: PrizePilot Qwen Cloud hackathon demo API
+      runtime: custom-container
+      memorySize: 512
+      cpu: 0.5
+      diskSize: 512
+      timeout: 30
+      instanceConcurrency: 20
+      internetAccess: true
+      customContainerConfig:
+        image: ${env('ACR_IMAGE')}
+        port: 8000
+        healthCheckConfig:
+          httpGetUrl: /
+          initialDelaySeconds: 5
+          periodSeconds: 10
+          timeoutSeconds: 3
+          failureThreshold: 3
+          successThreshold: 1
+      environmentVariables:
+        PYTHONUNBUFFERED: "1"
+        PYTHONPATH: /app/src
+      triggers:
+        - triggerName: httpTrigger
+          triggerType: http
+          qualifier: LATEST
+          triggerConfig:
+            authType: anonymous
+            disableURLInternet: false
+            methods:
+              - GET

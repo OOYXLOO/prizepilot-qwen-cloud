@@ -21,7 +21,7 @@ Use this as the non-sensitive recovery record for the Qwen backup route. Do not 
 - Devpost portfolio project created: yes
 - Qwen/Alibaba Cloud account ready: no/unknown
 - Qwen live check completed: no
-- Alibaba Cloud deployment proof: no
+- Alibaba Cloud deployment proof: partial - Function Compute custom-container manifest prepared at deploy/alibaba-cloud/s.yaml; live Alibaba Cloud endpoint not verified
 - Public GitHub repository: yes
 - Public demo video: partial - generated local WebM at docs/demo-video/prizepilot-demo.webm; Devpost rejected GitHub raw WebM and requires YouTube, Facebook Video, Vimeo, or Youku URL
 - Public blog/social post: yes
@@ -55,6 +55,7 @@ Use this as the non-sensitive recovery record for the Qwen backup route. Do not 
 - Generated local demo GIF: `docs/screenshots/prizepilot-demo.gif`.
 - Prepared Qwen Blog Post Award build journal at `docs/blog/index.html`, with a lightweight `docs/index.html` redirect/landing page for GitHub Pages publication. This is not yet marked complete until a public URL is verified.
 - Enabled GitHub Pages for `main` / `docs` and verified the public Qwen build journal at https://ooyxloo.github.io/prizepilot-qwen-cloud/blog/ with HTTP 200 and the expected title `Building PrizePilot for the Qwen Cloud Hackathon`.
+- Prepared an Alibaba Cloud Function Compute custom-container manifest at `deploy/alibaba-cloud/s.yaml` and linked it from the deployment runbook/proof template. This is only a code proof path, not live deployment proof.
 
 ## Update Rules
 

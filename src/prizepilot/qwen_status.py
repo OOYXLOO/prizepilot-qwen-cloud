@@ -13,6 +13,8 @@ REQUIRED_ARTIFACTS = {
     "README.md": "Project README",
     "LICENSE": "License",
     "Dockerfile": "Deployment container file",
+    "deploy/alibaba-cloud/README.md": "Alibaba Cloud deployment adapter notes",
+    "deploy/alibaba-cloud/s.yaml": "Alibaba Cloud Function Compute deployment manifest",
     "pyproject.toml": "Python project metadata",
     "ARCHITECTURE.md": "Architecture notes",
     "architecture.svg": "Architecture diagram",
@@ -74,6 +76,8 @@ def public_gate_next_action(gate: str, status: str, default_action: str) -> str:
         return "Upload the generated WebM to a Devpost-supported video host: YouTube, Facebook Video, Vimeo, or Youku."
     if gate == "public blog/social post" and "partial" in normalized:
         return "Publish the prepared static blog page and record its public URL for the Qwen Blog Post Award field."
+    if gate == "alibaba cloud deployment proof" and "partial" in normalized:
+        return "Use the prepared Function Compute manifest with the user's Alibaba Cloud account, then record the live URL and proof evidence."
     return default_action
 
 def inspect_artifacts(root: Path) -> list[dict[str, object]]:
