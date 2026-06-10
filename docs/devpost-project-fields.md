@@ -24,3 +24,9 @@ Run the local service with:
 $env:PYTHONPATH='src'
 python -m prizepilot.webapp --host 127.0.0.1 --port 8000
 ```
+
+## Demo Media
+
+- `docs/screenshots/prizepilot-demo.gif`
+- `docs/screenshots/prizepilot-dashboard-desktop.png`
+- `docs/screenshots/prizepilot-dashboard-mobile.png`

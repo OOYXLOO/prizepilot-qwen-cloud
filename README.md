@@ -14,3 +14,8 @@ python -m prizepilot.webapp --host 127.0.0.1 --port 8000
 ```
 
 Live Qwen refinement is optional and requires `DASHSCOPE_API_KEY` or `QWEN_API_KEY` at action time only.
+
+## Demo Assets
+
+- Dashboard screenshots: `docs/screenshots/prizepilot-dashboard-desktop.png` and `docs/screenshots/prizepilot-dashboard-mobile.png`
+- Short demo GIF: `docs/screenshots/prizepilot-demo.gif`
