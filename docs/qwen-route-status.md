@@ -1,6 +1,6 @@
 # Qwen PrizePilot Route Status
 
-Generated: 2026-06-10T06:31:36.651731+00:00
+Generated: 2026-06-10T06:40:57.687787+00:00
 Phase: **ready_for_user_publication_steps**
 Severity: **ACTION_NEEDED**
 
@@ -9,7 +9,7 @@ Next action: Complete the Devpost reCAPTCHA and save the PrizePilot portfolio pr
 ## Deadline
 
 - Deadline UTC: `2026-07-09T21:00:00+00:00`
-- Hours until deadline: `710.47`
+- Hours until deadline: `710.32`
 
 ## Local Artifact Gate
 
@@ -18,7 +18,7 @@ Next action: Complete the Devpost reCAPTCHA and save the PrizePilot portfolio pr
 ## Public/Account Gates
 
 - Incomplete public/account gates: `8`
-- `devpost portfolio project created`: `blocked by Devpost reCAPTCHA after project name entry` - Complete the visible Devpost reCAPTCHA, save the PrizePilot portfolio project, then continue the Qwen import/submission flow.
+- `devpost portfolio project created`: `blocked by Devpost reCAPTCHA after project name entry; reconfirmed on 2026-06-10 in the active browser session with PrizePilot typed into the project-name field and g-recaptcha-response present after save attempt` - Complete the visible Devpost reCAPTCHA, save the PrizePilot portfolio project, then continue the Qwen import/submission flow.
 - `qwen/alibaba cloud account ready`: `no/unknown` - Create/access Qwen or Alibaba Cloud account.
 - `qwen live check completed`: `no` - Run Qwen/DashScope live check with user-provided API key at action time.
 - `alibaba cloud deployment proof`: `no` - Deploy or otherwise produce approved Alibaba Cloud proof.

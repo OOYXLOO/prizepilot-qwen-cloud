@@ -9,7 +9,7 @@ Current state on 2026-06-10:
 - Local public package is ready at `qwen-prizepilot-public.zip`.
 - Local demo recording page is ready at `docs/demo-recording-page.html`; use `docs/demo-recording-runbook.md` to produce the public demo video after publication gates are unblocked.
 - GitHub code push is blocked by GitHub HTTPS/SSH authorization, not by local package readiness.
-- Devpost portfolio project creation is blocked by reCAPTCHA after entering project name `PrizePilot`.
+- Devpost portfolio project creation is blocked by reCAPTCHA after entering project name `PrizePilot`; this was reconfirmed in the active browser session on 2026-06-10.
 - Local Git commit history has been rewritten to use `OOYXLOO@users.noreply.github.com` instead of the user's QQ email before any public push.
 
 Minimum public package:
