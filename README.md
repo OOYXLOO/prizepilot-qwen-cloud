@@ -6,6 +6,8 @@ The project is intentionally conservative: it records public repository, blog, v
 
 ## Current Public Status
 
+Latest review status as of 2026-06-10: the repository, build journal, and route status files are the current source of truth for PrizePilot's submission state.
+
 - Devpost project: https://devpost.com/software/prizepilot-qwen-cloud
 - Public demo video: https://vimeo.com/1200124146
 - Public build journal: https://ooyxloo.github.io/prizepilot-qwen-cloud/blog/
@@ -18,7 +20,8 @@ The project is intentionally conservative: it records public repository, blog, v
 The fastest review path is:
 
 1. Open the Devpost project and demo video above.
-2. Run the local dashboard:
+2. Read the build journal for the current public evidence boundary.
+3. Run the local dashboard:
 
 ## Local Use
 
@@ -30,8 +33,8 @@ python -m prizepilot portfolio samples/splunk_agentic_ops.json samples/qwen_hack
 python -m prizepilot.webapp --host 127.0.0.1 --port 8000
 ```
 
-3. Inspect the machine-readable planning payload at `http://127.0.0.1:8000/api/plan`.
-4. Review `docs/submission-story.md`, `docs/qwen-route-status.md`, and `docs/validation-report.md` for the evidence boundary.
+4. Inspect the machine-readable planning payload at `http://127.0.0.1:8000/api/plan`.
+5. Review `docs/submission-story.md`, `docs/qwen-route-status.md`, and `docs/validation-report.md` for the evidence boundary.
 
 Live Qwen refinement is optional and requires `DASHSCOPE_API_KEY` or `QWEN_API_KEY` at action time only.
 The Mind the Product route additionally requires Novus email verification and official Novus installation before final Devpost submission. The web service exposes `/api/novus-readiness` so that gate can be tracked without claiming completion early.
