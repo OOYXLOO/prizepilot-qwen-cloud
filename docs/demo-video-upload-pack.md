@@ -1,6 +1,6 @@
 # Demo Video Upload Pack
 
-Use this when a YouTube, Vimeo, Facebook Video, or Youku upload session is available.
+Use this when a YouTube, Vimeo, or Facebook Video upload session is available. The Devpost video field also displays Youku as a generic accepted host, but the Qwen official requirements say videos must be uploaded to YouTube, Vimeo, or Facebook Video and made public, so prefer those three for rule compliance.
 
 ## Local File
 

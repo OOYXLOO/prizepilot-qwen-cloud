@@ -9,6 +9,7 @@
 - [x] Qwen route ledger and next-action status
 - [x] Qwen official rule notes
 - [x] Blog draft aligned to Blog Post Award and project submission requirements
+- [x] Devpost architecture PNG
 - [x] Unit tests
 - [x] Approval checkpoints
 - [x] Static dashboard
@@ -18,7 +19,7 @@
 - [x] Deployable standard-library web/API service
 - [x] Dockerfile for cloud deployment
 - [x] Alibaba Cloud deployment evidence runbook
-- [ ] Public GitHub repository
+- [x] Public GitHub repository
 - [ ] Public demo video
 - [ ] Alibaba Cloud deployment proof
 - [ ] Devpost final submission

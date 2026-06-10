@@ -18,6 +18,7 @@ REQUIRED_ARTIFACTS = {
     "pyproject.toml": "Python project metadata",
     "ARCHITECTURE.md": "Architecture notes",
     "architecture.svg": "Architecture diagram",
+    "architecture.png": "Devpost architecture diagram upload",
     "web/index.html": "Static dashboard demo",
     "docs/index.html": "Public build notes landing page",
     "docs/blog/index.html": "Public blog page for Blog Post Award",
@@ -75,10 +76,10 @@ def public_gate_next_action(gate: str, status: str, default_action: str) -> str:
         return "Complete the visible Devpost reCAPTCHA, save the PrizePilot portfolio project, then continue the Qwen import/submission flow."
     if gate == "qwen/alibaba cloud account ready" and "partial" in normalized:
         if "verification code" in normalized or "email" in normalized:
-            return "Enter the Qwen Cloud email verification code in the active browser, then confirm whether the account reaches the benefits/console page."
+            return "Open or restore the Qwen Cloud email verification page, enter the current email code, then confirm whether the account reaches the benefits/console page."
         return "Finish the remaining Qwen/Alibaba account verification step, then record the non-sensitive account-ready status."
     if gate == "public demo video" and "partial" in normalized:
-        return "Upload the generated WebM to a Devpost-supported video host: YouTube, Facebook Video, Vimeo, or Youku."
+        return "Upload the generated WebM to a Qwen-compliant public video host: YouTube, Facebook Video, or Vimeo."
     if gate == "public blog/social post" and "partial" in normalized:
         return "Publish the prepared static blog page and record its public URL for the Qwen Blog Post Award field."
     if gate == "alibaba cloud deployment proof" and "partial" in normalized:
@@ -144,11 +145,11 @@ def build_status(root: Path, ledger_path: Path, now: datetime | None = None) -> 
         if not is_yes(fields.get("devpost portfolio project created", "")):
             next_action = "Complete the Devpost reCAPTCHA and save the PrizePilot portfolio project, then import it into the Qwen submission flow."
         elif "partial" in fields.get("qwen/alibaba cloud account ready", "").lower():
-            next_action = "Enter the Qwen Cloud email verification code in the active browser, then continue account setup until benefits/console access is verified."
+            next_action = "Open or restore the Qwen Cloud email verification page, enter the current email code, then continue account setup until benefits/console access is verified."
         elif "partial" in fields.get("public github repository", "").lower():
             next_action = "Authorize GitHub publication and push the prepared local package to the existing public repository."
         elif "partial" in fields.get("public demo video", "").lower():
-            next_action = "Upload the generated WebM demo to YouTube, Facebook Video, Vimeo, or Youku, then add that accepted video URL to the Qwen Devpost draft."
+            next_action = "Upload the generated WebM demo to YouTube, Facebook Video, or Vimeo, then add that accepted video URL to the Qwen Devpost draft."
         elif "partial" in fields.get("public blog/social post", "").lower():
             next_action = "Publish the prepared static blog page and add its public URL to the Qwen Devpost draft."
         else:

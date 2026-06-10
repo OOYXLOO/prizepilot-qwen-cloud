@@ -1,16 +1,16 @@
 {
-  "checked_at": "2026-06-10T08:34:53.717522+00:00",
+  "checked_at": "2026-06-10T08:52:06.736386+00:00",
   "phase": "ready_for_user_publication_steps",
   "severity": "ACTION_NEEDED",
-  "next_action": "Enter the Qwen Cloud email verification code in the active browser, then continue account setup until benefits/console access is verified.",
+  "next_action": "Open or restore the Qwen Cloud email verification page, enter the current email code, then continue account setup until benefits/console access is verified.",
   "deadline_utc": "2026-07-09T21:00:00+00:00",
-  "hours_until_deadline": 708.42,
+  "hours_until_deadline": 708.13,
   "artifact_checks": [
     {
       "path": "README.md",
       "description": "Project README",
       "exists": true,
-      "size": 1207
+      "size": 1306
     },
     {
       "path": "LICENSE",
@@ -55,6 +55,12 @@
       "size": 2266
     },
     {
+      "path": "architecture.png",
+      "description": "Devpost architecture diagram upload",
+      "exists": true,
+      "size": 60016
+    },
+    {
       "path": "web/index.html",
       "description": "Static dashboard demo",
       "exists": true,
@@ -94,13 +100,13 @@
       "path": "docs/demo-video-url-candidates.md",
       "description": "Demo video URL candidate notes",
       "exists": true,
-      "size": 1693
+      "size": 1945
     },
     {
       "path": "docs/demo-video-upload-pack.md",
       "description": "Demo video host upload metadata",
       "exists": true,
-      "size": 1685
+      "size": 1910
     },
     {
       "path": "tools/record_demo_webm.mjs",
@@ -112,13 +118,13 @@
       "path": "docs/devpost-project-fields.md",
       "description": "Devpost field draft",
       "exists": true,
-      "size": 1754
+      "size": 2933
     },
     {
       "path": "docs/qwen-start-handoff-template.md",
       "description": "User launch handoff template",
       "exists": true,
-      "size": 4862
+      "size": 4883
     },
     {
       "path": "docs/qwen-cloud-live-check.md",
@@ -148,7 +154,7 @@
       "path": "docs/public-package-checklist.md",
       "description": "Public package checklist",
       "exists": true,
-      "size": 1137
+      "size": 1155
     },
     {
       "path": "docs/validation-report.md",
@@ -179,8 +185,8 @@
   "incomplete_public_gates": [
     {
       "gate": "qwen/alibaba cloud account ready",
-      "status": "partial - GitHub OAuth authorized for qwencloud.com and verification code sent to registered email; browser is waiting for the email code",
-      "next_action": "Enter the Qwen Cloud email verification code in the active browser, then confirm whether the account reaches the benefits/console page."
+      "status": "partial - GitHub OAuth authorized for qwencloud.com and verification code sent to registered email; Qwen verification must be reopened or restored before entering the current email code",
+      "next_action": "Open or restore the Qwen Cloud email verification page, enter the current email code, then confirm whether the account reaches the benefits/console page."
     },
     {
       "gate": "qwen live check completed",
@@ -194,8 +200,8 @@
     },
     {
       "gate": "public demo video",
-      "status": "partial - generated local WebM at docs/demo-video/prizepilot-demo.webm; Devpost rejected GitHub raw WebM and requires YouTube, Facebook Video, Vimeo, or Youku URL",
-      "next_action": "Upload the generated WebM to a Devpost-supported video host: YouTube, Facebook Video, Vimeo, or Youku."
+      "status": "partial - generated local WebM at docs/demo-video/prizepilot-demo.webm; Devpost rejected GitHub raw WebM; Qwen official requirements call for a public YouTube, Facebook Video, or Vimeo URL",
+      "next_action": "Upload the generated WebM to a Qwen-compliant public video host: YouTube, Facebook Video, or Vimeo."
     },
     {
       "gate": "devpost final submitted",

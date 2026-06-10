@@ -19,11 +19,11 @@ Use this as the non-sensitive recovery record for the Qwen backup route. Do not 
 
 - Devpost hackathon joined: yes
 - Devpost portfolio project created: yes
-- Qwen/Alibaba Cloud account ready: partial - GitHub OAuth authorized for qwencloud.com and verification code sent to registered email; browser is waiting for the email code
+- Qwen/Alibaba Cloud account ready: partial - GitHub OAuth authorized for qwencloud.com and verification code sent to registered email; Qwen verification must be reopened or restored before entering the current email code
 - Qwen live check completed: no
 - Alibaba Cloud deployment proof: partial - Function Compute custom-container manifest prepared at deploy/alibaba-cloud/s.yaml; live Alibaba Cloud endpoint not verified
 - Public GitHub repository: yes
-- Public demo video: partial - generated local WebM at docs/demo-video/prizepilot-demo.webm; Devpost rejected GitHub raw WebM and requires YouTube, Facebook Video, Vimeo, or Youku URL
+- Public demo video: partial - generated local WebM at docs/demo-video/prizepilot-demo.webm; Devpost rejected GitHub raw WebM; Qwen official requirements call for a public YouTube, Facebook Video, or Vimeo URL
 - Public blog/social post: yes
 - Devpost final submitted: no
 - Prize claim or winner notification status: not started
@@ -36,6 +36,7 @@ Use this as the non-sensitive recovery record for the Qwen backup route. Do not 
 - Deployment URL:
 - Demo video URL:
 - Blog/social post URL: https://ooyxloo.github.io/prizepilot-qwen-cloud/blog/
+- Architecture diagram file: architecture.png
 - Devpost project URL: https://devpost.com/software/prizepilot-qwen-cloud
 - Qwen submission draft URL: https://devpost.com/submit-to/29966-global-ai-hackathon-series-with-qwen-cloud/manage/submissions/1046103-prizepilot-qwen-cloud/project_details
 - Submission timestamp:
@@ -57,7 +58,9 @@ Use this as the non-sensitive recovery record for the Qwen backup route. Do not 
 - Enabled GitHub Pages for `main` / `docs` and verified the public Qwen build journal at https://ooyxloo.github.io/prizepilot-qwen-cloud/blog/ with HTTP 200 and the expected title `Building PrizePilot for the Qwen Cloud Hackathon`.
 - Prepared an Alibaba Cloud Function Compute custom-container manifest at `deploy/alibaba-cloud/s.yaml` and linked it from the deployment runbook/proof template. This is only a code proof path, not live deployment proof.
 - Checked the YouTube upload path. The browser showed Google sign-in for YouTube upload, so no usable YouTube upload session is currently available. Video remains blocked on a supported video-host login/session.
-- Started Qwen Cloud account setup from https://home.qwencloud.com/benefits using GitHub OAuth for Devpost/GitHub user `OOYXLOO`. GitHub OAuth authorized `qwencloud.com` read-only profile access, then Qwen Cloud required an email because GitHub did not return one. Entered the registered email and clicked `Send Code`; the page showed `Resend in 59s` and is waiting for the email verification code. Do not store or paste the code into local files.
+- Started Qwen Cloud account setup from https://home.qwencloud.com/benefits using GitHub OAuth for Devpost/GitHub user `OOYXLOO`. GitHub OAuth authorized `qwencloud.com` read-only profile access, then Qwen Cloud required an email because GitHub did not return one. Entered the registered email and clicked `Send Code`; the page showed `Resend in 59s`. Later browser work moved the active tab to the Qwen Devpost draft, so Qwen Cloud verification must be reopened or restored before entering a current email code. Do not store or paste the code into local files.
+- Generated `architecture.png` from the existing architecture model for the Qwen Devpost Additional info upload. The file is local/public-package material and contains no secrets.
+- Reopened the Qwen Devpost draft from the hackathon page. The direct deep link without `/edit` returned a Devpost 404, but the hackathon page showed the logged-in `OOYXLOO` account, `Edit project`, draft status, and `2/5 steps done`; the edit URL resolved to `/project_details/edit`.
 
 ## Update Rules
 

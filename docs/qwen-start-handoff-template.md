@@ -11,11 +11,11 @@ Do not paste passwords, OTPs, API keys, recovery codes, payment data, tax data, 
 - Primary prize target: Blog Post Award, USD 500 cash + USD 500 cloud credits, 10 winners.
 - Secondary prize target: Top 10 Honorable Mention Projects, USD 500 cash + USD 500 cloud credits, 10 winners.
 - Project: PrizePilot, an Autopilot Agent for turning prize/hackathon pages into executable submission plans and human action queues.
-- Current account state: Qwen Devpost registration complete as `OOYXLOO`; Devpost portfolio project and Qwen submission draft are created; Qwen Cloud GitHub OAuth reached email verification and is waiting for the email code.
+- Current account state: Qwen Devpost registration complete as `OOYXLOO`; Devpost portfolio project and Qwen submission draft are created; Qwen Cloud GitHub OAuth reached email verification, but the verification page may need to be reopened and a current email code entered.
 - Current repository state: public GitHub repository is published at https://github.com/OOYXLOO/prizepilot-qwen-cloud.
 - Current blog state: public build journal is published at https://ooyxloo.github.io/prizepilot-qwen-cloud/blog/.
 - Current Alibaba proof state: Function Compute custom-container manifest is prepared at `deploy/alibaba-cloud/s.yaml`, but no live cloud endpoint is verified.
-- Current video state: local silent WebM exists at `docs/demo-video/prizepilot-demo.webm`, but Devpost requires a YouTube, Facebook Video, Vimeo, or Youku URL for the Qwen Project details page.
+- Current video state: local silent WebM exists at `docs/demo-video/prizepilot-demo.webm`, but Qwen official requirements call for a public YouTube, Facebook Video, or Vimeo URL for the demo video.
 
 The blog prize is not standalone. It still requires a qualified Devpost project submission, public repo, demo/video, blog or social post, and Alibaba Cloud deployment proof.
 
@@ -38,7 +38,7 @@ Eligibility confirmation:
 I confirm I am eligible for the Qwen Cloud Global AI Hackathon under the official rules, including age, location, employment/conflict, and non-sanctioned-region requirements. I understand that if selected as a potential winner, identity, qualification, tax, and payment verification may be required before any prize is delivered.
 
 Preparation authorization:
-Please prepare the Qwen PrizePilot public package, live-check commands, deployment checklist, demo video metadata, and Devpost submission fields for my review. Do not create accounts, deploy cloud resources, upload videos, run API keys, or submit Devpost forms without separate action-time confirmation.
+Please prepare the Qwen PrizePilot public package, live-check commands, deployment checklist, demo video metadata, and Devpost submission fields. Do not store passwords, OTPs, API keys, payment, tax, KYC, or recovery details.
 ```
 
 ## Current Two-Minute Unblock Prompt
@@ -46,7 +46,7 @@ Please prepare the Qwen PrizePilot public package, live-check commands, deployme
 Use this after the Qwen Cloud verification code arrives in the registered email inbox:
 
 ```text
-The Qwen Cloud verification code is available in the browser/email inbox. Continue account setup from the active Qwen Cloud verification page. Do not store the code in files or ledgers.
+The Qwen Cloud verification code is available in the browser/email inbox. Reopen or restore the Qwen Cloud verification page if needed, enter the current code, and continue account setup. Do not store the code in files or ledgers.
 ```
 
 Use this after you upload the generated WebM to a supported video host:

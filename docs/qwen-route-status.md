@@ -1,15 +1,15 @@
 # Qwen PrizePilot Route Status
 
-Generated: 2026-06-10T08:34:53.717522+00:00
+Generated: 2026-06-10T08:52:06.736386+00:00
 Phase: **ready_for_user_publication_steps**
 Severity: **ACTION_NEEDED**
 
-Next action: Enter the Qwen Cloud email verification code in the active browser, then continue account setup until benefits/console access is verified.
+Next action: Open or restore the Qwen Cloud email verification page, enter the current email code, then continue account setup until benefits/console access is verified.
 
 ## Deadline
 
 - Deadline UTC: `2026-07-09T21:00:00+00:00`
-- Hours until deadline: `708.42`
+- Hours until deadline: `708.13`
 
 ## Local Artifact Gate
 
@@ -18,10 +18,10 @@ Next action: Enter the Qwen Cloud email verification code in the active browser,
 ## Public/Account Gates
 
 - Incomplete public/account gates: `5`
-- `qwen/alibaba cloud account ready`: `partial - GitHub OAuth authorized for qwencloud.com and verification code sent to registered email; browser is waiting for the email code` - Enter the Qwen Cloud email verification code in the active browser, then confirm whether the account reaches the benefits/console page.
+- `qwen/alibaba cloud account ready`: `partial - GitHub OAuth authorized for qwencloud.com and verification code sent to registered email; Qwen verification must be reopened or restored before entering the current email code` - Open or restore the Qwen Cloud email verification page, enter the current email code, then confirm whether the account reaches the benefits/console page.
 - `qwen live check completed`: `no` - Run Qwen/DashScope live check with user-provided API key at action time.
 - `alibaba cloud deployment proof`: `partial - Function Compute custom-container manifest prepared at deploy/alibaba-cloud/s.yaml; live Alibaba Cloud endpoint not verified` - Use the prepared Function Compute manifest with the user's Alibaba Cloud account, then record the live URL and proof evidence.
-- `public demo video`: `partial - generated local WebM at docs/demo-video/prizepilot-demo.webm; Devpost rejected GitHub raw WebM and requires YouTube, Facebook Video, Vimeo, or Youku URL` - Upload the generated WebM to a Devpost-supported video host: YouTube, Facebook Video, Vimeo, or Youku.
+- `public demo video`: `partial - generated local WebM at docs/demo-video/prizepilot-demo.webm; Devpost rejected GitHub raw WebM; Qwen official requirements call for a public YouTube, Facebook Video, or Vimeo URL` - Upload the generated WebM to a Qwen-compliant public video host: YouTube, Facebook Video, or Vimeo.
 - `devpost final submitted`: `no` - Submit final Devpost project after review and explicit confirmation.
 
 ## Reference Files

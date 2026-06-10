@@ -1,8 +1,8 @@
 # PrizePilot
 
-PrizePilot is a Qwen Cloud hackathon submission draft for Track 4, Autopilot Agent. It turns hackathon and bounty opportunities into ranked execution plans, public artifact drafts, and human approval checkpoints.
+PrizePilot is a Qwen Cloud hackathon submission for Track 4, Autopilot Agent. It turns hackathon and bounty opportunities into ranked execution plans, public artifact drafts, and human approval checkpoints.
 
-The project is intentionally conservative: it does not claim public submission, Alibaba Cloud deployment, Qwen API usage, public repository publication, or payout eligibility until those events actually happen.
+The project is intentionally conservative: it records public repository and blog publication after verification, but it does not claim final Devpost submission, live Alibaba Cloud deployment, Qwen API usage, or payout eligibility until those events actually happen.
 
 ## Local Use
 
@@ -19,5 +19,6 @@ Live Qwen refinement is optional and requires `DASHSCOPE_API_KEY` or `QWEN_API_K
 
 - Dashboard screenshots: `docs/screenshots/prizepilot-dashboard-desktop.png` and `docs/screenshots/prizepilot-dashboard-mobile.png`
 - Short demo GIF: `docs/screenshots/prizepilot-demo.gif`
+- Devpost architecture upload: `architecture.png`
 - Recording page: `docs/demo-recording-page.html`
 - Recording runbook: `docs/demo-recording-runbook.md`
