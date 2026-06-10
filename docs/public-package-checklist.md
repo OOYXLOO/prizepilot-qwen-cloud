@@ -4,10 +4,10 @@ Required: README, LICENSE, pyproject.toml, ARCHITECTURE.md, architecture.svg, Do
 
 Forbidden: `.env`, API keys, passwords, OTPs, payment data, tax data, KYC data, `__pycache__`, `*.pyc`, `.pytest_cache`, `.venv`, `dist`, `build`.
 
-Latest inspection on 2026-06-10 after publishing the Qwen build journal:
+Latest inspection on 2026-06-10 after adding the Alibaba Cloud deployment adapter:
 
 - Package: `qwen-prizepilot-public.zip`
-- Entries: 63
+- Entries: 67
 - Missing required entries: 0
 - Forbidden cache/private entries: 0
 - Exact byte count is not a gate.
