@@ -23,9 +23,10 @@ Important: the blog route is not standalone. It still needs a qualified Devpost 
 
 Immediate unblock sequence:
 
-1. Upload `docs/demo-video/prizepilot-demo.webm` to YouTube, Facebook Video, or Vimeo using the metadata in `docs/demo-video-upload-pack.md`.
-2. Add the accepted video URL to the Qwen Project details page.
-3. Continue with Qwen/Alibaba live check and deployment proof only after the account/API-key boundary is handled at action time.
+1. In the current Devpost Additional info browser page, use the native file picker to upload `architecture.png`, then click `Save & continue`.
+2. Upload `docs/demo-video/prizepilot-demo.webm` to YouTube, Facebook Video, or Vimeo using the metadata in `docs/demo-video-upload-pack.md`.
+3. Add the accepted video URL to the Qwen Project details page.
+4. Continue with Qwen/Alibaba live check and deployment proof only after the account/API-key boundary is handled at action time.
 
 Final submission confirmation:
 

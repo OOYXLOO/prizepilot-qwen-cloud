@@ -54,3 +54,7 @@ Paste from `docs/submission-story.md`.
 - Blog/social post: https://ooyxloo.github.io/prizepilot-qwen-cloud/blog/
 - AI tools used: Qwen Cloud / DashScope-compatible API path for optional refinement, Codex for implementation assistance, GitHub for source publication, and local Python validation tools.
 - Learning level: Significant
+
+## Current Browser-Filled Additional Info State
+
+The active Devpost Additional info page has been filled with the values above, including the eligibility confirmations, but it has not been saved because the required architecture diagram upload uses a native file picker. Upload `architecture.png` through the page's file chooser and click `Save & continue` before treating this step as complete.
