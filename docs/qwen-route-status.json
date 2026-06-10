@@ -1,10 +1,10 @@
 {
-  "checked_at": "2026-06-10T07:46:23.051892+00:00",
+  "checked_at": "2026-06-10T07:55:32.873954+00:00",
   "phase": "ready_for_user_publication_steps",
   "severity": "ACTION_NEEDED",
   "next_action": "Upload the generated WebM demo to YouTube, Facebook Video, Vimeo, or Youku, then add that accepted video URL to the Qwen Devpost draft.",
   "deadline_utc": "2026-07-09T21:00:00+00:00",
-  "hours_until_deadline": 709.23,
+  "hours_until_deadline": 709.07,
   "artifact_checks": [
     {
       "path": "README.md",
@@ -47,6 +47,18 @@
       "description": "Static dashboard demo",
       "exists": true,
       "size": 1488
+    },
+    {
+      "path": "docs/index.html",
+      "description": "Public build notes landing page",
+      "exists": true,
+      "size": 749
+    },
+    {
+      "path": "docs/blog/index.html",
+      "description": "Public blog page for Blog Post Award",
+      "exists": true,
+      "size": 11788
     },
     {
       "path": "docs/blog-draft.md",
@@ -118,7 +130,7 @@
       "path": "docs/public-package-checklist.md",
       "description": "Public package checklist",
       "exists": true,
-      "size": 1056
+      "size": 1074
     },
     {
       "path": "docs/validation-report.md",
@@ -169,8 +181,8 @@
     },
     {
       "gate": "public blog/social post",
-      "status": "no",
-      "next_action": "Publish approved blog/social post for Blog Post Award."
+      "status": "partial - static blog page prepared at docs/blog/index.html; needs a verified public URL before entering it in Devpost",
+      "next_action": "Publish the prepared static blog page and record its public URL for the Qwen Blog Post Award field."
     },
     {
       "gate": "devpost final submitted",

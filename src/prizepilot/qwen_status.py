@@ -17,6 +17,8 @@ REQUIRED_ARTIFACTS = {
     "ARCHITECTURE.md": "Architecture notes",
     "architecture.svg": "Architecture diagram",
     "web/index.html": "Static dashboard demo",
+    "docs/index.html": "Public build notes landing page",
+    "docs/blog/index.html": "Public blog page for Blog Post Award",
     "docs/blog-draft.md": "Blog/social post draft",
     "docs/demo-video-script.md": "Demo video script",
     "docs/demo-video/prizepilot-demo.webm": "Generated silent demo WebM",
@@ -70,6 +72,8 @@ def public_gate_next_action(gate: str, status: str, default_action: str) -> str:
         return "Complete the visible Devpost reCAPTCHA, save the PrizePilot portfolio project, then continue the Qwen import/submission flow."
     if gate == "public demo video" and "partial" in normalized:
         return "Upload the generated WebM to a Devpost-supported video host: YouTube, Facebook Video, Vimeo, or Youku."
+    if gate == "public blog/social post" and "partial" in normalized:
+        return "Publish the prepared static blog page and record its public URL for the Qwen Blog Post Award field."
     return default_action
 
 def inspect_artifacts(root: Path) -> list[dict[str, object]]:
@@ -134,6 +138,8 @@ def build_status(root: Path, ledger_path: Path, now: datetime | None = None) -> 
             next_action = "Authorize GitHub publication and push the prepared local package to the existing public repository."
         elif "partial" in fields.get("public demo video", "").lower():
             next_action = "Upload the generated WebM demo to YouTube, Facebook Video, Vimeo, or Youku, then add that accepted video URL to the Qwen Devpost draft."
+        elif "partial" in fields.get("public blog/social post", "").lower():
+            next_action = "Publish the prepared static blog page and add its public URL to the Qwen Devpost draft."
         else:
             next_action = "Use docs/qwen-start-handoff-template.md for the remaining Qwen/Alibaba, deployment, blog/video, and final submission gates."
 

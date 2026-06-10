@@ -24,7 +24,7 @@ Use this as the non-sensitive recovery record for the Qwen backup route. Do not 
 - Alibaba Cloud deployment proof: no
 - Public GitHub repository: yes
 - Public demo video: partial - generated local WebM at docs/demo-video/prizepilot-demo.webm; Devpost rejected GitHub raw WebM and requires YouTube, Facebook Video, Vimeo, or Youku URL
-- Public blog/social post: no
+- Public blog/social post: partial - static blog page prepared at docs/blog/index.html; needs a verified public URL before entering it in Devpost
 - Devpost final submitted: no
 - Prize claim or winner notification status: not started
 - Payout received: no
@@ -53,6 +53,7 @@ Use this as the non-sensitive recovery record for the Qwen backup route. Do not 
 - Project details are blocked on the required video field. Devpost rejected `https://raw.githubusercontent.com/ooyxloo/prizepilot-qwen-cloud/main/docs/demo-video/prizepilot-demo.webm` with: `must be a valid YouTube, Facebook Video, Vimeo or Youku URL`.
 - Next action: upload the generated WebM to a supported video host, then add that URL to the Qwen Project details page and continue to Additional info.
 - Generated local demo GIF: `docs/screenshots/prizepilot-demo.gif`.
+- Prepared Qwen Blog Post Award build journal at `docs/blog/index.html`, with a lightweight `docs/index.html` redirect/landing page for GitHub Pages publication. This is not yet marked complete until a public URL is verified.
 
 ## Update Rules
 

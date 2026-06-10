@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Building PrizePilot for the Qwen Cloud Hackathon</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #17202a;
+      --muted: #536273;
+      --line: #d7dde5;
+      --paper: #ffffff;
+      --wash: #f4f7fa;
+      --teal: #0f766e;
+      --blue: #2563eb;
+      --amber: #b45309;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--ink);
+      background: var(--wash);
+    }
+
+    header {
+      background: var(--paper);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .wrap {
+      width: min(1040px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    .hero {
+      padding: 52px 0 34px;
+    }
+
+    .eyebrow {
+      margin: 0 0 14px;
+      color: var(--teal);
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 0;
+      max-width: 880px;
+      font-size: clamp(34px, 5vw, 58px);
+      line-height: 1.06;
+      letter-spacing: 0;
+    }
+
+    .dek {
+      max-width: 780px;
+      margin: 18px 0 0;
+      color: var(--muted);
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 22px;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      min-height: 30px;
+      padding: 6px 10px;
+      border: 1px solid var(--line);
+      background: #f9fbfd;
+      color: #273443;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    main {
+      padding: 34px 0 64px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 300px;
+      gap: 28px;
+      align-items: start;
+    }
+
+    article {
+      min-width: 0;
+    }
+
+    section {
+      padding: 28px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    section:first-child {
+      padding-top: 0;
+    }
+
+    h2 {
+      margin: 0 0 14px;
+      font-size: 26px;
+      line-height: 1.2;
+      letter-spacing: 0;
+    }
+
+    h3 {
+      margin: 22px 0 8px;
+      font-size: 19px;
+      letter-spacing: 0;
+    }
+
+    p, li {
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.62;
+    }
+
+    p {
+      margin: 0 0 14px;
+    }
+
+    ul, ol {
+      margin: 0 0 14px 22px;
+      padding: 0;
+    }
+
+    a {
+      color: var(--blue);
+      font-weight: 700;
+    }
+
+    code {
+      padding: 2px 5px;
+      background: #eaf0f7;
+      color: #1d2a39;
+      font-size: 0.94em;
+    }
+
+    .callout {
+      margin: 18px 0 0;
+      padding: 16px 18px;
+      border-left: 5px solid var(--teal);
+      background: var(--paper);
+    }
+
+    .callout.warning {
+      border-color: var(--amber);
+    }
+
+    .callout strong {
+      color: var(--ink);
+    }
+
+    aside {
+      position: sticky;
+      top: 16px;
+      padding: 20px;
+      background: var(--paper);
+      border: 1px solid var(--line);
+    }
+
+    aside h2 {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .status-list {
+      list-style: none;
+      margin: 0;
+    }
+
+    .status-list li {
+      padding: 11px 0;
+      border-top: 1px solid var(--line);
+      color: var(--ink);
+      font-size: 14px;
+      line-height: 1.45;
+    }
+
+    .status-list li:first-child {
+      border-top: 0;
+    }
+
+    .status-list span {
+      display: block;
+      margin-top: 3px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    footer {
+      padding: 28px 0 38px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    @media (max-width: 840px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      aside {
+        position: static;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap hero">
+      <p class="eyebrow">Qwen Cloud Hackathon build journal</p>
+      <h1>Building PrizePilot: an accountable autopilot for hackathon execution</h1>
+      <p class="dek">PrizePilot turns prize pages into ranked execution plans, public artifact drafts, and human approval checkpoints. This post documents the current Qwen Cloud hackathon build path, what is already working, and what proof still has to be captured before final submission.</p>
+      <div class="meta" aria-label="Project metadata">
+        <span class="tag">Track 4: Autopilot Agent</span>
+        <span class="tag">Public repo ready</span>
+        <span class="tag">Qwen-ready client</span>
+        <span class="tag">Evidence-first workflow</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <div class="grid">
+      <article>
+        <section>
+          <h2>The problem</h2>
+          <p>Online hackathons look like a fast path to income, but the useful decision is not simply which prize has the biggest headline number. The better question is which route is actually reachable with the time, account access, evidence requirements, and public actions available right now.</p>
+          <p>PrizePilot was built around that practical question. It reads structured opportunity data, ranks cash-prize routes, and turns the best route into a concrete execution plan. The agent is intentionally useful before the risky steps: account creation, API keys, public repositories, videos, blog posts, cloud deployment, payout setup, and final submission buttons.</p>
+        </section>
+
+        <section>
+          <h2>Why this fits Track 4</h2>
+          <p>Track 4 focuses on agents that automate real-world business workflows end to end while handling ambiguous inputs, external tools, and human-in-the-loop checkpoints. PrizePilot applies that pattern to hackathon execution, where the raw inputs are messy and the cost of a false claim is high.</p>
+          <p>The workflow asks and answers operational questions:</p>
+          <ul>
+            <li>Which prize route should be attempted first?</li>
+            <li>Which prizes have multiple winners and practical eligibility?</li>
+            <li>Which steps can be prepared offline without external side effects?</li>
+            <li>Which steps require identity, account access, API keys, public publishing, or final approval?</li>
+            <li>What proof needs to be captured before a claim appears in a Devpost submission?</li>
+          </ul>
+          <div class="callout">
+            <strong>Product thesis:</strong> the strongest agent is not the one that blindly clicks every form. It is the one that keeps momentum while preserving a clean evidence trail.
+          </div>
+        </section>
+
+        <section>
+          <h2>Current planning behavior</h2>
+          <p>The local deterministic planner ranks opportunities by prize value, number of winners, deadline pressure, and blockers. In the current sample portfolio, a near-deadline Splunk feedback route stays first because it is a multi-winner, low-friction prize. The Qwen Cloud route is the higher-upside second wave because it requires a qualified Devpost project, public repository, public video, blog/social URL, Qwen Cloud usage, and Alibaba Cloud deployment proof.</p>
+          <p>That distinction is the core of PrizePilot: it does not chase the largest pool if the evidence cannot be produced. It chooses the route that can be completed honestly.</p>
+        </section>
+
+        <section>
+          <h2>Qwen Cloud integration plan</h2>
+          <p>PrizePilot is Qwen-ready through an OpenAI-compatible DashScope client. The deterministic planner works locally so every recommendation can be audited. After a Qwen or DashScope API key is provided at runtime, Qwen Cloud can refine route reasoning, improve submission narratives, and turn raw opportunity data into sharper Devpost and blog material.</p>
+          <h3>Implemented locally</h3>
+          <ul>
+            <li>Support for <code>DASHSCOPE_API_KEY</code> and <code>QWEN_API_KEY</code> environment variables.</li>
+            <li>OpenAI-compatible <code>/chat/completions</code> request shape.</li>
+            <li>Configurable base URL and model.</li>
+            <li>Safer error messages when no runtime API key is present.</li>
+          </ul>
+          <div class="callout warning">
+            <strong>Evidence boundary:</strong> this post does not claim a live Qwen API call yet. The live check belongs in the final evidence pack after account access and a runtime API key are available.
+          </div>
+        </section>
+
+        <section>
+          <h2>Deployment story</h2>
+          <p>The project includes a deployable standard-library web/API service and a Dockerfile. The dashboard exposes the same plan through a browser-readable page and a machine-readable <code>/api/plan</code> endpoint. The Alibaba Cloud deployment runbook lists the proof that should be captured once the cloud step is performed: public endpoint, screenshot, API response, and a repository link showing Alibaba Cloud service usage.</p>
+          <p>This keeps the Devpost submission aligned with the rules: the backend proof should be shown through actual deployment evidence, not by implying that local screenshots are enough.</p>
+        </section>
+
+        <section>
+          <h2>What the demo shows</h2>
+          <p>The demo starts with a portfolio containing several hackathon and bounty routes. PrizePilot ranks them and explains why a small multi-winner feedback prize can be the urgent first target while Qwen Cloud is the stronger second-wave project route.</p>
+          <p>Then the demo opens the Qwen project plan. The agent targets the Blog Post Award and Honorable Mention route instead of over-optimizing for a single-winner grand prize. It generates publication and approval checkpoints for Devpost joining, Qwen and Alibaba account work, public repository creation, video and blog publication, and final submission.</p>
+          <p>The final section shows the dashboard and <code>/api/plan</code> output so both people and tools can inspect the decision.</p>
+        </section>
+
+        <section>
+          <h2>Next proof to capture</h2>
+          <ol>
+            <li>Run a live Qwen Cloud refinement pass with a runtime key.</li>
+            <li>Deploy the web/API service on Alibaba Cloud and capture deployment proof.</li>
+            <li>Publish the demo video on a Devpost-supported video host.</li>
+            <li>Add the public video URL and this blog URL to the Devpost draft.</li>
+            <li>Submit the final Devpost project only after the required evidence is complete.</li>
+          </ol>
+          <p>The public build record is deliberately conservative. PrizePilot should move fast where preparation is reversible and slow down where the action becomes public, costly, or account-bound.</p>
+        </section>
+      </article>
+
+      <aside aria-label="Build status">
+        <h2>Build status</h2>
+        <ul class="status-list">
+          <li>Public repository<span>Published at <a href="https://github.com/OOYXLOO/prizepilot-qwen-cloud">github.com/OOYXLOO/prizepilot-qwen-cloud</a></span></li>
+          <li>Hackathon route<span>Qwen Cloud Track 4: Autopilot Agent</span></li>
+          <li>Demo asset<span>Local WebM generated; supported video host still required</span></li>
+          <li>Qwen live check<span>Prepared but not claimed complete</span></li>
+          <li>Alibaba Cloud proof<span>Runbook prepared; deployment proof still required</span></li>
+          <li>Integrity rule<span>No secrets, payout data, or private identity documents are stored in this repo</span></li>
+        </ul>
+      </aside>
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrap">PrizePilot build journal for the Global AI Hackathon Series with Qwen Cloud. Last updated June 10, 2026.</div>
+  </footer>
+</body>
+</html>
