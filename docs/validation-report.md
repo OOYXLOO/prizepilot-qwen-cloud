@@ -1,6 +1,6 @@
 # Validation Report
 
-Latest verification: 2026-06-10 after Qwen route-status update
+Latest verification: 2026-06-10 after adding demo recording assets
 
 ## Passed Gates
 
@@ -13,6 +13,7 @@ Latest verification: 2026-06-10 after Qwen route-status update
 - Deployable demo service checks verify `/`, `/api/plan`, JSON serializability, target prize output, and integrity-boundary copy.
 - External local process smoke test passed on 2026-06-10 after recovery: a hidden Python process served `/` and `/api/plan`, both returned 200, project was `PrizePilot`, target was `Blog Post Award`, and the portfolio still ranked Splunk first.
 - Browser check passed on 2026-06-10 after recovery: desktop and 390px mobile views showed the PrizePilot headline, target prize, prize amount, and integrity-boundary copy with no horizontal overflow.
+- Demo recording page check passed on 2026-06-10 through a temporary local server at `127.0.0.1`: desktop and 390px mobile layouts had no horizontal overflow, the dashboard screenshots loaded, and autoplay advanced through Qwen/demo chapters.
 - Public ZIP inspection after adding Qwen route status: 44 entries, missing required entries 0, forbidden cache/private entries 0. Exact byte size is not a gate.
 - Screenshots were rebuilt on 2026-06-10 from the local web service:
   - `docs/screenshots/prizepilot-dashboard-desktop.png`

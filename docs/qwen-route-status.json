@@ -1,16 +1,16 @@
 {
-  "checked_at": "2026-06-10T05:43:46.852636+00:00",
+  "checked_at": "2026-06-10T06:27:15.761157+00:00",
   "phase": "ready_for_user_publication_steps",
   "severity": "ACTION_NEEDED",
   "next_action": "Complete the Devpost reCAPTCHA and save the PrizePilot portfolio project, then import it into the Qwen submission flow.",
   "deadline_utc": "2026-07-09T21:00:00+00:00",
-  "hours_until_deadline": 711.27,
+  "hours_until_deadline": 710.55,
   "artifact_checks": [
     {
       "path": "README.md",
       "description": "Project README",
       "exists": true,
-      "size": 1103
+      "size": 1207
     },
     {
       "path": "LICENSE",
@@ -64,7 +64,7 @@
       "path": "docs/devpost-project-fields.md",
       "description": "Devpost field draft",
       "exists": true,
-      "size": 1395
+      "size": 1498
     },
     {
       "path": "docs/qwen-start-handoff-template.md",
@@ -94,19 +94,19 @@
       "path": "docs/publication-action-card.md",
       "description": "Publication action card",
       "exists": true,
-      "size": 1542
+      "size": 1832
     },
     {
       "path": "docs/public-package-checklist.md",
       "description": "Public package checklist",
       "exists": true,
-      "size": 979
+      "size": 1035
     },
     {
       "path": "docs/validation-report.md",
       "description": "Validation report",
       "exists": true,
-      "size": 2173
+      "size": 2420
     },
     {
       "path": "docs/screenshots/prizepilot-dashboard-desktop.png",

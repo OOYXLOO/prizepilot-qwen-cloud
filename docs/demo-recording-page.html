@@ -1,0 +1,429 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PrizePilot Demo Recording Page</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #17202a;
+      --muted: #5d6978;
+      --line: #d9e1ea;
+      --paper: #f7f9fc;
+      --panel: #ffffff;
+      --blue: #276ef1;
+      --green: #12715b;
+      --gold: #a15c00;
+      --red: #b42318;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: Inter, "Segoe UI", Arial, sans-serif;
+      letter-spacing: 0;
+    }
+
+    main {
+      min-height: 100vh;
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      gap: 24px;
+      align-items: center;
+      padding: 22px 32px;
+      border-bottom: 1px solid var(--line);
+      background: var(--panel);
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 30px;
+      line-height: 1.1;
+      font-weight: 760;
+    }
+
+    .subtitle {
+      margin: 6px 0 0;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.45;
+    }
+
+    .timer {
+      min-width: 112px;
+      text-align: right;
+      font-size: 26px;
+      font-weight: 760;
+      color: var(--blue);
+    }
+
+    .stage {
+      display: grid;
+      grid-template-columns: minmax(280px, 0.8fr) minmax(420px, 1.2fr);
+      gap: 28px;
+      align-items: stretch;
+      padding: 28px 32px;
+    }
+
+    .narration,
+    .visual {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      min-height: 0;
+    }
+
+    .narration {
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .label {
+      color: var(--blue);
+      font-size: 13px;
+      font-weight: 760;
+      text-transform: uppercase;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: 28px;
+      line-height: 1.18;
+    }
+
+    .talk {
+      color: var(--muted);
+      font-size: 17px;
+      line-height: 1.55;
+    }
+
+    .metrics {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 10px;
+      margin-top: auto;
+    }
+
+    .metric {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 12px;
+      background: #fbfcfe;
+    }
+
+    .metric strong {
+      display: block;
+      font-size: 20px;
+      margin-bottom: 4px;
+    }
+
+    .metric span {
+      display: block;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.35;
+    }
+
+    .visual {
+      padding: 16px;
+      display: grid;
+      place-items: center;
+      overflow: hidden;
+    }
+
+    .visual img {
+      width: 100%;
+      height: 100%;
+      max-height: calc(100vh - 190px);
+      object-fit: contain;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fff;
+    }
+
+    .fallback-flow {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(5, minmax(110px, 1fr));
+      gap: 10px;
+    }
+
+    .step {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 14px;
+      min-height: 120px;
+      background: #fbfcfe;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .step b {
+      font-size: 15px;
+      line-height: 1.25;
+    }
+
+    .step small {
+      color: var(--muted);
+      line-height: 1.35;
+    }
+
+    footer {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      border-top: 1px solid var(--line);
+      background: var(--panel);
+    }
+
+    .chapter {
+      position: relative;
+      border: 0;
+      border-right: 1px solid var(--line);
+      background: transparent;
+      padding: 14px 12px 16px;
+      text-align: left;
+      color: var(--muted);
+      font: inherit;
+    }
+
+    .chapter:last-child {
+      border-right: 0;
+    }
+
+    .chapter b {
+      display: block;
+      color: var(--ink);
+      font-size: 13px;
+      margin-bottom: 4px;
+    }
+
+    .chapter span {
+      display: block;
+      font-size: 12px;
+      line-height: 1.35;
+    }
+
+    .chapter.active::before {
+      content: "";
+      position: absolute;
+      inset: 0 auto auto 0;
+      height: 4px;
+      width: 100%;
+      background: var(--blue);
+    }
+
+    @media (max-width: 900px) {
+      header {
+        align-items: flex-start;
+        padding: 18px;
+      }
+
+      h1 {
+        font-size: 24px;
+      }
+
+      .stage {
+        grid-template-columns: 1fr;
+        padding: 18px;
+      }
+
+      .metrics {
+        grid-template-columns: 1fr;
+      }
+
+      .fallback-flow {
+        grid-template-columns: 1fr;
+      }
+
+      footer {
+        grid-template-columns: 1fr;
+      }
+
+      .chapter {
+        border-right: 0;
+        border-bottom: 1px solid var(--line);
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <div>
+        <h1>PrizePilot</h1>
+        <p class="subtitle">An accountable autopilot agent for hackathon execution.</p>
+      </div>
+      <div class="timer" id="timer">00:00</div>
+    </header>
+
+    <section class="stage" aria-live="polite">
+      <aside class="narration">
+        <div class="label" id="label">Problem</div>
+        <h2 id="headline">Prize pages are noisy.</h2>
+        <p class="talk" id="talk">PrizePilot ranks reachable cash routes by deadline, winner count, evidence requirements, and external-action blockers.</p>
+        <div class="metrics">
+          <div class="metric"><strong id="metricA">$200</strong><span id="metricALabel">low-friction feedback route</span></div>
+          <div class="metric"><strong id="metricB">10x</strong><span id="metricBLabel">multi-winner Qwen targets</span></div>
+          <div class="metric"><strong id="metricC">0</strong><span id="metricCLabel">secrets stored locally</span></div>
+        </div>
+      </aside>
+      <div class="visual" id="visual"></div>
+    </section>
+
+    <footer id="chapters"></footer>
+  </main>
+
+  <script>
+    const chapters = [
+      {
+        label: "Problem",
+        headline: "Prize pages are noisy.",
+        talk: "PrizePilot ranks reachable cash routes by deadline, winner count, evidence requirements, and external-action blockers.",
+        metricA: "$200",
+        metricALabel: "low-friction feedback route",
+        metricB: "10x",
+        metricBLabel: "multi-winner Qwen targets",
+        metricC: "0",
+        metricCLabel: "secrets stored locally",
+        visual: "desktop"
+      },
+      {
+        label: "Planner",
+        headline: "The agent chooses reachable work first.",
+        talk: "The sample portfolio keeps a near-deadline feedback prize first, then stages Qwen Cloud as the higher-upside project route.",
+        metricA: "1",
+        metricALabel: "ranked primary route",
+        metricB: "2",
+        metricBLabel: "Qwen target categories",
+        metricC: "8",
+        metricCLabel: "public/account gates tracked",
+        visual: "gif"
+      },
+      {
+        label: "Qwen Plan",
+        headline: "Qwen refines the reasoning, not the risk boundary.",
+        talk: "The deterministic planner is auditable locally. A live Qwen Cloud pass can refine narratives after the user provides an API key at action time.",
+        metricA: "API",
+        metricALabel: "OpenAI-compatible endpoint",
+        metricB: "Track 4",
+        metricBLabel: "Autopilot Agent",
+        metricC: "ready",
+        metricCLabel: "local package",
+        visual: "mobile"
+      },
+      {
+        label: "Approval",
+        headline: "External effects stay explicit.",
+        talk: "PrizePilot queues account setup, CAPTCHA, API keys, public posts, deployment proof, payout, and final submit buttons as human-gated actions.",
+        metricA: "yes",
+        metricALabel: "drafts and checklists",
+        metricB: "no",
+        metricBLabel: "blind public submission",
+        metricC: "clear",
+        metricCLabel: "evidence boundary",
+        visual: "flow"
+      },
+      {
+        label: "Close",
+        headline: "Fast where it can be fast. Careful where it must be careful.",
+        talk: "The demo shows a practical pattern for accountable hackathon automation: prepare aggressively, prove honestly, and submit only with the right evidence.",
+        metricA: "repo",
+        metricALabel: "ready for publication",
+        metricB: "cloud",
+        metricBLabel: "deployment runbook ready",
+        metricC: "video",
+        metricCLabel: "recording page ready",
+        visual: "desktop"
+      }
+    ];
+
+    const visual = document.getElementById("visual");
+    const chaptersEl = document.getElementById("chapters");
+    const fields = {
+      label: document.getElementById("label"),
+      headline: document.getElementById("headline"),
+      talk: document.getElementById("talk"),
+      metricA: document.getElementById("metricA"),
+      metricALabel: document.getElementById("metricALabel"),
+      metricB: document.getElementById("metricB"),
+      metricBLabel: document.getElementById("metricBLabel"),
+      metricC: document.getElementById("metricC"),
+      metricCLabel: document.getElementById("metricCLabel")
+    };
+
+    function renderVisual(kind) {
+      if (kind === "flow") {
+        visual.innerHTML = `
+          <div class="fallback-flow">
+            <div class="step"><b>Intake</b><small>Collect opportunity rules and prize signals.</small></div>
+            <div class="step"><b>Rank</b><small>Score urgency, winners, blockers, and evidence.</small></div>
+            <div class="step"><b>Prepare</b><small>Generate drafts, runbooks, screenshots, and checks.</small></div>
+            <div class="step"><b>Approve</b><small>Gate accounts, API keys, public posts, and payouts.</small></div>
+            <div class="step"><b>Submit</b><small>Record proof, follow up, and track prize claims.</small></div>
+          </div>`;
+        return;
+      }
+      const src = kind === "gif"
+        ? "screenshots/prizepilot-demo.gif"
+        : kind === "mobile"
+          ? "screenshots/prizepilot-dashboard-mobile.png"
+          : "screenshots/prizepilot-dashboard-desktop.png";
+      visual.innerHTML = `<img src="${src}" alt="PrizePilot ${kind} demo asset">`;
+    }
+
+    function render(index) {
+      const chapter = chapters[index];
+      Object.keys(fields).forEach((key) => {
+        fields[key].textContent = chapter[key];
+      });
+      renderVisual(chapter.visual);
+      [...chaptersEl.children].forEach((button, buttonIndex) => {
+        button.classList.toggle("active", buttonIndex === index);
+      });
+    }
+
+    chapters.forEach((chapter, index) => {
+      const button = document.createElement("button");
+      button.className = "chapter";
+      button.type = "button";
+      button.innerHTML = `<b>${index + 1}. ${chapter.label}</b><span>${chapter.headline}</span>`;
+      button.addEventListener("click", () => {
+        current = index;
+        render(current);
+      });
+      chaptersEl.appendChild(button);
+    });
+
+    let current = 0;
+    const started = Date.now();
+    render(current);
+
+    setInterval(() => {
+      const seconds = Math.floor((Date.now() - started) / 1000);
+      const mm = String(Math.floor(seconds / 60)).padStart(2, "0");
+      const ss = String(seconds % 60).padStart(2, "0");
+      document.getElementById("timer").textContent = `${mm}:${ss}`;
+      const next = Math.min(chapters.length - 1, Math.floor(seconds / 12));
+      if (next !== current) {
+        current = next;
+        render(current);
+      }
+    }, 500);
+  </script>
+</body>
+</html>

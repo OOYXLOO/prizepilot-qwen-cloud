@@ -30,3 +30,4 @@ python -m prizepilot.webapp --host 127.0.0.1 --port 8000
 - `docs/screenshots/prizepilot-demo.gif`
 - `docs/screenshots/prizepilot-dashboard-desktop.png`
 - `docs/screenshots/prizepilot-dashboard-mobile.png`
+- `docs/demo-recording-page.html` for recording a public demo video after publication gates are ready.

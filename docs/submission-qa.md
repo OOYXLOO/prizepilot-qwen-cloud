@@ -13,6 +13,8 @@
 - [x] Approval checkpoints
 - [x] Static dashboard
 - [x] Desktop and mobile dashboard screenshots
+- [x] Demo GIF
+- [x] Local demo recording page and runbook
 - [x] Deployable standard-library web/API service
 - [x] Dockerfile for cloud deployment
 - [x] Alibaba Cloud deployment evidence runbook

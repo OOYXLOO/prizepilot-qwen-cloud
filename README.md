@@ -19,3 +19,5 @@ Live Qwen refinement is optional and requires `DASHSCOPE_API_KEY` or `QWEN_API_K
 
 - Dashboard screenshots: `docs/screenshots/prizepilot-dashboard-desktop.png` and `docs/screenshots/prizepilot-dashboard-mobile.png`
 - Short demo GIF: `docs/screenshots/prizepilot-demo.gif`
+- Recording page: `docs/demo-recording-page.html`
+- Recording runbook: `docs/demo-recording-runbook.md`
