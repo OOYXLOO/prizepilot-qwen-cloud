@@ -13,15 +13,15 @@ Use this as the non-sensitive recovery record for the Qwen backup route. Do not 
 - Secondary target: Top 10 Honorable Mention Projects, USD 500 x10
 - Project: PrizePilot
 - Deadline: July 10, 2026 5:00 AM GMT+8 / July 9, 2026 9:00 PM UTC
-- Current status: local package prepared; waiting for user-approved public/account actions
+- Current status: local package prepared; Qwen Devpost joined; GitHub public repository shell created; Devpost portfolio project creation is blocked by reCAPTCHA.
 
 ## Gate Status
 
-- Devpost hackathon joined: no/unknown
+- Devpost hackathon joined: yes
 - Qwen/Alibaba Cloud account ready: no/unknown
 - Qwen live check completed: no
 - Alibaba Cloud deployment proof: no
-- Public GitHub repository: no
+- Public GitHub repository: partial - empty repository created, code push still blocked by GitHub HTTPS authorization
 - Public demo video: no
 - Public blog/social post: no
 - Devpost final submitted: no
@@ -30,14 +30,23 @@ Use this as the non-sensitive recovery record for the Qwen backup route. Do not 
 
 ## Non-Sensitive Recovery Fields
 
-- Devpost username:
-- Public repository URL:
+- Devpost username: OOYXLOO
+- Public repository URL: https://github.com/OOYXLOO/prizepilot-qwen-cloud
 - Deployment URL:
 - Demo video URL:
 - Blog/social post URL:
 - Devpost project URL:
 - Submission timestamp:
 - Follow-up date after submission:
+
+## 2026-06-10 Automation Notes
+
+- Qwen Devpost registration was completed in browser for Devpost user `OOYXLOO`.
+- Created public GitHub repository shell: https://github.com/OOYXLOO/prizepilot-qwen-cloud
+- Local repository commit prepared at `10870dd` with 45 public-package files and no real credentials.
+- Git push to GitHub is blocked by missing HTTPS credentials/Git Credential Manager authorization.
+- Devpost portfolio project creation at `https://devpost.com/software/new` accepted project name `PrizePilot` but returned `Please complete the reCAPTCHA to submit this form.`
+- Next action after user completes CAPTCHA: save Devpost portfolio project, fill project fields, import it into the Qwen hackathon, and continue public submission gates.
 
 ## Update Rules
 
