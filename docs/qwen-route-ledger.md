@@ -56,6 +56,7 @@ Use this as the non-sensitive recovery record for the Qwen backup route. Do not 
 - Prepared Qwen Blog Post Award build journal at `docs/blog/index.html`, with a lightweight `docs/index.html` redirect/landing page for GitHub Pages publication. This is not yet marked complete until a public URL is verified.
 - Enabled GitHub Pages for `main` / `docs` and verified the public Qwen build journal at https://ooyxloo.github.io/prizepilot-qwen-cloud/blog/ with HTTP 200 and the expected title `Building PrizePilot for the Qwen Cloud Hackathon`.
 - Prepared an Alibaba Cloud Function Compute custom-container manifest at `deploy/alibaba-cloud/s.yaml` and linked it from the deployment runbook/proof template. This is only a code proof path, not live deployment proof.
+- Checked the YouTube upload path. The browser showed Google sign-in for YouTube upload, so no usable YouTube upload session is currently available. Video remains blocked on a supported video-host login/session.
 
 ## Update Rules
 

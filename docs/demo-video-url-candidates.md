@@ -22,6 +22,13 @@ Upload `docs/demo-video/prizepilot-demo.webm` to one of:
 - Vimeo
 - Youku
 
+## Current Host Check
+
+- YouTube upload check on 2026-06-10: `https://www.youtube.com/upload` opened a Google sign-in page, so no usable YouTube upload session is currently available in the browser.
+- YouTube official upload flow starts with signing in to YouTube Studio: https://support.google.com/youtube/answer/57407
+- Vimeo official upload flow uses the user's Vimeo upload page/library: https://help.vimeo.com/hc/en-us/articles/18774922216721-How-to-upload-a-video-to-Vimeo
+- Do not reuse unrelated passwords for a video platform account. If a logged-in YouTube, Vimeo, Facebook, or Youku session becomes available, upload the local WebM, make it publicly accessible, and record the accepted URL in `docs/qwen-route-ledger.md`.
+
 ## Notes
 
 - The WebM is silent and rendered only from public local demo assets.
