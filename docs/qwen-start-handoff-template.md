@@ -11,6 +11,8 @@ Do not paste passwords, OTPs, API keys, recovery codes, payment data, tax data, 
 - Primary prize target: Blog Post Award, USD 500 cash + USD 500 cloud credits, 10 winners.
 - Secondary prize target: Top 10 Honorable Mention Projects, USD 500 cash + USD 500 cloud credits, 10 winners.
 - Project: PrizePilot, an Autopilot Agent for turning prize/hackathon pages into executable submission plans and human action queues.
+- Current account state: Qwen Devpost registration complete as `OOYXLOO`; Devpost portfolio project creation is waiting on reCAPTCHA after project name entry.
+- Current repository state: public GitHub repository shell exists at https://github.com/OOYXLOO/prizepilot-qwen-cloud, but pushing code still needs GitHub authorization.
 
 The blog prize is not standalone. It still requires a qualified Devpost project submission, public repo, demo/video, blog or social post, and Alibaba Cloud deployment proof.
 
@@ -34,6 +36,14 @@ I confirm I am eligible for the Qwen Cloud Global AI Hackathon under the officia
 
 Preparation authorization:
 Please prepare the Qwen PrizePilot public package, live-check commands, deployment checklist, blog draft, demo script, and Devpost submission fields for my review. Do not create accounts, publish repositories, deploy cloud resources, upload videos, publish blog/social posts, or submit Devpost forms without separate action-time confirmation.
+```
+
+## Current Two-Minute Unblock Prompt
+
+Use this after you manually complete Devpost reCAPTCHA and/or GitHub authorization:
+
+```text
+I completed the Devpost reCAPTCHA / GitHub authorization. Continue the Qwen PrizePilot submission flow from the current browser and local repo state.
 ```
 
 ## Separate Confirmations Needed
@@ -68,4 +78,3 @@ Please confirm I should submit PrizePilot to the Qwen Cloud Devpost hackathon us
 4. Public GitHub repo is live and clean.
 5. Demo video and blog/social post are public.
 6. Devpost submission is reviewed and explicitly submitted.
-
