@@ -1,6 +1,6 @@
 # Qwen PrizePilot Route Status
 
-Generated: 2026-06-10T02:00:44.264847+00:00
+Generated: 2026-06-10T05:09:49.917848+00:00
 Phase: **ready_for_user_publication_steps**
 Severity: **ACTION_NEEDED**
 
@@ -9,7 +9,7 @@ Next action: Use docs/qwen-start-handoff-template.md when the user wants to star
 ## Deadline
 
 - Deadline UTC: `2026-07-09T21:00:00+00:00`
-- Hours until deadline: `714.99`
+- Hours until deadline: `711.84`
 
 ## Local Artifact Gate
 
@@ -17,12 +17,11 @@ Next action: Use docs/qwen-start-handoff-template.md when the user wants to star
 
 ## Public/Account Gates
 
-- Incomplete public/account gates: `8`
-- `devpost hackathon joined`: `no/unknown` - Join Qwen Devpost hackathon.
+- Incomplete public/account gates: `7`
 - `qwen/alibaba cloud account ready`: `no/unknown` - Create/access Qwen or Alibaba Cloud account.
 - `qwen live check completed`: `no` - Run Qwen/DashScope live check with user-provided API key at action time.
 - `alibaba cloud deployment proof`: `no` - Deploy or otherwise produce approved Alibaba Cloud proof.
-- `public github repository`: `no` - Publish approved public GitHub repository.
+- `public github repository`: `partial - empty repository created, code push still blocked by GitHub HTTPS authorization` - Publish approved public GitHub repository.
 - `public demo video`: `no` - Publish approved public demo video.
 - `public blog/social post`: `no` - Publish approved blog/social post for Blog Post Award.
 - `devpost final submitted`: `no` - Submit final Devpost project after review and explicit confirmation.

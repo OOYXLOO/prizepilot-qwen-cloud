@@ -1,10 +1,10 @@
 {
-  "checked_at": "2026-06-10T02:00:44.264847+00:00",
+  "checked_at": "2026-06-10T05:09:49.917848+00:00",
   "phase": "ready_for_user_publication_steps",
   "severity": "ACTION_NEEDED",
   "next_action": "Use docs/qwen-start-handoff-template.md when the user wants to start Qwen in parallel or after Splunk.",
   "deadline_utc": "2026-07-09T21:00:00+00:00",
-  "hours_until_deadline": 714.99,
+  "hours_until_deadline": 711.84,
   "artifact_checks": [
     {
       "path": "README.md",
@@ -118,11 +118,6 @@
   "missing_artifacts": [],
   "incomplete_public_gates": [
     {
-      "gate": "devpost hackathon joined",
-      "status": "no/unknown",
-      "next_action": "Join Qwen Devpost hackathon."
-    },
-    {
       "gate": "qwen/alibaba cloud account ready",
       "status": "no/unknown",
       "next_action": "Create/access Qwen or Alibaba Cloud account."
@@ -139,7 +134,7 @@
     },
     {
       "gate": "public github repository",
-      "status": "no",
+      "status": "partial - empty repository created, code push still blocked by GitHub HTTPS authorization",
       "next_action": "Publish approved public GitHub repository."
     },
     {
