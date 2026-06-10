@@ -1,6 +1,6 @@
 # Qwen PrizePilot Route Status
 
-Generated: 2026-06-10T07:11:43.329557+00:00
+Generated: 2026-06-10T07:26:52.726900+00:00
 Phase: **ready_for_user_publication_steps**
 Severity: **ACTION_NEEDED**
 
@@ -9,7 +9,7 @@ Next action: Complete the Devpost reCAPTCHA and save the PrizePilot portfolio pr
 ## Deadline
 
 - Deadline UTC: `2026-07-09T21:00:00+00:00`
-- Hours until deadline: `709.8`
+- Hours until deadline: `709.55`
 
 ## Local Artifact Gate
 
@@ -22,7 +22,7 @@ Next action: Complete the Devpost reCAPTCHA and save the PrizePilot portfolio pr
 - `qwen/alibaba cloud account ready`: `no/unknown` - Create/access Qwen or Alibaba Cloud account.
 - `qwen live check completed`: `no` - Run Qwen/DashScope live check with user-provided API key at action time.
 - `alibaba cloud deployment proof`: `no` - Deploy or otherwise produce approved Alibaba Cloud proof.
-- `public demo video`: `no` - Publish approved public demo video.
+- `public demo video`: `partial - generated local WebM at docs/demo-video/prizepilot-demo.webm; public GitHub URL candidate pending Devpost acceptance or video-host upload` - Review whether Devpost accepts the GitHub-hosted WebM URL; otherwise upload the generated WebM to an approved public video host.
 - `public blog/social post`: `no` - Publish approved blog/social post for Blog Post Award.
 - `devpost final submitted`: `no` - Submit final Devpost project after review and explicit confirmation.
 

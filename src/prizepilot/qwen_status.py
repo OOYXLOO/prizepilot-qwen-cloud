@@ -19,6 +19,9 @@ REQUIRED_ARTIFACTS = {
     "web/index.html": "Static dashboard demo",
     "docs/blog-draft.md": "Blog/social post draft",
     "docs/demo-video-script.md": "Demo video script",
+    "docs/demo-video/prizepilot-demo.webm": "Generated silent demo WebM",
+    "docs/demo-video-url-candidates.md": "Demo video URL candidate notes",
+    "tools/record_demo_webm.mjs": "Automated WebM recording script",
     "docs/devpost-project-fields.md": "Devpost field draft",
     "docs/qwen-start-handoff-template.md": "User launch handoff template",
     "docs/qwen-cloud-live-check.md": "Live Qwen check runbook",
@@ -65,6 +68,8 @@ def public_gate_next_action(gate: str, status: str, default_action: str) -> str:
         return "Authorize GitHub push/publication, then run `git push -u origin main` to publish the prepared package."
     if gate == "devpost portfolio project created" and ("recaptcha" in normalized or "captcha" in normalized):
         return "Complete the visible Devpost reCAPTCHA, save the PrizePilot portfolio project, then continue the Qwen import/submission flow."
+    if gate == "public demo video" and "partial" in normalized:
+        return "Review whether Devpost accepts the GitHub-hosted WebM URL; otherwise upload the generated WebM to an approved public video host."
     return default_action
 
 def inspect_artifacts(root: Path) -> list[dict[str, object]]:

@@ -1,10 +1,10 @@
 {
-  "checked_at": "2026-06-10T07:11:43.329557+00:00",
+  "checked_at": "2026-06-10T07:26:52.726900+00:00",
   "phase": "ready_for_user_publication_steps",
   "severity": "ACTION_NEEDED",
   "next_action": "Complete the Devpost reCAPTCHA and save the PrizePilot portfolio project, then import it into the Qwen submission flow.",
   "deadline_utc": "2026-07-09T21:00:00+00:00",
-  "hours_until_deadline": 709.8,
+  "hours_until_deadline": 709.55,
   "artifact_checks": [
     {
       "path": "README.md",
@@ -59,6 +59,24 @@
       "description": "Demo video script",
       "exists": true,
       "size": 478
+    },
+    {
+      "path": "docs/demo-video/prizepilot-demo.webm",
+      "description": "Generated silent demo WebM",
+      "exists": true,
+      "size": 1330402
+    },
+    {
+      "path": "docs/demo-video-url-candidates.md",
+      "description": "Demo video URL candidate notes",
+      "exists": true,
+      "size": 710
+    },
+    {
+      "path": "tools/record_demo_webm.mjs",
+      "description": "Automated WebM recording script",
+      "exists": true,
+      "size": 4862
     },
     {
       "path": "docs/devpost-project-fields.md",
@@ -151,8 +169,8 @@
     },
     {
       "gate": "public demo video",
-      "status": "no",
-      "next_action": "Publish approved public demo video."
+      "status": "partial - generated local WebM at docs/demo-video/prizepilot-demo.webm; public GitHub URL candidate pending Devpost acceptance or video-host upload",
+      "next_action": "Review whether Devpost accepts the GitHub-hosted WebM URL; otherwise upload the generated WebM to an approved public video host."
     },
     {
       "gate": "public blog/social post",

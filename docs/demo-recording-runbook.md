@@ -4,6 +4,8 @@ Purpose: create the public demo video required by the Qwen Cloud Devpost submiss
 
 Current state: `docs/demo-recording-page.html` is a local, self-contained recording page. It uses the existing dashboard screenshots and demo GIF. It does not publish anything by itself.
 
+Generated asset: run `node tools/record_demo_webm.mjs` from the repo root to create `docs/demo-video/prizepilot-demo.webm`. The generated WebM is silent and safe to publish because it is rendered only from local public demo assets.
+
 ## Record
 
 1. Open `docs/demo-recording-page.html` in a browser.
@@ -16,6 +18,13 @@ Current state: `docs/demo-recording-page.html` is a local, self-contained record
    - "Qwen can refine narratives after a real API key is available."
    - "External effects stay human-gated."
    - "The project is fast where it can be fast and careful where it must be careful."
+
+## Automated WebM
+
+1. Make sure the bundled Node dependencies expose Playwright.
+2. Run `node tools/record_demo_webm.mjs`.
+3. Inspect `docs/demo-video/prizepilot-demo.webm`.
+4. If accepted by the final publication venue, use the public GitHub file URL as the demo video URL; otherwise upload the same file to the chosen public video host.
 
 ## Upload Checklist
 
