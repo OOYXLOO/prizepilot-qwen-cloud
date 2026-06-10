@@ -13,7 +13,7 @@ Use this as the non-sensitive recovery record for the Qwen backup route. Do not 
 - Secondary target: Top 10 Honorable Mention Projects, USD 500 x10
 - Project: PrizePilot
 - Deadline: July 10, 2026 5:00 AM GMT+8 / July 9, 2026 9:00 PM UTC
-- Current status: local package prepared; Qwen Devpost joined; public GitHub repository published; Devpost portfolio project created; Qwen submission draft created; project details are blocked by Devpost-supported video-host URL.
+- Current status: local package prepared; Qwen Devpost joined; public GitHub repository published; GitHub Pages blog published; Devpost portfolio project created; Qwen submission draft created; project details are blocked by Devpost-supported video-host URL.
 
 ## Gate Status
 
@@ -24,7 +24,7 @@ Use this as the non-sensitive recovery record for the Qwen backup route. Do not 
 - Alibaba Cloud deployment proof: no
 - Public GitHub repository: yes
 - Public demo video: partial - generated local WebM at docs/demo-video/prizepilot-demo.webm; Devpost rejected GitHub raw WebM and requires YouTube, Facebook Video, Vimeo, or Youku URL
-- Public blog/social post: partial - static blog page prepared at docs/blog/index.html; needs a verified public URL before entering it in Devpost
+- Public blog/social post: yes
 - Devpost final submitted: no
 - Prize claim or winner notification status: not started
 - Payout received: no
@@ -35,7 +35,7 @@ Use this as the non-sensitive recovery record for the Qwen backup route. Do not 
 - Public repository URL: https://github.com/OOYXLOO/prizepilot-qwen-cloud
 - Deployment URL:
 - Demo video URL:
-- Blog/social post URL:
+- Blog/social post URL: https://ooyxloo.github.io/prizepilot-qwen-cloud/blog/
 - Devpost project URL: https://devpost.com/software/prizepilot-qwen-cloud
 - Qwen submission draft URL: https://devpost.com/submit-to/29966-global-ai-hackathon-series-with-qwen-cloud/manage/submissions/1046103-prizepilot-qwen-cloud/project_details
 - Submission timestamp:
@@ -54,6 +54,7 @@ Use this as the non-sensitive recovery record for the Qwen backup route. Do not 
 - Next action: upload the generated WebM to a supported video host, then add that URL to the Qwen Project details page and continue to Additional info.
 - Generated local demo GIF: `docs/screenshots/prizepilot-demo.gif`.
 - Prepared Qwen Blog Post Award build journal at `docs/blog/index.html`, with a lightweight `docs/index.html` redirect/landing page for GitHub Pages publication. This is not yet marked complete until a public URL is verified.
+- Enabled GitHub Pages for `main` / `docs` and verified the public Qwen build journal at https://ooyxloo.github.io/prizepilot-qwen-cloud/blog/ with HTTP 200 and the expected title `Building PrizePilot for the Qwen Cloud Hackathon`.
 
 ## Update Rules
 

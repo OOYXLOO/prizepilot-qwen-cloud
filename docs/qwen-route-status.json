@@ -1,10 +1,10 @@
 {
-  "checked_at": "2026-06-10T07:55:32.873954+00:00",
+  "checked_at": "2026-06-10T08:00:14.528057+00:00",
   "phase": "ready_for_user_publication_steps",
   "severity": "ACTION_NEEDED",
   "next_action": "Upload the generated WebM demo to YouTube, Facebook Video, Vimeo, or Youku, then add that accepted video URL to the Qwen Devpost draft.",
   "deadline_utc": "2026-07-09T21:00:00+00:00",
-  "hours_until_deadline": 709.07,
+  "hours_until_deadline": 709.0,
   "artifact_checks": [
     {
       "path": "README.md",
@@ -178,11 +178,6 @@
       "gate": "public demo video",
       "status": "partial - generated local WebM at docs/demo-video/prizepilot-demo.webm; Devpost rejected GitHub raw WebM and requires YouTube, Facebook Video, Vimeo, or Youku URL",
       "next_action": "Upload the generated WebM to a Devpost-supported video host: YouTube, Facebook Video, Vimeo, or Youku."
-    },
-    {
-      "gate": "public blog/social post",
-      "status": "partial - static blog page prepared at docs/blog/index.html; needs a verified public URL before entering it in Devpost",
-      "next_action": "Publish the prepared static blog page and record its public URL for the Qwen Blog Post Award field."
     },
     {
       "gate": "devpost final submitted",
