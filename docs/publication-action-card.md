@@ -9,6 +9,7 @@ Current state on 2026-06-10:
 - Local public package is ready at `qwen-prizepilot-public.zip`.
 - GitHub code push is blocked by GitHub HTTPS/SSH authorization, not by local package readiness.
 - Devpost portfolio project creation is blocked by reCAPTCHA after entering project name `PrizePilot`.
+- Local Git commit history has been rewritten to use `OOYXLOO@users.noreply.github.com` instead of the user's QQ email before any public push.
 
 Minimum public package:
 
