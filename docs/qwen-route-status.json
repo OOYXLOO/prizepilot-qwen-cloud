@@ -1,10 +1,10 @@
 {
-  "checked_at": "2026-06-10T08:00:14.528057+00:00",
+  "checked_at": "2026-06-10T08:02:28.333097+00:00",
   "phase": "ready_for_user_publication_steps",
   "severity": "ACTION_NEEDED",
   "next_action": "Upload the generated WebM demo to YouTube, Facebook Video, Vimeo, or Youku, then add that accepted video URL to the Qwen Devpost draft.",
   "deadline_utc": "2026-07-09T21:00:00+00:00",
-  "hours_until_deadline": 709.0,
+  "hours_until_deadline": 708.96,
   "artifact_checks": [
     {
       "path": "README.md",
@@ -130,7 +130,7 @@
       "path": "docs/public-package-checklist.md",
       "description": "Public package checklist",
       "exists": true,
-      "size": 1074
+      "size": 1079
     },
     {
       "path": "docs/validation-report.md",
