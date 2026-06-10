@@ -60,6 +60,24 @@ class AgentTests(unittest.TestCase):
 
         self.assertIn("smallest credible artifact", plan["strategy"])
 
+    def test_product_analytics_required_route_keeps_cash_target(self) -> None:
+        opportunity = Opportunity(
+            name="Mind the Product",
+            url="https://example.com",
+            deadline="2026-06-20",
+            prizes=[
+                Prize("First Place", 5000, 1, ["single_winner", "product_analytics_required"]),
+                Prize("Product Bundle", 0, 10, ["non_cash", "product_analytics_required"]),
+            ],
+            human_blockers=["Novus email verification"],
+        )
+
+        plan = plan_locally(opportunity)
+
+        self.assertEqual(plan["target_prize"]["name"], "First Place")
+        self.assertIn("instrument it with the required analytics tool", plan["strategy"])
+        self.assertTrue(any("Install or connect product analytics" in item for item in plan["approval_checkpoints"]))
+
     def test_portfolio_keeps_splunk_first(self) -> None:
         splunk = Opportunity(
             name="Splunk Agentic Ops Hackathon",

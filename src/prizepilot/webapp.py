@@ -20,10 +20,12 @@ def _load_opportunity(name: str) -> Opportunity:
 
 def dashboard_payload() -> dict[str, Any]:
     qwen = _load_opportunity("qwen_hackathon.json")
+    mindtheproduct = _load_opportunity("mindtheproduct_world_product_day.json")
     portfolio = plan_portfolio(
         [
             _load_opportunity("splunk_agentic_ops.json"),
             qwen,
+            mindtheproduct,
             _load_opportunity("uipath_agenthack.json"),
             _load_opportunity("algora_onyx_bounty.json"),
             _load_opportunity("arm_ai_optimization.json"),
@@ -33,17 +35,29 @@ def dashboard_payload() -> dict[str, Any]:
         "project": "PrizePilot",
         "track": "Track 4 - Autopilot Agent",
         "qwen_plan": plan_locally(qwen),
+        "mindtheproduct_plan": plan_locally(mindtheproduct),
         "portfolio": portfolio,
+        "novus_readiness": {
+            "required_for": "Mind the Product World Product Day",
+            "registered_on_devpost": True,
+            "novus_signup_started": True,
+            "email_verification_required": True,
+            "novus_installed": False,
+            "next_action": "Verify the Novus email, create the password on the official link, then connect or install Novus before Devpost submission.",
+        },
         "integrity_boundary": [
             "No API key is stored in the deployed app.",
             "No public repository, video, blog post, or final Devpost submission is claimed until the user authorizes it.",
             "Live Qwen Cloud usage and Alibaba Cloud deployment proof must be captured after deployment.",
+            "Novus is not claimed as installed until the official Novus account is verified and connected.",
         ],
     }
 
 
 def render_dashboard(payload: dict[str, Any]) -> str:
     qwen_target = payload["qwen_plan"]["target_prize"]
+    mtp_target = payload["mindtheproduct_plan"]["target_prize"]
+    novus = payload["novus_readiness"]
     top_routes = payload["portfolio"]["ranked"][:4]
     rows = "\n".join(
         f"<tr><td data-label=\"#\">{index}</td><td data-label=\"Route\">{route['opportunity']['name']}</td><td data-label=\"Target\">{route['target_prize'].get('name', 'N/A')}</td><td data-label=\"Amount\">USD {route['target_prize'].get('amount_usd', 'N/A')}</td></tr>"
@@ -93,6 +107,9 @@ def render_dashboard(payload: dict[str, Any]) -> str:
   <div class="panel">
     <strong>Current Qwen target:</strong> {qwen_target.get('name')} - USD {qwen_target.get('amount_usd')} x {qwen_target.get('winners')} winners.
   </div>
+  <div class="panel">
+    <strong>Mind the Product target:</strong> {mtp_target.get('name')} - USD {mtp_target.get('amount_usd')} cash. Novus status: {'installed' if novus.get('novus_installed') else 'email verification required'}.
+  </div>
   <h2>Portfolio Ranking</h2>
   <div class="table-wrap">
     <table>
@@ -116,6 +133,9 @@ class PrizePilotHandler(BaseHTTPRequestHandler):
             return
         if route == "/api/plan":
             self._send("application/json; charset=utf-8", json.dumps(dashboard_payload(), indent=2).encode("utf-8"))
+            return
+        if route == "/api/novus-readiness":
+            self._send("application/json; charset=utf-8", json.dumps(dashboard_payload()["novus_readiness"], indent=2).encode("utf-8"))
             return
         self.send_error(HTTPStatus.NOT_FOUND, "Not found")
 

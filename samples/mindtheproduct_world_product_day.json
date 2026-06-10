@@ -1,0 +1,45 @@
+{
+  "name": "Mind the Product World Product Day",
+  "url": "https://mindtheproduct.devpost.com/",
+  "deadline": "2026-06-20",
+  "participants": 920,
+  "status": "registered_novus_verify_blocked",
+  "prizes": [
+    {
+      "name": "First Place",
+      "amount_usd": 5000,
+      "winners": 1,
+      "tags": ["single_winner", "product_analytics_required"]
+    },
+    {
+      "name": "Second Place",
+      "amount_usd": 3000,
+      "winners": 1,
+      "tags": ["single_winner", "product_analytics_required"]
+    },
+    {
+      "name": "Third Place",
+      "amount_usd": 2000,
+      "winners": 1,
+      "tags": ["single_winner", "product_analytics_required"]
+    },
+    {
+      "name": "Product Bundle",
+      "amount_usd": 0,
+      "winners": 10,
+      "tags": ["non_cash", "product_analytics_required"]
+    }
+  ],
+  "human_blockers": [
+    "Novus email verification and password creation",
+    "Novus connection or installation before submission",
+    "deployed product URL",
+    "Devpost-compatible demo video URL",
+    "final Devpost submission"
+  ],
+  "notes": [
+    "Registered on Devpost as OOYXLOO on 2026-06-10.",
+    "Novus free account signup was started with the user's authorized email, but the official email verification link must be completed by the user.",
+    "PrizePilot is a fit if positioned as a shipped product for builders under prize/deadline pressure, with Novus observing route triage and blocker-resolution flows."
+  ]
+}

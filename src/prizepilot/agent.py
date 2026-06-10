@@ -89,6 +89,10 @@ def _prize_score(prize: Prize) -> int:
         score -= 250
     if "cloud_deployment" in tags:
         score -= 100
+    if "product_analytics_required" in tags:
+        score -= 120
+    if "non_cash" in tags:
+        score -= 1000
     return score
 
 
@@ -122,6 +126,8 @@ def approval_checkpoints(opportunity: Opportunity, prize: Prize) -> List[str]:
         checkpoints.append("Publish the blog/social post only after the user approves the public URL and wording.")
     if "public_pr" in tags:
         checkpoints.append("Open a public PR only after the user approves the GitHub account and branch.")
+    if "product_analytics_required" in tags:
+        checkpoints.append("Install or connect product analytics only after the official account is verified, and record the public proof without storing credentials.")
     return checkpoints
 
 
@@ -135,6 +141,8 @@ def strategy_for(opportunity: Opportunity, prize: Prize) -> str:
         return "Ship a clean working prototype with honest deployment proof and strong project narrative."
     if "public_pr" in tags:
         return "Treat this as a backup bounty: prepare a focused patch, then wait for user-approved public PR and payout setup."
+    if "product_analytics_required" in tags:
+        return "Ship a narrow product workflow, instrument it with the required analytics tool, and use the data trail as judging evidence."
     return "Build the smallest credible artifact that satisfies the rules and can be verified publicly."
 
 

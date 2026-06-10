@@ -11,6 +11,8 @@ class WebappTests(unittest.TestCase):
         self.assertEqual(payload["project"], "PrizePilot")
         self.assertEqual(payload["track"], "Track 4 - Autopilot Agent")
         self.assertEqual(payload["qwen_plan"]["target_prize"]["name"], "Blog Post Award")
+        self.assertEqual(payload["mindtheproduct_plan"]["target_prize"]["name"], "First Place")
+        self.assertFalse(payload["novus_readiness"]["novus_installed"])
         self.assertGreaterEqual(len(payload["portfolio"]["ranked"]), 4)
         self.assertTrue(any("No API key is stored" in item for item in payload["integrity_boundary"]))
 
@@ -19,6 +21,8 @@ class WebappTests(unittest.TestCase):
 
         self.assertIn("/api/plan", html)
         self.assertIn("PrizePilot turns prize pages", html)
+        self.assertIn("Mind the Product target", html)
+        self.assertIn("email verification required", html)
         self.assertIn("No API key is stored", html)
         self.assertIn('data-label="Target"', html)
         self.assertIn("grid-template-columns", html)

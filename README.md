@@ -9,11 +9,13 @@ The project is intentionally conservative: it records public repository and blog
 ```powershell
 $env:PYTHONPATH='src'
 python -m prizepilot plan samples/qwen_hackathon.json
-python -m prizepilot portfolio samples/splunk_agentic_ops.json samples/qwen_hackathon.json samples/uipath_agenthack.json samples/algora_onyx_bounty.json samples/arm_ai_optimization.json
+python -m prizepilot plan samples/mindtheproduct_world_product_day.json
+python -m prizepilot portfolio samples/splunk_agentic_ops.json samples/qwen_hackathon.json samples/mindtheproduct_world_product_day.json samples/uipath_agenthack.json samples/algora_onyx_bounty.json samples/arm_ai_optimization.json
 python -m prizepilot.webapp --host 127.0.0.1 --port 8000
 ```
 
 Live Qwen refinement is optional and requires `DASHSCOPE_API_KEY` or `QWEN_API_KEY` at action time only.
+The Mind the Product route additionally requires Novus email verification and official Novus installation before final Devpost submission. The web service exposes `/api/novus-readiness` so that gate can be tracked without claiming completion early.
 
 ## Demo Assets
 
