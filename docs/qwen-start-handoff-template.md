@@ -11,8 +11,9 @@ Do not paste passwords, OTPs, API keys, recovery codes, payment data, tax data, 
 - Primary prize target: Blog Post Award, USD 500 cash + USD 500 cloud credits, 10 winners.
 - Secondary prize target: Top 10 Honorable Mention Projects, USD 500 cash + USD 500 cloud credits, 10 winners.
 - Project: PrizePilot, an Autopilot Agent for turning prize/hackathon pages into executable submission plans and human action queues.
-- Current account state: Qwen Devpost registration complete as `OOYXLOO`; Devpost portfolio project creation is waiting on reCAPTCHA after project name entry.
-- Current repository state: public GitHub repository shell exists at https://github.com/OOYXLOO/prizepilot-qwen-cloud, but pushing code still needs GitHub authorization.
+- Current account state: Qwen Devpost registration complete as `OOYXLOO`; Devpost portfolio project and Qwen submission draft are created.
+- Current repository state: public GitHub repository is published at https://github.com/OOYXLOO/prizepilot-qwen-cloud.
+- Current video state: local silent WebM exists at `docs/demo-video/prizepilot-demo.webm`, but Devpost requires a YouTube, Facebook Video, Vimeo, or Youku URL for the Qwen Project details page.
 
 The blog prize is not standalone. It still requires a qualified Devpost project submission, public repo, demo/video, blog or social post, and Alibaba Cloud deployment proof.
 
@@ -40,10 +41,10 @@ Please prepare the Qwen PrizePilot public package, live-check commands, deployme
 
 ## Current Two-Minute Unblock Prompt
 
-Use this after you manually complete Devpost reCAPTCHA and/or GitHub authorization:
+Use this after you upload the generated WebM to a supported video host:
 
 ```text
-I completed the Devpost reCAPTCHA / GitHub authorization. Continue the Qwen PrizePilot submission flow from the current browser and local repo state.
+I uploaded the PrizePilot demo video. The accepted video URL is: <paste URL>. Continue the Qwen PrizePilot submission flow from the current browser and local repo state.
 ```
 
 ## Separate Confirmations Needed
@@ -51,7 +52,7 @@ I completed the Devpost reCAPTCHA / GitHub authorization. Continue the Qwen Priz
 These are separate because each one creates a public or account-side effect:
 
 ```text
-Please confirm I should publish the PrizePilot Qwen package to the approved public GitHub repository. This will make the code and docs public and may associate them with my GitHub account.
+Please confirm I should upload or publish the generated PrizePilot demo video to the approved video host. This will make the video public and may associate it with my account.
 ```
 
 ```text

@@ -1,10 +1,10 @@
 {
-  "checked_at": "2026-06-10T07:28:52.128667+00:00",
+  "checked_at": "2026-06-10T07:44:29.720245+00:00",
   "phase": "ready_for_user_publication_steps",
   "severity": "ACTION_NEEDED",
-  "next_action": "Complete the Devpost reCAPTCHA and save the PrizePilot portfolio project, then import it into the Qwen submission flow.",
+  "next_action": "Upload the generated WebM demo to YouTube, Facebook Video, Vimeo, or Youku, then add that accepted video URL to the Qwen Devpost draft.",
   "deadline_utc": "2026-07-09T21:00:00+00:00",
-  "hours_until_deadline": 709.52,
+  "hours_until_deadline": 709.26,
   "artifact_checks": [
     {
       "path": "README.md",
@@ -70,7 +70,7 @@
       "path": "docs/demo-video-url-candidates.md",
       "description": "Demo video URL candidate notes",
       "exists": true,
-      "size": 710
+      "size": 959
     },
     {
       "path": "tools/record_demo_webm.mjs",
@@ -88,7 +88,7 @@
       "path": "docs/qwen-start-handoff-template.md",
       "description": "User launch handoff template",
       "exists": true,
-      "size": 4313
+      "size": 4431
     },
     {
       "path": "docs/qwen-cloud-live-check.md",
@@ -148,11 +148,6 @@
   "missing_artifacts": [],
   "incomplete_public_gates": [
     {
-      "gate": "devpost portfolio project created",
-      "status": "blocked by Devpost reCAPTCHA after project name entry; reconfirmed on 2026-06-10 in the active browser session with PrizePilot typed into the project-name field and g-recaptcha-response present after save attempt",
-      "next_action": "Complete the visible Devpost reCAPTCHA, save the PrizePilot portfolio project, then continue the Qwen import/submission flow."
-    },
-    {
       "gate": "qwen/alibaba cloud account ready",
       "status": "no/unknown",
       "next_action": "Create/access Qwen or Alibaba Cloud account."
@@ -169,8 +164,8 @@
     },
     {
       "gate": "public demo video",
-      "status": "partial - generated local WebM at docs/demo-video/prizepilot-demo.webm; public GitHub URL candidate pending Devpost acceptance or video-host upload",
-      "next_action": "Review whether Devpost accepts the GitHub-hosted WebM URL; otherwise upload the generated WebM to an approved public video host."
+      "status": "partial - generated local WebM at docs/demo-video/prizepilot-demo.webm; Devpost rejected GitHub raw WebM and requires YouTube, Facebook Video, Vimeo, or Youku URL",
+      "next_action": "Upload the generated WebM to a Devpost-supported video host: YouTube, Facebook Video, Vimeo, or Youku."
     },
     {
       "gate": "public blog/social post",

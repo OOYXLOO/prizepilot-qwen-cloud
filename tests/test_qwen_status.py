@@ -93,12 +93,13 @@ class QwenStatusTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as temp_dir:
             root = Path(temp_dir)
             write_required_artifacts(root)
-            ledger = write_ledger(root, video="partial - generated WebM in public repository")
+            ledger = write_ledger(root, joined="yes", portfolio_project="yes", repo="yes", video="partial - generated WebM in public repository")
 
             status = build_status(root, ledger, now=datetime(2026, 6, 20, tzinfo=timezone.utc))
 
         video_gate = next(item for item in status["incomplete_public_gates"] if item["gate"] == "public demo video")
-        self.assertIn("GitHub-hosted WebM", video_gate["next_action"])
+        self.assertIn("YouTube", video_gate["next_action"])
+        self.assertIn("Vimeo", status["next_action"])
 
     def test_urgent_near_deadline(self) -> None:
         with tempfile.TemporaryDirectory() as temp_dir:

@@ -69,7 +69,7 @@ def public_gate_next_action(gate: str, status: str, default_action: str) -> str:
     if gate == "devpost portfolio project created" and ("recaptcha" in normalized or "captcha" in normalized):
         return "Complete the visible Devpost reCAPTCHA, save the PrizePilot portfolio project, then continue the Qwen import/submission flow."
     if gate == "public demo video" and "partial" in normalized:
-        return "Review whether Devpost accepts the GitHub-hosted WebM URL; otherwise upload the generated WebM to an approved public video host."
+        return "Upload the generated WebM to a Devpost-supported video host: YouTube, Facebook Video, Vimeo, or Youku."
     return default_action
 
 def inspect_artifacts(root: Path) -> list[dict[str, object]]:
@@ -132,6 +132,8 @@ def build_status(root: Path, ledger_path: Path, now: datetime | None = None) -> 
             next_action = "Complete the Devpost reCAPTCHA and save the PrizePilot portfolio project, then import it into the Qwen submission flow."
         elif "partial" in fields.get("public github repository", "").lower():
             next_action = "Authorize GitHub publication and push the prepared local package to the existing public repository."
+        elif "partial" in fields.get("public demo video", "").lower():
+            next_action = "Upload the generated WebM demo to YouTube, Facebook Video, Vimeo, or Youku, then add that accepted video URL to the Qwen Devpost draft."
         else:
             next_action = "Use docs/qwen-start-handoff-template.md for the remaining Qwen/Alibaba, deployment, blog/video, and final submission gates."
 

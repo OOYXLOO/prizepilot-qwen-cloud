@@ -13,17 +13,17 @@ Use this as the non-sensitive recovery record for the Qwen backup route. Do not 
 - Secondary target: Top 10 Honorable Mention Projects, USD 500 x10
 - Project: PrizePilot
 - Deadline: July 10, 2026 5:00 AM GMT+8 / July 9, 2026 9:00 PM UTC
-- Current status: local package prepared; Qwen Devpost joined; public GitHub repository published; Devpost portfolio project creation is blocked by reCAPTCHA.
+- Current status: local package prepared; Qwen Devpost joined; public GitHub repository published; Devpost portfolio project created; Qwen submission draft created; project details are blocked by Devpost-supported video-host URL.
 
 ## Gate Status
 
 - Devpost hackathon joined: yes
-- Devpost portfolio project created: blocked by Devpost reCAPTCHA after project name entry; reconfirmed on 2026-06-10 in the active browser session with PrizePilot typed into the project-name field and g-recaptcha-response present after save attempt
+- Devpost portfolio project created: yes
 - Qwen/Alibaba Cloud account ready: no/unknown
 - Qwen live check completed: no
 - Alibaba Cloud deployment proof: no
 - Public GitHub repository: yes
-- Public demo video: partial - generated local WebM at docs/demo-video/prizepilot-demo.webm; public GitHub URL candidate pending Devpost acceptance or video-host upload
+- Public demo video: partial - generated local WebM at docs/demo-video/prizepilot-demo.webm; Devpost rejected GitHub raw WebM and requires YouTube, Facebook Video, Vimeo, or Youku URL
 - Public blog/social post: no
 - Devpost final submitted: no
 - Prize claim or winner notification status: not started
@@ -36,7 +36,8 @@ Use this as the non-sensitive recovery record for the Qwen backup route. Do not 
 - Deployment URL:
 - Demo video URL:
 - Blog/social post URL:
-- Devpost project URL:
+- Devpost project URL: https://devpost.com/software/prizepilot-qwen-cloud
+- Qwen submission draft URL: https://devpost.com/submit-to/29966-global-ai-hackathon-series-with-qwen-cloud/manage/submissions/1046103-prizepilot-qwen-cloud/project_details
 - Submission timestamp:
 - Follow-up date after submission:
 
@@ -47,8 +48,10 @@ Use this as the non-sensitive recovery record for the Qwen backup route. Do not 
 - Local repository has a committed public package published to remote `main`; run `git rev-parse --short HEAD` for the current exact commit. The latest rebuilt `qwen-prizepilot-public.zip` has 55 public-package entries and no forbidden cache/private entries.
 - GitHub publication status: `git push -u origin main` completed with `Everything up-to-date` and set local `main` to track `origin/main`.
 - Generated silent demo WebM: `docs/demo-video/prizepilot-demo.webm`, 1280x720, browser playback verified locally to 3 seconds; URL candidates are in `docs/demo-video-url-candidates.md`.
-- Devpost portfolio project creation at `https://devpost.com/software/new` accepted project name `PrizePilot` but returned `Please complete the reCAPTCHA to submit this form.` Reconfirmed on 2026-06-10 from `https://devpost.com/software`: the form still contains `software[name]=PrizePilot`, `g-recaptcha-response`, and the `Save and continue` submit control, so no portfolio project URL exists yet.
-- Next action after user completes CAPTCHA: save Devpost portfolio project, fill project fields, import it into the Qwen hackathon, and continue public submission gates.
+- Devpost portfolio project was created by importing the public GitHub repo through `https://devpost.com/software/add`, avoiding the earlier project-name reCAPTCHA path.
+- Qwen submission draft was created by importing the portfolio project into the Qwen hackathon; Devpost reports draft status and `2/5 steps done`.
+- Project details are blocked on the required video field. Devpost rejected `https://raw.githubusercontent.com/ooyxloo/prizepilot-qwen-cloud/main/docs/demo-video/prizepilot-demo.webm` with: `must be a valid YouTube, Facebook Video, Vimeo or Youku URL`.
+- Next action: upload the generated WebM to a supported video host, then add that URL to the Qwen Project details page and continue to Additional info.
 - Generated local demo GIF: `docs/screenshots/prizepilot-demo.gif`.
 
 ## Update Rules
