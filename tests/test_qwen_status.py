@@ -13,6 +13,7 @@ LEDGER_TEXT = """# Ledger
 
 - Devpost hackathon joined: {joined}
 - Devpost portfolio project created: {portfolio_project}
+- Devpost additional info saved: {additional_info}
 - Qwen/Alibaba Cloud account ready: {account_ready}
 - Qwen live check completed: {live_check}
 - Alibaba Cloud deployment proof: {deployment}
@@ -32,6 +33,7 @@ def write_ledger(root: Path, **overrides: str) -> Path:
     values = {
         "joined": "no/unknown",
         "portfolio_project": "no",
+        "additional_info": "no",
         "account_ready": "no/unknown",
         "live_check": "no",
         "deployment": "no",
@@ -89,6 +91,23 @@ class QwenStatusTests(unittest.TestCase):
         github_gate = next(item for item in status["incomplete_public_gates"] if item["gate"] == "public github repository")
         self.assertIn("git push", github_gate["next_action"])
 
+    def test_partial_additional_info_gets_file_upload_next_action(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            root = Path(temp_dir)
+            write_required_artifacts(root)
+            ledger = write_ledger(
+                root,
+                joined="yes",
+                portfolio_project="yes",
+                additional_info="partial - fields filled in browser; architecture file upload/save pending",
+            )
+
+            status = build_status(root, ledger, now=datetime(2026, 6, 20, tzinfo=timezone.utc))
+
+        self.assertIn("architecture.png", status["next_action"])
+        additional_gate = next(item for item in status["incomplete_public_gates"] if item["gate"] == "devpost additional info saved")
+        self.assertIn("Save & continue", additional_gate["next_action"])
+
     def test_partial_demo_video_gets_hosting_specific_next_action(self) -> None:
         with tempfile.TemporaryDirectory() as temp_dir:
             root = Path(temp_dir)
@@ -120,6 +139,7 @@ class QwenStatusTests(unittest.TestCase):
                 root,
                 joined="yes",
                 portfolio_project="yes",
+                additional_info="yes",
                 account_ready="yes",
                 live_check="yes",
                 deployment="yes",

@@ -19,6 +19,7 @@ Use this as the non-sensitive recovery record for the Qwen backup route. Do not 
 
 - Devpost hackathon joined: yes
 - Devpost portfolio project created: yes
+- Devpost additional info saved: partial - browser page fields are filled, but architecture.png upload and Save & continue are still pending
 - Qwen/Alibaba Cloud account ready: partial - GitHub OAuth authorized for qwencloud.com and verification code sent to registered email; Qwen verification must be reopened or restored before entering the current email code
 - Qwen live check completed: no
 - Alibaba Cloud deployment proof: partial - Function Compute custom-container manifest prepared at deploy/alibaba-cloud/s.yaml; live Alibaba Cloud endpoint not verified

@@ -1,10 +1,10 @@
 {
-  "checked_at": "2026-06-10T09:05:43.718973+00:00",
+  "checked_at": "2026-06-10T09:13:14.533178+00:00",
   "phase": "ready_for_user_publication_steps",
   "severity": "ACTION_NEEDED",
-  "next_action": "Open or restore the Qwen Cloud email verification page, enter the current email code, then continue account setup until benefits/console access is verified.",
+  "next_action": "Upload `architecture.png` through the current Devpost Additional info page's file picker, then click `Save & continue` and verify Devpost confirms the step saved.",
   "deadline_utc": "2026-07-09T21:00:00+00:00",
-  "hours_until_deadline": 707.9,
+  "hours_until_deadline": 707.78,
   "artifact_checks": [
     {
       "path": "README.md",
@@ -183,6 +183,11 @@
   ],
   "missing_artifacts": [],
   "incomplete_public_gates": [
+    {
+      "gate": "devpost additional info saved",
+      "status": "partial - browser page fields are filled, but architecture.png upload and Save & continue are still pending",
+      "next_action": "Upload `architecture.png` through the current Devpost Additional info page's file picker, then click `Save & continue` and verify Devpost confirms the step saved."
+    },
     {
       "gate": "qwen/alibaba cloud account ready",
       "status": "partial - GitHub OAuth authorized for qwencloud.com and verification code sent to registered email; Qwen verification must be reopened or restored before entering the current email code",

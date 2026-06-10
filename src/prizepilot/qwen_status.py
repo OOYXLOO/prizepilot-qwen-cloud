@@ -44,6 +44,7 @@ REQUIRED_ARTIFACTS = {
 PUBLIC_GATES = {
     "devpost hackathon joined": "Join Qwen Devpost hackathon.",
     "devpost portfolio project created": "Complete the Devpost reCAPTCHA, save the PrizePilot portfolio project, and import it into the Qwen submission flow.",
+    "devpost additional info saved": "Upload architecture.png through Devpost's native file picker and save the Additional info page.",
     "qwen/alibaba cloud account ready": "Create/access Qwen or Alibaba Cloud account.",
     "qwen live check completed": "Run Qwen/DashScope live check with user-provided API key at action time.",
     "alibaba cloud deployment proof": "Deploy or otherwise produce approved Alibaba Cloud proof.",
@@ -74,6 +75,8 @@ def public_gate_next_action(gate: str, status: str, default_action: str) -> str:
         return "Authorize GitHub push/publication, then run `git push -u origin main` to publish the prepared package."
     if gate == "devpost portfolio project created" and ("recaptcha" in normalized or "captcha" in normalized):
         return "Complete the visible Devpost reCAPTCHA, save the PrizePilot portfolio project, then continue the Qwen import/submission flow."
+    if gate == "devpost additional info saved" and "partial" in normalized:
+        return "Upload `architecture.png` through the current Devpost Additional info page's file picker, then click `Save & continue` and verify Devpost confirms the step saved."
     if gate == "qwen/alibaba cloud account ready" and "partial" in normalized:
         if "verification code" in normalized or "email" in normalized:
             return "Open or restore the Qwen Cloud email verification page, enter the current email code, then confirm whether the account reaches the benefits/console page."
@@ -144,6 +147,8 @@ def build_status(root: Path, ledger_path: Path, now: datetime | None = None) -> 
         severity = "ACTION_NEEDED"
         if not is_yes(fields.get("devpost portfolio project created", "")):
             next_action = "Complete the Devpost reCAPTCHA and save the PrizePilot portfolio project, then import it into the Qwen submission flow."
+        elif "partial" in fields.get("devpost additional info saved", "").lower():
+            next_action = "Upload `architecture.png` through the current Devpost Additional info page's file picker, then click `Save & continue` and verify Devpost confirms the step saved."
         elif "partial" in fields.get("qwen/alibaba cloud account ready", "").lower():
             next_action = "Open or restore the Qwen Cloud email verification page, enter the current email code, then continue account setup until benefits/console access is verified."
         elif "partial" in fields.get("public github repository", "").lower():
