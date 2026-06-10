@@ -1,0 +1,17 @@
+{
+  "name": "Algora / Onyx Jira Service Management Connector",
+  "url": "https://github.com/onyx-dot-app/onyx/issues/2281",
+  "deadline": "unknown",
+  "participants": 27,
+  "status": "backup",
+  "prizes": [
+    {
+      "name": "Merged PR bounty",
+      "amount_usd": 250,
+      "winners": 1,
+      "tags": ["public_pr", "single_winner"]
+    }
+  ],
+  "human_blockers": ["GitHub public PR", "maintainer review", "Algora payout setup"],
+  "notes": ["Crowded backup route; payout depends on public claim and merge."]
+}

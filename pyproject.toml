@@ -1,0 +1,8 @@
+[project]
+name = "prizepilot"
+version = "0.1.0"
+description = "Autopilot agent demo for turning hackathon prize pages into accountable execution plans."
+requires-python = ">=3.8"
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]

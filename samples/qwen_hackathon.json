@@ -1,0 +1,29 @@
+{
+  "name": "Global AI Hackathon Series with Qwen Cloud",
+  "url": "https://qwencloud-hackathon.devpost.com/",
+  "deadline": "2026-07-10 05:00 GMT+8",
+  "participants": 2528,
+  "status": "secondary",
+  "prizes": [
+    {
+      "name": "Track 5 EdgeAgent",
+      "amount_usd": 7000,
+      "winners": 1,
+      "tags": ["single_winner", "cloud_deployment"]
+    },
+    {
+      "name": "Blog Post Award",
+      "amount_usd": 500,
+      "winners": 10,
+      "tags": ["blog", "cloud_deployment"]
+    },
+    {
+      "name": "Top 10 Honorable Mention Projects",
+      "amount_usd": 500,
+      "winners": 10,
+      "tags": ["honorable_mention", "cloud_deployment"]
+    }
+  ],
+  "human_blockers": ["Devpost join", "Qwen or Alibaba Cloud account", "API key at action time", "public repository", "public video", "public blog/social post", "Alibaba Cloud deployment proof", "final Devpost submission"],
+  "notes": ["Blog Post Award is not standalone; it requires a qualified Devpost project submission."]
+}

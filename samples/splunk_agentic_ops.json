@@ -1,0 +1,17 @@
+{
+  "name": "Splunk Agentic Ops Hackathon",
+  "url": "https://splunk.devpost.com/",
+  "deadline": "2026-06-16 00:00 GMT+8",
+  "participants": 2170,
+  "status": "primary",
+  "prizes": [
+    {
+      "name": "Most Valuable Feedback",
+      "amount_usd": 200,
+      "winners": 5,
+      "tags": ["feedback"]
+    }
+  ],
+  "human_blockers": ["Devpost join", "Google form identity fields", "eligibility confirmation", "final submission confirmation"],
+  "notes": ["Prepared feedback route based on Splunk MCP documentation mismatch."]
+}

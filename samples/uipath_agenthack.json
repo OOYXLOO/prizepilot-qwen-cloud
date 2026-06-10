@@ -1,0 +1,23 @@
+{
+  "name": "UiPath AgentHack",
+  "url": "https://uipath-agenthack.devpost.com/",
+  "deadline": "2026-06-30 14:45 GMT+8",
+  "participants": 2583,
+  "status": "backup",
+  "prizes": [
+    {
+      "name": "People's Choice",
+      "amount_usd": 500,
+      "winners": 3,
+      "tags": ["public_demo"]
+    },
+    {
+      "name": "Best Product Feedback",
+      "amount_usd": 1500,
+      "winners": 1,
+      "tags": ["feedback", "product_usage_required", "single_winner"]
+    }
+  ],
+  "human_blockers": ["real UiPath product usage", "Devpost join", "public demo actions"],
+  "notes": ["Feedback must be based on honest product use."]
+}

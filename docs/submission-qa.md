@@ -1,0 +1,22 @@
+# Submission QA
+
+- [x] README
+- [x] MIT license
+- [x] Python CLI
+- [x] Qwen client
+- [x] Qwen/DashScope live-check runbook
+- [x] Qwen user start handoff template
+- [x] Qwen route ledger and next-action status
+- [x] Qwen official rule notes
+- [x] Blog draft aligned to Blog Post Award and project submission requirements
+- [x] Unit tests
+- [x] Approval checkpoints
+- [x] Static dashboard
+- [x] Desktop and mobile dashboard screenshots
+- [x] Deployable standard-library web/API service
+- [x] Dockerfile for cloud deployment
+- [x] Alibaba Cloud deployment evidence runbook
+- [ ] Public GitHub repository
+- [ ] Public demo video
+- [ ] Alibaba Cloud deployment proof
+- [ ] Devpost final submission

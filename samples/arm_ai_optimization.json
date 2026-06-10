@@ -1,0 +1,17 @@
+{
+  "name": "Arm Create AI Optimization Challenge",
+  "url": "https://arm-ai-optimization-challenge.devpost.com/",
+  "deadline": "2026-08-15 07:00 GMT+8",
+  "participants": 170,
+  "status": "backup",
+  "prizes": [
+    {
+      "name": "Best in Category: Cloud AI",
+      "amount_usd": 1000,
+      "winners": 1,
+      "tags": ["single_winner", "cloud_deployment"]
+    }
+  ],
+  "human_blockers": ["Arm64 environment", "benchmark evidence", "public submission"],
+  "notes": ["Longer-horizon evidence route, not a fast USD 200 target."]
+}

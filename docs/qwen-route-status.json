@@ -1,0 +1,171 @@
+{
+  "checked_at": "2026-06-10T02:00:44.264847+00:00",
+  "phase": "ready_for_user_publication_steps",
+  "severity": "ACTION_NEEDED",
+  "next_action": "Use docs/qwen-start-handoff-template.md when the user wants to start Qwen in parallel or after Splunk.",
+  "deadline_utc": "2026-07-09T21:00:00+00:00",
+  "hours_until_deadline": 714.99,
+  "artifact_checks": [
+    {
+      "path": "README.md",
+      "description": "Project README",
+      "exists": true,
+      "size": 897
+    },
+    {
+      "path": "LICENSE",
+      "description": "License",
+      "exists": true,
+      "size": 1056
+    },
+    {
+      "path": "Dockerfile",
+      "description": "Deployment container file",
+      "exists": true,
+      "size": 352
+    },
+    {
+      "path": "pyproject.toml",
+      "description": "Python project metadata",
+      "exists": true,
+      "size": 227
+    },
+    {
+      "path": "ARCHITECTURE.md",
+      "description": "Architecture notes",
+      "exists": true,
+      "size": 591
+    },
+    {
+      "path": "architecture.svg",
+      "description": "Architecture diagram",
+      "exists": true,
+      "size": 2266
+    },
+    {
+      "path": "web/index.html",
+      "description": "Static dashboard demo",
+      "exists": true,
+      "size": 1488
+    },
+    {
+      "path": "docs/blog-draft.md",
+      "description": "Blog/social post draft",
+      "exists": true,
+      "size": 6047
+    },
+    {
+      "path": "docs/demo-video-script.md",
+      "description": "Demo video script",
+      "exists": true,
+      "size": 478
+    },
+    {
+      "path": "docs/devpost-project-fields.md",
+      "description": "Devpost field draft",
+      "exists": true,
+      "size": 1231
+    },
+    {
+      "path": "docs/qwen-start-handoff-template.md",
+      "description": "User launch handoff template",
+      "exists": true,
+      "size": 3699
+    },
+    {
+      "path": "docs/qwen-cloud-live-check.md",
+      "description": "Live Qwen check runbook",
+      "exists": true,
+      "size": 2306
+    },
+    {
+      "path": "docs/alibaba-cloud-deployment-runbook.md",
+      "description": "Alibaba Cloud deployment runbook",
+      "exists": true,
+      "size": 2048
+    },
+    {
+      "path": "docs/alibaba-cloud-deployment-proof-template.md",
+      "description": "Deployment proof template",
+      "exists": true,
+      "size": 225
+    },
+    {
+      "path": "docs/public-package-checklist.md",
+      "description": "Public package checklist",
+      "exists": true,
+      "size": 979
+    },
+    {
+      "path": "docs/validation-report.md",
+      "description": "Validation report",
+      "exists": true,
+      "size": 2173
+    },
+    {
+      "path": "docs/screenshots/prizepilot-dashboard-desktop.png",
+      "description": "Desktop dashboard screenshot",
+      "exists": true,
+      "size": 95749
+    },
+    {
+      "path": "docs/screenshots/prizepilot-dashboard-mobile.png",
+      "description": "Mobile dashboard screenshot",
+      "exists": true,
+      "size": 85665
+    }
+  ],
+  "missing_artifacts": [],
+  "incomplete_public_gates": [
+    {
+      "gate": "devpost hackathon joined",
+      "status": "no/unknown",
+      "next_action": "Join Qwen Devpost hackathon."
+    },
+    {
+      "gate": "qwen/alibaba cloud account ready",
+      "status": "no/unknown",
+      "next_action": "Create/access Qwen or Alibaba Cloud account."
+    },
+    {
+      "gate": "qwen live check completed",
+      "status": "no",
+      "next_action": "Run Qwen/DashScope live check with user-provided API key at action time."
+    },
+    {
+      "gate": "alibaba cloud deployment proof",
+      "status": "no",
+      "next_action": "Deploy or otherwise produce approved Alibaba Cloud proof."
+    },
+    {
+      "gate": "public github repository",
+      "status": "no",
+      "next_action": "Publish approved public GitHub repository."
+    },
+    {
+      "gate": "public demo video",
+      "status": "no",
+      "next_action": "Publish approved public demo video."
+    },
+    {
+      "gate": "public blog/social post",
+      "status": "no",
+      "next_action": "Publish approved blog/social post for Blog Post Award."
+    },
+    {
+      "gate": "devpost final submitted",
+      "status": "no",
+      "next_action": "Submit final Devpost project after review and explicit confirmation."
+    }
+  ],
+  "ledger_path": "C:\\Users\\YXL\\.codex\\tmp\\hks-yxl\\money-goal-200usd\\qwen-prizepilot\\docs\\qwen-route-ledger.md",
+  "reference_files": [
+    "docs/qwen-route-ledger.md",
+    "docs/qwen-start-handoff-template.md",
+    "docs/qwen-human-action-card.md",
+    "docs/devpost-project-fields.md",
+    "docs/blog-draft.md",
+    "docs/alibaba-cloud-deployment-runbook.md",
+    "docs/validation-report.md"
+  ]
+}
