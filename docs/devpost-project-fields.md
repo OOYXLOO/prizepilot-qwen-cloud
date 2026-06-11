@@ -28,6 +28,7 @@ python -m prizepilot.webapp --host 127.0.0.1 --port 8000
 ## Demo Media
 
 - Public Vimeo demo: https://vimeo.com/1200124146
+- Public judge evidence pack: https://ooyxloo.github.io/prizepilot-qwen-cloud/judge-pack/
 - `docs/screenshots/prizepilot-demo.gif`
 - `docs/screenshots/prizepilot-dashboard-desktop.png`
 - `docs/screenshots/prizepilot-dashboard-mobile.png`

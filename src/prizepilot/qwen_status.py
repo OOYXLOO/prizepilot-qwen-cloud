@@ -22,6 +22,7 @@ REQUIRED_ARTIFACTS = {
     "web/index.html": "Static dashboard demo",
     "docs/index.html": "Public build notes landing page",
     "docs/blog/index.html": "Public blog page for Blog Post Award",
+    "docs/judge-pack/index.html": "Public judge evidence pack",
     "docs/blog-draft.md": "Blog/social post draft",
     "docs/demo-video-script.md": "Demo video script",
     "docs/demo-video/prizepilot-demo.webm": "Generated silent demo WebM",

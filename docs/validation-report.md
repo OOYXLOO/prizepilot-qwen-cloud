@@ -1,10 +1,10 @@
 # Validation Report
 
-Latest verification: 2026-06-10 after submitting the Qwen Devpost project
+Latest verification: 2026-06-12 after adding the public judge evidence pack
 
 ## Passed Gates
 
-- 23 unit tests pass with `PYTHONPATH=src; python -m unittest discover -s tests -v`.
+- 25 unit tests pass with `PYTHONPATH=src; python -m unittest discover -s tests -v`.
 - `python -m compileall -q .` passes.
 - `python -m prizepilot plan samples/qwen_hackathon.json` targets the Blog Post Award.
 - `python -m prizepilot portfolio ...` keeps Splunk first and Qwen second when run with current sample names.
@@ -25,4 +25,5 @@ Latest verification: 2026-06-10 after submitting the Qwen Devpost project
 - Alibaba Cloud deployment proof has not been created.
 - Docker CLI is installed locally, but Docker Desktop/Linux daemon was not running during the 2026-06-10 check, so a local `docker build` has not been proven in this environment.
 - Public GitHub repository, public Vimeo demo video, blog/social post, and Devpost final submission are done.
+- Public judge evidence pack is linked from the GitHub Pages evidence hub and README.
 - Real Qwen/Alibaba Cloud account readiness and live endpoint proof still need to be strengthened before judging.
