@@ -49,7 +49,7 @@ Use this as the non-sensitive recovery record for the Qwen backup route. Do not 
 
 - Qwen Devpost registration was completed in browser for Devpost user `OOYXLOO`.
 - Created public GitHub repository shell: https://github.com/OOYXLOO/prizepilot-qwen-cloud
-- Local repository has a committed public package published to remote `main`; run `git rev-parse --short HEAD` for the current exact commit. The latest rebuilt `qwen-prizepilot-public.zip` has 55 public-package entries and no forbidden cache/private entries.
+- Local repository has a committed public package published to remote `main`; run `git rev-parse --short HEAD` for the current exact commit. The current tracked public tree has 64 files, all required public entries present, and no forbidden cache/private entries.
 - GitHub publication status: `git push -u origin main` completed with `Everything up-to-date` and set local `main` to track `origin/main`.
 - Generated silent demo WebM: `docs/demo-video/prizepilot-demo.webm`, 1280x720, browser playback verified locally to 3 seconds; URL candidates are in `docs/demo-video-url-candidates.md`.
 - Devpost portfolio project was created by importing the public GitHub repo through `https://devpost.com/software/add`, avoiding the earlier project-name reCAPTCHA path.

@@ -45,7 +45,7 @@ Paste from `docs/submission-story.md`.
 ## Additional Info Draft
 
 - Submitter type: Individual
-- Country of residence: China, inferred from the user's provided Chinese phone number and Asia/Shanghai workspace context; verify before final submission if the user corrects this.
+- Country of residence: confirm directly in the official Devpost form with the account owner.
 - Project type: New
 - Start date: 06-10-26
 - Started before May 26 explanation: Project started on 06-10-26, after May 26. During the submission period I built the planner, dashboard, public repository, blog, demo assets, and Alibaba Cloud deployment adapter.

@@ -4,13 +4,12 @@ Required: README, LICENSE, pyproject.toml, ARCHITECTURE.md, architecture.svg, ar
 
 Forbidden: `.env`, API keys, passwords, OTPs, payment data, tax data, KYC data, `__pycache__`, `*.pyc`, `.pytest_cache`, `.venv`, `dist`, `build`.
 
-Latest inspection on 2026-06-10 after adding the demo video upload pack:
+Latest inspection on 2026-06-12 after adding the judge evidence pack:
 
-- Package: `qwen-prizepilot-public.zip`
-- Entries: 68
+- Source: tracked public repository tree on `main`
+- Tracked files: 64
 - Missing required entries: 0
 - Forbidden cache/private entries: 0
-- Exact byte count is not a gate.
-- Exact byte count is not a gate.
+- Exact byte count and ZIP entry count are not gates.
 
 Optional presentation deck is not currently included and is not a package gate.

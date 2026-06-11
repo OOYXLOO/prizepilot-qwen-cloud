@@ -22,6 +22,17 @@ class PublicPagesTests(unittest.TestCase):
 
         self.assertIn("https://ooyxloo.github.io/prizepilot-qwen-cloud/judge-pack/", readme)
 
+    def test_devpost_fields_do_not_publish_identity_inferences(self) -> None:
+        fields = (ROOT / "docs" / "devpost-project-fields.md").read_text(encoding="utf-8")
+
+        forbidden_fragments = [
+            "phone number",
+            "Asia/Shanghai",
+            "inferred from",
+        ]
+        for fragment in forbidden_fragments:
+            self.assertNotIn(fragment, fields)
+
 
 if __name__ == "__main__":
     unittest.main()
