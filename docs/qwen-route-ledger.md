@@ -13,7 +13,7 @@ Use this as the non-sensitive recovery record for the Qwen backup route. Do not 
 - Secondary target: Top 10 Honorable Mention Projects, USD 500 x10
 - Project: PrizePilot
 - Deadline: July 10, 2026 5:00 AM GMT+8 / July 9, 2026 9:00 PM UTC
-- Current status: local package prepared; Qwen Devpost joined; public GitHub repository published; GitHub Pages blog published; Devpost portfolio project created; public Vimeo demo video published; Additional info saved with architecture diagram; Qwen Devpost project submitted. Qwen Cloud account/API and live Alibaba Cloud deployment proof still need to be strengthened before judging.
+- Current status: local package prepared; Qwen Devpost joined; public GitHub repository published; GitHub Pages blog published; Devpost portfolio project created; public Vimeo demo video published; Additional info saved with architecture diagram; Qwen Devpost project submitted; public Devpost Story updated to remove draft wording and show the current public evidence links. Qwen Cloud account/API and live Alibaba Cloud deployment proof still need to be strengthened before judging.
 
 ## Gate Status
 
@@ -27,6 +27,7 @@ Use this as the non-sensitive recovery record for the Qwen backup route. Do not 
 - Public demo video: yes - Vimeo public URL accepted by Devpost
 - Public blog/social post: yes
 - Devpost final submitted: yes - Devpost confirmation displayed `Project submitted! Continue to edit your project until the hackathon deadline: July 09, 2026 at 05:00pm EDT.`
+- Public Devpost Story current: yes - checked 2026-06-11 22:06 CST; old `submission draft` wording absent and Vimeo/repo/blog links present
 - Prize claim or winner notification status: not started
 - Payout received: no
 
@@ -65,6 +66,7 @@ Use this as the non-sensitive recovery record for the Qwen backup route. Do not 
 - Continued the Qwen Devpost Additional info page in the active browser. Filled visible fields for submitter type (`Individual`), country (`China`), project type (`New`), start date (`06-10-26`), pre-May-26 update explanation, Track 4, repository URL, Alibaba Cloud proof code-file URL, blog URL, AI tools used, learning level (`Significant`), and the three eligibility confirmations.
 - Uploaded `architecture.png` through the native Windows file picker. Devpost showed `architecture.png` in the file list, saved Additional info successfully, and advanced to finalization with `4/5 steps done`.
 - Checked the final terms box and submitted the project. Devpost redirected to https://devpost.com/software/prizepilot-qwen-cloud and displayed: `Project submitted! Continue to edit your project until the hackathon deadline: July 09, 2026 at 05:00pm EDT.`
+- 2026-06-11: Reopened the recorded Qwen Devpost submission edit URL, replaced the public Story text with the current published-project version, saved Project details, and verified the public Devpost page no longer says `submission draft` and now shows the Vimeo demo, public repository, build journal, and live-evidence caveats.
 - Remaining Qwen improvement work is evidence quality, not submission plumbing: finish Qwen/Alibaba Cloud account verification, run a live Qwen/DashScope check with a user-provided API key at action time, and add stronger live Alibaba Cloud endpoint proof if available before the deadline.
 
 ## Update Rules
