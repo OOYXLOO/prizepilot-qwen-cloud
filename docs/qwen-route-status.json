@@ -1,16 +1,16 @@
 {
-  "checked_at": "2026-06-11T17:57:57.515617+00:00",
+  "checked_at": "2026-06-11T21:43:55.914455+00:00",
   "phase": "submitted_can_still_improve",
   "severity": "OK_WITH_EVIDENCE_GAPS",
   "next_action": "Strengthen evidence before judging: complete Qwen/Alibaba Cloud account verification, run a live Qwen/DashScope check with a user-provided API key at action time, and add stronger live Alibaba Cloud endpoint proof if available.",
   "deadline_utc": "2026-07-09T21:00:00+00:00",
-  "hours_until_deadline": 675.03,
+  "hours_until_deadline": 671.27,
   "artifact_checks": [
     {
       "path": "README.md",
       "description": "Project README",
       "exists": true,
-      "size": 3186
+      "size": 3460
     },
     {
       "path": "LICENSE",
@@ -70,7 +70,7 @@
       "path": "docs/index.html",
       "description": "Public build notes landing page",
       "exists": true,
-      "size": 4066
+      "size": 4358
     },
     {
       "path": "docs/blog/index.html",
@@ -82,7 +82,13 @@
       "path": "docs/judge-pack/index.html",
       "description": "Public judge evidence pack",
       "exists": true,
-      "size": 12177
+      "size": 12385
+    },
+    {
+      "path": "docs/prizepilot-qwen-submission-deck.pptx",
+      "description": "Editable presentation deck",
+      "exists": true,
+      "size": 31845
     },
     {
       "path": "docs/blog-draft.md",
@@ -160,13 +166,13 @@
       "path": "docs/public-package-checklist.md",
       "description": "Public package checklist",
       "exists": true,
-      "size": 1181
+      "size": 1300
     },
     {
       "path": "docs/validation-report.md",
       "description": "Validation report",
       "exists": true,
-      "size": 2763
+      "size": 3054
     },
     {
       "path": "docs/screenshots/prizepilot-dashboard-desktop.png",
