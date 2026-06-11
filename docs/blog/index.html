@@ -148,6 +148,75 @@
       font-size: 0.94em;
     }
 
+    pre {
+      overflow-x: auto;
+      padding: 16px;
+      background: #17202a;
+      color: #eff6ff;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    figure {
+      margin: 18px 0 0;
+      padding: 14px;
+      border: 1px solid var(--line);
+      background: var(--paper);
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border: 1px solid var(--line);
+    }
+
+    figcaption {
+      margin-top: 10px;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.45;
+    }
+
+    .figure-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      gap: 16px;
+      align-items: start;
+    }
+
+    .table-wrap {
+      overflow-x: auto;
+      border: 1px solid var(--line);
+      background: var(--paper);
+      margin-top: 16px;
+    }
+
+    table {
+      width: 100%;
+      min-width: 760px;
+      border-collapse: collapse;
+    }
+
+    th, td {
+      padding: 13px 14px;
+      border-bottom: 1px solid var(--line);
+      text-align: left;
+      vertical-align: top;
+      font-size: 15px;
+      line-height: 1.45;
+    }
+
+    th {
+      color: var(--muted);
+      font-size: 13px;
+      text-transform: uppercase;
+    }
+
+    tr:last-child td {
+      border-bottom: 0;
+    }
+
     .callout {
       margin: 18px 0 0;
       padding: 16px 18px;
@@ -215,6 +284,45 @@
       aside {
         position: static;
       }
+
+      .figure-grid {
+        grid-template-columns: 1fr;
+      }
+
+      table {
+        min-width: 0;
+      }
+
+      thead {
+        display: none;
+      }
+
+      tbody, tr, td {
+        display: block;
+      }
+
+      tr {
+        padding: 10px 0;
+        border-bottom: 1px solid var(--line);
+      }
+
+      tr:last-child {
+        border-bottom: 0;
+      }
+
+      td {
+        display: grid;
+        grid-template-columns: minmax(92px, 120px) minmax(0, 1fr);
+        gap: 10px;
+        border-bottom: 0;
+        overflow-wrap: anywhere;
+      }
+
+      td::before {
+        content: attr(data-label);
+        color: var(--muted);
+        font-weight: 700;
+      }
     }
   </style>
 </head>
@@ -240,8 +348,8 @@
       <article>
         <section>
           <h2>Latest review status</h2>
-          <p>As of June 10, 2026, PrizePilot is submitted on Devpost with a public GitHub repository, public Vimeo demo, and public build journal. The current evidence boundary is intentionally explicit: live Qwen/DashScope refinement and a verified live Alibaba Cloud endpoint are prepared paths, not completed claims.</p>
-          <p>The repository and this build journal are the current source of truth for judges who want the latest status, validation report, and route ledger.</p>
+          <p>As of June 11, 2026, PrizePilot is submitted on Devpost with a public GitHub repository, public Vimeo demo, public build journal, and a <a href="../demo/">static judge demo</a>. The public Devpost Story has been updated so it no longer describes the project as a draft.</p>
+          <p>The current evidence boundary is intentionally explicit: live Qwen/DashScope refinement and a verified live Alibaba Cloud endpoint are prepared paths, not completed claims. The repository and this build journal are the source of truth for judges who want the latest status, validation report, and route ledger.</p>
         </section>
 
         <section>
@@ -270,6 +378,54 @@
           <h2>Current planning behavior</h2>
           <p>The local deterministic planner ranks opportunities by prize value, number of winners, deadline pressure, and blockers. In the current sample portfolio, a near-deadline Splunk feedback route stays first because it is a multi-winner, low-friction prize. The Qwen Cloud route is the higher-upside project route and is now submitted publicly; the remaining improvement path is live Qwen usage evidence and Alibaba Cloud endpoint proof.</p>
           <p>That distinction is the core of PrizePilot: it does not chase the largest pool if the evidence cannot be produced. It chooses the route that can be completed honestly.</p>
+          <div class="figure-grid">
+            <figure>
+              <img src="../screenshots/prizepilot-demo.gif" alt="PrizePilot dashboard walkthrough">
+              <figcaption>The dashboard walkthrough shows the ranked route portfolio, Qwen target selection, approval queue, and evidence gaps.</figcaption>
+            </figure>
+            <figure>
+              <img src="../assets/architecture.png" alt="PrizePilot architecture diagram">
+              <figcaption>The architecture keeps deterministic planning, Qwen refinement, evidence publication, and human-gated external actions separate.</figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <section>
+          <h2>Claim, proof, and gap map</h2>
+          <p>This table is the operating principle behind the submission. The project should only strengthen public claims after the proof exists.</p>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Claim</th>
+                  <th>Current Proof</th>
+                  <th>Remaining Gap</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td data-label="Claim">PrizePilot can rank cash-prize routes.</td>
+                  <td data-label="Current Proof">CLI, local web dashboard, portfolio sample data, screenshots, validation report, and the static judge demo.</td>
+                  <td data-label="Remaining Gap">None for local deterministic behavior.</td>
+                </tr>
+                <tr>
+                  <td data-label="Claim">The project is a submitted Qwen Track 4 entry.</td>
+                  <td data-label="Current Proof">Public Devpost page, Vimeo demo, public repository, and this build journal.</td>
+                  <td data-label="Remaining Gap">Improve evidence before judging if live sponsor tooling becomes available.</td>
+                </tr>
+                <tr>
+                  <td data-label="Claim">Qwen/DashScope can refine the planning narrative.</td>
+                  <td data-label="Current Proof">OpenAI-compatible client, runtime environment-variable handling, and focused unit tests.</td>
+                  <td data-label="Remaining Gap">A live call transcript requires official account/API access at action time.</td>
+                </tr>
+                <tr>
+                  <td data-label="Claim">Alibaba Cloud deployment is prepared.</td>
+                  <td data-label="Current Proof">Function Compute manifest and deployment runbook in the public repository.</td>
+                  <td data-label="Remaining Gap">A live endpoint requires official cloud account verification and billing/credit approval.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </section>
 
         <section>
@@ -282,6 +438,13 @@
             <li>Configurable base URL and model.</li>
             <li>Safer error messages when no runtime API key is present.</li>
           </ul>
+          <pre><code>payload = {
+    "model": self.model,
+    "messages": list(messages),
+    "temperature": 0.2,
+}
+POST {base_url}/chat/completions
+Authorization: Bearer &lt;runtime key only&gt;</code></pre>
           <div class="callout warning">
             <strong>Evidence boundary:</strong> this post does not claim a live Qwen API call yet. The live check belongs in the final evidence pack after account access and a runtime API key are available.
           </div>
@@ -297,7 +460,44 @@
           <h2>What the demo shows</h2>
           <p>The demo starts with a portfolio containing several hackathon and bounty routes. PrizePilot ranks them and explains why a small multi-winner feedback prize can be the urgent first target while Qwen Cloud is the stronger second-wave project route.</p>
           <p>Then the demo opens the Qwen project plan. The agent targets the Blog Post Award and Honorable Mention route instead of over-optimizing for a single-winner grand prize. It generates publication and approval checkpoints for Devpost updates, Qwen and Alibaba account work, public repository maintenance, video and blog publication, and deployment evidence.</p>
-          <p>The final section shows the dashboard and <code>/api/plan</code> output so both people and tools can inspect the decision.</p>
+          <p>The final section shows the dashboard and <code>/api/plan</code> output so both people and tools can inspect the decision. Judges who want a setup-free version can open the <a href="../demo/">static judge demo</a>.</p>
+        </section>
+
+        <section>
+          <h2>Judging criteria map</h2>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Criterion</th>
+                  <th>How PrizePilot addresses it</th>
+                  <th>Evidence</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td data-label="Criterion">Innovation</td>
+                  <td data-label="How PrizePilot addresses it">Automates the under-served workflow of turning prize pages into accountable execution plans instead of only generating another app shell.</td>
+                  <td data-label="Evidence">Route ranking, agent roles, approval queue, and public evidence ledger.</td>
+                </tr>
+                <tr>
+                  <td data-label="Criterion">Technical depth</td>
+                  <td data-label="How PrizePilot addresses it">Combines deterministic planning, a Qwen-compatible client, local web/API surface, Docker packaging, and Alibaba deployment preparation.</td>
+                  <td data-label="Evidence">Source code, tests, dashboard, API payload, Dockerfile, and Function Compute manifest.</td>
+                </tr>
+                <tr>
+                  <td data-label="Criterion">Problem value</td>
+                  <td data-label="How PrizePilot addresses it">Makes real-money route selection safer by tracking deadlines, winner count, proof gaps, public action risk, payout risk, and KYC boundaries.</td>
+                  <td data-label="Evidence">Live money-goal route stack, submitted Splunk/Qwen routes, and bounty PR monitoring records.</td>
+                </tr>
+                <tr>
+                  <td data-label="Criterion">Presentation</td>
+                  <td data-label="How PrizePilot addresses it">Provides Devpost, video, repo, build journal, screenshots, and a setup-free judge demo.</td>
+                  <td data-label="Evidence">Public links in the sidebar and the evidence hub.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </section>
 
         <section>
@@ -315,6 +515,7 @@
       <aside aria-label="Build status">
         <h2>Build status</h2>
         <ul class="status-list">
+          <li>Judge demo<span>Published at <a href="../demo/">GitHub Pages demo</a></span></li>
           <li>Public repository<span>Published at <a href="https://github.com/OOYXLOO/prizepilot-qwen-cloud">github.com/OOYXLOO/prizepilot-qwen-cloud</a></span></li>
           <li>Devpost project<span>Submitted at <a href="https://devpost.com/software/prizepilot-qwen-cloud">devpost.com/software/prizepilot-qwen-cloud</a></span></li>
           <li>Hackathon route<span>Qwen Cloud Track 4: Autopilot Agent</span></li>
@@ -328,7 +529,7 @@
   </main>
 
   <footer>
-    <div class="wrap">PrizePilot build journal for the Global AI Hackathon Series with Qwen Cloud. Last updated June 10, 2026.</div>
+    <div class="wrap">PrizePilot build journal for the Global AI Hackathon Series with Qwen Cloud. Last updated June 11, 2026.</div>
   </footer>
 </body>
 </html>
