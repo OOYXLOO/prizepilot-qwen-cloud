@@ -6,10 +6,11 @@ The project is intentionally conservative: it records public repository, blog, v
 
 ## Current Public Status
 
-Latest review status as of 2026-06-10: the repository, build journal, and route status files are the current source of truth for PrizePilot's submission state.
+Latest review status as of 2026-06-12: the repository, build journal, presentation deck, and route status files are the current source of truth for PrizePilot's submission state.
 
 - Devpost project: https://devpost.com/software/prizepilot-qwen-cloud
 - Public demo video: https://vimeo.com/1200124146
+- Public presentation deck: https://ooyxloo.github.io/prizepilot-qwen-cloud/prizepilot-qwen-submission-deck.pptx
 - Public judge demo: https://ooyxloo.github.io/prizepilot-qwen-cloud/demo/
 - Public judge evidence pack: https://ooyxloo.github.io/prizepilot-qwen-cloud/judge-pack/
 - Public build journal: https://ooyxloo.github.io/prizepilot-qwen-cloud/blog/
@@ -22,10 +23,11 @@ Latest review status as of 2026-06-10: the repository, build journal, and route 
 The fastest review path is:
 
 1. Open the Devpost project and demo video above.
-2. Open the public judge demo for the setup-free evidence map.
-3. Open the judge evidence pack for the Track 4 / Blog Post Award matrix.
-4. Read the build journal for the current public evidence boundary.
-5. Run the local dashboard:
+2. Open the public presentation deck for the 5-slide judge summary.
+3. Open the public judge demo for the setup-free evidence map.
+4. Open the judge evidence pack for the Track 4 / Blog Post Award matrix.
+5. Read the build journal for the current public evidence boundary.
+6. Run the local dashboard:
 
 ## Local Use
 
@@ -37,8 +39,8 @@ python -m prizepilot portfolio samples/splunk_agentic_ops.json samples/qwen_hack
 python -m prizepilot.webapp --host 127.0.0.1 --port 8000
 ```
 
-6. Inspect the machine-readable planning payload at `http://127.0.0.1:8000/api/plan`.
-7. Review `docs/submission-story.md`, `docs/qwen-route-status.md`, and `docs/validation-report.md` for the evidence boundary.
+7. Inspect the machine-readable planning payload at `http://127.0.0.1:8000/api/plan`.
+8. Review `docs/submission-story.md`, `docs/qwen-route-status.md`, and `docs/validation-report.md` for the evidence boundary.
 
 Live Qwen refinement is optional and requires `DASHSCOPE_API_KEY` or `QWEN_API_KEY` at action time only.
 The Mind the Product route additionally requires Novus email verification and official Novus installation before final Devpost submission. The web service exposes `/api/novus-readiness` so that gate can be tracked without claiming completion early.
@@ -47,6 +49,7 @@ The Mind the Product route additionally requires Novus email verification and of
 
 - Dashboard screenshots: `docs/screenshots/prizepilot-dashboard-desktop.png` and `docs/screenshots/prizepilot-dashboard-mobile.png`
 - Short demo GIF: `docs/screenshots/prizepilot-demo.gif`
+- Editable presentation deck: `docs/prizepilot-qwen-submission-deck.pptx`
 - Static judge demo: `docs/demo/index.html`
 - Devpost architecture upload: `architecture.png`
 - Recording page: `docs/demo-recording-page.html`

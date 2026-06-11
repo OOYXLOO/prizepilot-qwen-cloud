@@ -10,17 +10,22 @@ class PublicPagesTests(unittest.TestCase):
         judge_pack = (ROOT / "docs" / "judge-pack" / "index.html").read_text(encoding="utf-8")
 
         self.assertIn("./judge-pack/", hub)
+        self.assertIn("./prizepilot-qwen-submission-deck.pptx", hub)
         self.assertIn("Judge Evidence Pack", hub)
+        self.assertIn("Presentation Deck", hub)
         self.assertIn("Qwen Cloud Track 4 judge packet", judge_pack)
         self.assertIn("https://devpost.com/software/prizepilot-qwen-cloud", judge_pack)
         self.assertIn("https://vimeo.com/1200124146", judge_pack)
+        self.assertIn("../prizepilot-qwen-submission-deck.pptx", judge_pack)
         self.assertIn("../screenshots/prizepilot-dashboard-desktop.png", judge_pack)
+        self.assertTrue((ROOT / "docs" / "prizepilot-qwen-submission-deck.pptx").is_file())
         self.assertTrue((ROOT / "docs" / "screenshots" / "prizepilot-dashboard-desktop.png").is_file())
 
     def test_readme_exposes_judge_pack_url(self) -> None:
         readme = (ROOT / "README.md").read_text(encoding="utf-8")
 
         self.assertIn("https://ooyxloo.github.io/prizepilot-qwen-cloud/judge-pack/", readme)
+        self.assertIn("https://ooyxloo.github.io/prizepilot-qwen-cloud/prizepilot-qwen-submission-deck.pptx", readme)
 
     def test_devpost_fields_do_not_publish_identity_inferences(self) -> None:
         fields = (ROOT / "docs" / "devpost-project-fields.md").read_text(encoding="utf-8")

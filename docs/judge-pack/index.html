@@ -132,7 +132,7 @@
 
     .links {
       display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
       gap: 10px;
       margin-top: 22px;
     }
@@ -292,6 +292,7 @@
       <div class="links">
         <a class="link-tile" href="https://devpost.com/software/prizepilot-qwen-cloud">Devpost<span>Submitted project page with Vimeo demo and public repository.</span></a>
         <a class="link-tile" href="https://vimeo.com/1200124146">Demo Video<span>Short public video accepted by Devpost.</span></a>
+        <a class="link-tile" href="../prizepilot-qwen-submission-deck.pptx">Presentation Deck<span>Editable 5-slide PowerPoint summary for judge review.</span></a>
         <a class="link-tile" href="https://github.com/OOYXLOO/prizepilot-qwen-cloud">Repository<span>Source, tests, route ledger, Qwen client, and deployment adapter.</span></a>
         <a class="link-tile" href="../demo/">Judge Demo<span>Setup-free static walkthrough of the working dashboard and evidence map.</span></a>
       </div>
@@ -302,7 +303,7 @@
     <section>
       <h2>Fast Evidence Snapshot</h2>
       <div class="metric-row">
-        <div class="metric"><strong>25</strong><span>unit tests pass with the judge evidence pack included.</span></div>
+        <div class="metric"><strong>26</strong><span>unit tests pass with the judge evidence pack and deck link included.</span></div>
         <div class="metric"><strong>HTTP 200</strong><span>public page checks cover the evidence hub, blog, and judge demo.</span></div>
         <div class="metric"><strong>500</strong><span>USD target prize for both Blog Post Award and Honorable Mention routes.</span></div>
         <div class="metric"><strong>3</strong><span>remaining account-gated proofs: Qwen account, live Qwen call, live Alibaba endpoint.</span></div>
@@ -341,7 +342,7 @@
             </tr>
             <tr>
               <td data-label="Judging Signal">Public proof and reproducibility</td>
-              <td data-label="Public Evidence">README quickstart, validation report, screenshots, demo GIF, public judge demo, and machine-readable <code>/api/plan</code> payload.</td>
+              <td data-label="Public Evidence">README quickstart, presentation deck, validation report, screenshots, demo GIF, public judge demo, and machine-readable <code>/api/plan</code> payload.</td>
               <td data-label="Status">Available without login.</td>
             </tr>
             <tr>
