@@ -13,7 +13,7 @@ Use this as the non-sensitive recovery record for the Qwen backup route. Do not 
 - Secondary target: Top 10 Honorable Mention Projects, USD 500 x10
 - Project: PrizePilot
 - Deadline: July 10, 2026 5:00 AM GMT+8 / July 9, 2026 9:00 PM UTC
-- Current status: local package prepared; Qwen Devpost joined; public GitHub repository published; GitHub Pages blog published; Devpost portfolio project created; public Vimeo demo video published; Additional info saved with architecture diagram; Qwen Devpost project submitted; public Devpost Story updated to remove draft wording and show the current public evidence links. Qwen Cloud account/API and live Alibaba Cloud deployment proof still need to be strengthened before judging.
+- Current status: local package prepared; Qwen Devpost joined; public GitHub repository published; GitHub Pages blog and judge demo published; Devpost portfolio project created; public Vimeo demo video published; Additional info saved with architecture diagram; Qwen Devpost project submitted; public Devpost Story updated to remove draft wording and show the current public evidence links. Qwen Cloud account/API and live Alibaba Cloud deployment proof still need to be strengthened before judging.
 
 ## Gate Status
 
@@ -38,6 +38,7 @@ Use this as the non-sensitive recovery record for the Qwen backup route. Do not 
 - Deployment URL:
 - Demo video URL: https://vimeo.com/1200124146
 - Blog/social post URL: https://ooyxloo.github.io/prizepilot-qwen-cloud/blog/
+- Judge demo URL: https://ooyxloo.github.io/prizepilot-qwen-cloud/demo/
 - Architecture diagram file: architecture.png
 - Devpost project URL: https://devpost.com/software/prizepilot-qwen-cloud
 - Qwen submission manage URL: https://devpost.com/submit-to/29966-global-ai-hackathon-series-with-qwen-cloud/manage/submissions/1046103-prizepilot-qwen-cloud/edit
@@ -67,6 +68,8 @@ Use this as the non-sensitive recovery record for the Qwen backup route. Do not 
 - Uploaded `architecture.png` through the native Windows file picker. Devpost showed `architecture.png` in the file list, saved Additional info successfully, and advanced to finalization with `4/5 steps done`.
 - Checked the final terms box and submitted the project. Devpost redirected to https://devpost.com/software/prizepilot-qwen-cloud and displayed: `Project submitted! Continue to edit your project until the hackathon deadline: July 09, 2026 at 05:00pm EDT.`
 - 2026-06-11: Reopened the recorded Qwen Devpost submission edit URL, replaced the public Story text with the current published-project version, saved Project details, and verified the public Devpost page no longer says `submission draft` and now shows the Vimeo demo, public repository, build journal, and live-evidence caveats.
+- 2026-06-11: Added a static GitHub Pages evidence hub and judge demo at `docs/index.html` and `docs/demo/index.html`, copied the architecture diagram into `docs/assets/architecture.png` for Pages rendering, and expanded the build journal with screenshots, a claim/proof/gap table, Qwen client request shape, and judging-criteria map. Public repository HEAD `092965a82826e29d3d1fc746297f13c3963186ea` contains this update; GitHub Pages deployment may lag briefly after the push.
+- 2026-06-11: Verified GitHub Pages deployment for the root evidence hub, `/demo/`, and `/blog/`, then updated Devpost Project details to add `https://ooyxloo.github.io/prizepilot-qwen-cloud/demo/` as an additional public "Try it out" link. Public Devpost verification found the demo link href present alongside GitHub, Vimeo, and build journal links.
 - Remaining Qwen improvement work is evidence quality, not submission plumbing: finish Qwen/Alibaba Cloud account verification, run a live Qwen/DashScope check with a user-provided API key at action time, and add stronger live Alibaba Cloud endpoint proof if available before the deadline.
 
 ## Update Rules

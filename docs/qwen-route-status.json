@@ -1,16 +1,16 @@
 {
-  "checked_at": "2026-06-11T14:08:27.222242+00:00",
+  "checked_at": "2026-06-11T14:41:05.327803+00:00",
   "phase": "submitted_can_still_improve",
   "severity": "OK_WITH_EVIDENCE_GAPS",
   "next_action": "Strengthen evidence before judging: complete Qwen/Alibaba Cloud account verification, run a live Qwen/DashScope check with a user-provided API key at action time, and add stronger live Alibaba Cloud endpoint proof if available.",
   "deadline_utc": "2026-07-09T21:00:00+00:00",
-  "hours_until_deadline": 678.86,
+  "hours_until_deadline": 678.32,
   "artifact_checks": [
     {
       "path": "README.md",
       "description": "Project README",
       "exists": true,
-      "size": 2840
+      "size": 3022
     },
     {
       "path": "LICENSE",
@@ -70,13 +70,13 @@
       "path": "docs/index.html",
       "description": "Public build notes landing page",
       "exists": true,
-      "size": 749
+      "size": 3839
     },
     {
       "path": "docs/blog/index.html",
       "description": "Public blog page for Blog Post Award",
       "exists": true,
-      "size": 12551
+      "size": 19952
     },
     {
       "path": "docs/blog-draft.md",
