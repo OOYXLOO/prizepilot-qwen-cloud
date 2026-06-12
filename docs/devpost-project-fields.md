@@ -12,6 +12,14 @@ Rule interpretation: the Blog Post Award is a bonus target and still requires a 
 
 An autopilot agent that ranks cash-prize opportunities, prepares submission assets, and queues risky external actions for human approval.
 
+## Stronger First Paragraph For Devpost
+
+PrizePilot is a Qwen Cloud Track 4 Autopilot Agent that turns hackathon and bounty prize pages into ranked execution plans, public submission assets, and human approval gates. The public project includes a submitted Devpost page, Vimeo demo, GitHub Pages judge hub, Blog Award story, benchmark method, static plan JSON, verified Qwen/DashScope live smoke proof, and a prepared Alibaba Function Compute deployment path. It is intentionally honest about the remaining sponsor proof: live Alibaba endpoint evidence is not claimed until a public URL returns HTTP 200 at `/` and `/api/plan`.
+
+## Devpost Update Snippet While Endpoint Is Pending
+
+PrizePilot now has a clearer public judge path: the Qwen contribution map explains how the live Qwen/DashScope pass refined the Blog Award route, risk wording, and evidence packaging, while the Alibaba endpoint checklist shows the exact remaining public HTTP proof gate. Verified today: public repo, demo, Blog Award story, Qwen live smoke proof, benchmark method, and no-secret cloud readiness. Still pending: account-owner-approved Alibaba endpoint proof.
+
 ## Built With
 
 Python, standard-library HTTP server, Qwen Cloud OpenAI-compatible API, Alibaba Cloud deployment target, Devpost, Docker.
@@ -33,6 +41,8 @@ python -m prizepilot.webapp --host 127.0.0.1 --port 8000
 - Public cloud readiness report: https://ooyxloo.github.io/prizepilot-qwen-cloud/cloud-readiness/
 - Public live proof gate: https://ooyxloo.github.io/prizepilot-qwen-cloud/live-proof-gate/
 - Public Qwen live proof: https://ooyxloo.github.io/prizepilot-qwen-cloud/qwen-live-proof/
+- Public Qwen contribution map: https://ooyxloo.github.io/prizepilot-qwen-cloud/qwen-contribution/
+- Public Alibaba endpoint checklist: https://ooyxloo.github.io/prizepilot-qwen-cloud/alibaba-endpoint-checklist/
 - Public static plan snapshot: https://ooyxloo.github.io/prizepilot-qwen-cloud/api/plan.json
 - `docs/screenshots/prizepilot-demo.gif`
 - `docs/screenshots/prizepilot-dashboard-desktop.png`

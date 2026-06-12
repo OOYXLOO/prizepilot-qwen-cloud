@@ -16,19 +16,28 @@ Use this when a YouTube, Vimeo, or Facebook Video upload session is available. T
 
 ## Title
 
-PrizePilot Qwen Cloud Hackathon Demo
+PrizePilot: Qwen Cloud Autopilot Agent Demo
 
 ## Short Description
 
-PrizePilot is a Qwen-ready Track 4 Autopilot Agent for turning hackathon and bounty prize pages into ranked execution plans, public artifact drafts, and human approval checkpoints.
+PrizePilot is a submitted Qwen Cloud Track 4 Autopilot Agent for turning hackathon and bounty prize pages into ranked execution plans, public artifact drafts, and human approval checkpoints.
 
-The demo shows a cash-prize portfolio ranking, the Qwen Blog Post Award / Honorable Mention route, the local dashboard, and the integrity boundary for API keys, deployment proof, public posts, and Devpost evidence updates.
+The demo shows a cash-prize portfolio ranking, the Qwen Blog Post Award / Honorable Mention route, the local dashboard, and the integrity boundary for API keys, deployment proof, public posts, and Devpost evidence updates. The public judge hub adds a verified Qwen/DashScope live smoke proof, a Qwen contribution map, and an Alibaba endpoint checklist that keeps live cloud deployment proof honest until a public URL returns HTTP 200.
 
 Public repository:
 https://github.com/OOYXLOO/prizepilot-qwen-cloud
 
 Build journal:
 https://ooyxloo.github.io/prizepilot-qwen-cloud/blog/
+
+Judge evidence pack:
+https://ooyxloo.github.io/prizepilot-qwen-cloud/judge-pack/
+
+Qwen contribution map:
+https://ooyxloo.github.io/prizepilot-qwen-cloud/qwen-contribution/
+
+Alibaba endpoint checklist:
+https://ooyxloo.github.io/prizepilot-qwen-cloud/alibaba-endpoint-checklist/
 
 ## Tags
 

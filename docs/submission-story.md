@@ -23,7 +23,7 @@ PrizePilot turns structured prize pages into:
 
 The core planner is a deterministic Python package so every ranking can be audited locally. The web dashboard is a small standard-library HTTP service that exposes the same planning payload through `/` and `/api/plan`. A Dockerfile and Alibaba Cloud Function Compute manifest prepare the service for cloud deployment proof.
 
-PrizePilot is Qwen-ready through an OpenAI-compatible DashScope client. A live Qwen/DashScope smoke test has verified that the local plan can be refined into sharper reasoning and submission narratives. The key is not stored in the repository or ledger, and future reruns still require action-time key entry.
+PrizePilot is Qwen-ready through an OpenAI-compatible DashScope client. A live Qwen/DashScope smoke test has verified that the local plan can be refined into sharper reasoning and submission narratives. The Qwen contribution map shows the specific stages affected: route-plan clarity, story shaping, risk wording, and evidence packaging. The key is not stored in the repository or ledger, and future reruns still require action-time key entry.
 
 The product surface is designed for a five-minute judging pass: the dashboard shows the current public submission status, route ranking, agent roles, approval queue, evidence gaps, and a small benchmark comparing manual prize triage with the PrizePilot workflow.
 
@@ -31,7 +31,7 @@ The product surface is designed for a five-minute judging pass: the dashboard sh
 
 The project targets Track 4: Autopilot Agent because it automates a messy real-world workflow end to end: opportunity intake, route selection, artifact generation, evidence tracking, and human-in-the-loop approval checkpoints.
 
-The repository includes an Alibaba Cloud deployment adapter at `deploy/alibaba-cloud/s.yaml` and a proof runbook. The Devpost deployment field points to the public code file that demonstrates the Alibaba Cloud service path; a live endpoint should only be claimed after the account and deployment are actually verified.
+The repository includes an Alibaba Cloud deployment adapter at `deploy/alibaba-cloud/s.yaml`, a proof runbook, and an endpoint judge checklist. The Devpost deployment field points to the public code file that demonstrates the Alibaba Cloud service path; a live endpoint should only be claimed after the account and deployment are actually verified at `/` and `/api/plan`.
 
 ## Challenges
 

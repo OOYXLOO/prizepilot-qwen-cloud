@@ -311,6 +311,8 @@
         <a class="link-tile" href="../benchmark-method/">Benchmark Method<span>Scoring method, sample portfolio, reproducible commands, and known limits.</span></a>
         <a class="link-tile" href="../live-proof-gate/">Live Proof Gate<span>Exact action-time proof checklist for Qwen and Alibaba Cloud without secrets.</span></a>
         <a class="link-tile" href="../qwen-live-proof/">Qwen Live Proof<span>Verified runtime Qwen/DashScope smoke proof with key cleanup.</span></a>
+        <a class="link-tile" href="../qwen-contribution/">Qwen Contribution Map<span>How Qwen improves route reasoning, story clarity, and risk wording without replacing proof gates.</span></a>
+        <a class="link-tile" href="../alibaba-endpoint-checklist/">Alibaba Endpoint Checklist<span>One compact success signal for the remaining public / and /api/plan proof.</span></a>
         <a class="link-tile" href="../api/plan.json">Static Plan JSON<span>Setup-free machine-readable snapshot of the dashboard API payload.</span></a>
       </div>
     </div>
@@ -362,6 +364,15 @@
     </section>
 
     <section>
+      <h2>Qwen Contribution Depth</h2>
+      <p>PrizePilot keeps route scoring deterministic and audit-friendly, then uses Qwen/DashScope as a refinement layer for the submitted Blog Post Award route. The completed live Qwen pass sharpened the public plan around the qualified Devpost prerequisite, USD 500 target, 10-winner structure, no stored credentials, no premature publishing, no assumed infrastructure, and eligibility-first constraints.</p>
+      <div class="callout">
+        <strong>Why this matters for Track 4:</strong> the agent does not just call Qwen once for decoration. It uses the Qwen-refined language to improve the project story, proof boundary, Devpost/Vimeo copy, and human approval gates while preserving local reproducibility without an API key.
+      </div>
+      <p>Open the <a href="../qwen-contribution/">Qwen Contribution Map</a> for the stage-by-stage matrix.</p>
+    </section>
+
+    <section>
       <h2>Judging Map</h2>
       <div class="table-wrap">
         <table>
@@ -385,13 +396,13 @@
             </tr>
             <tr>
               <td data-label="Judging Signal">Qwen integration readiness</td>
-              <td data-label="Public Evidence"><code>src/prizepilot/qwen_client.py</code> supports DashScope and Qwen API keys at action time, with OpenAI-compatible chat-completions request tests and <a href="../qwen-live-proof/">live smoke proof</a>.</td>
-              <td data-label="Status">Code path, tests, and one live Qwen/DashScope call verified.</td>
+              <td data-label="Public Evidence"><code>src/prizepilot/qwen_client.py</code> supports DashScope and Qwen API keys at action time, with OpenAI-compatible chat-completions request tests, <a href="../qwen-live-proof/">live smoke proof</a>, and a <a href="../qwen-contribution/">contribution map</a>.</td>
+              <td data-label="Status">Code path, tests, one live Qwen/DashScope call, and stage-by-stage contribution evidence verified.</td>
             </tr>
             <tr>
               <td data-label="Judging Signal">Alibaba Cloud deployment path</td>
-              <td data-label="Public Evidence"><code>deploy/alibaba-cloud/s.yaml</code> and the deployment runbook document the Function Compute custom-container path.</td>
-              <td data-label="Status">Prepared manifest; live endpoint not claimed.</td>
+              <td data-label="Public Evidence"><code>deploy/alibaba-cloud/s.yaml</code>, the deployment runbook, and the <a href="../alibaba-endpoint-checklist/">endpoint checklist</a> document the Function Compute custom-container path and exact public HTTP success signal.</td>
+              <td data-label="Status">Prepared manifest and checklist; live endpoint not claimed.</td>
             </tr>
             <tr>
               <td data-label="Judging Signal">Public proof and reproducibility</td>
@@ -447,7 +458,7 @@ python -m prizepilot.webapp --host 127.0.0.1 --port 8000</code></pre>
             <tr>
               <td data-label="Proof">Live Alibaba Cloud endpoint</td>
               <td data-label="Why It Is Gated">Requires official account, possible billing/credits, and deployment approval.</td>
-              <td data-label="Prepared Path"><a href="../live-proof-gate/">Live proof gate</a> plus <a href="../alibaba-cloud-deployment-runbook.md">Alibaba deployment runbook</a></td>
+              <td data-label="Prepared Path"><a href="../alibaba-endpoint-checklist/">Alibaba endpoint checklist</a>, <a href="../live-proof-gate/">live proof gate</a>, and <a href="../alibaba-cloud-deployment-runbook.md">Alibaba deployment runbook</a></td>
             </tr>
             <tr>
               <td data-label="Proof">Prize payout</td>
