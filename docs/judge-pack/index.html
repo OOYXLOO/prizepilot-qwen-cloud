@@ -105,6 +105,11 @@
       line-height: 1.62;
     }
 
+    .wrap, h1, h2, h3, p, li, td, strong, a, code, pre {
+      min-width: 0;
+      overflow-wrap: anywhere;
+    }
+
     a {
       color: var(--blue);
       font-weight: 700;
@@ -112,6 +117,11 @@
 
     code, pre {
       font-family: Consolas, Monaco, monospace;
+    }
+
+    pre code {
+      white-space: pre-wrap;
+      word-break: break-word;
     }
 
     code {
@@ -298,6 +308,7 @@
         <a class="link-tile" href="../award-preflight/">Award Preflight<span>Fast readiness check for Blog Post Award and Honorable Mention judging.</span></a>
         <a class="link-tile" href="../award-evidence-map/">Award Evidence Map<span>One-screen matrix of public proof and account-gated gaps.</span></a>
         <a class="link-tile" href="../cloud-readiness/">Cloud Readiness<span>No-secret verification of Qwen request shape, Alibaba manifest, and dashboard proof targets.</span></a>
+        <a class="link-tile" href="../benchmark-method/">Benchmark Method<span>Scoring method, sample portfolio, reproducible commands, and known limits.</span></a>
         <a class="link-tile" href="../live-proof-gate/">Live Proof Gate<span>Exact action-time proof checklist for Qwen and Alibaba Cloud without secrets.</span></a>
         <a class="link-tile" href="../qwen-live-proof/">Qwen Live Proof<span>Verified runtime Qwen/DashScope smoke proof with key cleanup.</span></a>
         <a class="link-tile" href="../api/plan.json">Static Plan JSON<span>Setup-free machine-readable snapshot of the dashboard API payload.</span></a>
@@ -331,6 +342,11 @@
             </tr>
           </thead>
           <tbody>
+            <tr>
+              <td data-label="Judging Signal">Decision method</td>
+              <td data-label="Public Evidence">The <a href="../benchmark-method/">benchmark method</a> documents sample routes, scoring signals, reproducible commands, and known limits.</td>
+              <td data-label="Status">Available without login and tied to <code>src/prizepilot/agent.py</code>.</td>
+            </tr>
             <tr>
               <td data-label="Judging Signal">Track 4 Autopilot Agent fit</td>
               <td data-label="Public Evidence">The app ranks hackathon and bounty routes, produces execution plans, and exposes human approval gates instead of pretending all account actions are automated.</td>

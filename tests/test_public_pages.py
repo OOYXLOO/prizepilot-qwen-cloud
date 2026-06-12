@@ -14,6 +14,7 @@ class PublicPagesTests(unittest.TestCase):
         self.assertIn("./award-preflight/", hub)
         self.assertIn("./award-evidence-map/", hub)
         self.assertIn("./cloud-readiness/", hub)
+        self.assertIn("./benchmark-method/", hub)
         self.assertIn("./live-proof-gate/", hub)
         self.assertIn("./qwen-live-proof/", hub)
         self.assertIn("./api/plan.json", hub)
@@ -22,6 +23,7 @@ class PublicPagesTests(unittest.TestCase):
         self.assertIn("Award Preflight", hub)
         self.assertIn("Award Evidence Map", hub)
         self.assertIn("Cloud Readiness", hub)
+        self.assertIn("Benchmark Method", hub)
         self.assertIn("Live Proof Gate", hub)
         self.assertIn("Qwen Live Proof", hub)
         self.assertIn("Static Plan JSON", hub)
@@ -33,6 +35,7 @@ class PublicPagesTests(unittest.TestCase):
         self.assertIn("../award-preflight/", judge_pack)
         self.assertIn("../award-evidence-map/", judge_pack)
         self.assertIn("../cloud-readiness/", judge_pack)
+        self.assertIn("../benchmark-method/", judge_pack)
         self.assertIn("../live-proof-gate/", judge_pack)
         self.assertIn("../qwen-live-proof/", judge_pack)
         self.assertIn("../api/plan.json", judge_pack)
@@ -43,6 +46,8 @@ class PublicPagesTests(unittest.TestCase):
         self.assertTrue((ROOT / "docs" / "award-preflight" / "index.html").is_file())
         self.assertTrue((ROOT / "docs" / "award-evidence-map" / "index.html").is_file())
         self.assertTrue((ROOT / "docs" / "cloud-readiness" / "index.html").is_file())
+        self.assertTrue((ROOT / "docs" / "benchmark-method" / "index.html").is_file())
+        self.assertTrue((ROOT / "docs" / "benchmark-method.md").is_file())
         self.assertTrue((ROOT / "docs" / "qwen-live-proof" / "index.html").is_file())
         self.assertTrue((ROOT / "docs" / "api" / "plan.json").is_file())
 
@@ -53,6 +58,7 @@ class PublicPagesTests(unittest.TestCase):
         self.assertIn("https://ooyxloo.github.io/prizepilot-qwen-cloud/award-preflight/", readme)
         self.assertIn("https://ooyxloo.github.io/prizepilot-qwen-cloud/award-evidence-map/", readme)
         self.assertIn("https://ooyxloo.github.io/prizepilot-qwen-cloud/cloud-readiness/", readme)
+        self.assertIn("https://ooyxloo.github.io/prizepilot-qwen-cloud/benchmark-method/", readme)
         self.assertIn("https://ooyxloo.github.io/prizepilot-qwen-cloud/live-proof-gate/", readme)
         self.assertIn("https://ooyxloo.github.io/prizepilot-qwen-cloud/qwen-live-proof/", readme)
         self.assertIn("https://ooyxloo.github.io/prizepilot-qwen-cloud/api/plan.json", readme)
@@ -89,6 +95,21 @@ class PublicPagesTests(unittest.TestCase):
         self.assertIn("https://vimeo.com/1200124146", blog)
         self.assertIn("https://github.com/OOYXLOO/prizepilot-qwen-cloud", blog)
         self.assertIn("what remains account-gated", blog)
+        self.assertIn("../benchmark-method/", blog)
+        self.assertIn("Benchmark method", blog)
+
+    def test_benchmark_method_documents_scoring_limits(self) -> None:
+        markdown = (ROOT / "docs" / "benchmark-method.md").read_text(encoding="utf-8")
+        page = (ROOT / "docs" / "benchmark-method" / "index.html").read_text(encoding="utf-8")
+
+        self.assertIn("PrizePilot Benchmark Method", markdown)
+        self.assertIn("Sample Portfolio", markdown)
+        self.assertIn("Scoring Method", markdown)
+        self.assertIn("not a statistical prediction of winning", markdown)
+        self.assertIn("PrizePilot benchmark method", page)
+        self.assertIn("Sample Portfolio", page)
+        self.assertIn("Reproduce Locally", page)
+        self.assertIn("../api/plan.json", page)
 
     def test_cloud_readiness_page_names_no_secret_checks(self) -> None:
         page = (ROOT / "docs" / "cloud-readiness" / "index.html").read_text(encoding="utf-8")

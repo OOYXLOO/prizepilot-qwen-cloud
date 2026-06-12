@@ -16,6 +16,7 @@ Latest review status as of 2026-06-13: the repository, Blog Award story, present
 - Public award preflight: https://ooyxloo.github.io/prizepilot-qwen-cloud/award-preflight/
 - Public award evidence map: https://ooyxloo.github.io/prizepilot-qwen-cloud/award-evidence-map/
 - Public cloud readiness report: https://ooyxloo.github.io/prizepilot-qwen-cloud/cloud-readiness/
+- Public benchmark method: https://ooyxloo.github.io/prizepilot-qwen-cloud/benchmark-method/
 - Public live proof gate: https://ooyxloo.github.io/prizepilot-qwen-cloud/live-proof-gate/
 - Public Qwen live proof: https://ooyxloo.github.io/prizepilot-qwen-cloud/qwen-live-proof/
 - Public static plan snapshot: https://ooyxloo.github.io/prizepilot-qwen-cloud/api/plan.json
@@ -31,8 +32,9 @@ The 90-second review path is:
 1. Open the Devpost project, Vimeo demo, and 5-slide presentation deck.
 2. Open the public judge evidence pack for the Track 4 / Blog Post Award matrix.
 3. Open the award evidence map for completed proof versus remaining account-gated work.
-4. Open the Qwen live proof page for the verified runtime smoke test and cleanup boundary.
-5. Inspect the static machine-readable plan snapshot at https://ooyxloo.github.io/prizepilot-qwen-cloud/api/plan.json.
+4. Open the benchmark method to see how the route ranking is scored and what the sample portfolio proves.
+5. Open the Qwen live proof page for the verified runtime smoke test and cleanup boundary.
+6. Inspect the static machine-readable plan snapshot at https://ooyxloo.github.io/prizepilot-qwen-cloud/api/plan.json.
 
 For deeper local verification, run the dashboard:
 
@@ -48,7 +50,7 @@ python -m prizepilot.webapp --host 127.0.0.1 --port 8000
 ```
 
 Then inspect the live machine-readable planning payload at `http://127.0.0.1:8000/api/plan`.
-Review `docs/submission-story.md`, `docs/cloud-readiness-report.md`, `docs/qwen-live-proof.md`, `docs/live-proof-gate.md`, `docs/qwen-route-status.md`, and `docs/validation-report.md` for the evidence boundary.
+Review `docs/submission-story.md`, `docs/benchmark-method.md`, `docs/cloud-readiness-report.md`, `docs/qwen-live-proof.md`, `docs/live-proof-gate.md`, `docs/qwen-route-status.md`, and `docs/validation-report.md` for the evidence boundary.
 
 Live Qwen refinement has been verified once with a runtime-only key; future runs still require `DASHSCOPE_API_KEY` or `QWEN_API_KEY` at action time only.
 The Mind the Product route additionally requires Novus email verification and official Novus installation before final Devpost submission. The web service exposes `/api/novus-readiness` so that gate can be tracked without claiming completion early.

@@ -350,7 +350,7 @@
         <section>
           <h2>Blog Post Award reader path</h2>
           <p>This article is the judge-readable project story for the Qwen Blog Post Award path. The fastest review path is to read the product thesis below, open the <a href="../judge-pack/">judge evidence pack</a> for the Track 4 matrix, review the <a href="../cloud-readiness/">cloud readiness report</a>, watch the <a href="https://vimeo.com/1200124146">short public demo</a>, and then inspect the <a href="https://github.com/OOYXLOO/prizepilot-qwen-cloud">public repository</a>.</p>
-          <p>The story is intentionally evidence-first. It highlights what PrizePilot has already proved publicly, what Qwen Cloud integration has now verified through a live smoke test, and what remains account-gated until an Alibaba Cloud endpoint deployment is available.</p>
+          <p>The story is intentionally evidence-first. It highlights what PrizePilot has already proved publicly, what Qwen Cloud integration has now verified through a live smoke test, how the route ranking is scored in the <a href="../benchmark-method/">benchmark method</a>, and what remains account-gated until an Alibaba Cloud endpoint deployment is available.</p>
           <div class="callout">
             <strong>Award angle:</strong> PrizePilot is not just a hackathon app. It is a transparent case study in using an AI agent to pursue prize money while keeping proof, risk, and human approval visible.
           </div>
@@ -398,6 +398,12 @@
               <figcaption>The architecture keeps deterministic planning, Qwen refinement, evidence publication, and human-gated external actions separate.</figcaption>
             </figure>
           </div>
+        </section>
+
+        <section>
+          <h2>Benchmark method</h2>
+          <p>PrizePilot's benchmark is intentionally small and inspectable. It does not claim to predict winners statistically. It measures whether a route-selection agent can normalize real prize pages into comparable fields, weigh reachable value against execution friction, and keep public claims aligned with evidence.</p>
+          <p>The current sample portfolio covers feedback prizes, submitted Qwen project work, product-analytics gates, public PR bounties, and heavier cloud/hardware routes. The scorer caps raw prize amount, rewards multi-winner categories, rewards fast evidence-rich paths such as feedback and blog awards, and penalizes single-winner, public-PR, product-analytics, cloud-deployment, and non-cash routes when they add execution risk. Judges can inspect the full method in the <a href="../benchmark-method/">benchmark method page</a> and reproduce the output with the local CLI or the static <a href="../api/plan.json">plan JSON</a>.</p>
         </section>
 
         <section>
@@ -498,7 +504,7 @@ Authorization: Bearer &lt;runtime key only&gt;</code></pre>
                 <tr>
                   <td data-label="Criterion">Problem value</td>
                   <td data-label="How PrizePilot addresses it">Makes real-money route selection safer by tracking deadlines, winner count, proof gaps, public action risk, payout risk, and KYC boundaries.</td>
-                  <td data-label="Evidence">Live money-goal route stack, submitted Splunk/Qwen routes, and bounty PR monitoring records.</td>
+                  <td data-label="Evidence">Live money-goal route stack, submitted Splunk/Qwen routes, bounty PR monitoring records, and the benchmark method.</td>
                 </tr>
                 <tr>
                   <td data-label="Criterion">Presentation</td>
