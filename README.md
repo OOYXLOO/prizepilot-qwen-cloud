@@ -14,6 +14,7 @@ Latest review status as of 2026-06-12: the repository, Blog Award story, present
 - Public judge demo: https://ooyxloo.github.io/prizepilot-qwen-cloud/demo/
 - Public judge evidence pack: https://ooyxloo.github.io/prizepilot-qwen-cloud/judge-pack/
 - Public award preflight: https://ooyxloo.github.io/prizepilot-qwen-cloud/award-preflight/
+- Public award evidence map: https://ooyxloo.github.io/prizepilot-qwen-cloud/award-evidence-map/
 - Public live proof gate: https://ooyxloo.github.io/prizepilot-qwen-cloud/live-proof-gate/
 - Public Blog Award story: https://ooyxloo.github.io/prizepilot-qwen-cloud/blog/
 - Public repository: https://github.com/OOYXLOO/prizepilot-qwen-cloud
@@ -29,9 +30,10 @@ The fastest review path is:
 3. Open the public judge demo for the setup-free evidence map.
 4. Open the judge evidence pack for the Track 4 / Blog Post Award matrix.
 5. Open the award preflight for the Blog Post Award / Honorable Mention readiness check.
-6. Open the live proof gate to see exactly how account-gated Qwen and Alibaba evidence will be captured without secrets.
-7. Read the Blog Award story for the current public evidence boundary.
-8. Run the local dashboard:
+6. Open the award evidence map for the compact matrix of public proof, reproducibility, and account-gated gaps.
+7. Open the live proof gate to see exactly how account-gated Qwen and Alibaba evidence will be captured without secrets.
+8. Read the Blog Award story for the current public evidence boundary.
+9. Run the local dashboard:
 
 ## Local Use
 

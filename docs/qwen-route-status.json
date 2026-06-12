@@ -1,16 +1,16 @@
 {
-  "checked_at": "2026-06-12T06:37:51.956370+00:00",
+  "checked_at": "2026-06-12T09:19:42.318340+00:00",
   "phase": "submitted_can_still_improve",
   "severity": "OK_WITH_EVIDENCE_GAPS",
   "next_action": "Strengthen evidence before judging: complete Qwen/Alibaba Cloud account verification, run a live Qwen/DashScope check with a user-provided API key at action time, and add stronger live Alibaba Cloud endpoint proof if available.",
   "deadline_utc": "2026-07-09T21:00:00+00:00",
-  "hours_until_deadline": 662.37,
+  "hours_until_deadline": 659.67,
   "artifact_checks": [
     {
       "path": "README.md",
       "description": "Project README",
       "exists": true,
-      "size": 3889
+      "size": 4098
     },
     {
       "path": "LICENSE",
@@ -70,7 +70,7 @@
       "path": "docs/index.html",
       "description": "Public build notes landing page",
       "exists": true,
-      "size": 4852
+      "size": 5089
     },
     {
       "path": "docs/blog/index.html",
@@ -82,13 +82,19 @@
       "path": "docs/judge-pack/index.html",
       "description": "Public judge evidence pack",
       "exists": true,
-      "size": 12957
+      "size": 13169
     },
     {
       "path": "docs/award-preflight/index.html",
       "description": "Public award preflight page",
       "exists": true,
-      "size": 8145
+      "size": 8380
+    },
+    {
+      "path": "docs/award-evidence-map/index.html",
+      "description": "Public award evidence map",
+      "exists": true,
+      "size": 8838
     },
     {
       "path": "docs/prizepilot-qwen-submission-deck.pptx",
@@ -235,6 +241,7 @@
     "docs/qwen-start-handoff-template.md",
     "docs/live-proof-gate.md",
     "docs/award-preflight/index.html",
+    "docs/award-evidence-map/index.html",
     "docs/qwen-human-action-card.md",
     "docs/devpost-project-fields.md",
     "docs/blog-draft.md",

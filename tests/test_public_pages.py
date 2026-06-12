@@ -11,10 +11,12 @@ class PublicPagesTests(unittest.TestCase):
 
         self.assertIn("./judge-pack/", hub)
         self.assertIn("./award-preflight/", hub)
+        self.assertIn("./award-evidence-map/", hub)
         self.assertIn("./live-proof-gate/", hub)
         self.assertIn("./prizepilot-qwen-submission-deck.pptx", hub)
         self.assertIn("Judge Evidence Pack", hub)
         self.assertIn("Award Preflight", hub)
+        self.assertIn("Award Evidence Map", hub)
         self.assertIn("Live Proof Gate", hub)
         self.assertIn("Presentation Deck", hub)
         self.assertIn("Blog Award Story", hub)
@@ -22,18 +24,21 @@ class PublicPagesTests(unittest.TestCase):
         self.assertIn("https://devpost.com/software/prizepilot-qwen-cloud", judge_pack)
         self.assertIn("https://vimeo.com/1200124146", judge_pack)
         self.assertIn("../award-preflight/", judge_pack)
+        self.assertIn("../award-evidence-map/", judge_pack)
         self.assertIn("../live-proof-gate/", judge_pack)
         self.assertIn("../prizepilot-qwen-submission-deck.pptx", judge_pack)
         self.assertIn("../screenshots/prizepilot-dashboard-desktop.png", judge_pack)
         self.assertTrue((ROOT / "docs" / "prizepilot-qwen-submission-deck.pptx").is_file())
         self.assertTrue((ROOT / "docs" / "screenshots" / "prizepilot-dashboard-desktop.png").is_file())
         self.assertTrue((ROOT / "docs" / "award-preflight" / "index.html").is_file())
+        self.assertTrue((ROOT / "docs" / "award-evidence-map" / "index.html").is_file())
 
     def test_readme_exposes_judge_pack_url(self) -> None:
         readme = (ROOT / "README.md").read_text(encoding="utf-8")
 
         self.assertIn("https://ooyxloo.github.io/prizepilot-qwen-cloud/judge-pack/", readme)
         self.assertIn("https://ooyxloo.github.io/prizepilot-qwen-cloud/award-preflight/", readme)
+        self.assertIn("https://ooyxloo.github.io/prizepilot-qwen-cloud/award-evidence-map/", readme)
         self.assertIn("https://ooyxloo.github.io/prizepilot-qwen-cloud/live-proof-gate/", readme)
         self.assertIn("https://ooyxloo.github.io/prizepilot-qwen-cloud/prizepilot-qwen-submission-deck.pptx", readme)
         self.assertIn("Public Blog Award story", readme)
@@ -72,6 +77,20 @@ class PublicPagesTests(unittest.TestCase):
         self.assertIn("Qwen/DashScope integration", preflight)
         self.assertIn("live endpoint not claimed", preflight)
         self.assertIn("Do not publish API keys", preflight)
+        self.assertIn("../award-evidence-map/", preflight)
+
+    def test_award_evidence_map_compresses_public_and_gated_signals(self) -> None:
+        evidence_map = (ROOT / "docs" / "award-evidence-map" / "index.html").read_text(encoding="utf-8")
+
+        self.assertIn("PrizePilot Qwen Award Evidence Map", evidence_map)
+        self.assertIn("Blog Post Award", evidence_map)
+        self.assertIn("Top 10 Honorable Mention", evidence_map)
+        self.assertIn("Track 4 Autopilot Agent", evidence_map)
+        self.assertIn("29", evidence_map)
+        self.assertIn("Qwen/DashScope live model proof", evidence_map)
+        self.assertIn("Alibaba Cloud endpoint proof", evidence_map)
+        self.assertIn("Account-gated", evidence_map)
+        self.assertIn("does not claim live Qwen/DashScope execution", evidence_map)
 
     def test_devpost_fields_do_not_publish_identity_inferences(self) -> None:
         fields = (ROOT / "docs" / "devpost-project-fields.md").read_text(encoding="utf-8")
