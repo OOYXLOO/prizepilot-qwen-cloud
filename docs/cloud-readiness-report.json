@@ -1,6 +1,6 @@
 {
-  "checked_at": "2026-06-12T11:14:54.441325+00:00",
-  "overall": "ready_without_live_secrets",
+  "checked_at": "2026-06-12T16:37:22.647183+00:00",
+  "overall": "qwen_live_verified_endpoint_pending",
   "checks": [
     {
       "id": "QWEN_OPENAI_COMPATIBLE_REQUEST_SHAPE",
@@ -15,6 +15,13 @@
       "status": "pass",
       "evidence": "The client reads Qwen/DashScope keys only from runtime environment variables and the ledger does not store an API key.",
       "public_next_step": "Keep API keys out of chat, screenshots, commits, logs, and Devpost; remove the environment variable immediately after the smoke test."
+    },
+    {
+      "id": "QWEN_LIVE_SMOKE_PROOF",
+      "label": "Runtime Qwen/DashScope smoke proof",
+      "status": "pass",
+      "evidence": "A live Qwen/DashScope refinement pass succeeded through Alibaba Cloud China Bailian with a runtime-only key and no stored secret.",
+      "public_next_step": "Use only the short non-sensitive excerpt publicly; future runs still require account-owner key entry at action time."
     },
     {
       "id": "ALIBABA_FC_CUSTOM_CONTAINER_MANIFEST",
@@ -34,22 +41,22 @@
       "id": "DASHBOARD_JUDGE_PAYLOAD_READY",
       "label": "Dashboard and API judge payload",
       "status": "pass",
-      "evidence": "The local web payload exposes the submitted Qwen target, route status, judge scorecard, approval queue, and evidence gaps.",
+      "evidence": "The local web payload exposes the submitted Qwen target, verified Qwen live proof, route status, judge scorecard, approval queue, and remaining endpoint gap.",
       "public_next_step": "Use the same payload as the expected success signal for a live Alibaba endpoint proof."
     },
     {
       "id": "PUBLIC_CLAIM_BOUNDARY",
       "label": "Public claim boundary",
       "status": "pass",
-      "evidence": "The public live-proof gate states what is verified and what remains account-gated.",
-      "public_next_step": "Do not strengthen the public Devpost claim until live Qwen and/or Alibaba evidence actually exists."
+      "evidence": "The public live-proof gate states that Qwen live proof is verified and the Alibaba endpoint remains account-gated.",
+      "public_next_step": "Do not strengthen the public Devpost claim for Alibaba Cloud deployment until endpoint evidence actually exists."
     }
   ],
-  "live_claim": "not_claimed",
+  "live_claim": "qwen_dashscope_smoke_verified_alibaba_endpoint_pending",
   "secret_policy": "No API keys, raw headers, account IDs, billing data, payout data, tax data, KYC data, cookies, or private console pages are required or stored.",
   "next_live_evidence": [
-    "Runtime Qwen/DashScope smoke test with account-owner supplied key.",
     "Alibaba Cloud Function Compute deployment approved and run by the account owner.",
-    "Public endpoint proof for / and /api/plan with no private console chrome."
+    "Public endpoint proof for / and /api/plan with no private console chrome.",
+    "Devpost update copy that claims only the completed Qwen smoke proof and any endpoint proof that actually exists."
   ]
 }

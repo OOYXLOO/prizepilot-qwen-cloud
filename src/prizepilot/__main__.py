@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import sys
 from pathlib import Path
 
 from .agent import Opportunity, plan_locally, plan_portfolio
@@ -11,6 +12,11 @@ from .qwen_client import QwenClient
 from .qwen_status import build_status as build_qwen_status
 from .qwen_status import parse_iso_datetime as parse_qwen_status_datetime
 from .qwen_status import render_markdown as render_qwen_status_markdown
+
+
+def _configure_stdout() -> None:
+    if hasattr(sys.stdout, "reconfigure"):
+        sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 
 
 def _print_plan(plan: dict) -> None:
@@ -25,6 +31,7 @@ def _print_plan(plan: dict) -> None:
 
 
 def main() -> None:
+    _configure_stdout()
     parser = argparse.ArgumentParser(description="PrizePilot planning CLI")
     subparsers = parser.add_subparsers(dest="command", required=True)
 

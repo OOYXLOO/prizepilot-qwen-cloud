@@ -28,6 +28,8 @@ REQUIRED_ARTIFACTS = {
     "docs/cloud-readiness/index.html": "Public cloud readiness page",
     "docs/cloud-readiness-report.md": "Cloud readiness report",
     "docs/cloud-readiness-report.json": "Machine-readable cloud readiness report",
+    "docs/qwen-live-proof.md": "Live Qwen/DashScope smoke proof",
+    "docs/qwen-live-proof/index.html": "Public live Qwen/DashScope proof page",
     "docs/prizepilot-qwen-submission-deck.pptx": "Editable presentation deck",
     "docs/blog-draft.md": "Blog/social post draft",
     "docs/demo-video-script.md": "Demo video script",
@@ -145,7 +147,13 @@ def build_status(root: Path, ledger_path: Path, now: datetime | None = None) -> 
     elif final_submitted and incomplete_public_gates:
         phase = "submitted_can_still_improve"
         severity = "OK_WITH_EVIDENCE_GAPS"
-        next_action = "Strengthen evidence before judging: complete Qwen/Alibaba Cloud account verification, run a live Qwen/DashScope check with a user-provided API key at action time, and add stronger live Alibaba Cloud endpoint proof if available."
+        remaining_gate_names = {item["gate"] for item in incomplete_public_gates}
+        if "qwen live check completed" in remaining_gate_names:
+            next_action = "Strengthen evidence before judging: complete Qwen/Alibaba Cloud account verification, run a live Qwen/DashScope check with a user-provided API key at action time, and add stronger live Alibaba Cloud endpoint proof if available."
+        elif "alibaba cloud deployment proof" in remaining_gate_names:
+            next_action = "Strengthen remaining evidence before judging: add verified Alibaba Cloud endpoint proof if account access and billing/credit approval are available, then update public Devpost copy only with captured evidence."
+        else:
+            next_action = "Review remaining public/account gates before judging and update Devpost only with evidence that has actually been captured."
     elif final_submitted:
         phase = "submitted_waiting_for_results"
         severity = "OK"

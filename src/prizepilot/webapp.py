@@ -51,6 +51,7 @@ def dashboard_payload() -> dict[str, Any]:
             "repository_url": "https://github.com/OOYXLOO/prizepilot-qwen-cloud",
             "demo_video_url": "https://vimeo.com/1200124146",
             "blog_url": "https://ooyxloo.github.io/prizepilot-qwen-cloud/blog/",
+            "qwen_live_proof_url": "https://ooyxloo.github.io/prizepilot-qwen-cloud/qwen-live-proof/",
             "deadline": "July 09, 2026 at 05:00pm EDT",
         },
         "agent_walkthrough": [
@@ -84,8 +85,8 @@ def dashboard_payload() -> dict[str, Any]:
             {
                 "criterion": "Innovation",
                 "weight": "30%",
-                "proof": "Autopilot for prize-route execution, not only app generation.",
-                "gap": "Use live Qwen refinement to show sponsor model value.",
+                "proof": "Autopilot for prize-route execution plus verified live Qwen refinement.",
+                "gap": "Turn the live proof into tighter public Devpost copy before judging.",
             },
             {
                 "criterion": "Technical Depth",
@@ -107,14 +108,13 @@ def dashboard_payload() -> dict[str, Any]:
             },
         ],
         "approval_queue": [
-            {"action": "Runtime Qwen/DashScope API key", "status": "human-gated", "risk": "secret"},
+            {"action": "Runtime Qwen/DashScope API key", "status": "completed once; future runs stay human-gated", "risk": "secret"},
             {"action": "Alibaba Cloud live deployment", "status": "human-gated", "risk": "billing/account"},
             {"action": "Devpost submission updates", "status": "allowed after review", "risk": "public claim"},
             {"action": "Prize payout, tax, or KYC", "status": "user-only", "risk": "financial identity"},
         ],
         "evidence_gaps": [
-            "Qwen/Alibaba Cloud account verification is partial.",
-            "No live Qwen/DashScope refinement result is claimed yet.",
+            "Qwen/DashScope live refinement is verified with a runtime key and no stored secret.",
             "Alibaba Cloud Function Compute manifest exists, but no live endpoint has been verified.",
         ],
         "benchmark": [
@@ -125,7 +125,7 @@ def dashboard_payload() -> dict[str, Any]:
         "integrity_boundary": [
             "No API key is stored in the deployed app.",
             "Public repository, video, blog post, and Devpost submission are recorded only after verification.",
-            "Live Qwen Cloud usage and Alibaba Cloud endpoint proof must be captured before those claims are strengthened.",
+            "Live Qwen Cloud usage is captured as non-sensitive proof; Alibaba Cloud endpoint proof must still be captured before that claim is strengthened.",
             "Novus is not claimed as installed until the official Novus account is verified and connected.",
         ],
     }
@@ -148,6 +148,7 @@ def render_dashboard(payload: dict[str, Any]) -> str:
             ("Repository", status["repository_url"]),
             ("Vimeo demo", status["demo_video_url"]),
             ("Build journal", status["blog_url"]),
+            ("Qwen live proof", status["qwen_live_proof_url"]),
         ]
     )
     agents = "\n".join(

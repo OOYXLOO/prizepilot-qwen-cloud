@@ -167,7 +167,7 @@
     <div class="wrap hero">
       <p class="eyebrow">Qwen and Alibaba action-time proof</p>
       <h1>Live proof is a gated action, not an implied claim.</h1>
-      <p class="dek">PrizePilot is already submitted and public. This page shows exactly how the remaining Qwen/DashScope and Alibaba Cloud evidence should be captured without storing API keys, account cookies, billing data, payout details, tax material, or KYC evidence.</p>
+      <p class="dek">PrizePilot is already submitted and public. Qwen/DashScope live smoke proof is now captured; this page shows how the remaining Alibaba Cloud endpoint evidence should be handled without storing API keys, account cookies, billing data, payout details, tax material, or KYC evidence.</p>
     </div>
   </header>
 
@@ -175,8 +175,8 @@
     <section>
       <h2>Current Public Boundary</h2>
       <div class="grid">
-        <div class="panel"><strong>Verified public evidence</strong><p>Repository, Vimeo demo, GitHub Pages hub, build journal, tests, Qwen client code path, and Alibaba Cloud deployment manifest.</p></div>
-        <div class="panel"><strong>Not yet claimed</strong><p>Completed Qwen/DashScope live call, verified Alibaba Cloud endpoint, prize award, payout, tax, KYC, or bank verification.</p></div>
+        <div class="panel"><strong>Verified public evidence</strong><p>Repository, Vimeo demo, GitHub Pages hub, build journal, tests, Qwen client code path, Qwen/DashScope live smoke proof, and Alibaba Cloud deployment manifest.</p></div>
+        <div class="panel"><strong>Still not claimed</strong><p>Verified Alibaba Cloud endpoint, prize award, payout, tax, KYC, or bank verification.</p></div>
       </div>
       <p>Source Markdown: <a href="../live-proof-gate.md">docs/live-proof-gate.md</a>. Judge hub: <a href="../">PrizePilot Public Evidence Hub</a>.</p>
     </section>
@@ -191,12 +191,12 @@
 
     <section>
       <h2>Qwen/DashScope Live Proof</h2>
-      <p>Purpose: prove that PrizePilot can run a live Qwen-compatible refinement pass without storing the key.</p>
+      <p>Purpose: prove that PrizePilot can run a live Qwen-compatible refinement pass without storing the key. This gate was completed on 2026-06-13 with <code>qwen-plus</code>, China Bailian endpoint, exit code 0, and key cleanup confirmed.</p>
       <pre><code>$env:PYTHONPATH='src'
 $env:DASHSCOPE_API_KEY='runtime-only'
-python -m prizepilot plan samples/qwen_hackathon.json --use-qwen
+python -X utf8 -m prizepilot plan samples/qwen_hackathon.json --use-qwen
 Remove-Item Env:\DASHSCOPE_API_KEY</code></pre>
-      <p>Acceptable public evidence: timestamp, non-sensitive model name, public base URL region if visible, a short output excerpt showing plan refinement, and confirmation that the key was removed from the environment.</p>
+      <p>Captured public evidence: timestamp, non-sensitive model name, public base URL, short output excerpt showing plan refinement, confirmation that the key was removed from the environment, and the public proof page at <a href="../qwen-live-proof/">Qwen Live Proof</a>.</p>
       <p>Do not publish raw request headers, full responses containing account metadata, API keys, billing screens, or private console pages.</p>
     </section>
 
@@ -211,7 +211,7 @@ s deploy</code></pre>
 
     <section>
       <h2>Devpost Update Rule</h2>
-      <p>Only edit the Qwen Devpost project after new proof is real and captured. If either proof is still missing, keep the current honest wording: live Qwen execution and live Alibaba deployment are prepared paths, not completed claims.</p>
+      <p>Only edit the Qwen Devpost project after new proof is real and captured. Current honest wording: live Qwen execution is verified; live Alibaba deployment remains a prepared path until endpoint evidence exists.</p>
       <div class="callout good">
         <strong>Update copy after real proof:</strong> Added live proof evidence for the Qwen/DashScope refinement path and/or Alibaba Cloud endpoint. The project still keeps account, billing, payout, tax, and KYC material outside the repository and only publishes non-sensitive proof.
       </div>

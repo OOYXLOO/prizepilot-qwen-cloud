@@ -14,12 +14,14 @@ class PublicPagesTests(unittest.TestCase):
         self.assertIn("./award-evidence-map/", hub)
         self.assertIn("./cloud-readiness/", hub)
         self.assertIn("./live-proof-gate/", hub)
+        self.assertIn("./qwen-live-proof/", hub)
         self.assertIn("./prizepilot-qwen-submission-deck.pptx", hub)
         self.assertIn("Judge Evidence Pack", hub)
         self.assertIn("Award Preflight", hub)
         self.assertIn("Award Evidence Map", hub)
         self.assertIn("Cloud Readiness", hub)
         self.assertIn("Live Proof Gate", hub)
+        self.assertIn("Qwen Live Proof", hub)
         self.assertIn("Presentation Deck", hub)
         self.assertIn("Blog Award Story", hub)
         self.assertIn("Qwen Cloud Track 4 judge packet", judge_pack)
@@ -29,6 +31,7 @@ class PublicPagesTests(unittest.TestCase):
         self.assertIn("../award-evidence-map/", judge_pack)
         self.assertIn("../cloud-readiness/", judge_pack)
         self.assertIn("../live-proof-gate/", judge_pack)
+        self.assertIn("../qwen-live-proof/", judge_pack)
         self.assertIn("../prizepilot-qwen-submission-deck.pptx", judge_pack)
         self.assertIn("../screenshots/prizepilot-dashboard-desktop.png", judge_pack)
         self.assertTrue((ROOT / "docs" / "prizepilot-qwen-submission-deck.pptx").is_file())
@@ -36,6 +39,7 @@ class PublicPagesTests(unittest.TestCase):
         self.assertTrue((ROOT / "docs" / "award-preflight" / "index.html").is_file())
         self.assertTrue((ROOT / "docs" / "award-evidence-map" / "index.html").is_file())
         self.assertTrue((ROOT / "docs" / "cloud-readiness" / "index.html").is_file())
+        self.assertTrue((ROOT / "docs" / "qwen-live-proof" / "index.html").is_file())
 
     def test_readme_exposes_judge_pack_url(self) -> None:
         readme = (ROOT / "README.md").read_text(encoding="utf-8")
@@ -45,6 +49,7 @@ class PublicPagesTests(unittest.TestCase):
         self.assertIn("https://ooyxloo.github.io/prizepilot-qwen-cloud/award-evidence-map/", readme)
         self.assertIn("https://ooyxloo.github.io/prizepilot-qwen-cloud/cloud-readiness/", readme)
         self.assertIn("https://ooyxloo.github.io/prizepilot-qwen-cloud/live-proof-gate/", readme)
+        self.assertIn("https://ooyxloo.github.io/prizepilot-qwen-cloud/qwen-live-proof/", readme)
         self.assertIn("https://ooyxloo.github.io/prizepilot-qwen-cloud/prizepilot-qwen-submission-deck.pptx", readme)
         self.assertIn("Public Blog Award story", readme)
 
@@ -67,7 +72,7 @@ class PublicPagesTests(unittest.TestCase):
         self.assertIn("Qwen-compatible request shape", page)
         self.assertIn("Alibaba Function Compute manifest", page)
         self.assertIn("Runtime-only secret boundary", page)
-        self.assertIn("not a substitute for live Qwen/Alibaba proof", page)
+        self.assertIn("Qwen live smoke proof", page)
         self.assertIn("../cloud-readiness-report.md", page)
 
     def test_live_proof_gate_names_secret_boundaries(self) -> None:
@@ -83,6 +88,7 @@ class PublicPagesTests(unittest.TestCase):
         self.assertIn("Live proof is a gated action", gate_html)
         self.assertIn("Do not publish raw request headers", gate_html)
         self.assertIn("Do not publish Alibaba account IDs", gate_html)
+        self.assertIn("../qwen-live-proof/", gate_html)
 
     def test_award_preflight_keeps_live_claims_gated(self) -> None:
         preflight = (ROOT / "docs" / "award-preflight" / "index.html").read_text(encoding="utf-8")
@@ -93,9 +99,11 @@ class PublicPagesTests(unittest.TestCase):
         self.assertIn("Honorable Mention", preflight)
         self.assertIn("Submitted", preflight)
         self.assertIn("Qwen/DashScope integration", preflight)
+        self.assertIn("Live Qwen/DashScope smoke proof verified", preflight)
         self.assertIn("live endpoint not claimed", preflight)
         self.assertIn("Do not publish API keys", preflight)
         self.assertIn("../award-evidence-map/", preflight)
+        self.assertIn("../qwen-live-proof/", preflight)
 
     def test_award_evidence_map_compresses_public_and_gated_signals(self) -> None:
         evidence_map = (ROOT / "docs" / "award-evidence-map" / "index.html").read_text(encoding="utf-8")
@@ -109,7 +117,8 @@ class PublicPagesTests(unittest.TestCase):
         self.assertIn("Qwen/DashScope live model proof", evidence_map)
         self.assertIn("Alibaba Cloud endpoint proof", evidence_map)
         self.assertIn("Account-gated", evidence_map)
-        self.assertIn("does not claim live Qwen/DashScope execution", evidence_map)
+        self.assertIn("completed live Qwen/DashScope smoke proof", evidence_map)
+        self.assertIn("../qwen-live-proof/", evidence_map)
 
     def test_devpost_fields_do_not_publish_identity_inferences(self) -> None:
         fields = (ROOT / "docs" / "devpost-project-fields.md").read_text(encoding="utf-8")

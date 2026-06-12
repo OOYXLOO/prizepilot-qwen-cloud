@@ -299,6 +299,7 @@
         <a class="link-tile" href="../award-evidence-map/">Award Evidence Map<span>One-screen matrix of public proof and account-gated gaps.</span></a>
         <a class="link-tile" href="../cloud-readiness/">Cloud Readiness<span>No-secret verification of Qwen request shape, Alibaba manifest, and dashboard proof targets.</span></a>
         <a class="link-tile" href="../live-proof-gate/">Live Proof Gate<span>Exact action-time proof checklist for Qwen and Alibaba Cloud without secrets.</span></a>
+        <a class="link-tile" href="../qwen-live-proof/">Qwen Live Proof<span>Verified runtime Qwen/DashScope smoke proof with key cleanup.</span></a>
       </div>
     </div>
   </header>
@@ -307,13 +308,13 @@
     <section>
       <h2>Fast Evidence Snapshot</h2>
       <div class="metric-row">
-        <div class="metric"><strong>6/6</strong><span>no-secret cloud readiness checks verify Qwen request shape, Alibaba manifest, and judge payload.</span></div>
+        <div class="metric"><strong>7/7</strong><span>no-secret cloud readiness checks verify Qwen request shape, live Qwen proof, Alibaba manifest, and judge payload.</span></div>
         <div class="metric"><strong>HTTP 200</strong><span>public page checks cover the evidence hub, blog, and judge demo.</span></div>
         <div class="metric"><strong>500</strong><span>USD target prize for both Blog Post Award and Honorable Mention routes.</span></div>
-        <div class="metric"><strong>3</strong><span>remaining account-gated proofs: Qwen account, live Qwen call, live Alibaba endpoint.</span></div>
+        <div class="metric"><strong>1</strong><span>remaining account-gated proof: live Alibaba endpoint.</span></div>
       </div>
       <div class="callout">
-        <strong>Current boundary:</strong> the public project is submitted and reviewable. Use the <a href="../award-preflight/">Award Preflight</a> and <a href="../award-evidence-map/">Award Evidence Map</a> for the shortest Blog Post Award / Honorable Mention readiness check. PrizePilot does not claim live Qwen/DashScope execution or a live Alibaba Cloud endpoint until the user completes official account/API/billing gates.
+        <strong>Current boundary:</strong> the public project is submitted and reviewable. Use the <a href="../award-preflight/">Award Preflight</a> and <a href="../award-evidence-map/">Award Evidence Map</a> for the shortest Blog Post Award / Honorable Mention readiness check. PrizePilot claims only the completed live Qwen/DashScope smoke proof and does not claim a live Alibaba Cloud endpoint until official deployment proof exists.
       </div>
     </section>
 
@@ -336,8 +337,8 @@
             </tr>
             <tr>
               <td data-label="Judging Signal">Qwen integration readiness</td>
-              <td data-label="Public Evidence"><code>src/prizepilot/qwen_client.py</code> supports DashScope and Qwen API keys at action time, with OpenAI-compatible chat-completions request tests.</td>
-              <td data-label="Status">Code path and tests ready; live call waits for user key.</td>
+              <td data-label="Public Evidence"><code>src/prizepilot/qwen_client.py</code> supports DashScope and Qwen API keys at action time, with OpenAI-compatible chat-completions request tests and <a href="../qwen-live-proof/">live smoke proof</a>.</td>
+              <td data-label="Status">Code path, tests, and one live Qwen/DashScope call verified.</td>
             </tr>
             <tr>
               <td data-label="Judging Signal">Alibaba Cloud deployment path</td>
@@ -391,9 +392,9 @@ python -m prizepilot.webapp --host 127.0.0.1 --port 8000</code></pre>
           </thead>
           <tbody>
             <tr>
-              <td data-label="Proof">Live Qwen/DashScope call</td>
-              <td data-label="Why It Is Gated">Requires an API key provided at action time. No API key is stored in the repo.</td>
-              <td data-label="Prepared Path"><a href="../live-proof-gate/">Live proof gate</a> plus <a href="../qwen-cloud-live-check.md">Qwen live-check runbook</a></td>
+              <td data-label="Proof">Future Qwen/DashScope reruns</td>
+              <td data-label="Why It Is Gated">One live smoke proof is captured. Any future rerun still requires an API key provided at action time. No API key is stored in the repo.</td>
+              <td data-label="Prepared Path"><a href="../qwen-live-proof/">Qwen live proof</a>, <a href="../live-proof-gate/">live proof gate</a>, and <a href="../qwen-cloud-live-check.md">Qwen live-check runbook</a></td>
             </tr>
             <tr>
               <td data-label="Proof">Live Alibaba Cloud endpoint</td>

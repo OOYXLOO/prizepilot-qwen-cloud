@@ -41,6 +41,8 @@ def build_report(root: Path | str = PROJECT_ROOT, checked_at: datetime | None = 
     qwen_client = _read(root, "src/prizepilot/qwen_client.py")
     alibaba_manifest = _read(root, "deploy/alibaba-cloud/s.yaml")
     live_gate = _read(root, "docs/live-proof-gate.md")
+    qwen_live_proof = _read(root, "docs/qwen-live-proof.md")
+    ledger_text = _read(root, "docs/qwen-route-ledger.md").lower()
     payload = dashboard_payload()
 
     checks = [
@@ -64,9 +66,25 @@ def build_report(root: Path | str = PROJECT_ROOT, checked_at: datetime | None = 
                     "Authorization",
                 ],
             )
-            and "api_key" not in _read(root, "docs/qwen-route-ledger.md").lower(),
+            and all(fragment not in ledger_text for fragment in ["sk-", "bearer ", "access_key_secret"]),
             "The client reads Qwen/DashScope keys only from runtime environment variables and the ledger does not store an API key.",
             "Keep API keys out of chat, screenshots, commits, logs, and Devpost; remove the environment variable immediately after the smoke test.",
+        ),
+        _check(
+            "QWEN_LIVE_SMOKE_PROOF",
+            "Runtime Qwen/DashScope smoke proof",
+            _has_all(
+                qwen_live_proof,
+                [
+                    "Exit code: 0",
+                    "present after cleanup: False",
+                    "qwen-plus",
+                    "https://dashscope.aliyuncs.com/compatible-mode/v1",
+                    "Refined Submission Plan",
+                ],
+            ),
+            "A live Qwen/DashScope refinement pass succeeded through Alibaba Cloud China Bailian with a runtime-only key and no stored secret.",
+            "Use only the short non-sensitive excerpt publicly; future runs still require account-owner key entry at action time.",
         ),
         _check(
             "ALIBABA_FC_CUSTOM_CONTAINER_MANIFEST",
@@ -108,8 +126,8 @@ def build_report(root: Path | str = PROJECT_ROOT, checked_at: datetime | None = 
             and payload.get("track") == "Track 4 - Autopilot Agent"
             and payload["qwen_plan"]["target_prize"]["name"] == "Blog Post Award"
             and payload["submission_status"]["phase"] == "submitted_can_still_improve"
-            and any("No live Qwen" in gap for gap in payload["evidence_gaps"]),
-            "The local web payload exposes the submitted Qwen target, route status, judge scorecard, approval queue, and evidence gaps.",
+            and any("Qwen/DashScope live refinement is verified" in gap for gap in payload["evidence_gaps"]),
+            "The local web payload exposes the submitted Qwen target, verified Qwen live proof, route status, judge scorecard, approval queue, and remaining endpoint gap.",
             "Use the same payload as the expected success signal for a live Alibaba endpoint proof.",
         ),
         _check(
@@ -118,29 +136,29 @@ def build_report(root: Path | str = PROJECT_ROOT, checked_at: datetime | None = 
             _has_all(
                 live_gate,
                 [
-                    "Not yet claimed",
+                    "Verified after gate",
                     "completed Qwen/DashScope live call",
                     "verified Alibaba Cloud endpoint",
                     "Do not publish raw request headers",
                     "Do not publish Alibaba account IDs",
                 ],
             ),
-            "The public live-proof gate states what is verified and what remains account-gated.",
-            "Do not strengthen the public Devpost claim until live Qwen and/or Alibaba evidence actually exists.",
+            "The public live-proof gate states that Qwen live proof is verified and the Alibaba endpoint remains account-gated.",
+            "Do not strengthen the public Devpost claim for Alibaba Cloud deployment until endpoint evidence actually exists.",
         ),
     ]
 
-    overall = "ready_without_live_secrets" if all(item["status"] == "pass" for item in checks) else "needs_local_fix"
+    overall = "qwen_live_verified_endpoint_pending" if all(item["status"] == "pass" for item in checks) else "needs_local_fix"
     return {
         "checked_at": current.isoformat(),
         "overall": overall,
         "checks": checks,
-        "live_claim": "not_claimed",
+        "live_claim": "qwen_dashscope_smoke_verified_alibaba_endpoint_pending",
         "secret_policy": "No API keys, raw headers, account IDs, billing data, payout data, tax data, KYC data, cookies, or private console pages are required or stored.",
         "next_live_evidence": [
-            "Runtime Qwen/DashScope smoke test with account-owner supplied key.",
             "Alibaba Cloud Function Compute deployment approved and run by the account owner.",
             "Public endpoint proof for / and /api/plan with no private console chrome.",
+            "Devpost update copy that claims only the completed Qwen smoke proof and any endpoint proof that actually exists.",
         ],
     }
 

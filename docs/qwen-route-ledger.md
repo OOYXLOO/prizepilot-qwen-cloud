@@ -13,15 +13,15 @@ Use this as the non-sensitive recovery record for the Qwen backup route. Do not 
 - Secondary target: Top 10 Honorable Mention Projects, USD 500 x10
 - Project: PrizePilot
 - Deadline: July 10, 2026 5:00 AM GMT+8 / July 9, 2026 9:00 PM UTC
-- Current status: local package prepared; Qwen Devpost joined; public GitHub repository published; GitHub Pages blog and judge demo published; Devpost portfolio project created; public Vimeo demo video published; Additional info saved with architecture diagram; Qwen Devpost project submitted; public Devpost Story updated to remove draft wording and show the current public evidence links. Qwen Cloud account/API and live Alibaba Cloud deployment proof still need to be strengthened before judging.
+- Current status: local package prepared; Qwen Devpost joined; public GitHub repository published; GitHub Pages blog and judge demo published; Devpost portfolio project created; public Vimeo demo video published; Additional info saved with architecture diagram; Qwen Devpost project submitted; public Devpost Story updated to remove draft wording and show the current public evidence links; one live Qwen/DashScope refinement pass completed through Alibaba Cloud China Bailian with a runtime-only key and no stored secret. Live Alibaba Cloud deployment endpoint proof still needs to be strengthened before judging.
 
 ## Gate Status
 
 - Devpost hackathon joined: yes
 - Devpost portfolio project created: yes
 - Devpost additional info saved: yes - architecture.png was selected through the native Windows file picker and Devpost advanced to finalization
-- Qwen/Alibaba Cloud account ready: partial - GitHub OAuth authorized for qwencloud.com and verification code sent to registered email; Qwen verification must be reopened or restored before entering the current email code
-- Qwen live check completed: no
+- Qwen/Alibaba Cloud account ready: yes - Alibaba Cloud China Bailian API access used by the account owner at action time; no API key stored
+- Qwen live check completed: yes - 2026-06-13 live Qwen/DashScope smoke test succeeded with `qwen-plus`, China Bailian endpoint, exit code 0, and runtime key removed after cleanup
 - Alibaba Cloud deployment proof: partial - Function Compute custom-container manifest prepared at deploy/alibaba-cloud/s.yaml; live Alibaba Cloud endpoint not verified
 - Public GitHub repository: yes
 - Public demo video: yes - Vimeo public URL accepted by Devpost
@@ -41,6 +41,7 @@ Use this as the non-sensitive recovery record for the Qwen backup route. Do not 
 - Judge demo URL: https://ooyxloo.github.io/prizepilot-qwen-cloud/demo/
 - Cloud readiness URL: https://ooyxloo.github.io/prizepilot-qwen-cloud/cloud-readiness/
 - Live proof gate URL: https://ooyxloo.github.io/prizepilot-qwen-cloud/live-proof-gate/
+- Qwen live proof URL: https://ooyxloo.github.io/prizepilot-qwen-cloud/qwen-live-proof/
 - Architecture diagram file: architecture.png
 - Devpost project URL: https://devpost.com/software/prizepilot-qwen-cloud
 - Qwen submission manage URL: https://devpost.com/submit-to/29966-global-ai-hackathon-series-with-qwen-cloud/manage/submissions/1046103-prizepilot-qwen-cloud/edit
@@ -75,6 +76,7 @@ Use this as the non-sensitive recovery record for the Qwen backup route. Do not 
 - Remaining Qwen improvement work is evidence quality, not submission plumbing: finish Qwen/Alibaba Cloud account verification, run a live Qwen/DashScope check with a user-provided API key at action time, and add stronger live Alibaba Cloud endpoint proof if available before the deadline.
 - 2026-06-12: Added `docs/live-proof-gate.md` plus the public `docs/live-proof-gate/` HTML page, then linked it from the public evidence hub, judge pack, README, and Devpost field draft so judges and the account owner can see the exact non-secret proof-capture path before any live Qwen or Alibaba Cloud action.
 - 2026-06-12: Added `python -m prizepilot cloud-readiness`, `docs/cloud-readiness-report.md/json`, and `docs/cloud-readiness/` to verify the Qwen request shape, runtime-only secret boundary, Alibaba Function Compute manifest, public HTTP proof targets, dashboard payload, and public claim boundary without making a live Qwen/Alibaba claim.
+- 2026-06-13: Completed a live Qwen/DashScope smoke test through Alibaba Cloud China Bailian using `qwen-plus` and `https://dashscope.aliyuncs.com/compatible-mode/v1`. The command `python -X utf8 -m prizepilot plan samples/qwen_hackathon.json --use-qwen` returned exit code 0, produced a refined Blog Post Award plan, and confirmed `DASHSCOPE_API_KEY` was absent after cleanup. Public proof is recorded in `docs/qwen-live-proof.md` without API keys, request headers, account metadata, billing data, payout data, tax data, KYC data, cookies, or private console pages.
 
 ## Update Rules
 

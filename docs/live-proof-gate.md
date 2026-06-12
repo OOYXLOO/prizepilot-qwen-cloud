@@ -9,8 +9,9 @@ Use this page only when the account owner is present and can complete official Q
 - Public judge pack: https://ooyxloo.github.io/prizepilot-qwen-cloud/judge-pack/
 - Public build journal: https://ooyxloo.github.io/prizepilot-qwen-cloud/blog/
 - Public repository: https://github.com/OOYXLOO/prizepilot-qwen-cloud
-- Verified today in the project story: repository, Vimeo demo, GitHub Pages evidence, blog, tests, Qwen client code path, and Alibaba Cloud deployment manifest.
-- Not yet claimed: completed Qwen/DashScope live call, verified Alibaba Cloud endpoint, prize award, payout, tax, KYC, or bank verification.
+- Verified today in the project story: repository, Vimeo demo, GitHub Pages evidence, blog, tests, Qwen client code path, Qwen/DashScope live smoke proof, and Alibaba Cloud deployment manifest.
+- Verified after gate: completed Qwen/DashScope live call with `qwen-plus`, China Bailian endpoint, exit code 0, and runtime key removed after cleanup.
+- Not yet claimed: verified Alibaba Cloud endpoint, prize award, payout, tax, KYC, or bank verification.
 
 ## Human Gates
 
@@ -37,13 +38,14 @@ python -m prizepilot plan samples/qwen_hackathon.json --use-qwen
 Remove-Item Env:\DASHSCOPE_API_KEY
 ```
 
-Acceptable public evidence after the run:
+Captured public evidence after the run:
 
 - timestamp;
 - selected non-sensitive model name, for example `qwen-plus`;
 - selected public base URL region, if visible and non-secret;
 - short excerpt showing the model refined the PrizePilot plan;
 - confirmation that the API key was removed from the environment after the run.
+- public proof page: `docs/qwen-live-proof.md` and `docs/qwen-live-proof/index.html`.
 
 Do not publish raw request headers, full responses containing account metadata, API keys, billing screens, or private console pages.
 
@@ -78,15 +80,15 @@ Only edit the Qwen Devpost project after new proof is real and captured. Suggest
 
 > Added live proof evidence for the Qwen/DashScope refinement path and/or Alibaba Cloud endpoint. The project still keeps account, billing, payout, tax, and KYC material outside the repository and only publishes non-sensitive proof.
 
-If either proof is still missing, keep the current honest wording: live Qwen execution and live Alibaba deployment are prepared paths, not completed claims.
+Because Qwen live proof is now captured but Alibaba endpoint proof is still missing, keep the current honest wording for deployment: live Qwen execution is verified, while live Alibaba deployment remains a prepared path until endpoint evidence exists.
 
 ## Evidence Checklist
 
-- [ ] Qwen/Alibaba account verification completed by account owner.
-- [ ] Runtime-only API key used and removed from environment.
-- [ ] Live Qwen output captured without secrets.
+- [x] Qwen/Alibaba account verification completed enough for account-owner live Qwen/DashScope API use.
+- [x] Runtime-only API key used and removed from environment.
+- [x] Live Qwen output captured without secrets.
 - [ ] Alibaba deployment approved by account owner before any billing or credit use.
 - [ ] Public endpoint verified at `/` and `/api/plan`.
 - [ ] Devpost updated only with proof that actually happened.
-- [ ] `docs/qwen-route-ledger.md` updated with non-sensitive status.
+- [x] `docs/qwen-route-ledger.md` updated with non-sensitive status.
 - [ ] `python -m unittest discover -s tests -v` still passes.

@@ -350,7 +350,7 @@
         <section>
           <h2>Blog Post Award reader path</h2>
           <p>This article is the judge-readable project story for the Qwen Blog Post Award path. The fastest review path is to read the product thesis below, open the <a href="../judge-pack/">judge evidence pack</a> for the Track 4 matrix, review the <a href="../cloud-readiness/">cloud readiness report</a>, watch the <a href="https://vimeo.com/1200124146">short public demo</a>, and then inspect the <a href="https://github.com/OOYXLOO/prizepilot-qwen-cloud">public repository</a>.</p>
-          <p>The story is intentionally evidence-first. It highlights what PrizePilot has already proved publicly, what Qwen Cloud integration is implemented locally, and what remains account-gated until a real Qwen/DashScope key and Alibaba Cloud deployment are available.</p>
+          <p>The story is intentionally evidence-first. It highlights what PrizePilot has already proved publicly, what Qwen Cloud integration has now verified through a live smoke test, and what remains account-gated until an Alibaba Cloud endpoint deployment is available.</p>
           <div class="callout">
             <strong>Award angle:</strong> PrizePilot is not just a hackathon app. It is a transparent case study in using an AI agent to pursue prize money while keeping proof, risk, and human approval visible.
           </div>
@@ -358,8 +358,8 @@
 
         <section>
           <h2>Latest review status</h2>
-          <p>As of June 12, 2026, PrizePilot is submitted on Devpost with a public GitHub repository, public Vimeo demo, this public Blog Award story, and a <a href="../demo/">static judge demo</a>. The public Devpost Story has been updated so it no longer describes the project as a draft.</p>
-          <p>The current evidence boundary is intentionally explicit: live Qwen/DashScope refinement and a verified live Alibaba Cloud endpoint are prepared paths, not completed claims. The new <a href="../cloud-readiness/">cloud readiness report</a> verifies the request shape, Alibaba manifest, dashboard proof target, and claim boundary without using live secrets. The repository and this build journal are the source of truth for judges who want the latest status, validation report, and route ledger.</p>
+          <p>As of June 13, 2026, PrizePilot is submitted on Devpost with a public GitHub repository, public Vimeo demo, this public Blog Award story, a <a href="../demo/">static judge demo</a>, and <a href="../qwen-live-proof/">Qwen/DashScope live smoke proof</a>. The public Devpost Story has been updated so it no longer describes the project as a draft.</p>
+          <p>The current evidence boundary is intentionally explicit: live Qwen/DashScope refinement is verified, while a verified live Alibaba Cloud endpoint remains a prepared path, not a completed claim. The <a href="../cloud-readiness/">cloud readiness report</a> verifies the request shape, live Qwen proof, Alibaba manifest, dashboard proof target, and claim boundary without using live secrets. The repository and this build journal are the source of truth for judges who want the latest status, validation report, and route ledger.</p>
         </section>
 
         <section>
@@ -386,7 +386,7 @@
 
         <section>
           <h2>Current planning behavior</h2>
-          <p>The local deterministic planner ranks opportunities by prize value, number of winners, deadline pressure, and blockers. In the current sample portfolio, a near-deadline Splunk feedback route stays first because it is a multi-winner, low-friction prize. The Qwen Cloud route is the higher-upside project route and is now submitted publicly; the remaining improvement path is live Qwen usage evidence and Alibaba Cloud endpoint proof.</p>
+          <p>The local deterministic planner ranks opportunities by prize value, number of winners, deadline pressure, and blockers. In the current sample portfolio, a near-deadline Splunk feedback route stays first because it is a multi-winner, low-friction prize. The Qwen Cloud route is the higher-upside project route and is now submitted publicly; the remaining improvement path is Alibaba Cloud endpoint proof and sharper Devpost copy based on the captured Qwen live evidence.</p>
           <p>That distinction is the core of PrizePilot: it does not chase the largest pool if the evidence cannot be produced. It chooses the route that can be completed honestly.</p>
           <div class="figure-grid">
             <figure>
@@ -425,8 +425,8 @@
                 </tr>
                 <tr>
                   <td data-label="Claim">Qwen/DashScope can refine the planning narrative.</td>
-                  <td data-label="Current Proof">OpenAI-compatible client, runtime environment-variable handling, focused unit tests, and the cloud readiness report.</td>
-                  <td data-label="Remaining Gap">A live call transcript requires official account/API access at action time.</td>
+                  <td data-label="Current Proof">OpenAI-compatible client, runtime environment-variable handling, focused unit tests, the cloud readiness report, and a public Qwen live smoke proof page.</td>
+                  <td data-label="Remaining Gap">Future reruns still require official account/API access at action time, but the initial live proof is captured.</td>
                 </tr>
                 <tr>
                   <td data-label="Claim">Alibaba Cloud deployment is prepared.</td>
@@ -440,7 +440,7 @@
 
         <section>
           <h2>Qwen Cloud integration plan</h2>
-          <p>PrizePilot is Qwen-ready through an OpenAI-compatible DashScope client. The deterministic planner works locally so every recommendation can be audited. After a Qwen or DashScope API key is provided at runtime, Qwen Cloud can refine route reasoning, improve submission narratives, and turn raw opportunity data into sharper Devpost and blog material.</p>
+          <p>PrizePilot is Qwen-ready through an OpenAI-compatible DashScope client. The deterministic planner works locally so every recommendation can be audited. A live Qwen/DashScope smoke test has now shown that the same plan can be refined at runtime without storing the key.</p>
           <h3>Implemented locally</h3>
           <ul>
             <li>Support for <code>DASHSCOPE_API_KEY</code> and <code>QWEN_API_KEY</code> environment variables.</li>
@@ -456,7 +456,7 @@
 POST {base_url}/chat/completions
 Authorization: Bearer &lt;runtime key only&gt;</code></pre>
           <div class="callout warning">
-            <strong>Evidence boundary:</strong> this post does not claim a live Qwen API call yet. The live check belongs in the final evidence pack after account access and a runtime API key are available.
+            <strong>Evidence boundary:</strong> this post claims only the completed Qwen/DashScope smoke proof captured on June 13, 2026. It still does not claim a live Alibaba Cloud endpoint.
           </div>
         </section>
 
@@ -513,8 +513,8 @@ Authorization: Bearer &lt;runtime key only&gt;</code></pre>
         <section>
           <h2>Next proof to capture</h2>
           <ol>
-            <li>Run a live Qwen Cloud refinement pass with a runtime key.</li>
-            <li>Deploy the web/API service on Alibaba Cloud and capture deployment proof.</li>
+            <li>Use the captured live Qwen Cloud refinement pass as public sponsor-model evidence.</li>
+            <li>Deploy the web/API service on Alibaba Cloud and capture endpoint proof after account-owner approval.</li>
             <li>Update the submitted Devpost project only after the new live evidence exists.</li>
             <li>Refresh screenshots or demo assets if the dashboard changes materially.</li>
           </ol>
@@ -531,7 +531,7 @@ Authorization: Bearer &lt;runtime key only&gt;</code></pre>
           <li>Hackathon route<span>Qwen Cloud Track 4: Autopilot Agent</span></li>
           <li>Demo asset<span>Public Vimeo demo published at <a href="https://vimeo.com/1200124146">vimeo.com/1200124146</a></span></li>
           <li>Blog Award story<span>This page is the public judge-readable article for the Blog Post Award path</span></li>
-          <li>Qwen live check<span>Prepared but not claimed complete</span></li>
+          <li>Qwen live check<span>Completed once with runtime-only key; public proof page available</span></li>
           <li>Alibaba Cloud proof<span>Runbook prepared; deployment proof still required</span></li>
           <li>Integrity rule<span>No secrets, payout data, or private identity documents are stored in this repo</span></li>
         </ul>
@@ -540,7 +540,7 @@ Authorization: Bearer &lt;runtime key only&gt;</code></pre>
   </main>
 
   <footer>
-    <div class="wrap">PrizePilot Blog Award story for the Global AI Hackathon Series with Qwen Cloud. Last updated June 12, 2026.</div>
+    <div class="wrap">PrizePilot Blog Award story for the Global AI Hackathon Series with Qwen Cloud. Last updated June 13, 2026.</div>
   </footer>
 </body>
 </html>

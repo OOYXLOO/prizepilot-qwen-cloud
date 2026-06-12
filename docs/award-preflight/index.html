@@ -68,12 +68,12 @@
   <header>
     <div class="wrap">
       <p class="eyebrow">Qwen Cloud award preflight</p>
-      <h1>PrizePilot is ready for public judging, with live cloud proof clearly gated.</h1>
-      <p class="dek">This page is the fast preflight for the Blog Post Award and Honorable Mention routes. It tells judges what is already public, what can be reproduced without secrets, and what still requires the account owner.</p>
+      <h1>PrizePilot is ready for public judging, with live Qwen proof captured and endpoint proof clearly gated.</h1>
+      <p class="dek">This page is the fast preflight for the Blog Post Award and Honorable Mention routes. It tells judges what is already public, what can be reproduced without secrets, what live Qwen evidence has been captured, and what still requires the account owner.</p>
       <div class="status-strip" aria-label="Award status">
         <div class="card"><strong>Submitted</strong><p>Devpost project, Vimeo demo, repository, judge hub, deck, and Blog Award story are public.</p></div>
         <div class="card"><strong>USD 500</strong><p>Primary targets are the Blog Post Award and Top 10 Honorable Mention routes.</p></div>
-        <div class="card"><strong>3 gates</strong><p>Qwen account, live Qwen/DashScope call, and live Alibaba endpoint remain account-gated.</p></div>
+        <div class="card"><strong>1 gate</strong><p>Live Alibaba endpoint proof remains account-gated; Qwen/DashScope smoke proof is captured.</p></div>
       </div>
     </div>
   </header>
@@ -100,11 +100,15 @@
         </a>
         <a class="card" href="../cloud-readiness/">
           <h2>Cloud Readiness</h2>
-          <p>No-secret report proving the Qwen request shape, Alibaba Function Compute manifest, dashboard payload, and claim boundary before live account gates.</p>
+          <p>No-secret report proving the Qwen request shape, live Qwen smoke proof, Alibaba Function Compute manifest, dashboard payload, and claim boundary.</p>
         </a>
         <a class="card" href="../live-proof-gate/">
           <h2>Live Proof Gate</h2>
-          <p>Action-time Qwen and Alibaba proof checklist that avoids storing API keys, headers, billing, tax, or KYC data.</p>
+          <p>Action-time proof checklist showing completed Qwen/DashScope evidence and the remaining Alibaba endpoint gate.</p>
+        </a>
+        <a class="card" href="../qwen-live-proof/">
+          <h2>Qwen Live Proof</h2>
+          <p>Non-sensitive evidence for the completed Qwen/DashScope runtime refinement: model, endpoint, exit code, and key cleanup.</p>
         </a>
       </div>
     </section>
@@ -138,8 +142,8 @@
             </tr>
             <tr>
               <td data-label="Award Signal">Qwen/DashScope integration</td>
-              <td data-label="Current Evidence"><code>src/prizepilot/qwen_client.py</code>, tests, live-check runbook, and <a href="../cloud-readiness/">cloud readiness report</a>.</td>
-              <td data-label="Preflight Status">Code path ready; live proof waits for account key.</td>
+              <td data-label="Current Evidence"><code>src/prizepilot/qwen_client.py</code>, tests, live-check runbook, <a href="../qwen-live-proof/">Qwen live proof</a>, and <a href="../cloud-readiness/">cloud readiness report</a>.</td>
+              <td data-label="Preflight Status">Live Qwen/DashScope smoke proof verified.</td>
             </tr>
             <tr>
               <td data-label="Award Signal">Alibaba Cloud deployment proof</td>
@@ -154,7 +158,7 @@
     <section>
       <h2>Do Not Overclaim</h2>
       <div class="callout">
-        <strong>Current claim boundary:</strong> PrizePilot is submitted and publicly reviewable. It does not claim live Qwen/DashScope execution or a live Alibaba Cloud endpoint until the account owner completes the official account, API, billing or credit, and deployment steps.
+        <strong>Current claim boundary:</strong> PrizePilot is submitted and publicly reviewable. It claims only the completed live Qwen/DashScope smoke proof and does not claim a live Alibaba Cloud endpoint until the account owner completes the official billing or credit and deployment steps.
       </div>
       <ul>
         <li>Do not publish API keys, raw request headers, cookies, account IDs, billing data, tax data, KYC evidence, or payout details.</li>

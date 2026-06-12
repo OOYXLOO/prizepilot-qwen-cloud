@@ -17,7 +17,7 @@ class WebappTests(unittest.TestCase):
         self.assertEqual(payload["submission_status"]["phase"], "submitted_can_still_improve")
         self.assertEqual(len(payload["agent_walkthrough"]), 5)
         self.assertEqual(len(payload["judge_scorecard"]), 4)
-        self.assertTrue(any(gap.startswith("No live Qwen") for gap in payload["evidence_gaps"]))
+        self.assertTrue(any(gap.startswith("Qwen/DashScope live refinement is verified") for gap in payload["evidence_gaps"]))
         self.assertTrue(any("No API key is stored" in item for item in payload["integrity_boundary"]))
 
     def test_dashboard_html_links_json_endpoint_and_shows_verified_submission(self) -> None:
@@ -28,6 +28,7 @@ class WebappTests(unittest.TestCase):
         self.assertIn("Mind the Product target", html)
         self.assertIn("submitted_can_still_improve", html)
         self.assertIn("https://vimeo.com/1200124146", html)
+        self.assertIn("https://ooyxloo.github.io/prizepilot-qwen-cloud/qwen-live-proof/", html)
         self.assertIn("Autopilot Walkthrough", html)
         self.assertIn("Judge Scorecard", html)
         self.assertIn("Evidence gaps before judging", html)
