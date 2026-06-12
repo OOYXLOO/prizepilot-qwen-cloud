@@ -64,8 +64,38 @@
       margin-top: 30px;
     }
 
-    .fast-path {
+    .primary-actions, .fast-path {
       margin-top: 24px;
+    }
+
+    .primary-actions {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .primary-actions a {
+      min-height: 92px;
+      padding: 16px;
+      border: 1px solid var(--line);
+      background: var(--paper);
+    }
+
+    .primary-actions strong {
+      display: block;
+      margin-bottom: 6px;
+      color: var(--ink);
+      font-size: 18px;
+    }
+
+    .primary-actions span {
+      display: block;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.45;
+    }
+
+    .fast-path {
       padding: 18px 20px;
       border-left: 5px solid var(--teal);
       background: var(--paper);
@@ -132,7 +162,7 @@
         padding: 40px 0;
       }
 
-      .grid {
+      .primary-actions, .grid {
         grid-template-columns: 1fr;
       }
 
@@ -147,6 +177,21 @@
     <p class="eyebrow">Qwen Cloud Track 4 evidence hub</p>
     <h1>PrizePilot is submitted, public, and still improving before judging.</h1>
     <p class="dek">This hub gives judges and reviewers the fastest path through the public evidence: the submitted Devpost project, the short demo video, the presentation deck, the Blog Post Award story, benchmark method, Qwen live smoke proof, and a static judge demo that separates verified proof from remaining account-gated work.</p>
+
+    <nav class="primary-actions" aria-label="Primary judge actions">
+      <a href="https://vimeo.com/1200124146">
+        <strong>Watch Demo</strong>
+        <span>Short public video for the submitted Qwen Track 4 project.</span>
+      </a>
+      <a href="./blog/">
+        <strong>Read Blog Award Story</strong>
+        <span>Published project journey for the Blog Post Award route.</span>
+      </a>
+      <a href="./judge-pack/">
+        <strong>Verify Proof Boundary</strong>
+        <span>Qwen proof, prize decision summary, and endpoint-pending boundary.</span>
+      </a>
+    </nav>
 
     <section class="fast-path" aria-label="90-second judge path">
       <h2>90-second judge path</h2>
