@@ -39,6 +39,7 @@ Use this as the non-sensitive recovery record for the Qwen backup route. Do not 
 - Demo video URL: https://vimeo.com/1200124146
 - Blog/social post URL: https://ooyxloo.github.io/prizepilot-qwen-cloud/blog/
 - Judge demo URL: https://ooyxloo.github.io/prizepilot-qwen-cloud/demo/
+- Live proof gate URL: https://ooyxloo.github.io/prizepilot-qwen-cloud/live-proof-gate/
 - Architecture diagram file: architecture.png
 - Devpost project URL: https://devpost.com/software/prizepilot-qwen-cloud
 - Qwen submission manage URL: https://devpost.com/submit-to/29966-global-ai-hackathon-series-with-qwen-cloud/manage/submissions/1046103-prizepilot-qwen-cloud/edit
@@ -71,6 +72,7 @@ Use this as the non-sensitive recovery record for the Qwen backup route. Do not 
 - 2026-06-11: Added a static GitHub Pages evidence hub and judge demo at `docs/index.html` and `docs/demo/index.html`, copied the architecture diagram into `docs/assets/architecture.png` for Pages rendering, and expanded the build journal with screenshots, a claim/proof/gap table, Qwen client request shape, and judging-criteria map. Public repository HEAD `092965a82826e29d3d1fc746297f13c3963186ea` contains this update; GitHub Pages deployment may lag briefly after the push.
 - 2026-06-11: Verified GitHub Pages deployment for the root evidence hub, `/demo/`, and `/blog/`, then updated Devpost Project details to add `https://ooyxloo.github.io/prizepilot-qwen-cloud/demo/` as an additional public "Try it out" link. Public Devpost verification found the demo link href present alongside GitHub, Vimeo, and build journal links.
 - Remaining Qwen improvement work is evidence quality, not submission plumbing: finish Qwen/Alibaba Cloud account verification, run a live Qwen/DashScope check with a user-provided API key at action time, and add stronger live Alibaba Cloud endpoint proof if available before the deadline.
+- 2026-06-12: Added `docs/live-proof-gate.md` plus the public `docs/live-proof-gate/` HTML page, then linked it from the public evidence hub, judge pack, README, and Devpost field draft so judges and the account owner can see the exact non-secret proof-capture path before any live Qwen or Alibaba Cloud action.
 
 ## Update Rules
 

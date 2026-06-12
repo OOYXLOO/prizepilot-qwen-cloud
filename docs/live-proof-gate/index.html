@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PrizePilot Live Proof Gate</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #17202a;
+      --muted: #536273;
+      --line: #d7dde5;
+      --paper: #ffffff;
+      --wash: #f4f7fa;
+      --teal: #0f766e;
+      --blue: #2563eb;
+      --amber: #b45309;
+      --green: #047857;
+      --code: #142033;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--ink);
+      background: var(--wash);
+    }
+
+    header {
+      background: var(--paper);
+      border-bottom: 1px solid var(--line);
+    }
+
+    main, .wrap {
+      width: min(1080px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    .hero {
+      padding: 48px 0 30px;
+    }
+
+    .eyebrow {
+      margin: 0 0 12px;
+      color: var(--teal);
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      max-width: 900px;
+      margin: 0;
+      font-size: clamp(34px, 5vw, 56px);
+      line-height: 1.06;
+      letter-spacing: 0;
+    }
+
+    .dek {
+      max-width: 820px;
+      margin: 18px 0 0;
+      color: var(--muted);
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    main {
+      padding: 28px 0 64px;
+    }
+
+    section {
+      padding: 26px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    h2 {
+      margin: 0 0 14px;
+      font-size: 26px;
+      line-height: 1.2;
+      letter-spacing: 0;
+    }
+
+    p, li {
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.62;
+    }
+
+    a {
+      color: var(--blue);
+      font-weight: 700;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 16px;
+    }
+
+    .panel {
+      min-height: 128px;
+      padding: 16px;
+      border: 1px solid var(--line);
+      background: var(--paper);
+    }
+
+    .panel strong {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--ink);
+    }
+
+    .callout {
+      margin-top: 16px;
+      padding: 16px 18px;
+      border-left: 5px solid var(--amber);
+      background: var(--paper);
+      color: var(--muted);
+      line-height: 1.55;
+    }
+
+    .callout.good {
+      border-color: var(--green);
+    }
+
+    .callout strong {
+      color: var(--ink);
+    }
+
+    code, pre {
+      font-family: Consolas, Monaco, monospace;
+    }
+
+    code {
+      padding: 2px 5px;
+      background: #eaf0f7;
+      color: #1d2a39;
+      font-size: 0.94em;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 16px;
+      background: var(--code);
+      color: #eff6ff;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    @media (max-width: 760px) {
+      .hero {
+        padding: 38px 0 24px;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap hero">
+      <p class="eyebrow">Qwen and Alibaba action-time proof</p>
+      <h1>Live proof is a gated action, not an implied claim.</h1>
+      <p class="dek">PrizePilot is already submitted and public. This page shows exactly how the remaining Qwen/DashScope and Alibaba Cloud evidence should be captured without storing API keys, account cookies, billing data, payout details, tax material, or KYC evidence.</p>
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <h2>Current Public Boundary</h2>
+      <div class="grid">
+        <div class="panel"><strong>Verified public evidence</strong><p>Repository, Vimeo demo, GitHub Pages hub, build journal, tests, Qwen client code path, and Alibaba Cloud deployment manifest.</p></div>
+        <div class="panel"><strong>Not yet claimed</strong><p>Completed Qwen/DashScope live call, verified Alibaba Cloud endpoint, prize award, payout, tax, KYC, or bank verification.</p></div>
+      </div>
+      <p>Source Markdown: <a href="../live-proof-gate.md">docs/live-proof-gate.md</a>. Judge hub: <a href="../">PrizePilot Public Evidence Hub</a>.</p>
+    </section>
+
+    <section>
+      <h2>Human Gates</h2>
+      <p>Stop and ask the account owner to act directly when any step asks for CAPTCHA, email/SMS/authenticator codes, API keys, access tokens, cookies, recovery codes, cloud credits, billing, card, bank, payout, tax, KYC, identity data, or final public Devpost updates.</p>
+      <div class="callout">
+        <strong>No secret belongs in this repository.</strong> Publish proof only when it is non-sensitive, reproducible, and actually happened.
+      </div>
+    </section>
+
+    <section>
+      <h2>Qwen/DashScope Live Proof</h2>
+      <p>Purpose: prove that PrizePilot can run a live Qwen-compatible refinement pass without storing the key.</p>
+      <pre><code>$env:PYTHONPATH='src'
+$env:DASHSCOPE_API_KEY='runtime-only'
+python -m prizepilot plan samples/qwen_hackathon.json --use-qwen
+Remove-Item Env:\DASHSCOPE_API_KEY</code></pre>
+      <p>Acceptable public evidence: timestamp, non-sensitive model name, public base URL region if visible, a short output excerpt showing plan refinement, and confirmation that the key was removed from the environment.</p>
+      <p>Do not publish raw request headers, full responses containing account metadata, API keys, billing screens, or private console pages.</p>
+    </section>
+
+    <section>
+      <h2>Alibaba Cloud Endpoint Proof</h2>
+      <p>Purpose: prove that the prepared Function Compute deployment path can serve the PrizePilot dashboard from an Alibaba Cloud endpoint after the account owner approves any credit or billing use.</p>
+      <pre><code>cd deploy/alibaba-cloud
+s deploy</code></pre>
+      <p>Verify that <code>/</code> renders the PrizePilot dashboard and <code>/api/plan</code> returns a JSON planning payload. Acceptable public evidence includes endpoint URL, timestamp, HTTP status, a dashboard screenshot with no private console chrome, and a short JSON snippet showing route names and evidence gates.</p>
+      <p>Do not publish Alibaba account IDs, billing screens, access keys, RAM policies, console cookies, private logs, or deployment tokens.</p>
+    </section>
+
+    <section>
+      <h2>Devpost Update Rule</h2>
+      <p>Only edit the Qwen Devpost project after new proof is real and captured. If either proof is still missing, keep the current honest wording: live Qwen execution and live Alibaba deployment are prepared paths, not completed claims.</p>
+      <div class="callout good">
+        <strong>Update copy after real proof:</strong> Added live proof evidence for the Qwen/DashScope refinement path and/or Alibaba Cloud endpoint. The project still keeps account, billing, payout, tax, and KYC material outside the repository and only publishes non-sensitive proof.
+      </div>
+    </section>
+  </main>
+</body>
+</html>

@@ -32,6 +32,8 @@ REQUIRED_ARTIFACTS = {
     "tools/record_demo_webm.mjs": "Automated WebM recording script",
     "docs/devpost-project-fields.md": "Devpost field draft",
     "docs/qwen-start-handoff-template.md": "User launch handoff template",
+    "docs/live-proof-gate.md": "Live Qwen and Alibaba proof gate",
+    "docs/live-proof-gate/index.html": "Public live proof gate page",
     "docs/qwen-cloud-live-check.md": "Live Qwen check runbook",
     "docs/alibaba-cloud-deployment-runbook.md": "Alibaba Cloud deployment runbook",
     "docs/alibaba-cloud-deployment-proof-template.md": "Deployment proof template",
@@ -183,6 +185,7 @@ def build_status(root: Path, ledger_path: Path, now: datetime | None = None) -> 
         "reference_files": [
             "docs/qwen-route-ledger.md",
             "docs/qwen-start-handoff-template.md",
+            "docs/live-proof-gate.md",
             "docs/qwen-human-action-card.md",
             "docs/devpost-project-fields.md",
             "docs/blog-draft.md",

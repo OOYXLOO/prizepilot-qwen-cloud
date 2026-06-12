@@ -4,6 +4,8 @@ Created: 2026-06-10
 
 Use this only after the user has created or logged into their Qwen Cloud / Alibaba Cloud account and provided the API key at action time. Do not store the key in this project, in docs, or in the ledger.
 
+For the full action-time evidence boundary and post-run Devpost update rule, use `docs/live-proof-gate.md` first.
+
 ## Official API References
 
 - Qwen first API call: https://www.alibabacloud.com/help/en/model-studio/first-api-call-to-qwen

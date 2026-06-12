@@ -29,6 +29,7 @@ python -m prizepilot.webapp --host 127.0.0.1 --port 8000
 
 - Public Vimeo demo: https://vimeo.com/1200124146
 - Public judge evidence pack: https://ooyxloo.github.io/prizepilot-qwen-cloud/judge-pack/
+- Public live proof gate: https://ooyxloo.github.io/prizepilot-qwen-cloud/live-proof-gate/
 - `docs/screenshots/prizepilot-demo.gif`
 - `docs/screenshots/prizepilot-dashboard-desktop.png`
 - `docs/screenshots/prizepilot-dashboard-mobile.png`
@@ -60,3 +61,5 @@ Paste from `docs/submission-story.md`.
 ## Current Devpost State
 
 The Devpost project is submitted at https://devpost.com/software/prizepilot-qwen-cloud and can still be edited until the Qwen Cloud hackathon deadline. Future updates should focus on stronger live evidence: Qwen/DashScope refinement proof and a verified Alibaba Cloud endpoint, if account access is available in time.
+
+The public live proof gate at https://ooyxloo.github.io/prizepilot-qwen-cloud/live-proof-gate/ explains exactly how any future Qwen/DashScope or Alibaba Cloud proof will be captured without storing API keys, account cookies, billing data, payout details, tax material, or KYC evidence.

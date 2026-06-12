@@ -1,16 +1,16 @@
 {
-  "checked_at": "2026-06-11T21:43:55.914455+00:00",
+  "checked_at": "2026-06-12T02:26:13.915290+00:00",
   "phase": "submitted_can_still_improve",
   "severity": "OK_WITH_EVIDENCE_GAPS",
   "next_action": "Strengthen evidence before judging: complete Qwen/Alibaba Cloud account verification, run a live Qwen/DashScope check with a user-provided API key at action time, and add stronger live Alibaba Cloud endpoint proof if available.",
   "deadline_utc": "2026-07-09T21:00:00+00:00",
-  "hours_until_deadline": 671.27,
+  "hours_until_deadline": 666.56,
   "artifact_checks": [
     {
       "path": "README.md",
       "description": "Project README",
       "exists": true,
-      "size": 3460
+      "size": 3699
     },
     {
       "path": "LICENSE",
@@ -70,7 +70,7 @@
       "path": "docs/index.html",
       "description": "Public build notes landing page",
       "exists": true,
-      "size": 4358
+      "size": 4600
     },
     {
       "path": "docs/blog/index.html",
@@ -82,7 +82,7 @@
       "path": "docs/judge-pack/index.html",
       "description": "Public judge evidence pack",
       "exists": true,
-      "size": 12385
+      "size": 12661
     },
     {
       "path": "docs/prizepilot-qwen-submission-deck.pptx",
@@ -130,7 +130,7 @@
       "path": "docs/devpost-project-fields.md",
       "description": "Devpost field draft",
       "exists": true,
-      "size": 3307
+      "size": 3685
     },
     {
       "path": "docs/qwen-start-handoff-template.md",
@@ -139,10 +139,22 @@
       "size": 4301
     },
     {
+      "path": "docs/live-proof-gate.md",
+      "description": "Live Qwen and Alibaba proof gate",
+      "exists": true,
+      "size": 4297
+    },
+    {
+      "path": "docs/live-proof-gate/index.html",
+      "description": "Public live proof gate page",
+      "exists": true,
+      "size": 6844
+    },
+    {
       "path": "docs/qwen-cloud-live-check.md",
       "description": "Live Qwen check runbook",
       "exists": true,
-      "size": 2309
+      "size": 2424
     },
     {
       "path": "docs/alibaba-cloud-deployment-runbook.md",
@@ -166,7 +178,7 @@
       "path": "docs/public-package-checklist.md",
       "description": "Public package checklist",
       "exists": true,
-      "size": 1300
+      "size": 1349
     },
     {
       "path": "docs/validation-report.md",
@@ -215,6 +227,7 @@
   "reference_files": [
     "docs/qwen-route-ledger.md",
     "docs/qwen-start-handoff-template.md",
+    "docs/live-proof-gate.md",
     "docs/qwen-human-action-card.md",
     "docs/devpost-project-fields.md",
     "docs/blog-draft.md",
