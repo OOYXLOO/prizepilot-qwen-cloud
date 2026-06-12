@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PrizePilot Qwen Award Preflight</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #17202a;
+      --muted: #536273;
+      --line: #d7dde5;
+      --paper: #ffffff;
+      --wash: #f4f7fa;
+      --teal: #0f766e;
+      --blue: #2563eb;
+      --amber: #b45309;
+      --green: #047857;
+    }
+
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: Arial, Helvetica, sans-serif; color: var(--ink); background: var(--wash); }
+    .wrap { width: min(1080px, calc(100% - 32px)); margin: 0 auto; }
+    header { padding: 48px 0 30px; background: var(--paper); border-bottom: 1px solid var(--line); }
+    .eyebrow { margin: 0 0 12px; color: var(--teal); font-size: 14px; font-weight: 700; letter-spacing: 0; text-transform: uppercase; }
+    h1 { max-width: 900px; margin: 0; font-size: clamp(34px, 5vw, 56px); line-height: 1.06; letter-spacing: 0; }
+    .dek { max-width: 820px; margin: 18px 0 0; color: var(--muted); font-size: 18px; line-height: 1.6; }
+    main { padding: 30px 0 64px; }
+    .status-strip, .grid { display: grid; gap: 14px; margin-top: 24px; }
+    .status-strip { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .card { min-width: 0; padding: 18px; border: 1px solid var(--line); background: var(--paper); }
+    .card strong { display: block; margin-bottom: 8px; color: var(--green); font-size: 26px; line-height: 1; }
+    .card h2 { margin: 0 0 10px; font-size: 22px; letter-spacing: 0; }
+    .card p, li { color: var(--muted); font-size: 15px; line-height: 1.58; }
+    .card p { margin: 0 0 12px; }
+    section { padding: 28px 0; border-bottom: 1px solid var(--line); }
+    section:first-child { padding-top: 0; }
+    h2 { margin: 0 0 14px; font-size: 26px; line-height: 1.2; letter-spacing: 0; }
+    a { color: var(--blue); font-weight: 700; }
+    ul, ol { margin: 0; padding-left: 20px; }
+    .table-wrap { overflow-x: auto; border: 1px solid var(--line); background: var(--paper); margin-top: 16px; }
+    table { width: 100%; min-width: 760px; border-collapse: collapse; }
+    th, td { padding: 13px 14px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; font-size: 15px; line-height: 1.45; }
+    th { color: var(--muted); font-size: 13px; text-transform: uppercase; }
+    tr:last-child td { border-bottom: 0; }
+    .callout { margin-top: 18px; padding: 16px 18px; border-left: 5px solid var(--amber); background: var(--paper); color: var(--muted); line-height: 1.55; }
+    .callout strong { color: var(--ink); }
+
+    @media (max-width: 820px) {
+      .status-strip, .grid { grid-template-columns: 1fr; }
+      table { min-width: 0; }
+      thead { display: none; }
+      tr, td { display: block; }
+      td::before {
+        content: attr(data-label);
+        display: block;
+        margin-bottom: 4px;
+        color: var(--ink);
+        font-size: 12px;
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <p class="eyebrow">Qwen Cloud award preflight</p>
+      <h1>PrizePilot is ready for public judging, with live cloud proof clearly gated.</h1>
+      <p class="dek">This page is the fast preflight for the Blog Post Award and Honorable Mention routes. It tells judges what is already public, what can be reproduced without secrets, and what still requires the account owner.</p>
+      <div class="status-strip" aria-label="Award status">
+        <div class="card"><strong>Submitted</strong><p>Devpost project, Vimeo demo, repository, judge hub, deck, and Blog Award story are public.</p></div>
+        <div class="card"><strong>USD 500</strong><p>Primary targets are the Blog Post Award and Top 10 Honorable Mention routes.</p></div>
+        <div class="card"><strong>3 gates</strong><p>Qwen account, live Qwen/DashScope call, and live Alibaba endpoint remain account-gated.</p></div>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section>
+      <h2>Judge Fast Path</h2>
+      <div class="grid">
+        <a class="card" href="https://devpost.com/software/prizepilot-qwen-cloud">
+          <h2>Devpost Project</h2>
+          <p>Submitted public project with Story, Vimeo demo, repository, and editable status before deadline.</p>
+        </a>
+        <a class="card" href="../blog/">
+          <h2>Blog Award Story</h2>
+          <p>Judge-readable article for the Blog Post Award: product loop, Qwen path, Alibaba plan, and honest boundary.</p>
+        </a>
+        <a class="card" href="../judge-pack/">
+          <h2>Judge Evidence Pack</h2>
+          <p>Track 4 matrix, proof snapshot, local verification path, screenshots, and account-gated proof table.</p>
+        </a>
+        <a class="card" href="../live-proof-gate/">
+          <h2>Live Proof Gate</h2>
+          <p>Action-time Qwen and Alibaba proof checklist that avoids storing API keys, headers, billing, tax, or KYC data.</p>
+        </a>
+      </div>
+    </section>
+
+    <section>
+      <h2>Award Readiness Table</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Award Signal</th>
+              <th>Current Evidence</th>
+              <th>Preflight Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td data-label="Award Signal">Qualified public project</td>
+              <td data-label="Current Evidence"><a href="https://devpost.com/software/prizepilot-qwen-cloud">Devpost project</a>, <a href="https://github.com/OOYXLOO/prizepilot-qwen-cloud">repository</a>, <a href="https://vimeo.com/1200124146">Vimeo demo</a>, and <a href="../">evidence hub</a>.</td>
+              <td data-label="Preflight Status">Ready.</td>
+            </tr>
+            <tr>
+              <td data-label="Award Signal">Blog Post Award reader path</td>
+              <td data-label="Current Evidence"><a href="../blog/">Blog Award Story</a> plus links to demo, judge pack, deployment plan, and proof boundary.</td>
+              <td data-label="Preflight Status">Ready and public.</td>
+            </tr>
+            <tr>
+              <td data-label="Award Signal">Track 4 Autopilot Agent fit</td>
+              <td data-label="Current Evidence">Planner ranks routes, exposes evidence gaps, prepares public assets, and keeps risky actions in a human approval queue.</td>
+              <td data-label="Preflight Status">Ready through code, dashboard, and judge pack.</td>
+            </tr>
+            <tr>
+              <td data-label="Award Signal">Qwen/DashScope integration</td>
+              <td data-label="Current Evidence"><code>src/prizepilot/qwen_client.py</code>, tests, and live-check runbook.</td>
+              <td data-label="Preflight Status">Code path ready; live proof waits for account key.</td>
+            </tr>
+            <tr>
+              <td data-label="Award Signal">Alibaba Cloud deployment proof</td>
+              <td data-label="Current Evidence"><code>deploy/alibaba-cloud/s.yaml</code> and deployment runbook.</td>
+              <td data-label="Preflight Status">Manifest ready; live endpoint not claimed.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section>
+      <h2>Do Not Overclaim</h2>
+      <div class="callout">
+        <strong>Current claim boundary:</strong> PrizePilot is submitted and publicly reviewable. It does not claim live Qwen/DashScope execution or a live Alibaba Cloud endpoint until the account owner completes the official account, API, billing or credit, and deployment steps.
+      </div>
+      <ul>
+        <li>Do not publish API keys, raw request headers, cookies, account IDs, billing data, tax data, KYC evidence, or payout details.</li>
+        <li>Do not add a live endpoint to Devpost until the endpoint is public, reachable, and verified.</li>
+        <li>Do not replace the Blog Award story with private account screenshots.</li>
+      </ul>
+    </section>
+  </main>
+</body>
+</html>
