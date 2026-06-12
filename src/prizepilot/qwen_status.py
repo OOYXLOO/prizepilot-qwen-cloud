@@ -149,7 +149,7 @@ def build_status(root: Path, ledger_path: Path, now: datetime | None = None) -> 
         severity = "OK_WITH_EVIDENCE_GAPS"
         remaining_gate_names = {item["gate"] for item in incomplete_public_gates}
         if "qwen live check completed" in remaining_gate_names:
-            next_action = "Strengthen evidence before judging: complete Qwen/Alibaba Cloud account verification, run a live Qwen/DashScope check with a user-provided API key at action time, and add stronger live Alibaba Cloud endpoint proof if available."
+            next_action = "Strengthen evidence before judging: restore missing Qwen/DashScope proof with account-owner key entry at action time, and add stronger live Alibaba Cloud endpoint proof if available."
         elif "alibaba cloud deployment proof" in remaining_gate_names:
             next_action = "Strengthen remaining evidence before judging: add verified Alibaba Cloud endpoint proof if account access and billing/credit approval are available, then update public Devpost copy only with captured evidence."
         else:

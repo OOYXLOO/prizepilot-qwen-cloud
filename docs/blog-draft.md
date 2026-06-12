@@ -30,7 +30,7 @@ That distinction is the whole product thesis: the best agent should not chase th
 
 ## Qwen Cloud Integration Plan
 
-PrizePilot is Qwen-ready through an OpenAI-compatible DashScope client. The deterministic planner works locally so every recommendation can be audited. After the user provides a Qwen or DashScope API key at runtime, Qwen Cloud can refine the reasoning, rewrite submission narratives, and help turn raw opportunity data into sharper Devpost and blog materials.
+PrizePilot is Qwen-ready through an OpenAI-compatible DashScope client. The deterministic planner works locally so every recommendation can be audited. A live Qwen/DashScope smoke proof now shows that Qwen Cloud can refine the reasoning, rewrite submission narratives, and help turn raw opportunity data into sharper Devpost and blog materials without storing the runtime key.
 
 The client supports:
 
@@ -39,7 +39,7 @@ The client supports:
 - configurable base URL and model
 - safer error messages when no API key is present
 
-This draft does not claim that a live Qwen API call has already been made. The live check belongs in the final submission evidence after the user's Qwen Cloud account and API key are available.
+This draft claims only the completed Qwen/DashScope smoke proof captured with a runtime-only key. It does not claim Alibaba Cloud endpoint deployment.
 
 ## Deployment Story
 
@@ -55,7 +55,7 @@ The local dashboard already shows the project target, portfolio ranking, and int
 The agent intentionally separates preparation from external effects:
 
 - It can write drafts, rank opportunities, generate checklists, and build local packages.
-- It cannot truthfully claim live Qwen usage until a real API key is used.
+- It can truthfully claim one Qwen/DashScope live smoke proof, and future reruns still require action-time key entry.
 - It cannot claim Alibaba Cloud deployment until a public deployment exists.
 - It cannot publish a repo, video, blog post, or Devpost submission without user approval.
 - It does not store passwords, OTPs, API keys, payout data, tax data, or KYC data.
@@ -74,8 +74,8 @@ Finally, the demo shows the dashboard and `/api/plan` output, proving that the p
 
 Before this is published as a final Qwen Blog Post Award entry, the remaining proof should be captured:
 
-1. Run a live Qwen Cloud refinement pass with a user-provided API key.
-2. Deploy the web/API service on Alibaba Cloud.
+1. Link the completed Qwen Cloud refinement proof.
+2. Deploy the web/API service on Alibaba Cloud after account-owner approval.
 3. Publish the source repository after user approval.
 4. Record or publish the demo video.
 5. Update this blog with the final public repo, deployment URL, and Qwen live-check result.

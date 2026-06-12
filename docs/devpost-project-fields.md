@@ -6,7 +6,7 @@ Targets: Blog Post Award, USD 500 x10; Top 10 Honorable Mention Projects, USD 50
 
 PrizePilot turns hackathon and bounty opportunities into executable submission plans, public asset drafts, and human approval checkpoints. It uses deterministic scoring locally and can call Qwen Cloud through the OpenAI-compatible DashScope endpoint for reasoning refinement.
 
-Rule interpretation: the Blog Post Award is a bonus target and still requires a qualified Devpost project submission. The Honorable Mention route is the secondary project target. Public repository, blog, Vimeo demo, and Devpost submission are verified. Do not claim Qwen Cloud live usage or Alibaba Cloud live deployment until those actions actually happen.
+Rule interpretation: the Blog Post Award is a bonus target and still requires a qualified Devpost project submission. The Honorable Mention route is the secondary project target. Public repository, blog, Vimeo demo, Devpost submission, and one Qwen/DashScope live smoke proof are verified. Do not claim Alibaba Cloud live deployment until endpoint proof actually exists.
 
 ## Short Description
 
@@ -32,6 +32,7 @@ python -m prizepilot.webapp --host 127.0.0.1 --port 8000
 - Public award preflight: https://ooyxloo.github.io/prizepilot-qwen-cloud/award-preflight/
 - Public cloud readiness report: https://ooyxloo.github.io/prizepilot-qwen-cloud/cloud-readiness/
 - Public live proof gate: https://ooyxloo.github.io/prizepilot-qwen-cloud/live-proof-gate/
+- Public Qwen live proof: https://ooyxloo.github.io/prizepilot-qwen-cloud/qwen-live-proof/
 - `docs/screenshots/prizepilot-demo.gif`
 - `docs/screenshots/prizepilot-dashboard-desktop.png`
 - `docs/screenshots/prizepilot-dashboard-mobile.png`
@@ -57,14 +58,14 @@ Paste from `docs/submission-story.md`.
 - Alibaba Cloud deployment proof code file: https://github.com/OOYXLOO/prizepilot-qwen-cloud/blob/main/deploy/alibaba-cloud/s.yaml
 - Architecture diagram: `architecture.png`
 - Blog/social post: https://ooyxloo.github.io/prizepilot-qwen-cloud/blog/
-- AI tools used: Qwen Cloud / DashScope-compatible API path for optional refinement, Codex for implementation assistance, GitHub for source publication, and local Python validation tools.
+- AI tools used: Qwen Cloud / DashScope-compatible API path with one verified live smoke proof, Codex for implementation assistance, GitHub for source publication, and local Python validation tools.
 - Learning level: Significant
 
 ## Current Devpost State
 
-The Devpost project is submitted at https://devpost.com/software/prizepilot-qwen-cloud and can still be edited until the Qwen Cloud hackathon deadline. Future updates should focus on stronger live evidence: Qwen/DashScope refinement proof and a verified Alibaba Cloud endpoint, if account access is available in time.
+The Devpost project is submitted at https://devpost.com/software/prizepilot-qwen-cloud and can still be edited until the Qwen Cloud hackathon deadline. Future updates should focus on the remaining live evidence: a verified Alibaba Cloud endpoint, if account access and deployment approval are available in time.
 
-The public live proof gate at https://ooyxloo.github.io/prizepilot-qwen-cloud/live-proof-gate/ explains exactly how any future Qwen/DashScope or Alibaba Cloud proof will be captured without storing API keys, account cookies, billing data, payout details, tax material, or KYC evidence.
+The public live proof gate at https://ooyxloo.github.io/prizepilot-qwen-cloud/live-proof-gate/ explains exactly how the captured Qwen/DashScope proof and any future Alibaba Cloud proof are handled without storing API keys, account cookies, billing data, payout details, tax material, or KYC evidence.
 
 The public cloud readiness report at https://ooyxloo.github.io/prizepilot-qwen-cloud/cloud-readiness/ verifies the Qwen-compatible request shape, runtime-only key boundary, Alibaba Function Compute manifest, public HTTP proof targets, dashboard payload, and claim boundary without live secrets.
 

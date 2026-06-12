@@ -6,7 +6,7 @@ Hackathon agents are usually judged by the app they produce. PrizePilot looks at
 
 I built PrizePilot around a real portfolio: a near-term USD 200 feedback prize, the Qwen Blog Post Award / Honorable Mention route, and higher-friction open-source bounty backups. The goal is to make an autopilot agent useful without letting it overclaim evidence or press irreversible buttons blindly.
 
-The public Qwen project is now submitted on Devpost with a repository, Vimeo demo, and build journal. The remaining work is focused on strengthening live sponsor evidence before judging: account verification, a real Qwen/DashScope refinement run, and a verified Alibaba Cloud endpoint if account access is available in time.
+The public Qwen project is now submitted on Devpost with a repository, Vimeo demo, build journal, and a verified Qwen/DashScope smoke proof. The remaining work is focused on strengthening live sponsor evidence before judging with a verified Alibaba Cloud endpoint if account access and deployment approval are available in time.
 
 ## What it does
 
@@ -23,7 +23,7 @@ PrizePilot turns structured prize pages into:
 
 The core planner is a deterministic Python package so every ranking can be audited locally. The web dashboard is a small standard-library HTTP service that exposes the same planning payload through `/` and `/api/plan`. A Dockerfile and Alibaba Cloud Function Compute manifest prepare the service for cloud deployment proof.
 
-PrizePilot is Qwen-ready through an OpenAI-compatible DashScope client. When a Qwen or DashScope API key is provided at runtime, the local plan can be refined into sharper reasoning and submission narratives. The key is not stored in the repository or ledger.
+PrizePilot is Qwen-ready through an OpenAI-compatible DashScope client. A live Qwen/DashScope smoke test has verified that the local plan can be refined into sharper reasoning and submission narratives. The key is not stored in the repository or ledger, and future reruns still require action-time key entry.
 
 The product surface is designed for a five-minute judging pass: the dashboard shows the current public submission status, route ranking, agent roles, approval queue, evidence gaps, and a small benchmark comparing manual prize triage with the PrizePilot workflow.
 
@@ -43,4 +43,4 @@ For prize automation, the valuable agent behavior is not just writing text faste
 
 ## What's next
 
-The next step is to improve the already-submitted project before judging: complete Qwen Cloud account verification, run a live Qwen refinement check, deploy or verify the dashboard on Alibaba Cloud, capture the endpoint proof, and update Devpost with stronger sponsor evidence without overstating anything that has not been run.
+The next step is to improve the already-submitted project before judging: deploy or verify the dashboard on Alibaba Cloud, capture endpoint proof, and update Devpost with stronger sponsor evidence without overstating any unsupported claim.

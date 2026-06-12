@@ -15,7 +15,7 @@ Generated asset: run `node tools/record_demo_webm.mjs` from the repo root to cre
 5. Optional voiceover:
    - "Prize pages are noisy."
    - "PrizePilot ranks reachable routes first."
-   - "Qwen can refine narratives after a real API key is available."
+   - "Qwen live proof is captured without storing the key."
    - "External effects stay human-gated."
    - "The project is fast where it can be fast and careful where it must be careful."
 
@@ -30,7 +30,7 @@ Generated asset: run `node tools/record_demo_webm.mjs` from the repo root to cre
 
 - Public repository URL is live.
 - Alibaba Cloud deployment proof exists.
-- Qwen live check result is recorded, or the video clearly says live Qwen usage is still pending.
+- Qwen live check result is recorded and linked through the public Qwen live proof page.
 - No passwords, API keys, OTPs, account recovery data, billing data, tax/KYC data, or private URLs are visible.
 - The Devpost project links to the public repository, deployment URL, blog/social post, and demo video URL.
 

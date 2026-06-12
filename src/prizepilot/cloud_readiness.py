@@ -52,7 +52,7 @@ def build_report(root: Path | str = PROJECT_ROOT, checked_at: datetime | None = 
             DEFAULT_BASE_URL == "https://dashscope-intl.aliyuncs.com/compatible-mode/v1"
             and _has_all(qwen_client, ["/chat/completions", '"model"', '"messages"', '"temperature"', "qwen-plus"]),
             "The client defaults to DashScope compatible mode and posts chat/completions payloads with model, messages, and temperature.",
-            "When the account owner supplies a runtime key, run the live proof command and publish only a short non-secret excerpt.",
+            "The live proof has been captured once; future reruns still require an account-owner supplied runtime key and should publish only a short non-secret excerpt.",
         ),
         _check(
             "QWEN_RUNTIME_SECRET_BOUNDARY",

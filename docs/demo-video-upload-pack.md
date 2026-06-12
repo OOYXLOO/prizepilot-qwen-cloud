@@ -46,4 +46,4 @@ The same URL is recorded in `docs/qwen-route-ledger.md` under `Demo video URL` a
 
 ## Do Not Claim
 
-Do not claim live Qwen API usage or Alibaba Cloud deployment from the video alone. Those gates need separate evidence.
+Do not claim live Qwen API usage from the video alone; cite the separate Qwen live proof page. Do not claim Alibaba Cloud deployment until separate endpoint evidence exists.

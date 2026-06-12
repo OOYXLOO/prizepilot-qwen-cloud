@@ -13,7 +13,7 @@ Target length: 3 minutes.
 
 3. Qwen route, 0:55-1:25
    - Open the Qwen plan and show the Blog Post Award / Honorable Mention target.
-   - Explain the Qwen-ready DashScope client: local deterministic planning is auditable, and a live Qwen refinement pass can improve narratives once a runtime key is provided.
+   - Explain the Qwen-ready DashScope client: local deterministic planning is auditable, and one live Qwen refinement pass has verified the runtime path without storing the key.
    - Be explicit that the key is never stored in the repo or ledger.
 
 4. Multi-agent workflow, 1:25-1:55
@@ -22,7 +22,7 @@ Target length: 3 minutes.
 
 5. Trust and control, 1:55-2:25
    - Show the approval queue for API keys, OAuth, cloud deployment, payout, tax, KYC, and public submission updates.
-   - Show risk badges and evidence gaps: live Qwen check and live Alibaba Cloud endpoint are still open until verified.
+   - Show risk badges and evidence gaps: Qwen live smoke proof is captured; live Alibaba Cloud endpoint remains open until verified.
 
 6. Judge view, 2:25-2:50
    - Show the judge scorecard aligned to Qwen criteria: innovation, technical depth, problem value, and presentation.

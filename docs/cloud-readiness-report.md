@@ -1,6 +1,6 @@
 # PrizePilot Cloud Readiness Report
 
-Generated: 2026-06-12T16:37:22.647183+00:00
+Generated: 2026-06-12T16:44:41.464954+00:00
 Overall: **qwen_live_verified_endpoint_pending**
 Live claim: `qwen_dashscope_smoke_verified_alibaba_endpoint_pending`
 
@@ -10,7 +10,7 @@ No API keys, raw headers, account IDs, billing data, payout data, tax data, KYC 
 
 | Check | Status | Evidence | Next live step |
 | --- | --- | --- | --- |
-| `QWEN_OPENAI_COMPATIBLE_REQUEST_SHAPE` | `pass` | The client defaults to DashScope compatible mode and posts chat/completions payloads with model, messages, and temperature. | When the account owner supplies a runtime key, run the live proof command and publish only a short non-secret excerpt. |
+| `QWEN_OPENAI_COMPATIBLE_REQUEST_SHAPE` | `pass` | The client defaults to DashScope compatible mode and posts chat/completions payloads with model, messages, and temperature. | The live proof has been captured once; future reruns still require an account-owner supplied runtime key and should publish only a short non-secret excerpt. |
 | `QWEN_RUNTIME_SECRET_BOUNDARY` | `pass` | The client reads Qwen/DashScope keys only from runtime environment variables and the ledger does not store an API key. | Keep API keys out of chat, screenshots, commits, logs, and Devpost; remove the environment variable immediately after the smoke test. |
 | `QWEN_LIVE_SMOKE_PROOF` | `pass` | A live Qwen/DashScope refinement pass succeeded through Alibaba Cloud China Bailian with a runtime-only key and no stored secret. | Use only the short non-sensitive excerpt publicly; future runs still require account-owner key entry at action time. |
 | `ALIBABA_FC_CUSTOM_CONTAINER_MANIFEST` | `pass` | The checked-in Serverless Devs manifest targets Alibaba Function Compute with the PrizePilot container on port 8000. | Deploy only after the account owner approves Alibaba Cloud account, credit, region, and billing implications. |

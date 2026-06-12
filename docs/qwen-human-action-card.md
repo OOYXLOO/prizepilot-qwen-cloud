@@ -1,6 +1,6 @@
 # Qwen Human Action Card
 
-Required steps still open: finish Qwen/Alibaba Cloud account access, provide API key at action time only, run a live Qwen/DashScope refinement check, verify Alibaba Cloud deployment proof, and update the already-submitted Devpost project only with evidence that has actually been captured.
+Required steps still open: verify Alibaba Cloud deployment proof and update the already-submitted Devpost project only with evidence that has actually been captured. A Qwen/DashScope live smoke check has been completed once; any future rerun still requires action-time key entry and no key storage.
 
 Already done:
 
@@ -11,6 +11,7 @@ Already done:
 - Alibaba Cloud Function Compute deployment adapter is prepared: `deploy/alibaba-cloud/s.yaml`
 - Devpost portfolio project exists: https://devpost.com/software/prizepilot-qwen-cloud
 - Qwen Devpost project is submitted and editable until the hackathon deadline: https://devpost.com/software/prizepilot-qwen-cloud
+- Qwen/DashScope live smoke proof is published: https://ooyxloo.github.io/prizepilot-qwen-cloud/qwen-live-proof/
 - Local public package, demo GIF, silent WebM, architecture PNG, and video upload metadata are prepared.
 
 Use `docs/qwen-start-handoff-template.md` when the user is ready to start this route in parallel or after the Splunk feedback route.
@@ -24,10 +25,10 @@ Important: the blog route is not standalone. It still needs a qualified Devpost 
 
 Post-submission improvement sequence:
 
-1. Reopen or restore Qwen/Alibaba Cloud account verification through the official site.
-2. Run the Qwen/DashScope live check only with a runtime API key that is not stored in files, docs, command history, or ledgers.
-3. Deploy or verify PrizePilot on Alibaba Cloud and capture non-sensitive endpoint proof.
-4. Update Devpost with the live evidence only after the proof exists.
+1. Keep the completed Qwen/DashScope live proof public and non-sensitive.
+2. Deploy or verify PrizePilot on Alibaba Cloud only after account-owner approval for any credit or billing use.
+3. Capture non-sensitive endpoint proof for `/` and `/api/plan`.
+4. Update Devpost with the live evidence only after the endpoint proof exists.
 
 Devpost evidence-update confirmation, if a new public claim is added:
 

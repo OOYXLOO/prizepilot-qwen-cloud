@@ -1,10 +1,10 @@
 {
-  "checked_at": "2026-06-12T16:37:22.647183+00:00",
+  "checked_at": "2026-06-12T16:44:41.505741+00:00",
   "phase": "submitted_can_still_improve",
   "severity": "OK_WITH_EVIDENCE_GAPS",
   "next_action": "Strengthen remaining evidence before judging: add verified Alibaba Cloud endpoint proof if account access and billing/credit approval are available, then update public Devpost copy only with captured evidence.",
   "deadline_utc": "2026-07-09T21:00:00+00:00",
-  "hours_until_deadline": 652.38,
+  "hours_until_deadline": 652.26,
   "artifact_checks": [
     {
       "path": "README.md",
@@ -106,13 +106,13 @@
       "path": "docs/cloud-readiness-report.md",
       "description": "Cloud readiness report",
       "exists": true,
-      "size": 2720
+      "size": 2778
     },
     {
       "path": "docs/cloud-readiness-report.json",
       "description": "Machine-readable cloud readiness report",
       "exists": true,
-      "size": 3671
+      "size": 3709
     },
     {
       "path": "docs/qwen-live-proof.md",
@@ -124,7 +124,7 @@
       "path": "docs/qwen-live-proof/index.html",
       "description": "Public live Qwen/DashScope proof page",
       "exists": true,
-      "size": 4560
+      "size": 4701
     },
     {
       "path": "docs/prizepilot-qwen-submission-deck.pptx",
@@ -136,13 +136,13 @@
       "path": "docs/blog-draft.md",
       "description": "Blog/social post draft",
       "exists": true,
-      "size": 6047
+      "size": 6073
     },
     {
       "path": "docs/demo-video-script.md",
       "description": "Demo video script",
       "exists": true,
-      "size": 2013
+      "size": 2028
     },
     {
       "path": "docs/demo-video/prizepilot-demo.webm",
@@ -160,7 +160,7 @@
       "path": "docs/demo-video-upload-pack.md",
       "description": "Demo video host upload metadata",
       "exists": true,
-      "size": 1745
+      "size": 1800
     },
     {
       "path": "tools/record_demo_webm.mjs",
@@ -172,13 +172,13 @@
       "path": "docs/devpost-project-fields.md",
       "description": "Devpost field draft",
       "exists": true,
-      "size": 4405
+      "size": 4529
     },
     {
       "path": "docs/qwen-start-handoff-template.md",
       "description": "User launch handoff template",
       "exists": true,
-      "size": 4301
+      "size": 4462
     },
     {
       "path": "docs/live-proof-gate.md",
@@ -226,7 +226,7 @@
       "path": "docs/validation-report.md",
       "description": "Validation report",
       "exists": true,
-      "size": 3661
+      "size": 3480
     },
     {
       "path": "docs/screenshots/prizepilot-dashboard-desktop.png",
