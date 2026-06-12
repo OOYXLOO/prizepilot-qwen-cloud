@@ -6,7 +6,7 @@ The project is intentionally conservative: it records public repository, blog, v
 
 ## Current Public Status
 
-Latest review status as of 2026-06-12: the repository, build journal, presentation deck, and route status files are the current source of truth for PrizePilot's submission state.
+Latest review status as of 2026-06-12: the repository, Blog Award story, presentation deck, and route status files are the current source of truth for PrizePilot's submission state.
 
 - Devpost project: https://devpost.com/software/prizepilot-qwen-cloud
 - Public demo video: https://vimeo.com/1200124146
@@ -14,7 +14,7 @@ Latest review status as of 2026-06-12: the repository, build journal, presentati
 - Public judge demo: https://ooyxloo.github.io/prizepilot-qwen-cloud/demo/
 - Public judge evidence pack: https://ooyxloo.github.io/prizepilot-qwen-cloud/judge-pack/
 - Public live proof gate: https://ooyxloo.github.io/prizepilot-qwen-cloud/live-proof-gate/
-- Public build journal: https://ooyxloo.github.io/prizepilot-qwen-cloud/blog/
+- Public Blog Award story: https://ooyxloo.github.io/prizepilot-qwen-cloud/blog/
 - Public repository: https://github.com/OOYXLOO/prizepilot-qwen-cloud
 - Submission state: submitted to Devpost; still editable until the Qwen Cloud hackathon deadline.
 - Evidence gaps: live Qwen/DashScope refinement and a verified live Alibaba Cloud endpoint still need to be captured before judging if account access is available.
@@ -28,7 +28,7 @@ The fastest review path is:
 3. Open the public judge demo for the setup-free evidence map.
 4. Open the judge evidence pack for the Track 4 / Blog Post Award matrix.
 5. Open the live proof gate to see exactly how account-gated Qwen and Alibaba evidence will be captured without secrets.
-6. Read the build journal for the current public evidence boundary.
+6. Read the Blog Award story for the current public evidence boundary.
 7. Run the local dashboard:
 
 ## Local Use

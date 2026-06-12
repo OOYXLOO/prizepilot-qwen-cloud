@@ -15,6 +15,7 @@ class PublicPagesTests(unittest.TestCase):
         self.assertIn("Judge Evidence Pack", hub)
         self.assertIn("Live Proof Gate", hub)
         self.assertIn("Presentation Deck", hub)
+        self.assertIn("Blog Award Story", hub)
         self.assertIn("Qwen Cloud Track 4 judge packet", judge_pack)
         self.assertIn("https://devpost.com/software/prizepilot-qwen-cloud", judge_pack)
         self.assertIn("https://vimeo.com/1200124146", judge_pack)
@@ -30,6 +31,17 @@ class PublicPagesTests(unittest.TestCase):
         self.assertIn("https://ooyxloo.github.io/prizepilot-qwen-cloud/judge-pack/", readme)
         self.assertIn("https://ooyxloo.github.io/prizepilot-qwen-cloud/live-proof-gate/", readme)
         self.assertIn("https://ooyxloo.github.io/prizepilot-qwen-cloud/prizepilot-qwen-submission-deck.pptx", readme)
+        self.assertIn("Public Blog Award story", readme)
+
+    def test_blog_post_award_story_has_judge_path(self) -> None:
+        blog = (ROOT / "docs" / "blog" / "index.html").read_text(encoding="utf-8")
+
+        self.assertIn("Qwen Cloud Hackathon blog award story", blog)
+        self.assertIn("Blog Post Award reader path", blog)
+        self.assertIn("../judge-pack/", blog)
+        self.assertIn("https://vimeo.com/1200124146", blog)
+        self.assertIn("https://github.com/OOYXLOO/prizepilot-qwen-cloud", blog)
+        self.assertIn("what remains account-gated", blog)
 
     def test_live_proof_gate_names_secret_boundaries(self) -> None:
         gate = (ROOT / "docs" / "live-proof-gate.md").read_text(encoding="utf-8")
