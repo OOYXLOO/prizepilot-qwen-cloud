@@ -30,7 +30,7 @@ Latest review status as of 2026-06-13: the repository, Blog Award story, present
 The 90-second review path is:
 
 1. Open the Devpost project, Vimeo demo, and 5-slide presentation deck.
-2. Open the public judge evidence pack for the Track 4 / Blog Post Award matrix.
+2. Open the public judge evidence pack for the prize decision summary and Track 4 / Blog Post Award matrix.
 3. Open the award evidence map for completed proof versus remaining account-gated work.
 4. Open the benchmark method to see how the route ranking is scored and what the sample portfolio proves.
 5. Open the Qwen live proof page for the verified runtime smoke test and cleanup boundary.
