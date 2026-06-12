@@ -121,6 +121,12 @@ def inspect_artifacts(root: Path) -> list[dict[str, object]]:
 def hours_until(now: datetime, deadline: datetime) -> float:
     return round((deadline - now).total_seconds() / 3600, 2)
 
+def display_path(root: Path, path: Path) -> str:
+    try:
+        return path.relative_to(root).as_posix()
+    except ValueError:
+        return path.as_posix()
+
 def build_status(root: Path, ledger_path: Path, now: datetime | None = None) -> dict[str, object]:
     current = now or datetime.now(timezone.utc)
     if current.tzinfo is None:
@@ -195,7 +201,7 @@ def build_status(root: Path, ledger_path: Path, now: datetime | None = None) -> 
         "artifact_checks": artifact_checks,
         "missing_artifacts": missing_artifacts,
         "incomplete_public_gates": incomplete_public_gates,
-        "ledger_path": str(ledger_path),
+        "ledger_path": display_path(root, ledger_path),
         "reference_files": [
             "docs/qwen-route-ledger.md",
             "docs/qwen-start-handoff-template.md",

@@ -101,6 +101,8 @@ class QwenStatusTests(unittest.TestCase):
         self.assertIn("reCAPTCHA", status["next_action"])
         self.assertEqual(len(status["missing_artifacts"]), 0)
         self.assertGreater(len(status["incomplete_public_gates"]), 0)
+        self.assertEqual(status["ledger_path"], "docs/qwen-route-ledger.md")
+        self.assertNotIn(str(root), str(status["ledger_path"]))
 
     def test_partial_github_repo_gets_push_specific_next_action(self) -> None:
         with tempfile.TemporaryDirectory() as temp_dir:

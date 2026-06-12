@@ -1,58 +1,58 @@
 {
-  "checked_at": "2026-06-12T17:48:31.328766+00:00",
+  "checked_at": "2026-06-12T20:24:48.805869+00:00",
   "phase": "submitted_can_still_improve",
   "severity": "OK_WITH_EVIDENCE_GAPS",
   "next_action": "Strengthen remaining evidence before judging: add verified Alibaba Cloud endpoint proof if account access and billing/credit approval are available, then update public Devpost copy only with captured evidence.",
   "deadline_utc": "2026-07-09T21:00:00+00:00",
-  "hours_until_deadline": 651.19,
+  "hours_until_deadline": 648.59,
   "artifact_checks": [
     {
       "path": "README.md",
       "description": "Project README",
       "exists": true,
-      "size": 4377
+      "size": 5127
     },
     {
       "path": "LICENSE",
       "description": "License",
       "exists": true,
-      "size": 1056
+      "size": 1077
     },
     {
       "path": "Dockerfile",
       "description": "Deployment container file",
       "exists": true,
-      "size": 352
+      "size": 367
     },
     {
       "path": "deploy/alibaba-cloud/README.md",
       "description": "Alibaba Cloud deployment adapter notes",
       "exists": true,
-      "size": 1560
+      "size": 1602
     },
     {
       "path": "deploy/alibaba-cloud/s.yaml",
       "description": "Alibaba Cloud Function Compute deployment manifest",
       "exists": true,
-      "size": 1071
+      "size": 1111
     },
     {
       "path": "pyproject.toml",
       "description": "Python project metadata",
       "exists": true,
-      "size": 227
+      "size": 235
     },
     {
       "path": "ARCHITECTURE.md",
       "description": "Architecture notes",
       "exists": true,
-      "size": 591
+      "size": 600
     },
     {
       "path": "architecture.svg",
       "description": "Architecture diagram",
       "exists": true,
-      "size": 2266
+      "size": 2291
     },
     {
       "path": "architecture.png",
@@ -64,43 +64,43 @@
       "path": "web/index.html",
       "description": "Static dashboard demo",
       "exists": true,
-      "size": 1488
+      "size": 1517
     },
     {
       "path": "docs/index.html",
       "description": "Public build notes landing page",
       "exists": true,
-      "size": 6761
+      "size": 8986
     },
     {
       "path": "docs/blog/index.html",
       "description": "Public blog page for Blog Post Award",
       "exists": true,
-      "size": 21718
+      "size": 23424
     },
     {
       "path": "docs/judge-pack/index.html",
       "description": "Public judge evidence pack",
       "exists": true,
-      "size": 14045
+      "size": 18877
     },
     {
       "path": "docs/award-preflight/index.html",
       "description": "Public award preflight page",
       "exists": true,
-      "size": 9126
+      "size": 9334
     },
     {
       "path": "docs/award-evidence-map/index.html",
       "description": "Public award evidence map",
       "exists": true,
-      "size": 9462
+      "size": 9686
     },
     {
       "path": "docs/cloud-readiness/index.html",
       "description": "Public cloud readiness page",
       "exists": true,
-      "size": 10110
+      "size": 10296
     },
     {
       "path": "docs/cloud-readiness-report.md",
@@ -118,13 +118,13 @@
       "path": "docs/qwen-live-proof.md",
       "description": "Live Qwen/DashScope smoke proof",
       "exists": true,
-      "size": 1653
+      "size": 1693
     },
     {
       "path": "docs/qwen-live-proof/index.html",
       "description": "Public live Qwen/DashScope proof page",
       "exists": true,
-      "size": 4701
+      "size": 4882
     },
     {
       "path": "docs/api/plan.json",
@@ -142,13 +142,13 @@
       "path": "docs/blog-draft.md",
       "description": "Blog/social post draft",
       "exists": true,
-      "size": 6082
+      "size": 6168
     },
     {
       "path": "docs/demo-video-script.md",
       "description": "Demo video script",
       "exists": true,
-      "size": 2028
+      "size": 2061
     },
     {
       "path": "docs/demo-video/prizepilot-demo.webm",
@@ -160,79 +160,79 @@
       "path": "docs/demo-video-url-candidates.md",
       "description": "Demo video URL candidate notes",
       "exists": true,
-      "size": 1945
+      "size": 1981
     },
     {
       "path": "docs/demo-video-upload-pack.md",
       "description": "Demo video host upload metadata",
       "exists": true,
-      "size": 1800
+      "size": 2365
     },
     {
       "path": "tools/record_demo_webm.mjs",
       "description": "Automated WebM recording script",
       "exists": true,
-      "size": 4862
+      "size": 5016
     },
     {
       "path": "docs/devpost-project-fields.md",
       "description": "Devpost field draft",
       "exists": true,
-      "size": 4622
+      "size": 6058
     },
     {
       "path": "docs/qwen-start-handoff-template.md",
       "description": "User launch handoff template",
       "exists": true,
-      "size": 4462
+      "size": 4538
     },
     {
       "path": "docs/live-proof-gate.md",
       "description": "Live Qwen and Alibaba proof gate",
       "exists": true,
-      "size": 4661
+      "size": 4755
     },
     {
       "path": "docs/live-proof-gate/index.html",
       "description": "Public live proof gate page",
       "exists": true,
-      "size": 7046
+      "size": 7267
     },
     {
       "path": "docs/qwen-cloud-live-check.md",
       "description": "Live Qwen check runbook",
       "exists": true,
-      "size": 2424
+      "size": 2474
     },
     {
       "path": "docs/alibaba-cloud-deployment-runbook.md",
       "description": "Alibaba Cloud deployment runbook",
       "exists": true,
-      "size": 2226
+      "size": 2281
     },
     {
       "path": "docs/alibaba-cloud-deployment-proof-template.md",
       "description": "Deployment proof template",
       "exists": true,
-      "size": 333
+      "size": 345
     },
     {
       "path": "docs/publication-action-card.md",
       "description": "Publication action card",
       "exists": true,
-      "size": 1898
+      "size": 1935
     },
     {
       "path": "docs/public-package-checklist.md",
       "description": "Public package checklist",
       "exists": true,
-      "size": 1349
+      "size": 1364
     },
     {
       "path": "docs/validation-report.md",
       "description": "Validation report",
       "exists": true,
-      "size": 3480
+      "size": 3511
     },
     {
       "path": "docs/screenshots/prizepilot-dashboard-desktop.png",
@@ -261,7 +261,7 @@
       "next_action": "Use the prepared Function Compute manifest with the user's Alibaba Cloud account, then record the live URL and proof evidence."
     }
   ],
-  "ledger_path": "C:\\Users\\YXL\\.codex\\tmp\\hks-yxl\\money-goal-200usd\\qwen-prizepilot\\docs\\qwen-route-ledger.md",
+  "ledger_path": "docs/qwen-route-ledger.md",
   "reference_files": [
     "docs/qwen-route-ledger.md",
     "docs/qwen-start-handoff-template.md",
