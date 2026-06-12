@@ -33,6 +33,7 @@ python -m prizepilot.webapp --host 127.0.0.1 --port 8000
 - Public cloud readiness report: https://ooyxloo.github.io/prizepilot-qwen-cloud/cloud-readiness/
 - Public live proof gate: https://ooyxloo.github.io/prizepilot-qwen-cloud/live-proof-gate/
 - Public Qwen live proof: https://ooyxloo.github.io/prizepilot-qwen-cloud/qwen-live-proof/
+- Public static plan snapshot: https://ooyxloo.github.io/prizepilot-qwen-cloud/api/plan.json
 - `docs/screenshots/prizepilot-demo.gif`
 - `docs/screenshots/prizepilot-dashboard-desktop.png`
 - `docs/screenshots/prizepilot-dashboard-mobile.png`

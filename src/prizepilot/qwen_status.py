@@ -30,6 +30,7 @@ REQUIRED_ARTIFACTS = {
     "docs/cloud-readiness-report.json": "Machine-readable cloud readiness report",
     "docs/qwen-live-proof.md": "Live Qwen/DashScope smoke proof",
     "docs/qwen-live-proof/index.html": "Public live Qwen/DashScope proof page",
+    "docs/api/plan.json": "Static public dashboard API snapshot",
     "docs/prizepilot-qwen-submission-deck.pptx": "Editable presentation deck",
     "docs/blog-draft.md": "Blog/social post draft",
     "docs/demo-video-script.md": "Demo video script",
@@ -198,6 +199,7 @@ def build_status(root: Path, ledger_path: Path, now: datetime | None = None) -> 
         "reference_files": [
             "docs/qwen-route-ledger.md",
             "docs/qwen-start-handoff-template.md",
+            "docs/api/plan.json",
             "docs/live-proof-gate.md",
             "docs/cloud-readiness-report.md",
             "docs/cloud-readiness/index.html",

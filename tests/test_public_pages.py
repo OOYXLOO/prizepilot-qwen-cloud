@@ -1,3 +1,4 @@
+import json
 import unittest
 from pathlib import Path
 
@@ -15,6 +16,7 @@ class PublicPagesTests(unittest.TestCase):
         self.assertIn("./cloud-readiness/", hub)
         self.assertIn("./live-proof-gate/", hub)
         self.assertIn("./qwen-live-proof/", hub)
+        self.assertIn("./api/plan.json", hub)
         self.assertIn("./prizepilot-qwen-submission-deck.pptx", hub)
         self.assertIn("Judge Evidence Pack", hub)
         self.assertIn("Award Preflight", hub)
@@ -22,6 +24,7 @@ class PublicPagesTests(unittest.TestCase):
         self.assertIn("Cloud Readiness", hub)
         self.assertIn("Live Proof Gate", hub)
         self.assertIn("Qwen Live Proof", hub)
+        self.assertIn("Static Plan JSON", hub)
         self.assertIn("Presentation Deck", hub)
         self.assertIn("Blog Award Story", hub)
         self.assertIn("Qwen Cloud Track 4 judge packet", judge_pack)
@@ -32,6 +35,7 @@ class PublicPagesTests(unittest.TestCase):
         self.assertIn("../cloud-readiness/", judge_pack)
         self.assertIn("../live-proof-gate/", judge_pack)
         self.assertIn("../qwen-live-proof/", judge_pack)
+        self.assertIn("../api/plan.json", judge_pack)
         self.assertIn("../prizepilot-qwen-submission-deck.pptx", judge_pack)
         self.assertIn("../screenshots/prizepilot-dashboard-desktop.png", judge_pack)
         self.assertTrue((ROOT / "docs" / "prizepilot-qwen-submission-deck.pptx").is_file())
@@ -40,6 +44,7 @@ class PublicPagesTests(unittest.TestCase):
         self.assertTrue((ROOT / "docs" / "award-evidence-map" / "index.html").is_file())
         self.assertTrue((ROOT / "docs" / "cloud-readiness" / "index.html").is_file())
         self.assertTrue((ROOT / "docs" / "qwen-live-proof" / "index.html").is_file())
+        self.assertTrue((ROOT / "docs" / "api" / "plan.json").is_file())
 
     def test_readme_exposes_judge_pack_url(self) -> None:
         readme = (ROOT / "README.md").read_text(encoding="utf-8")
@@ -50,8 +55,29 @@ class PublicPagesTests(unittest.TestCase):
         self.assertIn("https://ooyxloo.github.io/prizepilot-qwen-cloud/cloud-readiness/", readme)
         self.assertIn("https://ooyxloo.github.io/prizepilot-qwen-cloud/live-proof-gate/", readme)
         self.assertIn("https://ooyxloo.github.io/prizepilot-qwen-cloud/qwen-live-proof/", readme)
+        self.assertIn("https://ooyxloo.github.io/prizepilot-qwen-cloud/api/plan.json", readme)
         self.assertIn("https://ooyxloo.github.io/prizepilot-qwen-cloud/prizepilot-qwen-submission-deck.pptx", readme)
         self.assertIn("Public Blog Award story", readme)
+
+    def test_static_plan_snapshot_matches_public_claim_boundary(self) -> None:
+        snapshot = json.loads((ROOT / "docs" / "api" / "plan.json").read_text(encoding="utf-8"))
+
+        self.assertEqual(snapshot["project"], "PrizePilot")
+        self.assertEqual(snapshot["track"], "Track 4 - Autopilot Agent")
+        self.assertEqual(snapshot["qwen_plan"]["target_prize"]["name"], "Blog Post Award")
+        self.assertEqual(snapshot["submission_status"]["phase"], "submitted_can_still_improve")
+        self.assertEqual(
+            snapshot["submission_status"]["qwen_live_proof_url"],
+            "https://ooyxloo.github.io/prizepilot-qwen-cloud/qwen-live-proof/",
+        )
+        self.assertIn(
+            "Qwen/DashScope live refinement is verified",
+            snapshot["evidence_gaps"][0],
+        )
+        self.assertIn(
+            "no live endpoint has been verified",
+            snapshot["evidence_gaps"][1],
+        )
 
     def test_blog_post_award_story_has_judge_path(self) -> None:
         blog = (ROOT / "docs" / "blog" / "index.html").read_text(encoding="utf-8")

@@ -300,6 +300,7 @@
         <a class="link-tile" href="../cloud-readiness/">Cloud Readiness<span>No-secret verification of Qwen request shape, Alibaba manifest, and dashboard proof targets.</span></a>
         <a class="link-tile" href="../live-proof-gate/">Live Proof Gate<span>Exact action-time proof checklist for Qwen and Alibaba Cloud without secrets.</span></a>
         <a class="link-tile" href="../qwen-live-proof/">Qwen Live Proof<span>Verified runtime Qwen/DashScope smoke proof with key cleanup.</span></a>
+        <a class="link-tile" href="../api/plan.json">Static Plan JSON<span>Setup-free machine-readable snapshot of the dashboard API payload.</span></a>
       </div>
     </div>
   </header>
@@ -347,7 +348,7 @@
             </tr>
             <tr>
               <td data-label="Judging Signal">Public proof and reproducibility</td>
-              <td data-label="Public Evidence">README quickstart, presentation deck, validation report, screenshots, demo GIF, public judge demo, and machine-readable <code>/api/plan</code> payload.</td>
+              <td data-label="Public Evidence">README quickstart, presentation deck, validation report, screenshots, demo GIF, public judge demo, static <a href="../api/plan.json">plan JSON</a>, and live machine-readable <code>/api/plan</code> payload.</td>
               <td data-label="Status">Available without login.</td>
             </tr>
             <tr>
@@ -376,7 +377,7 @@ python -m unittest discover -s tests -v
 python -m prizepilot plan samples/qwen_hackathon.json
 python -m prizepilot qwen-status
 python -m prizepilot.webapp --host 127.0.0.1 --port 8000</code></pre>
-      <p>Then open <code>http://127.0.0.1:8000/api/plan</code> to inspect the machine-readable plan and route ranking.</p>
+      <p>For a setup-free version of the same payload, open <a href="../api/plan.json">the static plan snapshot</a>. Then open <code>http://127.0.0.1:8000/api/plan</code> after running the local server to inspect the live machine-readable plan and route ranking.</p>
     </section>
 
     <section>

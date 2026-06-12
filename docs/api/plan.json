@@ -1,0 +1,686 @@
+{
+  "project": "PrizePilot",
+  "track": "Track 4 - Autopilot Agent",
+  "qwen_plan": {
+    "opportunity": {
+      "name": "Global AI Hackathon Series with Qwen Cloud",
+      "url": "https://qwencloud-hackathon.devpost.com/",
+      "deadline": "2026-07-10 05:00 GMT+8",
+      "participants": 2528,
+      "status": "secondary",
+      "prizes": [
+        {
+          "name": "Track 5 EdgeAgent",
+          "amount_usd": 7000,
+          "winners": 1,
+          "tags": [
+            "single_winner",
+            "cloud_deployment"
+          ]
+        },
+        {
+          "name": "Blog Post Award",
+          "amount_usd": 500,
+          "winners": 10,
+          "tags": [
+            "blog",
+            "cloud_deployment"
+          ]
+        },
+        {
+          "name": "Top 10 Honorable Mention Projects",
+          "amount_usd": 500,
+          "winners": 10,
+          "tags": [
+            "honorable_mention",
+            "cloud_deployment"
+          ]
+        }
+      ],
+      "human_blockers": [
+        "Devpost join",
+        "Qwen or Alibaba Cloud account",
+        "API key at action time",
+        "public repository",
+        "public video",
+        "public blog/social post",
+        "Alibaba Cloud deployment proof",
+        "final Devpost submission"
+      ],
+      "notes": [
+        "Blog Post Award is not standalone; it requires a qualified Devpost project submission."
+      ]
+    },
+    "target_prize": {
+      "name": "Blog Post Award",
+      "amount_usd": 500,
+      "winners": 10,
+      "tags": [
+        "blog",
+        "cloud_deployment"
+      ]
+    },
+    "score": 880,
+    "strategy": "Prepare a qualified project submission, then use a public blog post to target the multi-winner blog award.",
+    "approval_checkpoints": [
+      "Confirm eligibility for the target event and prize.",
+      "Confirm before creating accounts, joining hackathons, publishing repos, posting videos/blogs, or submitting forms.",
+      "Do not store passwords, OTPs, API keys, payment, tax, KYC, or recovery data.",
+      "Capture live cloud deployment proof only after the deployment exists and can be public.",
+      "Publish the blog/social post only after the user approves the public URL and wording."
+    ],
+    "human_actions": [
+      "Devpost join",
+      "Qwen or Alibaba Cloud account",
+      "API key at action time",
+      "public repository",
+      "public video",
+      "public blog/social post",
+      "Alibaba Cloud deployment proof",
+      "final Devpost submission"
+    ],
+    "notes": [
+      "Blog Post Award is not standalone; it requires a qualified Devpost project submission."
+    ]
+  },
+  "mindtheproduct_plan": {
+    "opportunity": {
+      "name": "Mind the Product World Product Day",
+      "url": "https://mindtheproduct.devpost.com/",
+      "deadline": "2026-06-20",
+      "participants": 920,
+      "status": "registered_novus_verify_blocked",
+      "prizes": [
+        {
+          "name": "First Place",
+          "amount_usd": 5000,
+          "winners": 1,
+          "tags": [
+            "single_winner",
+            "product_analytics_required"
+          ]
+        },
+        {
+          "name": "Second Place",
+          "amount_usd": 3000,
+          "winners": 1,
+          "tags": [
+            "single_winner",
+            "product_analytics_required"
+          ]
+        },
+        {
+          "name": "Third Place",
+          "amount_usd": 2000,
+          "winners": 1,
+          "tags": [
+            "single_winner",
+            "product_analytics_required"
+          ]
+        },
+        {
+          "name": "Product Bundle",
+          "amount_usd": 0,
+          "winners": 10,
+          "tags": [
+            "non_cash",
+            "product_analytics_required"
+          ]
+        }
+      ],
+      "human_blockers": [
+        "Novus email verification and password creation",
+        "Novus connection or installation before submission",
+        "deployed product URL",
+        "Devpost-compatible demo video URL",
+        "final Devpost submission"
+      ],
+      "notes": [
+        "Registered on Devpost as OOYXLOO on 2026-06-10.",
+        "Novus free account signup was started with the user's authorized email, but the official email verification link must be completed by the user.",
+        "PrizePilot is a fit if positioned as a shipped product for builders under prize/deadline pressure, with Novus observing route triage and blocker-resolution flows."
+      ]
+    },
+    "target_prize": {
+      "name": "First Place",
+      "amount_usd": 5000,
+      "winners": 1,
+      "tags": [
+        "single_winner",
+        "product_analytics_required"
+      ]
+    },
+    "score": -453,
+    "strategy": "Ship a narrow product workflow, instrument it with the required analytics tool, and use the data trail as judging evidence.",
+    "approval_checkpoints": [
+      "Confirm eligibility for the target event and prize.",
+      "Confirm before creating accounts, joining hackathons, publishing repos, posting videos/blogs, or submitting forms.",
+      "Do not store passwords, OTPs, API keys, payment, tax, KYC, or recovery data.",
+      "Install or connect product analytics only after the official account is verified, and record the public proof without storing credentials."
+    ],
+    "human_actions": [
+      "Novus email verification and password creation",
+      "Novus connection or installation before submission",
+      "deployed product URL",
+      "Devpost-compatible demo video URL",
+      "final Devpost submission"
+    ],
+    "notes": [
+      "Registered on Devpost as OOYXLOO on 2026-06-10.",
+      "Novus free account signup was started with the user's authorized email, but the official email verification link must be completed by the user.",
+      "PrizePilot is a fit if positioned as a shipped product for builders under prize/deadline pressure, with Novus observing route triage and blocker-resolution flows."
+    ]
+  },
+  "portfolio": {
+    "ranked": [
+      {
+        "opportunity": {
+          "name": "Splunk Agentic Ops Hackathon",
+          "url": "https://splunk.devpost.com/",
+          "deadline": "2026-06-16 00:00 GMT+8",
+          "participants": 2170,
+          "status": "primary",
+          "prizes": [
+            {
+              "name": "Most Valuable Feedback",
+              "amount_usd": 200,
+              "winners": 5,
+              "tags": [
+                "feedback"
+              ]
+            }
+          ],
+          "human_blockers": [
+            "Devpost join",
+            "Google form identity fields",
+            "eligibility confirmation",
+            "final submission confirmation"
+          ],
+          "notes": [
+            "Prepared feedback route based on Splunk MCP documentation mismatch."
+          ]
+        },
+        "target_prize": {
+          "name": "Most Valuable Feedback",
+          "amount_usd": 200,
+          "winners": 5,
+          "tags": [
+            "feedback"
+          ]
+        },
+        "score": 1052,
+        "strategy": "Submit concise, evidence-backed product or documentation feedback with reproduction details.",
+        "approval_checkpoints": [
+          "Confirm eligibility for the target event and prize.",
+          "Confirm before creating accounts, joining hackathons, publishing repos, posting videos/blogs, or submitting forms.",
+          "Do not store passwords, OTPs, API keys, payment, tax, KYC, or recovery data."
+        ],
+        "human_actions": [
+          "Devpost join",
+          "Google form identity fields",
+          "eligibility confirmation",
+          "final submission confirmation"
+        ],
+        "notes": [
+          "Prepared feedback route based on Splunk MCP documentation mismatch."
+        ]
+      },
+      {
+        "opportunity": {
+          "name": "Global AI Hackathon Series with Qwen Cloud",
+          "url": "https://qwencloud-hackathon.devpost.com/",
+          "deadline": "2026-07-10 05:00 GMT+8",
+          "participants": 2528,
+          "status": "secondary",
+          "prizes": [
+            {
+              "name": "Track 5 EdgeAgent",
+              "amount_usd": 7000,
+              "winners": 1,
+              "tags": [
+                "single_winner",
+                "cloud_deployment"
+              ]
+            },
+            {
+              "name": "Blog Post Award",
+              "amount_usd": 500,
+              "winners": 10,
+              "tags": [
+                "blog",
+                "cloud_deployment"
+              ]
+            },
+            {
+              "name": "Top 10 Honorable Mention Projects",
+              "amount_usd": 500,
+              "winners": 10,
+              "tags": [
+                "honorable_mention",
+                "cloud_deployment"
+              ]
+            }
+          ],
+          "human_blockers": [
+            "Devpost join",
+            "Qwen or Alibaba Cloud account",
+            "API key at action time",
+            "public repository",
+            "public video",
+            "public blog/social post",
+            "Alibaba Cloud deployment proof",
+            "final Devpost submission"
+          ],
+          "notes": [
+            "Blog Post Award is not standalone; it requires a qualified Devpost project submission."
+          ]
+        },
+        "target_prize": {
+          "name": "Blog Post Award",
+          "amount_usd": 500,
+          "winners": 10,
+          "tags": [
+            "blog",
+            "cloud_deployment"
+          ]
+        },
+        "score": 880,
+        "strategy": "Prepare a qualified project submission, then use a public blog post to target the multi-winner blog award.",
+        "approval_checkpoints": [
+          "Confirm eligibility for the target event and prize.",
+          "Confirm before creating accounts, joining hackathons, publishing repos, posting videos/blogs, or submitting forms.",
+          "Do not store passwords, OTPs, API keys, payment, tax, KYC, or recovery data.",
+          "Capture live cloud deployment proof only after the deployment exists and can be public.",
+          "Publish the blog/social post only after the user approves the public URL and wording."
+        ],
+        "human_actions": [
+          "Devpost join",
+          "Qwen or Alibaba Cloud account",
+          "API key at action time",
+          "public repository",
+          "public video",
+          "public blog/social post",
+          "Alibaba Cloud deployment proof",
+          "final Devpost submission"
+        ],
+        "notes": [
+          "Blog Post Award is not standalone; it requires a qualified Devpost project submission."
+        ]
+      },
+      {
+        "opportunity": {
+          "name": "UiPath AgentHack",
+          "url": "https://uipath-agenthack.devpost.com/",
+          "deadline": "2026-06-30 14:45 GMT+8",
+          "participants": 2583,
+          "status": "backup",
+          "prizes": [
+            {
+              "name": "People's Choice",
+              "amount_usd": 500,
+              "winners": 3,
+              "tags": [
+                "public_demo"
+              ]
+            },
+            {
+              "name": "Best Product Feedback",
+              "amount_usd": 1500,
+              "winners": 1,
+              "tags": [
+                "feedback",
+                "product_usage_required",
+                "single_winner"
+              ]
+            }
+          ],
+          "human_blockers": [
+            "real UiPath product usage",
+            "Devpost join",
+            "public demo actions"
+          ],
+          "notes": [
+            "Feedback must be based on honest product use."
+          ]
+        },
+        "target_prize": {
+          "name": "People's Choice",
+          "amount_usd": 500,
+          "winners": 3,
+          "tags": [
+            "public_demo"
+          ]
+        },
+        "score": 220,
+        "strategy": "Build the smallest credible artifact that satisfies the rules and can be verified publicly.",
+        "approval_checkpoints": [
+          "Confirm eligibility for the target event and prize.",
+          "Confirm before creating accounts, joining hackathons, publishing repos, posting videos/blogs, or submitting forms.",
+          "Do not store passwords, OTPs, API keys, payment, tax, KYC, or recovery data."
+        ],
+        "human_actions": [
+          "real UiPath product usage",
+          "Devpost join",
+          "public demo actions"
+        ],
+        "notes": [
+          "Feedback must be based on honest product use."
+        ]
+      },
+      {
+        "opportunity": {
+          "name": "Arm Create AI Optimization Challenge",
+          "url": "https://arm-ai-optimization-challenge.devpost.com/",
+          "deadline": "2026-08-15 07:00 GMT+8",
+          "participants": 170,
+          "status": "backup",
+          "prizes": [
+            {
+              "name": "Best in Category: Cloud AI",
+              "amount_usd": 1000,
+              "winners": 1,
+              "tags": [
+                "single_winner",
+                "cloud_deployment"
+              ]
+            }
+          ],
+          "human_blockers": [
+            "Arm64 environment",
+            "benchmark evidence",
+            "public submission"
+          ],
+          "notes": [
+            "Longer-horizon evidence route, not a fast USD 200 target."
+          ]
+        },
+        "target_prize": {
+          "name": "Best in Category: Cloud AI",
+          "amount_usd": 1000,
+          "winners": 1,
+          "tags": [
+            "single_winner",
+            "cloud_deployment"
+          ]
+        },
+        "score": -410,
+        "strategy": "Build the smallest credible artifact that satisfies the rules and can be verified publicly.",
+        "approval_checkpoints": [
+          "Confirm eligibility for the target event and prize.",
+          "Confirm before creating accounts, joining hackathons, publishing repos, posting videos/blogs, or submitting forms.",
+          "Do not store passwords, OTPs, API keys, payment, tax, KYC, or recovery data.",
+          "Capture live cloud deployment proof only after the deployment exists and can be public."
+        ],
+        "human_actions": [
+          "Arm64 environment",
+          "benchmark evidence",
+          "public submission"
+        ],
+        "notes": [
+          "Longer-horizon evidence route, not a fast USD 200 target."
+        ]
+      },
+      {
+        "opportunity": {
+          "name": "Mind the Product World Product Day",
+          "url": "https://mindtheproduct.devpost.com/",
+          "deadline": "2026-06-20",
+          "participants": 920,
+          "status": "registered_novus_verify_blocked",
+          "prizes": [
+            {
+              "name": "First Place",
+              "amount_usd": 5000,
+              "winners": 1,
+              "tags": [
+                "single_winner",
+                "product_analytics_required"
+              ]
+            },
+            {
+              "name": "Second Place",
+              "amount_usd": 3000,
+              "winners": 1,
+              "tags": [
+                "single_winner",
+                "product_analytics_required"
+              ]
+            },
+            {
+              "name": "Third Place",
+              "amount_usd": 2000,
+              "winners": 1,
+              "tags": [
+                "single_winner",
+                "product_analytics_required"
+              ]
+            },
+            {
+              "name": "Product Bundle",
+              "amount_usd": 0,
+              "winners": 10,
+              "tags": [
+                "non_cash",
+                "product_analytics_required"
+              ]
+            }
+          ],
+          "human_blockers": [
+            "Novus email verification and password creation",
+            "Novus connection or installation before submission",
+            "deployed product URL",
+            "Devpost-compatible demo video URL",
+            "final Devpost submission"
+          ],
+          "notes": [
+            "Registered on Devpost as OOYXLOO on 2026-06-10.",
+            "Novus free account signup was started with the user's authorized email, but the official email verification link must be completed by the user.",
+            "PrizePilot is a fit if positioned as a shipped product for builders under prize/deadline pressure, with Novus observing route triage and blocker-resolution flows."
+          ]
+        },
+        "target_prize": {
+          "name": "First Place",
+          "amount_usd": 5000,
+          "winners": 1,
+          "tags": [
+            "single_winner",
+            "product_analytics_required"
+          ]
+        },
+        "score": -453,
+        "strategy": "Ship a narrow product workflow, instrument it with the required analytics tool, and use the data trail as judging evidence.",
+        "approval_checkpoints": [
+          "Confirm eligibility for the target event and prize.",
+          "Confirm before creating accounts, joining hackathons, publishing repos, posting videos/blogs, or submitting forms.",
+          "Do not store passwords, OTPs, API keys, payment, tax, KYC, or recovery data.",
+          "Install or connect product analytics only after the official account is verified, and record the public proof without storing credentials."
+        ],
+        "human_actions": [
+          "Novus email verification and password creation",
+          "Novus connection or installation before submission",
+          "deployed product URL",
+          "Devpost-compatible demo video URL",
+          "final Devpost submission"
+        ],
+        "notes": [
+          "Registered on Devpost as OOYXLOO on 2026-06-10.",
+          "Novus free account signup was started with the user's authorized email, but the official email verification link must be completed by the user.",
+          "PrizePilot is a fit if positioned as a shipped product for builders under prize/deadline pressure, with Novus observing route triage and blocker-resolution flows."
+        ]
+      },
+      {
+        "opportunity": {
+          "name": "Algora / Onyx Jira Service Management Connector",
+          "url": "https://github.com/onyx-dot-app/onyx/issues/2281",
+          "deadline": "unknown",
+          "participants": 27,
+          "status": "backup",
+          "prizes": [
+            {
+              "name": "Merged PR bounty",
+              "amount_usd": 250,
+              "winners": 1,
+              "tags": [
+                "public_pr",
+                "single_winner"
+              ]
+            }
+          ],
+          "human_blockers": [
+            "GitHub public PR",
+            "maintainer review",
+            "Algora payout setup"
+          ],
+          "notes": [
+            "Crowded backup route; payout depends on public claim and merge."
+          ]
+        },
+        "target_prize": {
+          "name": "Merged PR bounty",
+          "amount_usd": 250,
+          "winners": 1,
+          "tags": [
+            "public_pr",
+            "single_winner"
+          ]
+        },
+        "score": -710,
+        "strategy": "Treat this as a backup bounty: prepare a focused patch, then wait for user-approved public PR and payout setup.",
+        "approval_checkpoints": [
+          "Confirm eligibility for the target event and prize.",
+          "Confirm before creating accounts, joining hackathons, publishing repos, posting videos/blogs, or submitting forms.",
+          "Do not store passwords, OTPs, API keys, payment, tax, KYC, or recovery data.",
+          "Open a public PR only after the user approves the GitHub account and branch."
+        ],
+        "human_actions": [
+          "GitHub public PR",
+          "maintainer review",
+          "Algora payout setup"
+        ],
+        "notes": [
+          "Crowded backup route; payout depends on public claim and merge."
+        ]
+      }
+    ],
+    "recommendation": "Splunk Agentic Ops Hackathon"
+  },
+  "novus_readiness": {
+    "required_for": "Mind the Product World Product Day",
+    "registered_on_devpost": true,
+    "novus_signup_started": true,
+    "email_verification_required": true,
+    "novus_installed": false,
+    "next_action": "Verify the Novus email, create the password on the official link, then connect or install Novus before Devpost submission."
+  },
+  "submission_status": {
+    "phase": "submitted_can_still_improve",
+    "devpost_url": "https://devpost.com/software/prizepilot-qwen-cloud",
+    "repository_url": "https://github.com/OOYXLOO/prizepilot-qwen-cloud",
+    "demo_video_url": "https://vimeo.com/1200124146",
+    "blog_url": "https://ooyxloo.github.io/prizepilot-qwen-cloud/blog/",
+    "qwen_live_proof_url": "https://ooyxloo.github.io/prizepilot-qwen-cloud/qwen-live-proof/",
+    "deadline": "July 09, 2026 at 05:00pm EDT"
+  },
+  "agent_walkthrough": [
+    {
+      "role": "Contest Analyst",
+      "responsibility": "Normalize prize pages into comparable opportunity records.",
+      "output": "Deadline, prize, winner-count, blocker, and evidence fields."
+    },
+    {
+      "role": "Competitor Scout",
+      "responsibility": "Compare the route against public winning-project patterns.",
+      "output": "Differentiators that judges can understand in under five minutes."
+    },
+    {
+      "role": "Differentiation Strategist",
+      "responsibility": "Choose the most reachable target instead of chasing the largest headline pool.",
+      "output": "Blog Post Award / Honorable Mention path with explicit proof needs."
+    },
+    {
+      "role": "Submission Coach",
+      "responsibility": "Draft Devpost, blog, video, and deployment evidence assets.",
+      "output": "Public links, scripts, runbooks, and update-ready copy."
+    },
+    {
+      "role": "Risk Reviewer",
+      "responsibility": "Hold account, billing, public posting, payout, tax, and KYC actions for human control.",
+      "output": "Approval queue and evidence gap register."
+    }
+  ],
+  "judge_scorecard": [
+    {
+      "criterion": "Innovation",
+      "weight": "30%",
+      "proof": "Autopilot for prize-route execution plus verified live Qwen refinement.",
+      "gap": "Turn the live proof into tighter public Devpost copy before judging."
+    },
+    {
+      "criterion": "Technical Depth",
+      "weight": "30%",
+      "proof": "Deterministic planner, Qwen-compatible client, HTTP API, Docker, Alibaba manifest.",
+      "gap": "Capture verified Alibaba Cloud endpoint proof."
+    },
+    {
+      "criterion": "Problem Value",
+      "weight": "25%",
+      "proof": "Turns a real money-seeking workflow into auditable actions and evidence gates.",
+      "gap": "Add more post-submission feedback if maintainers or judges request changes."
+    },
+    {
+      "criterion": "Presentation",
+      "weight": "15%",
+      "proof": "Public Devpost, Vimeo demo, blog, repo, and judge quickstart.",
+      "gap": "Refresh screenshots if the dashboard changes materially."
+    }
+  ],
+  "approval_queue": [
+    {
+      "action": "Runtime Qwen/DashScope API key",
+      "status": "completed once; future runs stay human-gated",
+      "risk": "secret"
+    },
+    {
+      "action": "Alibaba Cloud live deployment",
+      "status": "human-gated",
+      "risk": "billing/account"
+    },
+    {
+      "action": "Devpost submission updates",
+      "status": "allowed after review",
+      "risk": "public claim"
+    },
+    {
+      "action": "Prize payout, tax, or KYC",
+      "status": "user-only",
+      "risk": "financial identity"
+    }
+  ],
+  "evidence_gaps": [
+    "Qwen/DashScope live refinement is verified with a runtime key and no stored secret.",
+    "Alibaba Cloud Function Compute manifest exists, but no live endpoint has been verified."
+  ],
+  "benchmark": [
+    {
+      "metric": "Manual prize triage",
+      "baseline": "60-90 minutes",
+      "prizepilot": "one structured plan run"
+    },
+    {
+      "metric": "Evidence tracking",
+      "baseline": "spread across tabs and memory",
+      "prizepilot": "status ledger plus dashboard"
+    },
+    {
+      "metric": "Risky actions",
+      "baseline": "easy to mix with automation",
+      "prizepilot": "explicit approval queue"
+    }
+  ],
+  "integrity_boundary": [
+    "No API key is stored in the deployed app.",
+    "Public repository, video, blog post, and Devpost submission are recorded only after verification.",
+    "Live Qwen Cloud usage is captured as non-sensitive proof; Alibaba Cloud endpoint proof must still be captured before that claim is strengthened.",
+    "Novus is not claimed as installed until the official Novus account is verified and connected."
+  ]
+}

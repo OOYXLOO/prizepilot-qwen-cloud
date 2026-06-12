@@ -64,6 +64,31 @@
       margin-top: 30px;
     }
 
+    .fast-path {
+      margin-top: 24px;
+      padding: 18px 20px;
+      border-left: 5px solid var(--teal);
+      background: var(--paper);
+    }
+
+    .fast-path h2 {
+      margin: 0 0 10px;
+      font-size: 20px;
+      letter-spacing: 0;
+    }
+
+    .fast-path ol {
+      margin: 0;
+      padding-left: 22px;
+    }
+
+    .fast-path li {
+      margin: 6px 0;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.45;
+    }
+
     .tile {
       min-height: 154px;
       padding: 20px;
@@ -123,6 +148,15 @@
     <h1>PrizePilot is submitted, public, and still improving before judging.</h1>
     <p class="dek">This hub gives judges and reviewers the fastest path through the public evidence: the submitted Devpost project, the short demo video, the presentation deck, the Blog Post Award story, Qwen live smoke proof, and a static judge demo that separates verified proof from remaining account-gated work.</p>
 
+    <section class="fast-path" aria-label="90-second judge path">
+      <h2>90-second judge path</h2>
+      <ol>
+        <li>Start with the Devpost project, Vimeo demo, and 5-slide presentation deck.</li>
+        <li>Use the judge evidence pack and award evidence map to check Track 4 fit and Blog Award readiness.</li>
+        <li>Verify the completed Qwen live proof and static plan snapshot, then note the remaining Alibaba endpoint gate.</li>
+      </ol>
+    </section>
+
     <div class="grid">
       <a class="tile" href="./demo/">
         <h2>Judge Demo</h2>
@@ -152,6 +186,10 @@
         <h2>Qwen Live Proof</h2>
         <p>Non-sensitive smoke-test evidence for the live Qwen/DashScope refinement path, including model, endpoint, exit code, and key cleanup.</p>
       </a>
+      <a class="tile" href="./api/plan.json">
+        <h2>Static Plan JSON</h2>
+        <p>Setup-free machine-readable snapshot of the same route ranking, scorecard, approval queue, and evidence gaps served by the local API.</p>
+      </a>
       <a class="tile" href="./prizepilot-qwen-submission-deck.pptx">
         <h2>Presentation Deck</h2>
         <p>Editable 5-slide PowerPoint summary covering the route, architecture, proof boundary, and next sponsor-evidence sprint.</p>
@@ -171,7 +209,7 @@
     </div>
 
     <div class="status">
-      <strong>Evidence boundary:</strong> public repo, Devpost, Vimeo demo, presentation deck, Blog Award story, and live Qwen/DashScope refinement are verified. Live Alibaba Cloud endpoint proof remains a prepared path, not a completed claim.
+      <strong>Evidence boundary:</strong> public repo, Devpost, Vimeo demo, presentation deck, Blog Award story, static plan snapshot, and live Qwen/DashScope refinement are verified. Live Alibaba Cloud endpoint proof remains a prepared path, not a completed claim.
     </div>
   </main>
 </body>

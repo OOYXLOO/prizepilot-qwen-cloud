@@ -70,16 +70,14 @@ Then the demo opens the Qwen project plan. The agent targets the Blog Post Award
 
 Finally, the demo shows the dashboard and `/api/plan` output, proving that the planning result can be inspected by both people and tools.
 
-## Next Steps Before Publication
+## Current Publication State
 
-Before this is published as a final Qwen Blog Post Award entry, the remaining proof should be captured:
+This draft has been superseded by the public Blog Award story and the submitted Devpost project. The strongest current public proof is:
 
-1. Link the completed Qwen Cloud refinement proof.
-2. Deploy the web/API service on Alibaba Cloud after account-owner approval.
-3. Publish the source repository after user approval.
-4. Record or publish the demo video.
-5. Update this blog with the final public repo, deployment URL, and Qwen live-check result.
-6. Submit the Devpost project and blog URL only after final confirmation.
+1. Public repository, public Vimeo demo, public Blog Award story, and submitted Devpost page.
+2. Completed Qwen/DashScope live smoke proof with runtime-only key handling and no stored secret.
+3. Public static plan snapshot at `docs/api/plan.json` plus reproducible local `/api/plan`.
+4. Remaining gap: live Alibaba Cloud endpoint proof after account-owner approval.
 
 ## Closing
 

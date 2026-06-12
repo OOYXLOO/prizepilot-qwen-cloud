@@ -1,16 +1,16 @@
 {
-  "checked_at": "2026-06-12T16:44:41.505741+00:00",
+  "checked_at": "2026-06-12T17:48:31.328766+00:00",
   "phase": "submitted_can_still_improve",
   "severity": "OK_WITH_EVIDENCE_GAPS",
   "next_action": "Strengthen remaining evidence before judging: add verified Alibaba Cloud endpoint proof if account access and billing/credit approval are available, then update public Devpost copy only with captured evidence.",
   "deadline_utc": "2026-07-09T21:00:00+00:00",
-  "hours_until_deadline": 652.26,
+  "hours_until_deadline": 651.19,
   "artifact_checks": [
     {
       "path": "README.md",
       "description": "Project README",
       "exists": true,
-      "size": 4713
+      "size": 4377
     },
     {
       "path": "LICENSE",
@@ -70,7 +70,7 @@
       "path": "docs/index.html",
       "description": "Public build notes landing page",
       "exists": true,
-      "size": 5584
+      "size": 6761
     },
     {
       "path": "docs/blog/index.html",
@@ -82,7 +82,7 @@
       "path": "docs/judge-pack/index.html",
       "description": "Public judge evidence pack",
       "exists": true,
-      "size": 13694
+      "size": 14045
     },
     {
       "path": "docs/award-preflight/index.html",
@@ -127,6 +127,12 @@
       "size": 4701
     },
     {
+      "path": "docs/api/plan.json",
+      "description": "Static public dashboard API snapshot",
+      "exists": true,
+      "size": 25112
+    },
+    {
       "path": "docs/prizepilot-qwen-submission-deck.pptx",
       "description": "Editable presentation deck",
       "exists": true,
@@ -136,7 +142,7 @@
       "path": "docs/blog-draft.md",
       "description": "Blog/social post draft",
       "exists": true,
-      "size": 6073
+      "size": 6082
     },
     {
       "path": "docs/demo-video-script.md",
@@ -172,7 +178,7 @@
       "path": "docs/devpost-project-fields.md",
       "description": "Devpost field draft",
       "exists": true,
-      "size": 4529
+      "size": 4622
     },
     {
       "path": "docs/qwen-start-handoff-template.md",
@@ -259,6 +265,7 @@
   "reference_files": [
     "docs/qwen-route-ledger.md",
     "docs/qwen-start-handoff-template.md",
+    "docs/api/plan.json",
     "docs/live-proof-gate.md",
     "docs/cloud-readiness-report.md",
     "docs/cloud-readiness/index.html",

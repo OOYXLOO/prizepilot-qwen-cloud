@@ -1,6 +1,6 @@
 # Qwen PrizePilot Route Status
 
-Generated: 2026-06-12T16:44:41.505741+00:00
+Generated: 2026-06-12T17:48:31.328766+00:00
 Phase: **submitted_can_still_improve**
 Severity: **OK_WITH_EVIDENCE_GAPS**
 
@@ -9,7 +9,7 @@ Next action: Strengthen remaining evidence before judging: add verified Alibaba 
 ## Deadline
 
 - Deadline UTC: `2026-07-09T21:00:00+00:00`
-- Hours until deadline: `652.26`
+- Hours until deadline: `651.19`
 
 ## Local Artifact Gate
 
@@ -24,6 +24,7 @@ Next action: Strengthen remaining evidence before judging: add verified Alibaba 
 
 - `docs/qwen-route-ledger.md`
 - `docs/qwen-start-handoff-template.md`
+- `docs/api/plan.json`
 - `docs/live-proof-gate.md`
 - `docs/cloud-readiness-report.md`
 - `docs/cloud-readiness/index.html`
