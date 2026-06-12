@@ -30,6 +30,7 @@ python -m prizepilot.webapp --host 127.0.0.1 --port 8000
 - Public Vimeo demo: https://vimeo.com/1200124146
 - Public judge evidence pack: https://ooyxloo.github.io/prizepilot-qwen-cloud/judge-pack/
 - Public award preflight: https://ooyxloo.github.io/prizepilot-qwen-cloud/award-preflight/
+- Public cloud readiness report: https://ooyxloo.github.io/prizepilot-qwen-cloud/cloud-readiness/
 - Public live proof gate: https://ooyxloo.github.io/prizepilot-qwen-cloud/live-proof-gate/
 - `docs/screenshots/prizepilot-demo.gif`
 - `docs/screenshots/prizepilot-dashboard-desktop.png`
@@ -64,5 +65,7 @@ Paste from `docs/submission-story.md`.
 The Devpost project is submitted at https://devpost.com/software/prizepilot-qwen-cloud and can still be edited until the Qwen Cloud hackathon deadline. Future updates should focus on stronger live evidence: Qwen/DashScope refinement proof and a verified Alibaba Cloud endpoint, if account access is available in time.
 
 The public live proof gate at https://ooyxloo.github.io/prizepilot-qwen-cloud/live-proof-gate/ explains exactly how any future Qwen/DashScope or Alibaba Cloud proof will be captured without storing API keys, account cookies, billing data, payout details, tax material, or KYC evidence.
+
+The public cloud readiness report at https://ooyxloo.github.io/prizepilot-qwen-cloud/cloud-readiness/ verifies the Qwen-compatible request shape, runtime-only key boundary, Alibaba Function Compute manifest, public HTTP proof targets, dashboard payload, and claim boundary without live secrets.
 
 The public award preflight at https://ooyxloo.github.io/prizepilot-qwen-cloud/award-preflight/ gives judges the shortest readiness check for the Blog Post Award and Honorable Mention routes while keeping live cloud proof gaps explicit.

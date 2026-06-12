@@ -215,6 +215,8 @@ class QwenStatusTests(unittest.TestCase):
         self.assertIn("ready_for_user_publication_steps", markdown)
         self.assertIn("docs/qwen-start-handoff-template.md", markdown)
         self.assertIn("docs/live-proof-gate.md", markdown)
+        self.assertIn("docs/cloud-readiness-report.md", markdown)
+        self.assertIn("docs/cloud-readiness/index.html", markdown)
         self.assertIn("docs/award-evidence-map/index.html", markdown)
         self.assertIn("public github repository", markdown)
 

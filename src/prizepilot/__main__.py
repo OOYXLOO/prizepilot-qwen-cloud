@@ -5,6 +5,8 @@ import json
 from pathlib import Path
 
 from .agent import Opportunity, plan_locally, plan_portfolio
+from .cloud_readiness import build_report as build_cloud_readiness_report
+from .cloud_readiness import render_markdown as render_cloud_readiness_markdown
 from .qwen_client import QwenClient
 from .qwen_status import build_status as build_qwen_status
 from .qwen_status import parse_iso_datetime as parse_qwen_status_datetime
@@ -42,6 +44,11 @@ def main() -> None:
     status_parser.add_argument("--json-out", default="docs/qwen-route-status.json")
     status_parser.add_argument("--md-out", default="docs/qwen-route-status.md")
 
+    readiness_parser = subparsers.add_parser("cloud-readiness")
+    readiness_parser.add_argument("--root", default=str(Path(__file__).resolve().parents[2]))
+    readiness_parser.add_argument("--json-out", default="docs/cloud-readiness-report.json")
+    readiness_parser.add_argument("--md-out", default="docs/cloud-readiness-report.md")
+
     args = parser.parse_args()
     if args.command == "plan":
         plan = plan_locally(Opportunity.from_file(args.opportunity))
@@ -69,6 +76,14 @@ def main() -> None:
         (root / args.md_out).write_text(render_qwen_status_markdown(status), encoding="utf-8")
         print(f"Phase: {status['phase']}")
         print(f"Severity: {status['severity']}")
+        return
+
+    if args.command == "cloud-readiness":
+        root = Path(args.root).resolve()
+        report = build_cloud_readiness_report(root)
+        (root / args.json_out).write_text(json.dumps(report, indent=2), encoding="utf-8")
+        (root / args.md_out).write_text(render_cloud_readiness_markdown(report), encoding="utf-8")
+        print(f"Overall: {report['overall']}")
         return
 
     opportunities = [Opportunity.from_file(str(Path(path))) for path in args.opportunities]

@@ -12,11 +12,13 @@ class PublicPagesTests(unittest.TestCase):
         self.assertIn("./judge-pack/", hub)
         self.assertIn("./award-preflight/", hub)
         self.assertIn("./award-evidence-map/", hub)
+        self.assertIn("./cloud-readiness/", hub)
         self.assertIn("./live-proof-gate/", hub)
         self.assertIn("./prizepilot-qwen-submission-deck.pptx", hub)
         self.assertIn("Judge Evidence Pack", hub)
         self.assertIn("Award Preflight", hub)
         self.assertIn("Award Evidence Map", hub)
+        self.assertIn("Cloud Readiness", hub)
         self.assertIn("Live Proof Gate", hub)
         self.assertIn("Presentation Deck", hub)
         self.assertIn("Blog Award Story", hub)
@@ -25,6 +27,7 @@ class PublicPagesTests(unittest.TestCase):
         self.assertIn("https://vimeo.com/1200124146", judge_pack)
         self.assertIn("../award-preflight/", judge_pack)
         self.assertIn("../award-evidence-map/", judge_pack)
+        self.assertIn("../cloud-readiness/", judge_pack)
         self.assertIn("../live-proof-gate/", judge_pack)
         self.assertIn("../prizepilot-qwen-submission-deck.pptx", judge_pack)
         self.assertIn("../screenshots/prizepilot-dashboard-desktop.png", judge_pack)
@@ -32,6 +35,7 @@ class PublicPagesTests(unittest.TestCase):
         self.assertTrue((ROOT / "docs" / "screenshots" / "prizepilot-dashboard-desktop.png").is_file())
         self.assertTrue((ROOT / "docs" / "award-preflight" / "index.html").is_file())
         self.assertTrue((ROOT / "docs" / "award-evidence-map" / "index.html").is_file())
+        self.assertTrue((ROOT / "docs" / "cloud-readiness" / "index.html").is_file())
 
     def test_readme_exposes_judge_pack_url(self) -> None:
         readme = (ROOT / "README.md").read_text(encoding="utf-8")
@@ -39,6 +43,7 @@ class PublicPagesTests(unittest.TestCase):
         self.assertIn("https://ooyxloo.github.io/prizepilot-qwen-cloud/judge-pack/", readme)
         self.assertIn("https://ooyxloo.github.io/prizepilot-qwen-cloud/award-preflight/", readme)
         self.assertIn("https://ooyxloo.github.io/prizepilot-qwen-cloud/award-evidence-map/", readme)
+        self.assertIn("https://ooyxloo.github.io/prizepilot-qwen-cloud/cloud-readiness/", readme)
         self.assertIn("https://ooyxloo.github.io/prizepilot-qwen-cloud/live-proof-gate/", readme)
         self.assertIn("https://ooyxloo.github.io/prizepilot-qwen-cloud/prizepilot-qwen-submission-deck.pptx", readme)
         self.assertIn("Public Blog Award story", readme)
@@ -49,9 +54,21 @@ class PublicPagesTests(unittest.TestCase):
         self.assertIn("Qwen Cloud Hackathon blog award story", blog)
         self.assertIn("Blog Post Award reader path", blog)
         self.assertIn("../judge-pack/", blog)
+        self.assertIn("../cloud-readiness/", blog)
         self.assertIn("https://vimeo.com/1200124146", blog)
         self.assertIn("https://github.com/OOYXLOO/prizepilot-qwen-cloud", blog)
         self.assertIn("what remains account-gated", blog)
+
+    def test_cloud_readiness_page_names_no_secret_checks(self) -> None:
+        page = (ROOT / "docs" / "cloud-readiness" / "index.html").read_text(encoding="utf-8")
+
+        self.assertIn("PrizePilot Cloud Readiness", page)
+        self.assertIn("python -m prizepilot cloud-readiness", page)
+        self.assertIn("Qwen-compatible request shape", page)
+        self.assertIn("Alibaba Function Compute manifest", page)
+        self.assertIn("Runtime-only secret boundary", page)
+        self.assertIn("not a substitute for live Qwen/Alibaba proof", page)
+        self.assertIn("../cloud-readiness-report.md", page)
 
     def test_live_proof_gate_names_secret_boundaries(self) -> None:
         gate = (ROOT / "docs" / "live-proof-gate.md").read_text(encoding="utf-8")
@@ -71,6 +88,7 @@ class PublicPagesTests(unittest.TestCase):
         preflight = (ROOT / "docs" / "award-preflight" / "index.html").read_text(encoding="utf-8")
 
         self.assertIn("PrizePilot Qwen Award Preflight", preflight)
+        self.assertIn("../cloud-readiness/", preflight)
         self.assertIn("Blog Post Award", preflight)
         self.assertIn("Honorable Mention", preflight)
         self.assertIn("Submitted", preflight)
@@ -83,6 +101,7 @@ class PublicPagesTests(unittest.TestCase):
         evidence_map = (ROOT / "docs" / "award-evidence-map" / "index.html").read_text(encoding="utf-8")
 
         self.assertIn("PrizePilot Qwen Award Evidence Map", evidence_map)
+        self.assertIn("../cloud-readiness/", evidence_map)
         self.assertIn("Blog Post Award", evidence_map)
         self.assertIn("Top 10 Honorable Mention", evidence_map)
         self.assertIn("Track 4 Autopilot Agent", evidence_map)

@@ -39,6 +39,7 @@ Use this as the non-sensitive recovery record for the Qwen backup route. Do not 
 - Demo video URL: https://vimeo.com/1200124146
 - Blog/social post URL: https://ooyxloo.github.io/prizepilot-qwen-cloud/blog/
 - Judge demo URL: https://ooyxloo.github.io/prizepilot-qwen-cloud/demo/
+- Cloud readiness URL: https://ooyxloo.github.io/prizepilot-qwen-cloud/cloud-readiness/
 - Live proof gate URL: https://ooyxloo.github.io/prizepilot-qwen-cloud/live-proof-gate/
 - Architecture diagram file: architecture.png
 - Devpost project URL: https://devpost.com/software/prizepilot-qwen-cloud
@@ -73,6 +74,7 @@ Use this as the non-sensitive recovery record for the Qwen backup route. Do not 
 - 2026-06-11: Verified GitHub Pages deployment for the root evidence hub, `/demo/`, and `/blog/`, then updated Devpost Project details to add `https://ooyxloo.github.io/prizepilot-qwen-cloud/demo/` as an additional public "Try it out" link. Public Devpost verification found the demo link href present alongside GitHub, Vimeo, and build journal links.
 - Remaining Qwen improvement work is evidence quality, not submission plumbing: finish Qwen/Alibaba Cloud account verification, run a live Qwen/DashScope check with a user-provided API key at action time, and add stronger live Alibaba Cloud endpoint proof if available before the deadline.
 - 2026-06-12: Added `docs/live-proof-gate.md` plus the public `docs/live-proof-gate/` HTML page, then linked it from the public evidence hub, judge pack, README, and Devpost field draft so judges and the account owner can see the exact non-secret proof-capture path before any live Qwen or Alibaba Cloud action.
+- 2026-06-12: Added `python -m prizepilot cloud-readiness`, `docs/cloud-readiness-report.md/json`, and `docs/cloud-readiness/` to verify the Qwen request shape, runtime-only secret boundary, Alibaba Function Compute manifest, public HTTP proof targets, dashboard payload, and public claim boundary without making a live Qwen/Alibaba claim.
 
 ## Update Rules
 

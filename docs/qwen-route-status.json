@@ -1,16 +1,16 @@
 {
-  "checked_at": "2026-06-12T09:19:42.318340+00:00",
+  "checked_at": "2026-06-12T11:14:54.630924+00:00",
   "phase": "submitted_can_still_improve",
   "severity": "OK_WITH_EVIDENCE_GAPS",
   "next_action": "Strengthen evidence before judging: complete Qwen/Alibaba Cloud account verification, run a live Qwen/DashScope check with a user-provided API key at action time, and add stronger live Alibaba Cloud endpoint proof if available.",
   "deadline_utc": "2026-07-09T21:00:00+00:00",
-  "hours_until_deadline": 659.67,
+  "hours_until_deadline": 657.75,
   "artifact_checks": [
     {
       "path": "README.md",
       "description": "Project README",
       "exists": true,
-      "size": 4098
+      "size": 4433
     },
     {
       "path": "LICENSE",
@@ -70,31 +70,49 @@
       "path": "docs/index.html",
       "description": "Public build notes landing page",
       "exists": true,
-      "size": 5089
+      "size": 5321
     },
     {
       "path": "docs/blog/index.html",
       "description": "Public blog page for Blog Post Award",
       "exists": true,
-      "size": 21213
+      "size": 21517
     },
     {
       "path": "docs/judge-pack/index.html",
       "description": "Public judge evidence pack",
       "exists": true,
-      "size": 13169
+      "size": 13379
     },
     {
       "path": "docs/award-preflight/index.html",
       "description": "Public award preflight page",
       "exists": true,
-      "size": 8380
+      "size": 8763
     },
     {
       "path": "docs/award-evidence-map/index.html",
       "description": "Public award evidence map",
       "exists": true,
-      "size": 8838
+      "size": 9172
+    },
+    {
+      "path": "docs/cloud-readiness/index.html",
+      "description": "Public cloud readiness page",
+      "exists": true,
+      "size": 9304
+    },
+    {
+      "path": "docs/cloud-readiness-report.md",
+      "description": "Cloud readiness report",
+      "exists": true,
+      "size": 2273
+    },
+    {
+      "path": "docs/cloud-readiness-report.json",
+      "description": "Machine-readable cloud readiness report",
+      "exists": true,
+      "size": 3063
     },
     {
       "path": "docs/prizepilot-qwen-submission-deck.pptx",
@@ -142,7 +160,7 @@
       "path": "docs/devpost-project-fields.md",
       "description": "Devpost field draft",
       "exists": true,
-      "size": 4011
+      "size": 4405
     },
     {
       "path": "docs/qwen-start-handoff-template.md",
@@ -196,7 +214,7 @@
       "path": "docs/validation-report.md",
       "description": "Validation report",
       "exists": true,
-      "size": 3054
+      "size": 3661
     },
     {
       "path": "docs/screenshots/prizepilot-dashboard-desktop.png",
@@ -240,6 +258,8 @@
     "docs/qwen-route-ledger.md",
     "docs/qwen-start-handoff-template.md",
     "docs/live-proof-gate.md",
+    "docs/cloud-readiness-report.md",
+    "docs/cloud-readiness/index.html",
     "docs/award-preflight/index.html",
     "docs/award-evidence-map/index.html",
     "docs/qwen-human-action-card.md",
