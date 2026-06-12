@@ -1,5 +1,9 @@
 # PrizePilot
 
+[![Verify PrizePilot](https://github.com/OOYXLOO/prizepilot-qwen-cloud/actions/workflows/verify.yml/badge.svg)](https://github.com/OOYXLOO/prizepilot-qwen-cloud/actions/workflows/verify.yml)
+[![Public demo](https://img.shields.io/badge/Public%20demo-GitHub%20Pages-0969da)](https://ooyxloo.github.io/prizepilot-qwen-cloud/)
+[![Devpost](https://img.shields.io/badge/Devpost-submitted-003e54)](https://devpost.com/software/prizepilot-qwen-cloud)
+
 PrizePilot is a Qwen Cloud hackathon submission for Track 4, Autopilot Agent. It turns hackathon and bounty opportunities into ranked execution plans, public artifact drafts, and human approval checkpoints.
 
 The project is intentionally conservative: it records public repository, blog, video, Devpost submission status, and Qwen live smoke proof only after verification, while keeping live Alibaba Cloud deployment proof, payout eligibility, tax, and KYC outside the repository until those events actually happen.
