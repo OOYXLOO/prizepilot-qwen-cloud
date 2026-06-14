@@ -1,0 +1,106 @@
+{
+  "project": "PrizePilot",
+  "hackathon": "Global AI Hackathon Series with Qwen Cloud",
+  "submission_status": "submitted_can_still_improve",
+  "public_baseline_head": "6329f1ba225c3a59881882e8a5c0dd1a9fb2e33d",
+  "local_prepared_head": "7ffc2aee111a85905087d61f09122ca632f39ad0",
+  "award_targets": [
+    {
+      "name": "Blog Post Award",
+      "amount_usd": 500,
+      "status": "public_story_ready"
+    },
+    {
+      "name": "Top 10 Honorable Mention Projects",
+      "amount_usd": 500,
+      "status": "public_evidence_ready_with_endpoint_gap"
+    },
+    {
+      "name": "Track 4 - Autopilot Agent",
+      "amount_usd": null,
+      "status": "core_project_submitted"
+    }
+  ],
+  "judge_path": [
+    {
+      "step": 1,
+      "label": "Devpost project",
+      "url": "https://devpost.com/software/prizepilot-qwen-cloud",
+      "purpose": "Confirm submitted project identity and public video/deck links."
+    },
+    {
+      "step": 2,
+      "label": "Public evidence hub",
+      "url": "https://ooyxloo.github.io/prizepilot-qwen-cloud/",
+      "purpose": "Start from the fastest public review path."
+    },
+    {
+      "step": 3,
+      "label": "Blog Award story",
+      "url": "https://ooyxloo.github.io/prizepilot-qwen-cloud/blog/",
+      "purpose": "Review the narrative route for the Blog Post Award."
+    },
+    {
+      "step": 4,
+      "label": "Judge evidence pack",
+      "url": "https://ooyxloo.github.io/prizepilot-qwen-cloud/judge-pack/",
+      "purpose": "Check Track 4 fit, award thesis, and completed-vs-pending evidence."
+    },
+    {
+      "step": 5,
+      "label": "Qwen contribution and live proof",
+      "url": "https://ooyxloo.github.io/prizepilot-qwen-cloud/qwen-contribution/",
+      "purpose": "Inspect how Qwen refines PrizePilot decisions and where the live smoke proof is recorded."
+    },
+    {
+      "step": 6,
+      "label": "Alibaba endpoint checklist",
+      "url": "https://ooyxloo.github.io/prizepilot-qwen-cloud/alibaba-endpoint-checklist/",
+      "purpose": "Verify that live Alibaba endpoint proof remains pending rather than overclaimed."
+    }
+  ],
+  "completed_evidence": [
+    "Submitted Devpost project is public.",
+    "Public repository, Pages hub, demo video, and presentation deck are live.",
+    "Static judge demo and public plan snapshot are available without login.",
+    "Qwen-compatible client shape is implemented and locally testable.",
+    "Qwen/DashScope live smoke proof has been recorded without storing secrets.",
+    "Blog Post Award story, benchmark method, award preflight, and evidence map are prepared."
+  ],
+  "pending_evidence": [
+    {
+      "gate": "Live Alibaba Cloud endpoint proof",
+      "status": "pending_account_owner_approval",
+      "reason": "Requires account-owner approval for Alibaba Cloud account, region, credits or billing, deployment, and public endpoint verification."
+    },
+    {
+      "gate": "Devpost post-submit copy update",
+      "status": "requires_user_present_approval",
+      "reason": "Public Devpost edits are external side effects and must only describe evidence that actually exists."
+    }
+  ],
+  "do_not_infer": [
+    "Do not infer that PrizePilot has won a prize.",
+    "Do not infer that payout, tax, KYC, billing, or bank setup is complete.",
+    "Do not infer that a live Alibaba public endpoint exists until a public HTTP 200 URL is recorded.",
+    "Do not infer that API keys, cookies, account-local storage, or private console data are stored in the repository."
+  ],
+  "verification_commands": [
+    "PYTHONPATH=src python -m unittest discover -s tests -v",
+    "PYTHONPATH=src python -m compileall -q src tests tools",
+    "PYTHONPATH=src python -m prizepilot qwen-status",
+    "PYTHONPATH=src python -m prizepilot cloud-readiness",
+    "python -m json.tool docs/judge-manifest.json"
+  ],
+  "related_machine_readable_files": [
+    "docs/qwen-route-status.json",
+    "docs/cloud-readiness-report.json",
+    "docs/api/plan.json"
+  ],
+  "safety_boundary": {
+    "no_secrets": true,
+    "no_private_account_data": true,
+    "no_payout_claim": true,
+    "no_live_endpoint_claim_until_verified": true
+  }
+}

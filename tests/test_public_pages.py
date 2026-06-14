@@ -19,6 +19,7 @@ class PublicPagesTests(unittest.TestCase):
         self.assertIn("./qwen-live-proof/", hub)
         self.assertIn("./qwen-contribution/", hub)
         self.assertIn("./alibaba-endpoint-checklist/", hub)
+        self.assertIn("./judge-manifest.json", hub)
         self.assertIn("./api/plan.json", hub)
         self.assertIn("./prizepilot-qwen-submission-deck.pptx", hub)
         self.assertIn("Primary judge actions", hub)
@@ -34,6 +35,7 @@ class PublicPagesTests(unittest.TestCase):
         self.assertIn("Qwen Live Proof", hub)
         self.assertIn("Qwen Contribution Map", hub)
         self.assertIn("Alibaba Endpoint Checklist", hub)
+        self.assertIn("Judge Manifest JSON", hub)
         self.assertIn("Static Plan JSON", hub)
         self.assertIn("Presentation Deck", hub)
         self.assertIn("Blog Award Story", hub)
@@ -48,6 +50,7 @@ class PublicPagesTests(unittest.TestCase):
         self.assertIn("../qwen-live-proof/", judge_pack)
         self.assertIn("../qwen-contribution/", judge_pack)
         self.assertIn("../alibaba-endpoint-checklist/", judge_pack)
+        self.assertIn("../judge-manifest.json", judge_pack)
         self.assertIn("../api/plan.json", judge_pack)
         self.assertIn("../prizepilot-qwen-submission-deck.pptx", judge_pack)
         self.assertIn("Prize Decision Summary", judge_pack)
@@ -70,6 +73,7 @@ class PublicPagesTests(unittest.TestCase):
         self.assertTrue((ROOT / "docs" / "qwen-contribution-map.md").is_file())
         self.assertTrue((ROOT / "docs" / "alibaba-endpoint-checklist" / "index.html").is_file())
         self.assertTrue((ROOT / "docs" / "alibaba-endpoint-judge-checklist.md").is_file())
+        self.assertTrue((ROOT / "docs" / "judge-manifest.json").is_file())
         self.assertTrue((ROOT / "docs" / "api" / "plan.json").is_file())
 
     def test_readme_exposes_judge_pack_url(self) -> None:
@@ -84,9 +88,28 @@ class PublicPagesTests(unittest.TestCase):
         self.assertIn("https://ooyxloo.github.io/prizepilot-qwen-cloud/qwen-live-proof/", readme)
         self.assertIn("https://ooyxloo.github.io/prizepilot-qwen-cloud/qwen-contribution/", readme)
         self.assertIn("https://ooyxloo.github.io/prizepilot-qwen-cloud/alibaba-endpoint-checklist/", readme)
+        self.assertIn("https://ooyxloo.github.io/prizepilot-qwen-cloud/judge-manifest.json", readme)
         self.assertIn("https://ooyxloo.github.io/prizepilot-qwen-cloud/api/plan.json", readme)
         self.assertIn("https://ooyxloo.github.io/prizepilot-qwen-cloud/prizepilot-qwen-submission-deck.pptx", readme)
         self.assertIn("Public Blog Award story", readme)
+
+    def test_judge_manifest_is_machine_readable_and_boundary_safe(self) -> None:
+        manifest = json.loads((ROOT / "docs" / "judge-manifest.json").read_text(encoding="utf-8"))
+
+        self.assertEqual(manifest["project"], "PrizePilot")
+        self.assertEqual(manifest["submission_status"], "submitted_can_still_improve")
+        self.assertEqual(manifest["local_prepared_head"], "7ffc2aee111a85905087d61f09122ca632f39ad0")
+        self.assertEqual(manifest["award_targets"][0]["name"], "Blog Post Award")
+        self.assertEqual(manifest["award_targets"][0]["amount_usd"], 500)
+        self.assertEqual(manifest["judge_path"][0]["label"], "Devpost project")
+        self.assertEqual(manifest["judge_path"][-1]["label"], "Alibaba endpoint checklist")
+        self.assertIn("Qwen/DashScope live smoke proof has been recorded without storing secrets.", manifest["completed_evidence"])
+        self.assertEqual(manifest["pending_evidence"][0]["gate"], "Live Alibaba Cloud endpoint proof")
+        self.assertEqual(manifest["pending_evidence"][0]["status"], "pending_account_owner_approval")
+        self.assertIn("Do not infer that PrizePilot has won a prize.", manifest["do_not_infer"])
+        self.assertIn("Do not infer that payout, tax, KYC, billing, or bank setup is complete.", manifest["do_not_infer"])
+        self.assertTrue(manifest["safety_boundary"]["no_secrets"])
+        self.assertTrue(manifest["safety_boundary"]["no_live_endpoint_claim_until_verified"])
 
     def test_static_plan_snapshot_matches_public_claim_boundary(self) -> None:
         snapshot = json.loads((ROOT / "docs" / "api" / "plan.json").read_text(encoding="utf-8"))
