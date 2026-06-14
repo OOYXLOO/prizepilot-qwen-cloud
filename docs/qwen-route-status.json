@@ -1,16 +1,16 @@
 {
-  "checked_at": "2026-06-12T17:48:31.328766+00:00",
+  "checked_at": "2026-06-14T03:33:41.695008+00:00",
   "phase": "submitted_can_still_improve",
   "severity": "OK_WITH_EVIDENCE_GAPS",
   "next_action": "Strengthen remaining evidence before judging: add verified Alibaba Cloud endpoint proof if account access and billing/credit approval are available, then update public Devpost copy only with captured evidence.",
   "deadline_utc": "2026-07-09T21:00:00+00:00",
-  "hours_until_deadline": 651.19,
+  "hours_until_deadline": 617.44,
   "artifact_checks": [
     {
       "path": "README.md",
       "description": "Project README",
       "exists": true,
-      "size": 4377
+      "size": 5270
     },
     {
       "path": "LICENSE",
@@ -70,31 +70,37 @@
       "path": "docs/index.html",
       "description": "Public build notes landing page",
       "exists": true,
-      "size": 6761
+      "size": 8952
     },
     {
       "path": "docs/blog/index.html",
       "description": "Public blog page for Blog Post Award",
       "exists": true,
-      "size": 21718
+      "size": 22872
     },
     {
       "path": "docs/judge-pack/index.html",
       "description": "Public judge evidence pack",
       "exists": true,
-      "size": 14045
+      "size": 18731
+    },
+    {
+      "path": "docs/judge-manifest.json",
+      "description": "Machine-readable judge manifest",
+      "exists": true,
+      "size": 4119
     },
     {
       "path": "docs/award-preflight/index.html",
       "description": "Public award preflight page",
       "exists": true,
-      "size": 9126
+      "size": 9163
     },
     {
       "path": "docs/award-evidence-map/index.html",
       "description": "Public award evidence map",
       "exists": true,
-      "size": 9462
+      "size": 9503
     },
     {
       "path": "docs/cloud-readiness/index.html",
@@ -166,7 +172,7 @@
       "path": "docs/demo-video-upload-pack.md",
       "description": "Demo video host upload metadata",
       "exists": true,
-      "size": 1800
+      "size": 2307
     },
     {
       "path": "tools/record_demo_webm.mjs",
@@ -178,7 +184,7 @@
       "path": "docs/devpost-project-fields.md",
       "description": "Devpost field draft",
       "exists": true,
-      "size": 4622
+      "size": 5975
     },
     {
       "path": "docs/qwen-start-handoff-template.md",
@@ -226,7 +232,7 @@
       "path": "docs/public-package-checklist.md",
       "description": "Public package checklist",
       "exists": true,
-      "size": 1349
+      "size": 1398
     },
     {
       "path": "docs/validation-report.md",

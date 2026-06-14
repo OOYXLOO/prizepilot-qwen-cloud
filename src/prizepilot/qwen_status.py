@@ -23,6 +23,7 @@ REQUIRED_ARTIFACTS = {
     "docs/index.html": "Public build notes landing page",
     "docs/blog/index.html": "Public blog page for Blog Post Award",
     "docs/judge-pack/index.html": "Public judge evidence pack",
+    "docs/judge-manifest.json": "Machine-readable judge manifest",
     "docs/award-preflight/index.html": "Public award preflight page",
     "docs/award-evidence-map/index.html": "Public award evidence map",
     "docs/cloud-readiness/index.html": "Public cloud readiness page",
