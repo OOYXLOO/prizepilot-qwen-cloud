@@ -6,7 +6,7 @@ The project is intentionally conservative: it records public repository, blog, v
 
 ## Current Public Status
 
-Latest review status as of 2026-06-14: the repository, Blog Award story, presentation deck, Qwen live proof, and route status files are the current source of truth for PrizePilot's submission state. Local reviewer packets may be ahead of the public repository; before any public update, compare `git rev-parse HEAD` with `git ls-remote https://github.com/OOYXLOO/prizepilot-qwen-cloud.git HEAD` and publish only after account-owner approval.
+Latest review status as of 2026-06-15: the repository, Blog Award story, presentation deck, Qwen live proof, and route status files are the current source of truth for PrizePilot's submitted public state. Local reviewer packets may be ahead of the public repository; before any public update, compare `git rev-parse HEAD` with `git ls-remote https://github.com/OOYXLOO/prizepilot-qwen-cloud.git HEAD` and publish only after account-owner approval.
 
 ## Visible Now vs Prepared Locally
 
@@ -17,28 +17,33 @@ Latest review status as of 2026-06-14: the repository, Blog Award story, present
 | Judge review/update packet | Prepared locally until a user-approved push confirms the final public URLs: judge review card, Blog Share Packet, public update digest, refreshed route status, and refreshed cloud-readiness wording. | Treat these as prepared artifacts until the public HEAD is verified after a push. |
 | Alibaba Cloud endpoint proof | Prepared code only: Function Compute manifest and endpoint checklist exist. | Not live endpoint proof until a public URL returns HTTP 200 at `/` and `/api/plan`. |
 
+Baseline links verified live on 2026-06-15:
+
 - Devpost project: https://devpost.com/software/prizepilot-qwen-cloud
-- Public demo video: https://vimeo.com/1200124146
-- Public presentation deck: https://ooyxloo.github.io/prizepilot-qwen-cloud/prizepilot-qwen-submission-deck.pptx
-- Public judge demo: https://ooyxloo.github.io/prizepilot-qwen-cloud/demo/
-- Public judge evidence pack: https://ooyxloo.github.io/prizepilot-qwen-cloud/judge-pack/
-- Public award preflight: https://ooyxloo.github.io/prizepilot-qwen-cloud/award-preflight/
-- Public award evidence map: https://ooyxloo.github.io/prizepilot-qwen-cloud/award-evidence-map/
-- Public cloud readiness report: https://ooyxloo.github.io/prizepilot-qwen-cloud/cloud-readiness/
-- Public benchmark method: https://ooyxloo.github.io/prizepilot-qwen-cloud/benchmark-method/
-- Public live proof gate: https://ooyxloo.github.io/prizepilot-qwen-cloud/live-proof-gate/
-- Public Qwen live proof: https://ooyxloo.github.io/prizepilot-qwen-cloud/qwen-live-proof/
-- Public Qwen contribution map: https://ooyxloo.github.io/prizepilot-qwen-cloud/qwen-contribution/
-- Public Qwen before/after evidence: https://ooyxloo.github.io/prizepilot-qwen-cloud/qwen-before-after/
-- Public judge review card: https://ooyxloo.github.io/prizepilot-qwen-cloud/judge-review-card/
-- Public Blog Share Packet: https://ooyxloo.github.io/prizepilot-qwen-cloud/blog-share-packet/
+- Demo video: https://vimeo.com/1200124146
+- Presentation deck: https://ooyxloo.github.io/prizepilot-qwen-cloud/prizepilot-qwen-submission-deck.pptx
+- Judge demo: https://ooyxloo.github.io/prizepilot-qwen-cloud/demo/
+- Judge evidence pack: https://ooyxloo.github.io/prizepilot-qwen-cloud/judge-pack/
+- Award preflight: https://ooyxloo.github.io/prizepilot-qwen-cloud/award-preflight/
+- Award evidence map: https://ooyxloo.github.io/prizepilot-qwen-cloud/award-evidence-map/
+- Cloud readiness report: https://ooyxloo.github.io/prizepilot-qwen-cloud/cloud-readiness/
+- Benchmark method: https://ooyxloo.github.io/prizepilot-qwen-cloud/benchmark-method/
+- Live proof gate: https://ooyxloo.github.io/prizepilot-qwen-cloud/live-proof-gate/
+- Qwen live proof: https://ooyxloo.github.io/prizepilot-qwen-cloud/qwen-live-proof/
+- Qwen contribution map: https://ooyxloo.github.io/prizepilot-qwen-cloud/qwen-contribution/
+- Alibaba endpoint checklist: https://ooyxloo.github.io/prizepilot-qwen-cloud/alibaba-endpoint-checklist/
+- Static plan snapshot: https://ooyxloo.github.io/prizepilot-qwen-cloud/api/plan.json
+- Blog Award story: https://ooyxloo.github.io/prizepilot-qwen-cloud/blog/
+- Repository: https://github.com/OOYXLOO/prizepilot-qwen-cloud
+
+Prepared next-update links, not public until a user-approved push and HTTP 200 recheck:
+
+- Qwen before/after evidence: https://ooyxloo.github.io/prizepilot-qwen-cloud/qwen-before-after/
+- Judge Review Card: https://ooyxloo.github.io/prizepilot-qwen-cloud/judge-review-card/
+- Blog Share Packet: https://ooyxloo.github.io/prizepilot-qwen-cloud/blog-share-packet/
 - Public update checklist: https://ooyxloo.github.io/prizepilot-qwen-cloud/public-update-checklist/
 - Public update digest: https://ooyxloo.github.io/prizepilot-qwen-cloud/public-update-digest/
-- Public Alibaba endpoint checklist: https://ooyxloo.github.io/prizepilot-qwen-cloud/alibaba-endpoint-checklist/
-- Public judge manifest: https://ooyxloo.github.io/prizepilot-qwen-cloud/judge-manifest.json
-- Public static plan snapshot: https://ooyxloo.github.io/prizepilot-qwen-cloud/api/plan.json
-- Public Blog Award story: https://ooyxloo.github.io/prizepilot-qwen-cloud/blog/
-- Public repository: https://github.com/OOYXLOO/prizepilot-qwen-cloud
+- Judge manifest: https://ooyxloo.github.io/prizepilot-qwen-cloud/judge-manifest.json
 - Submission state: submitted to Devpost; still editable until the Qwen Cloud hackathon deadline.
 - Evidence gap: verified live Alibaba Cloud endpoint proof still needs to be captured before judging if account access, credit, and billing approval are available.
 

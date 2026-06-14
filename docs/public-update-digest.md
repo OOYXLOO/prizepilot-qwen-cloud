@@ -13,6 +13,12 @@ This digest is the non-sensitive decision packet for a future user-approved publ
 - Public status: submitted Devpost project is live and editable until the Qwen Cloud hackathon deadline.
 - Local status: update packet is prepared, verified locally, and not pushed.
 
+## Public Link Health Boundary
+
+Latest public baseline check on 2026-06-15 found the existing review pages live, including `demo/`, `judge-pack/`, `award-preflight/`, `award-evidence-map/`, `cloud-readiness/`, `benchmark-method/`, `live-proof-gate/`, `qwen-live-proof/`, `qwen-contribution/`, `alibaba-endpoint-checklist/`, `api/plan.json`, and `blog/`.
+
+The next-update pages are intentionally not treated as public until after an approved push and HTTP 200 recheck: `qwen-before-after/`, `judge-review-card/`, `blog-share-packet/`, `public-update-checklist/`, `public-update-digest/`, and `judge-manifest.json`.
+
 ## What The Update Improves
 
 - Adds a machine-readable judge manifest that names the submitted project, award targets, judge path, completed evidence, pending evidence, and do-not-infer boundaries.
