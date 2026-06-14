@@ -5,9 +5,13 @@ Purpose: give judges and the account owner one compact success checklist for the
 ## Current Status
 
 - Qwen/DashScope live smoke proof: complete.
-- Alibaba Function Compute manifest: prepared at `deploy/alibaba-cloud/s.yaml`.
+- Alibaba Function Compute manifest: prepared code proof at `deploy/alibaba-cloud/s.yaml`.
 - Live Alibaba public endpoint: not yet claimed.
 - Devpost deployment wording: should stay endpoint-pending until public proof exists.
+
+## Code Proof Boundary
+
+The repository code-file proof is `deploy/alibaba-cloud/s.yaml`. It shows the intended Alibaba Function Compute custom-container service, public HTTP trigger shape, and `/` health path. This is useful sponsor evidence for implementation readiness, but it is explicitly `prepared_code_only`, not live endpoint proof.
 
 ## Expected Success Signal
 

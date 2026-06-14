@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-06-14T14:02:45.115215+00:00",
+  "checked_at": "2026-06-14T17:08:45.844130+00:00",
   "overall": "qwen_live_verified_endpoint_pending",
   "checks": [
     {
@@ -26,15 +26,15 @@
     {
       "id": "ALIBABA_FC_CUSTOM_CONTAINER_MANIFEST",
       "label": "Alibaba Function Compute custom-container manifest",
-      "status": "pass",
+      "status": "source_code_prepared",
       "evidence": "The checked-in Serverless Devs manifest targets Alibaba Function Compute with the PrizePilot container on port 8000.",
       "public_next_step": "Deploy only after the account owner approves Alibaba Cloud account, credit, region, and billing implications."
     },
     {
       "id": "ALIBABA_PUBLIC_HTTP_PROOF_TARGETS",
       "label": "Public HTTP endpoint proof targets",
-      "status": "pass",
-      "evidence": "The manifest declares a public HTTP trigger and health check path that map to the dashboard and API proof plan.",
+      "status": "prepared_not_live",
+      "evidence": "The manifest declares a public HTTP trigger and health check path that map to the dashboard and API proof plan, but no live Alibaba URL is claimed here.",
       "public_next_step": "After deployment, verify the public endpoint at / and /api/plan before updating Devpost."
     },
     {

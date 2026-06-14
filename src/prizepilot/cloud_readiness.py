@@ -21,11 +21,18 @@ def _has_all(text: str, fragments: list[str]) -> bool:
     return all(fragment in text for fragment in fragments)
 
 
-def _check(check_id: str, label: str, passed: bool, evidence: str, public_next_step: str) -> dict[str, str]:
+def _check(
+    check_id: str,
+    label: str,
+    passed: bool,
+    evidence: str,
+    public_next_step: str,
+    status_when_passed: str = "pass",
+) -> dict[str, str]:
     return {
         "id": check_id,
         "label": label,
-        "status": "pass" if passed else "fail",
+        "status": status_when_passed if passed else "fail",
         "evidence": evidence,
         "public_next_step": public_next_step,
     }
@@ -101,6 +108,7 @@ def build_report(root: Path | str = PROJECT_ROOT, checked_at: datetime | None = 
             ),
             "The checked-in Serverless Devs manifest targets Alibaba Function Compute with the PrizePilot container on port 8000.",
             "Deploy only after the account owner approves Alibaba Cloud account, credit, region, and billing implications.",
+            "source_code_prepared",
         ),
         _check(
             "ALIBABA_PUBLIC_HTTP_PROOF_TARGETS",
@@ -116,8 +124,9 @@ def build_report(root: Path | str = PROJECT_ROOT, checked_at: datetime | None = 
                     "GET",
                 ],
             ),
-            "The manifest declares a public HTTP trigger and health check path that map to the dashboard and API proof plan.",
+            "The manifest declares a public HTTP trigger and health check path that map to the dashboard and API proof plan, but no live Alibaba URL is claimed here.",
             "After deployment, verify the public endpoint at / and /api/plan before updating Devpost.",
+            "prepared_not_live",
         ),
         _check(
             "DASHBOARD_JUDGE_PAYLOAD_READY",
@@ -148,7 +157,7 @@ def build_report(root: Path | str = PROJECT_ROOT, checked_at: datetime | None = 
         ),
     ]
 
-    overall = "qwen_live_verified_endpoint_pending" if all(item["status"] == "pass" for item in checks) else "needs_local_fix"
+    overall = "qwen_live_verified_endpoint_pending" if all(item["status"] != "fail" for item in checks) else "needs_local_fix"
     return {
         "checked_at": current.isoformat(),
         "overall": overall,

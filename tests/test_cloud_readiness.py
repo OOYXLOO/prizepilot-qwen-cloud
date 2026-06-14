@@ -12,12 +12,16 @@ class CloudReadinessTests(unittest.TestCase):
         self.assertEqual(report["overall"], "qwen_live_verified_endpoint_pending")
         self.assertEqual(report["live_claim"], "qwen_dashscope_smoke_verified_alibaba_endpoint_pending")
         self.assertEqual(len(report["checks"]), 7)
-        self.assertTrue(all(check["status"] == "pass" for check in report["checks"]))
+        self.assertTrue(all(check["status"] != "fail" for check in report["checks"]))
+        status_by_id = {check["id"]: check["status"] for check in report["checks"]}
         check_ids = {check["id"] for check in report["checks"]}
         self.assertIn("QWEN_OPENAI_COMPATIBLE_REQUEST_SHAPE", check_ids)
         self.assertIn("QWEN_LIVE_SMOKE_PROOF", check_ids)
         self.assertIn("ALIBABA_FC_CUSTOM_CONTAINER_MANIFEST", check_ids)
         self.assertIn("PUBLIC_CLAIM_BOUNDARY", check_ids)
+        self.assertEqual(status_by_id["QWEN_LIVE_SMOKE_PROOF"], "pass")
+        self.assertEqual(status_by_id["ALIBABA_FC_CUSTOM_CONTAINER_MANIFEST"], "source_code_prepared")
+        self.assertEqual(status_by_id["ALIBABA_PUBLIC_HTTP_PROOF_TARGETS"], "prepared_not_live")
         self.assertIn("No API keys", report["secret_policy"])
         self.assertIn("Alibaba Cloud Function Compute deployment", report["next_live_evidence"][0])
 
@@ -29,6 +33,7 @@ class CloudReadinessTests(unittest.TestCase):
         self.assertIn("QWEN_RUNTIME_SECRET_BOUNDARY", markdown)
         self.assertIn("QWEN_LIVE_SMOKE_PROOF", markdown)
         self.assertIn("ALIBABA_PUBLIC_HTTP_PROOF_TARGETS", markdown)
+        self.assertIn("prepared_not_live", markdown)
         self.assertIn("endpoint evidence actually exists", markdown)
 
 

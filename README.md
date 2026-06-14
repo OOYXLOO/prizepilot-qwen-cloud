@@ -6,7 +6,16 @@ The project is intentionally conservative: it records public repository, blog, v
 
 ## Current Public Status
 
-Latest review status as of 2026-06-14: the repository, Blog Award story, presentation deck, Qwen live proof, public update digest, and route status files are the current source of truth for PrizePilot's submission state.
+Latest review status as of 2026-06-14: the repository, Blog Award story, presentation deck, Qwen live proof, and route status files are the current source of truth for PrizePilot's submission state. Local reviewer packets may be ahead of the public repository; before any public update, compare `git rev-parse HEAD` with `git ls-remote https://github.com/OOYXLOO/prizepilot-qwen-cloud.git HEAD` and publish only after account-owner approval.
+
+## Visible Now vs Prepared Locally
+
+| Layer | Status | Boundary |
+| --- | --- | --- |
+| Submitted identity | Visible now: Devpost project, public repository, Vimeo demo, public Pages hub, deck, Blog Award story, and static judge demo. | These establish that the project is submitted and reviewable. They do not prove prize selection or payout. |
+| Qwen live smoke proof | Visible now in the proof packet: one Qwen/DashScope `qwen-plus` run through the China Bailian endpoint with runtime-only key cleanup recorded. | This proves a live Qwen-compatible refinement path, not a live Alibaba Cloud public endpoint. |
+| Judge review/update packet | Prepared locally until a user-approved push confirms the final public URLs: judge review card, Blog Share Packet, public update digest, refreshed route status, and refreshed cloud-readiness wording. | Treat these as prepared artifacts until the public HEAD is verified after a push. |
+| Alibaba Cloud endpoint proof | Prepared code only: Function Compute manifest and endpoint checklist exist. | Not live endpoint proof until a public URL returns HTTP 200 at `/` and `/api/plan`. |
 
 - Devpost project: https://devpost.com/software/prizepilot-qwen-cloud
 - Public demo video: https://vimeo.com/1200124146
@@ -38,10 +47,10 @@ Latest review status as of 2026-06-14: the repository, Blog Award story, present
 The 3-link reviewer fast path is:
 
 1. Devpost project: https://devpost.com/software/prizepilot-qwen-cloud
-2. Blog Award story: https://ooyxloo.github.io/prizepilot-qwen-cloud/blog/
-3. Proof boundary: https://ooyxloo.github.io/prizepilot-qwen-cloud/judge-pack/
+2. Judge Review Card: https://ooyxloo.github.io/prizepilot-qwen-cloud/judge-review-card/
+3. Blog Award story: https://ooyxloo.github.io/prizepilot-qwen-cloud/blog/
 
-This order gives judges the submitted identity, the Blog Post Award narrative, and the completed-vs-pending evidence boundary before they decide whether to open the deeper benchmark, Qwen contribution, before/after, live proof, manifest, or static plan files.
+This order gives judges the submitted identity, the one-minute award thesis and do-not-infer boundary, and the Blog Post Award narrative before they decide whether to open the deeper proof boundary, benchmark, Qwen contribution, before/after, live proof, manifest, or static plan files.
 
 For deeper local verification, run the dashboard:
 

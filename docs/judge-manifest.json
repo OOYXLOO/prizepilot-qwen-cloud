@@ -28,14 +28,14 @@
       "purpose": "Confirm submitted project identity and public video/deck links."
     },
     {
+      "label": "Judge Review Card",
+      "url": "https://ooyxloo.github.io/prizepilot-qwen-cloud/judge-review-card/",
+      "purpose": "Review the one-minute award thesis, Qwen evidence, and do-not-infer boundary."
+    },
+    {
       "label": "Blog Award story",
       "url": "https://ooyxloo.github.io/prizepilot-qwen-cloud/blog/",
       "purpose": "Review the product narrative, Qwen role, and Blog Post Award fit."
-    },
-    {
-      "label": "Proof boundary",
-      "url": "https://ooyxloo.github.io/prizepilot-qwen-cloud/judge-pack/",
-      "purpose": "Separate completed Qwen evidence from pending Alibaba endpoint proof and do-not-infer claims."
     }
   ],
   "award_targets": [
@@ -145,6 +145,12 @@
       "reason": "Public Devpost edits are external side effects and must only describe evidence that actually exists."
     }
   ],
+  "alibaba_code_proof": {
+    "status": "prepared_code_only",
+    "code_file": "deploy/alibaba-cloud/s.yaml",
+    "public_source_url": "https://github.com/OOYXLOO/prizepilot-qwen-cloud/blob/main/deploy/alibaba-cloud/s.yaml",
+    "boundary": "This is repository code proof for an Alibaba Function Compute deployment path, not live endpoint proof. Live proof starts only after a public Alibaba URL returns HTTP 200 at / and /api/plan."
+  },
   "do_not_infer": [
     "Do not infer that PrizePilot has won a prize.",
     "Do not infer that payout, tax, KYC, billing, or bank setup is complete.",

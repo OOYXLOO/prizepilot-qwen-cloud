@@ -44,7 +44,7 @@ Use this as the non-sensitive recovery record for the Qwen backup route. Do not 
 - Qwen live proof URL: https://ooyxloo.github.io/prizepilot-qwen-cloud/qwen-live-proof/
 - Architecture diagram file: architecture.png
 - Devpost project URL: https://devpost.com/software/prizepilot-qwen-cloud
-- Qwen submission manage URL: https://devpost.com/submit-to/29966-global-ai-hackathon-series-with-qwen-cloud/manage/submissions/1046103-prizepilot-qwen-cloud/edit
+- Qwen submission manage URL: account owner uses the Devpost dashboard while logged in; do not store private manage/edit deep links in the public package.
 - Submission timestamp: 2026-06-10T22:55:26+08:00
 - Follow-up date after submission: monitor before 2026-07-09T17:00:00-04:00 for Qwen/Alibaba live-proof improvements
 

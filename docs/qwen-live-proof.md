@@ -9,6 +9,8 @@ Purpose: prove that PrizePilot can run a live Qwen-compatible refinement pass wi
 - Region/account path: Alibaba Cloud China Bailian / DashScope
 - Model: `qwen-plus`
 - Base URL: `https://dashscope.aliyuncs.com/compatible-mode/v1`
+- Runtime environment override used for this China Bailian smoke test: `DASHSCOPE_BASE_URL=https://dashscope.aliyuncs.com/compatible-mode/v1` and `DASHSCOPE_MODEL=qwen-plus`; the code default remains the international-compatible endpoint unless a runtime env var overrides it.
+- Client provenance at capture time: `src/prizepilot/qwen_client.py` SHA256 `A476ACA07D524D3F50739949F5D04D6FA896D077216695B12ED37E1139E4FDF6`
 - Command: `python -X utf8 -m prizepilot plan samples/qwen_hackathon.json --use-qwen`
 - Exit code: 0
 - `DASHSCOPE_API_KEY` present after cleanup: False
