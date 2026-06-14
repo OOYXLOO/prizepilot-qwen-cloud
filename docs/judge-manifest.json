@@ -5,6 +5,23 @@
   "public_baseline_head": "6329f1ba225c3a59881882e8a5c0dd1a9fb2e33d",
   "local_update_base_head": "3f32bd489641c12e4c59df3be7cdf0a9702687d4",
   "manifest_note": "The local package may have later commits after this manifest update; verify with git history before a user-approved public push.",
+  "reviewer_fast_path": [
+    {
+      "label": "Devpost project",
+      "url": "https://devpost.com/software/prizepilot-qwen-cloud",
+      "purpose": "Confirm submitted project identity and public video/deck links."
+    },
+    {
+      "label": "Blog Award story",
+      "url": "https://ooyxloo.github.io/prizepilot-qwen-cloud/blog/",
+      "purpose": "Review the product narrative, Qwen role, and Blog Post Award fit."
+    },
+    {
+      "label": "Proof boundary",
+      "url": "https://ooyxloo.github.io/prizepilot-qwen-cloud/judge-pack/",
+      "purpose": "Separate completed Qwen evidence from pending Alibaba endpoint proof and do-not-infer claims."
+    }
+  ],
   "award_targets": [
     {
       "name": "Blog Post Award",

@@ -35,15 +35,13 @@ Latest review status as of 2026-06-14: the repository, Blog Award story, present
 
 ## Judge Quickstart
 
-The 90-second review path is:
+The 3-link reviewer fast path is:
 
-1. Open the Devpost project, Vimeo demo, and 5-slide presentation deck.
-2. Open the public judge evidence pack for the prize decision summary and Track 4 / Blog Post Award matrix.
-3. Open the award evidence map for completed proof versus remaining account-gated work.
-4. Open the benchmark method to see how the route ranking is scored and what the sample portfolio proves.
-5. Open the Qwen contribution map, before/after evidence, and Qwen live proof page for the verified runtime smoke test, contribution depth, and cleanup boundary.
-6. Open the Alibaba endpoint checklist for the exact remaining public HTTP 200 proof gate.
-7. Inspect the judge manifest and static machine-readable plan snapshot at https://ooyxloo.github.io/prizepilot-qwen-cloud/judge-manifest.json and https://ooyxloo.github.io/prizepilot-qwen-cloud/api/plan.json.
+1. Devpost project: https://devpost.com/software/prizepilot-qwen-cloud
+2. Blog Award story: https://ooyxloo.github.io/prizepilot-qwen-cloud/blog/
+3. Proof boundary: https://ooyxloo.github.io/prizepilot-qwen-cloud/judge-pack/
+
+This order gives judges the submitted identity, the Blog Post Award narrative, and the completed-vs-pending evidence boundary before they decide whether to open the deeper benchmark, Qwen contribution, before/after, live proof, manifest, or static plan files.
 
 For deeper local verification, run the dashboard:
 
