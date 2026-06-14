@@ -3,7 +3,8 @@
   "hackathon": "Global AI Hackathon Series with Qwen Cloud",
   "submission_status": "submitted_can_still_improve",
   "public_baseline_head": "6329f1ba225c3a59881882e8a5c0dd1a9fb2e33d",
-  "local_prepared_head": "7ffc2aee111a85905087d61f09122ca632f39ad0",
+  "local_update_base_head": "3f32bd489641c12e4c59df3be7cdf0a9702687d4",
+  "manifest_note": "The local package may have later commits after this manifest update; verify with git history before a user-approved public push.",
   "award_targets": [
     {
       "name": "Blog Post Award",
@@ -54,6 +55,12 @@
     },
     {
       "step": 6,
+      "label": "Qwen before/after evidence",
+      "url": "https://ooyxloo.github.io/prizepilot-qwen-cloud/qwen-before-after/",
+      "purpose": "Compare deterministic route planning with the Qwen-refined public copy and proof boundary."
+    },
+    {
+      "step": 7,
       "label": "Alibaba endpoint checklist",
       "url": "https://ooyxloo.github.io/prizepilot-qwen-cloud/alibaba-endpoint-checklist/",
       "purpose": "Verify that live Alibaba endpoint proof remains pending rather than overclaimed."
@@ -65,6 +72,7 @@
     "Static judge demo and public plan snapshot are available without login.",
     "Qwen-compatible client shape is implemented and locally testable.",
     "Qwen/DashScope live smoke proof has been recorded without storing secrets.",
+    "Qwen before/after evidence maps deterministic planning to Qwen-refined public copy.",
     "Blog Post Award story, benchmark method, award preflight, and evidence map are prepared."
   ],
   "pending_evidence": [

@@ -1,16 +1,16 @@
 {
-  "checked_at": "2026-06-14T03:33:41.695008+00:00",
+  "checked_at": "2026-06-14T03:48:04.241046+00:00",
   "phase": "submitted_can_still_improve",
   "severity": "OK_WITH_EVIDENCE_GAPS",
   "next_action": "Strengthen remaining evidence before judging: add verified Alibaba Cloud endpoint proof if account access and billing/credit approval are available, then update public Devpost copy only with captured evidence.",
   "deadline_utc": "2026-07-09T21:00:00+00:00",
-  "hours_until_deadline": 617.44,
+  "hours_until_deadline": 617.2,
   "artifact_checks": [
     {
       "path": "README.md",
       "description": "Project README",
       "exists": true,
-      "size": 5270
+      "size": 5436
     },
     {
       "path": "LICENSE",
@@ -70,37 +70,37 @@
       "path": "docs/index.html",
       "description": "Public build notes landing page",
       "exists": true,
-      "size": 8952
+      "size": 9201
     },
     {
       "path": "docs/blog/index.html",
       "description": "Public blog page for Blog Post Award",
       "exists": true,
-      "size": 22872
+      "size": 22946
     },
     {
       "path": "docs/judge-pack/index.html",
       "description": "Public judge evidence pack",
       "exists": true,
-      "size": 18731
+      "size": 19043
     },
     {
       "path": "docs/judge-manifest.json",
       "description": "Machine-readable judge manifest",
       "exists": true,
-      "size": 4119
+      "size": 4632
     },
     {
       "path": "docs/award-preflight/index.html",
       "description": "Public award preflight page",
       "exists": true,
-      "size": 9163
+      "size": 9408
     },
     {
       "path": "docs/award-evidence-map/index.html",
       "description": "Public award evidence map",
       "exists": true,
-      "size": 9503
+      "size": 9754
     },
     {
       "path": "docs/cloud-readiness/index.html",
@@ -131,6 +131,18 @@
       "description": "Public live Qwen/DashScope proof page",
       "exists": true,
       "size": 4701
+    },
+    {
+      "path": "docs/qwen-before-after-evidence.md",
+      "description": "Qwen before/after evidence",
+      "exists": true,
+      "size": 4310
+    },
+    {
+      "path": "docs/qwen-before-after/index.html",
+      "description": "Public Qwen before/after evidence page",
+      "exists": true,
+      "size": 8821
     },
     {
       "path": "docs/api/plan.json",
@@ -226,19 +238,19 @@
       "path": "docs/publication-action-card.md",
       "description": "Publication action card",
       "exists": true,
-      "size": 1898
+      "size": 2370
     },
     {
       "path": "docs/public-package-checklist.md",
       "description": "Public package checklist",
       "exists": true,
-      "size": 1398
+      "size": 1782
     },
     {
       "path": "docs/validation-report.md",
       "description": "Validation report",
       "exists": true,
-      "size": 3480
+      "size": 3322
     },
     {
       "path": "docs/screenshots/prizepilot-dashboard-desktop.png",
@@ -279,6 +291,7 @@
     "docs/award-evidence-map/index.html",
     "docs/qwen-human-action-card.md",
     "docs/devpost-project-fields.md",
+    "docs/qwen-before-after-evidence.md",
     "docs/blog-draft.md",
     "docs/alibaba-cloud-deployment-runbook.md",
     "docs/validation-report.md"

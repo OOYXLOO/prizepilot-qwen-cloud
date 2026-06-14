@@ -15,8 +15,8 @@ Qwen is not presented as a magic prize predictor. Its useful role is to turn a s
 
 | Agent stage | Deterministic input | Qwen contribution | Public artifact | Boundary |
 | --- | --- | --- | --- | --- |
-| Route selection | Prize amount, winners, deadline, submission state, blockers, and evidence gaps from `samples/qwen_hackathon.json`. | Refines the planned Blog Post Award route into a concise, judge-readable plan. | `docs/qwen-live-proof.md` and `docs/qwen-live-proof/`. | Qwen does not decide that a prize will be won. |
-| Story shaping | Local route ledger, benchmark method, and public proof status. | Makes the narrative more factual: qualified Devpost project first, Blog Award as target, no unsupported account claims. | `docs/submission-story.md`, `docs/blog/`, and `docs/judge-pack/`. | No private account metadata or hidden proof is published. |
+| Route selection | Prize amount, winners, deadline, submission state, blockers, and evidence gaps from `samples/qwen_hackathon.json`. | Refines the planned Blog Post Award route into a concise, judge-readable plan. | `docs/qwen-live-proof.md`, `docs/qwen-live-proof/`, and `docs/qwen-before-after-evidence.md`. | Qwen does not decide that a prize will be won. |
+| Story shaping | Local route ledger, benchmark method, and public proof status. | Makes the narrative more factual: qualified Devpost project first, Blog Award as target, no unsupported account claims. | `docs/submission-story.md`, `docs/blog/`, `docs/judge-pack/`, and `docs/qwen-before-after/`. | No private account metadata or hidden proof is published. |
 | Risk wording | Human action queue and live-proof gates. | Helps sharpen constraints such as no credentials stored, no premature publishing, no assumed infrastructure, and eligibility first. | `docs/live-proof-gate.md` and this map. | CAPTCHA, OTP, keys, cloud billing, payout, tax, and KYC remain human-only. |
 | Evidence packaging | Public repo, Vimeo demo, GitHub Pages, static plan JSON, and tests. | Turns the proof boundary into language a judge can verify quickly. | `docs/award-evidence-map/`, `docs/award-preflight/`, and `docs/cloud-readiness/`. | Alibaba endpoint proof is still pending until a public endpoint exists. |
 
@@ -35,6 +35,8 @@ The live Qwen/DashScope call refined that into public-facing submission language
 - eligibility verified first.
 
 Those points are now reflected across the public story and judge materials.
+
+For the concrete copy trail, see `docs/qwen-before-after-evidence.md` and the public `docs/qwen-before-after/` page. That evidence page maps the deterministic plan, the live Qwen refinement, and the exact public surfaces that changed.
 
 ## Reproducible Without A Key
 

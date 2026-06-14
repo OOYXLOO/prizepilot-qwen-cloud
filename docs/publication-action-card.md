@@ -1,37 +1,44 @@
 # Publication Action Card
 
-Do not publish without user confirmation.
+Do not push, publish, edit Devpost, or change account-side proof without user confirmation at action time.
 
-Current state on 2026-06-10:
+Current state on 2026-06-14:
 
-- Qwen Devpost registration is complete for Devpost user `OOYXLOO`.
-- Public GitHub repository shell exists: https://github.com/OOYXLOO/prizepilot-qwen-cloud
-- Local public package is ready at `qwen-prizepilot-public.zip`.
-- Local demo recording page is ready at `docs/demo-recording-page.html`; use `docs/demo-recording-runbook.md` to produce the public demo video after publication gates are unblocked.
-- GitHub code push is blocked by GitHub HTTPS/SSH authorization, not by local package readiness.
-- Devpost portfolio project creation is blocked by reCAPTCHA after entering project name `PrizePilot`; this was reconfirmed in the active browser session on 2026-06-10.
-- Local Git commit history has been rewritten to use `OOYXLOO@users.noreply.github.com` instead of the user's QQ email before any public push.
+- Qwen Devpost project is submitted and public: https://devpost.com/software/prizepilot-qwen-cloud
+- Public repository is live: https://github.com/OOYXLOO/prizepilot-qwen-cloud
+- Public evidence hub is live: https://ooyxloo.github.io/prizepilot-qwen-cloud/
+- Public Vimeo demo is live and accepted by Devpost: https://vimeo.com/1200124146
+- Public Blog Award story, judge pack, award preflight, award evidence map, Qwen live proof, Qwen contribution map, Qwen before/after evidence, static plan JSON, and judge manifest are part of the prepared public package.
+- One live Qwen/DashScope smoke proof has been captured safely with a runtime-only account-owner key.
+- The remaining high-value proof gap is a verified live Alibaba Cloud endpoint. Do not claim that endpoint until a real public URL returns HTTP 200 for `/` and `/api/plan`.
 
-Minimum public package:
+## Superseded 2026-06-10 Blockers
 
-- Source repository from `qwen-prizepilot-public.zip`
-- README and MIT license
-- Devpost project fields from `docs/devpost-project-fields.md`
-- Blog draft from `docs/blog-draft.md`
-- Deployment proof from `docs/alibaba-cloud-deployment-runbook.md` after it exists
-- Demo GIF from `docs/screenshots/prizepilot-demo.gif`
-- Demo recording page and runbook from `docs/demo-recording-page.html` and `docs/demo-recording-runbook.md`
+The earlier notes about GitHub push authorization, Devpost portfolio creation reCAPTCHA, Vimeo setup, and final Devpost submission are historical. They should not be treated as the current state.
 
-Confirmation before public GitHub upload:
+Current blocker type:
+
+- Public Qwen package improvements can be prepared locally.
+- Public push/Devpost edits still require explicit user approval because they change external public pages.
+- Alibaba endpoint proof requires account-owner approval for cloud account, credits or billing, deployment, and public endpoint verification.
+
+## Minimum Approval Before Public Update
+
+Use this confirmation before pushing the local Qwen update packet or editing Devpost:
 
 ```text
-Please confirm I should publish the PrizePilot Qwen package to the approved public GitHub repository. This will make the code and docs public and may associate them with my GitHub account.
+Please confirm I should publish the latest PrizePilot Qwen update packet. This will push public repository/GitHub Pages changes and may require updating Devpost copy. The update must only claim evidence that already exists.
 ```
 
-After GitHub authorization succeeds, run:
+After approval, verify the public package first:
 
 ```powershell
-git push -u origin main
+$env:PYTHONPATH='src'
+python -m unittest discover -s tests -v
+python -m compileall -q src tests tools
+python -m prizepilot qwen-status
+python -m prizepilot cloud-readiness
+python -m json.tool docs/judge-manifest.json
 ```
 
-After the Devpost reCAPTCHA is completed, save the `PrizePilot` portfolio project, fill fields from `docs/devpost-project-fields.md`, then import the project into the Qwen hackathon submission flow.
+Then push and verify public URLs before editing Devpost. If GitHub Pages or any public evidence link returns a non-200 status, do not update Devpost.

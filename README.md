@@ -20,6 +20,7 @@ Latest review status as of 2026-06-13: the repository, Blog Award story, present
 - Public live proof gate: https://ooyxloo.github.io/prizepilot-qwen-cloud/live-proof-gate/
 - Public Qwen live proof: https://ooyxloo.github.io/prizepilot-qwen-cloud/qwen-live-proof/
 - Public Qwen contribution map: https://ooyxloo.github.io/prizepilot-qwen-cloud/qwen-contribution/
+- Public Qwen before/after evidence: https://ooyxloo.github.io/prizepilot-qwen-cloud/qwen-before-after/
 - Public Alibaba endpoint checklist: https://ooyxloo.github.io/prizepilot-qwen-cloud/alibaba-endpoint-checklist/
 - Public judge manifest: https://ooyxloo.github.io/prizepilot-qwen-cloud/judge-manifest.json
 - Public static plan snapshot: https://ooyxloo.github.io/prizepilot-qwen-cloud/api/plan.json
@@ -36,7 +37,7 @@ The 90-second review path is:
 2. Open the public judge evidence pack for the prize decision summary and Track 4 / Blog Post Award matrix.
 3. Open the award evidence map for completed proof versus remaining account-gated work.
 4. Open the benchmark method to see how the route ranking is scored and what the sample portfolio proves.
-5. Open the Qwen contribution map and Qwen live proof page for the verified runtime smoke test, contribution depth, and cleanup boundary.
+5. Open the Qwen contribution map, before/after evidence, and Qwen live proof page for the verified runtime smoke test, contribution depth, and cleanup boundary.
 6. Open the Alibaba endpoint checklist for the exact remaining public HTTP 200 proof gate.
 7. Inspect the judge manifest and static machine-readable plan snapshot at https://ooyxloo.github.io/prizepilot-qwen-cloud/judge-manifest.json and https://ooyxloo.github.io/prizepilot-qwen-cloud/api/plan.json.
 
@@ -54,7 +55,7 @@ python -m prizepilot.webapp --host 127.0.0.1 --port 8000
 ```
 
 Then inspect the live machine-readable planning payload at `http://127.0.0.1:8000/api/plan`.
-Review `docs/submission-story.md`, `docs/benchmark-method.md`, `docs/cloud-readiness-report.md`, `docs/qwen-live-proof.md`, `docs/qwen-contribution-map.md`, `docs/live-proof-gate.md`, `docs/alibaba-endpoint-judge-checklist.md`, `docs/judge-manifest.json`, `docs/qwen-route-status.md`, and `docs/validation-report.md` for the evidence boundary.
+Review `docs/submission-story.md`, `docs/benchmark-method.md`, `docs/cloud-readiness-report.md`, `docs/qwen-live-proof.md`, `docs/qwen-contribution-map.md`, `docs/qwen-before-after-evidence.md`, `docs/live-proof-gate.md`, `docs/alibaba-endpoint-judge-checklist.md`, `docs/judge-manifest.json`, `docs/qwen-route-status.md`, and `docs/validation-report.md` for the evidence boundary.
 
 Live Qwen refinement has been verified once with a runtime-only key; future runs still require `DASHSCOPE_API_KEY` or `QWEN_API_KEY` at action time only.
 The Mind the Product route additionally requires Novus email verification and official Novus installation before final Devpost submission. The web service exposes `/api/novus-readiness` so that gate can be tracked without claiming completion early.
