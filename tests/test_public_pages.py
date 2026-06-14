@@ -136,8 +136,15 @@ class PublicPagesTests(unittest.TestCase):
 
         self.assertEqual(manifest["project"], "PrizePilot")
         self.assertEqual(manifest["submission_status"], "submitted_can_still_improve")
-        self.assertRegex(manifest["local_update_base_head"], r"^[0-9a-f]{40}$")
-        self.assertIn("verify with git history", manifest["manifest_note"])
+        self.assertNotIn("local_update_base_head", manifest)
+        self.assertIn("git rev-parse HEAD", manifest["prepared_head_policy"])
+        self.assertEqual(
+            [item["label"] for item in manifest["pre_push_required_checks"]],
+            ["Final local prepared head", "Current public baseline", "Public side-effect approval"],
+        )
+        self.assertTrue(
+            any("git ls-remote https://github.com/OOYXLOO/prizepilot-qwen-cloud.git HEAD" == item["command"] for item in manifest["pre_push_required_checks"])
+        )
         self.assertEqual(manifest["award_targets"][0]["name"], "Blog Post Award")
         self.assertEqual(manifest["award_targets"][0]["amount_usd"], 500)
         self.assertEqual([item["label"] for item in manifest["reviewer_fast_path"]], ["Devpost project", "Blog Award story", "Proof boundary"])
@@ -168,6 +175,7 @@ class PublicPagesTests(unittest.TestCase):
         self.assertIn("Public repository baseline", markdown)
         self.assertIn("Local prepared update", markdown)
         self.assertIn("unpublished commits after the public baseline", markdown)
+        self.assertIn("git ls-remote https://github.com/OOYXLOO/prizepilot-qwen-cloud.git HEAD", markdown)
         self.assertIn("Do not claim PrizePilot has won a prize.", markdown)
         self.assertIn("Do not claim a live Alibaba Cloud public endpoint exists", markdown)
         self.assertIn("Only after the account owner is present", markdown)
@@ -175,6 +183,7 @@ class PublicPagesTests(unittest.TestCase):
         self.assertIn("public repository baseline", page)
         self.assertIn("local prepared update", page)
         self.assertIn("unpublished commits after that baseline", page)
+        self.assertIn("git ls-remote https://github.com/OOYXLOO/prizepilot-qwen-cloud.git HEAD", page)
         self.assertIn("No live Alibaba Cloud public endpoint claim", page)
         self.assertIn("../judge-manifest.json", page)
         self.assertIn("../qwen-before-after/", page)

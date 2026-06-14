@@ -8,13 +8,15 @@ This digest is the non-sensitive decision packet for a future user-approved publ
 
 - Public repository baseline: `6329f1ba225c3a59881882e8a5c0dd1a9fb2e33d`
 - Local prepared update: unpublished commits after the public baseline; this digest intentionally avoids treating an older local commit as final.
-- Final local update head: verify with `git rev-parse HEAD` immediately before any user-approved push.
+- Final local update head: verify with `git rev-parse HEAD` immediately before any user-approved push; do not rely on a manifest-embedded local commit because local quality commits may continue before approval.
+- Public baseline recheck: run `git ls-remote https://github.com/OOYXLOO/prizepilot-qwen-cloud.git HEAD` immediately before push.
 - Public status: submitted Devpost project is live and editable until the Qwen Cloud hackathon deadline.
 - Local status: update packet is prepared, verified locally, and not pushed.
 
 ## What The Update Improves
 
 - Adds a machine-readable judge manifest that names the submitted project, award targets, judge path, completed evidence, pending evidence, and do-not-infer boundaries.
+- Adds a pre-push head-check policy so the account owner can confirm the exact local commit and public baseline before any public side effect.
 - Adds Qwen before/after evidence so judges can see how deterministic route planning was refined into clearer Qwen-backed public copy.
 - Adds a judge review card, Blog Share Packet, and public update checklist so reviewers and the account owner have a short path through the strongest public evidence and publishing gates.
 - Links the before/after trail from README, public hub, judge pack, Blog Award story, award preflight, award evidence map, and Qwen contribution map.

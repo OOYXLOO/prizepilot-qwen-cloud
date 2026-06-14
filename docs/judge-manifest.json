@@ -3,8 +3,24 @@
   "hackathon": "Global AI Hackathon Series with Qwen Cloud",
   "submission_status": "submitted_can_still_improve",
   "public_baseline_head": "6329f1ba225c3a59881882e8a5c0dd1a9fb2e33d",
-  "local_update_base_head": "3f32bd489641c12e4c59df3be7cdf0a9702687d4",
-  "manifest_note": "The local package may have later commits after this manifest update; verify with git history before a user-approved public push.",
+  "prepared_head_policy": "Do not treat any embedded local commit as final. Verify the final prepared head at action time with git rev-parse HEAD before any user-approved public push.",
+  "pre_push_required_checks": [
+    {
+      "label": "Final local prepared head",
+      "command": "git rev-parse HEAD",
+      "purpose": "Capture the exact commit being pushed after all local quality commits are complete."
+    },
+    {
+      "label": "Current public baseline",
+      "command": "git ls-remote https://github.com/OOYXLOO/prizepilot-qwen-cloud.git HEAD",
+      "purpose": "Confirm the public repository baseline has not changed unexpectedly before pushing."
+    },
+    {
+      "label": "Public side-effect approval",
+      "command": "account owner explicitly approves push and any Devpost edit while present",
+      "purpose": "Prevent unapproved public repository or Devpost changes."
+    }
+  ],
   "reviewer_fast_path": [
     {
       "label": "Devpost project",
