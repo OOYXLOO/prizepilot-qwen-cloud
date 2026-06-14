@@ -1,16 +1,16 @@
 {
-  "checked_at": "2026-06-14T14:02:45.093206+00:00",
+  "checked_at": "2026-06-14T17:26:29.767134+00:00",
   "phase": "submitted_can_still_improve",
   "severity": "OK_WITH_EVIDENCE_GAPS",
   "next_action": "Strengthen remaining evidence before judging: add verified Alibaba Cloud endpoint proof if account access and billing/credit approval are available, then update public Devpost copy only with captured evidence.",
   "deadline_utc": "2026-07-09T21:00:00+00:00",
-  "hours_until_deadline": 606.95,
+  "hours_until_deadline": 603.56,
   "artifact_checks": [
     {
       "path": "README.md",
       "description": "Project README",
       "exists": true,
-      "size": 5620
+      "size": 7005
     },
     {
       "path": "LICENSE",
@@ -70,7 +70,7 @@
       "path": "docs/index.html",
       "description": "Public build notes landing page",
       "exists": true,
-      "size": 10082
+      "size": 10066
     },
     {
       "path": "docs/blog/index.html",
@@ -88,7 +88,7 @@
       "path": "docs/judge-manifest.json",
       "description": "Machine-readable judge manifest",
       "exists": true,
-      "size": 7304
+      "size": 7737
     },
     {
       "path": "docs/judge-review-card.md",
@@ -154,25 +154,25 @@
       "path": "docs/cloud-readiness/index.html",
       "description": "Public cloud readiness page",
       "exists": true,
-      "size": 10110
+      "size": 10268
     },
     {
       "path": "docs/cloud-readiness-report.md",
       "description": "Cloud readiness report",
       "exists": true,
-      "size": 2778
+      "size": 2848
     },
     {
       "path": "docs/cloud-readiness-report.json",
       "description": "Machine-readable cloud readiness report",
       "exists": true,
-      "size": 3709
+      "size": 3779
     },
     {
       "path": "docs/qwen-live-proof.md",
       "description": "Live Qwen/DashScope smoke proof",
       "exists": true,
-      "size": 1653
+      "size": 2073
     },
     {
       "path": "docs/qwen-live-proof/index.html",
@@ -208,7 +208,7 @@
       "path": "docs/alibaba-endpoint-judge-checklist.md",
       "description": "Alibaba endpoint judge checklist",
       "exists": true,
-      "size": 2984
+      "size": 3336
     },
     {
       "path": "docs/alibaba-endpoint-checklist/index.html",
@@ -334,7 +334,7 @@
       "path": "docs/validation-report.md",
       "description": "Validation report",
       "exists": true,
-      "size": 3322
+      "size": 3284
     },
     {
       "path": "docs/screenshots/prizepilot-dashboard-desktop.png",
