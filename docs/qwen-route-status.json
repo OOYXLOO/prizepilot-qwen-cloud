@@ -1,16 +1,16 @@
 {
-  "checked_at": "2026-06-14T04:43:19.916145+00:00",
+  "checked_at": "2026-06-14T06:35:22.019301+00:00",
   "phase": "submitted_can_still_improve",
   "severity": "OK_WITH_EVIDENCE_GAPS",
   "next_action": "Strengthen remaining evidence before judging: add verified Alibaba Cloud endpoint proof if account access and billing/credit approval are available, then update public Devpost copy only with captured evidence.",
   "deadline_utc": "2026-07-09T21:00:00+00:00",
-  "hours_until_deadline": 616.28,
+  "hours_until_deadline": 614.41,
   "artifact_checks": [
     {
       "path": "README.md",
       "description": "Project README",
       "exists": true,
-      "size": 5584
+      "size": 5967
     },
     {
       "path": "LICENSE",
@@ -70,25 +70,61 @@
       "path": "docs/index.html",
       "description": "Public build notes landing page",
       "exists": true,
-      "size": 9468
+      "size": 10090
     },
     {
       "path": "docs/blog/index.html",
       "description": "Public blog page for Blog Post Award",
       "exists": true,
-      "size": 22946
+      "size": 23088
     },
     {
       "path": "docs/judge-pack/index.html",
       "description": "Public judge evidence pack",
       "exists": true,
-      "size": 19043
+      "size": 19568
     },
     {
       "path": "docs/judge-manifest.json",
       "description": "Machine-readable judge manifest",
       "exists": true,
-      "size": 4959
+      "size": 5962
+    },
+    {
+      "path": "docs/judge-review-card.md",
+      "description": "Judge review card",
+      "exists": true,
+      "size": 2305
+    },
+    {
+      "path": "docs/judge-review-card/index.html",
+      "description": "Public judge review card page",
+      "exists": true,
+      "size": 4297
+    },
+    {
+      "path": "docs/blog-share-packet.md",
+      "description": "Blog Share Packet",
+      "exists": true,
+      "size": 1916
+    },
+    {
+      "path": "docs/blog-share-packet/index.html",
+      "description": "Public Blog Share Packet page",
+      "exists": true,
+      "size": 4392
+    },
+    {
+      "path": "docs/public-update-checklist.md",
+      "description": "Public update checklist",
+      "exists": true,
+      "size": 1728
+    },
+    {
+      "path": "docs/public-update-checklist/index.html",
+      "description": "Public update checklist page",
+      "exists": true,
+      "size": 3951
     },
     {
       "path": "docs/award-preflight/index.html",
@@ -101,6 +137,18 @@
       "description": "Public award evidence map",
       "exists": true,
       "size": 9754
+    },
+    {
+      "path": "docs/benchmark-method.md",
+      "description": "Benchmark method",
+      "exists": true,
+      "size": 4421
+    },
+    {
+      "path": "docs/benchmark-method/index.html",
+      "description": "Public benchmark method page",
+      "exists": true,
+      "size": 9188
     },
     {
       "path": "docs/cloud-readiness/index.html",
@@ -133,6 +181,18 @@
       "size": 4701
     },
     {
+      "path": "docs/qwen-contribution-map.md",
+      "description": "Qwen contribution map",
+      "exists": true,
+      "size": 3656
+    },
+    {
+      "path": "docs/qwen-contribution/index.html",
+      "description": "Public Qwen contribution map page",
+      "exists": true,
+      "size": 9047
+    },
+    {
       "path": "docs/qwen-before-after-evidence.md",
       "description": "Qwen before/after evidence",
       "exists": true,
@@ -143,6 +203,30 @@
       "description": "Public Qwen before/after evidence page",
       "exists": true,
       "size": 8821
+    },
+    {
+      "path": "docs/alibaba-endpoint-judge-checklist.md",
+      "description": "Alibaba endpoint judge checklist",
+      "exists": true,
+      "size": 2984
+    },
+    {
+      "path": "docs/alibaba-endpoint-checklist/index.html",
+      "description": "Public Alibaba endpoint checklist page",
+      "exists": true,
+      "size": 7816
+    },
+    {
+      "path": "docs/public-update-digest.md",
+      "description": "Public update digest",
+      "exists": true,
+      "size": 2876
+    },
+    {
+      "path": "docs/public-update-digest/index.html",
+      "description": "Public update digest page",
+      "exists": true,
+      "size": 4738
     },
     {
       "path": "docs/api/plan.json",
@@ -238,7 +322,7 @@
       "path": "docs/publication-action-card.md",
       "description": "Publication action card",
       "exists": true,
-      "size": 2614
+      "size": 2785
     },
     {
       "path": "docs/public-package-checklist.md",
@@ -279,7 +363,7 @@
       "next_action": "Use the prepared Function Compute manifest with the user's Alibaba Cloud account, then record the live URL and proof evidence."
     }
   ],
-  "ledger_path": "C:\\Users\\YXL\\.codex\\tmp\\hks-yxl\\money-goal-200usd\\qwen-prizepilot\\docs\\qwen-route-ledger.md",
+  "ledger_path": "docs/qwen-route-ledger.md",
   "reference_files": [
     "docs/qwen-route-ledger.md",
     "docs/qwen-start-handoff-template.md",

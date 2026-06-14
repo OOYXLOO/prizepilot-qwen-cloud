@@ -7,7 +7,7 @@ This digest is the non-sensitive decision packet for a future user-approved publ
 ## Current Heads
 
 - Public repository baseline: `6329f1ba225c3a59881882e8a5c0dd1a9fb2e33d`
-- Local prepared update base: `2f764a2c0ef8d0bf44d2c91a7950978e97813634`
+- Local prepared update: unpublished commits after the public baseline; this digest intentionally avoids treating an older local commit as final.
 - Final local update head: verify with `git rev-parse HEAD` immediately before any user-approved push.
 - Public status: submitted Devpost project is live and editable until the Qwen Cloud hackathon deadline.
 - Local status: update packet is prepared, verified locally, and not pushed.
@@ -16,6 +16,7 @@ This digest is the non-sensitive decision packet for a future user-approved publ
 
 - Adds a machine-readable judge manifest that names the submitted project, award targets, judge path, completed evidence, pending evidence, and do-not-infer boundaries.
 - Adds Qwen before/after evidence so judges can see how deterministic route planning was refined into clearer Qwen-backed public copy.
+- Adds a judge review card, Blog Share Packet, and public update checklist so reviewers and the account owner have a short path through the strongest public evidence and publishing gates.
 - Links the before/after trail from README, public hub, judge pack, Blog Award story, award preflight, award evidence map, and Qwen contribution map.
 - Refreshes the public status language so the project reads as submitted and improvable, not as a draft.
 - Keeps the live Alibaba Cloud public endpoint as a pending account-owner proof gate instead of overclaiming it.

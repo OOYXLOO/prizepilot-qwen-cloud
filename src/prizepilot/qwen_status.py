@@ -24,15 +24,29 @@ REQUIRED_ARTIFACTS = {
     "docs/blog/index.html": "Public blog page for Blog Post Award",
     "docs/judge-pack/index.html": "Public judge evidence pack",
     "docs/judge-manifest.json": "Machine-readable judge manifest",
+    "docs/judge-review-card.md": "Judge review card",
+    "docs/judge-review-card/index.html": "Public judge review card page",
+    "docs/blog-share-packet.md": "Blog Share Packet",
+    "docs/blog-share-packet/index.html": "Public Blog Share Packet page",
+    "docs/public-update-checklist.md": "Public update checklist",
+    "docs/public-update-checklist/index.html": "Public update checklist page",
     "docs/award-preflight/index.html": "Public award preflight page",
     "docs/award-evidence-map/index.html": "Public award evidence map",
+    "docs/benchmark-method.md": "Benchmark method",
+    "docs/benchmark-method/index.html": "Public benchmark method page",
     "docs/cloud-readiness/index.html": "Public cloud readiness page",
     "docs/cloud-readiness-report.md": "Cloud readiness report",
     "docs/cloud-readiness-report.json": "Machine-readable cloud readiness report",
     "docs/qwen-live-proof.md": "Live Qwen/DashScope smoke proof",
     "docs/qwen-live-proof/index.html": "Public live Qwen/DashScope proof page",
+    "docs/qwen-contribution-map.md": "Qwen contribution map",
+    "docs/qwen-contribution/index.html": "Public Qwen contribution map page",
     "docs/qwen-before-after-evidence.md": "Qwen before/after evidence",
     "docs/qwen-before-after/index.html": "Public Qwen before/after evidence page",
+    "docs/alibaba-endpoint-judge-checklist.md": "Alibaba endpoint judge checklist",
+    "docs/alibaba-endpoint-checklist/index.html": "Public Alibaba endpoint checklist page",
+    "docs/public-update-digest.md": "Public update digest",
+    "docs/public-update-digest/index.html": "Public update digest page",
     "docs/api/plan.json": "Static public dashboard API snapshot",
     "docs/prizepilot-qwen-submission-deck.pptx": "Editable presentation deck",
     "docs/blog-draft.md": "Blog/social post draft",
@@ -124,6 +138,12 @@ def inspect_artifacts(root: Path) -> list[dict[str, object]]:
 def hours_until(now: datetime, deadline: datetime) -> float:
     return round((deadline - now).total_seconds() / 3600, 2)
 
+def public_relative_path(root: Path, path: Path) -> str:
+    try:
+        return path.resolve().relative_to(root.resolve()).as_posix()
+    except ValueError:
+        return path.name
+
 def build_status(root: Path, ledger_path: Path, now: datetime | None = None) -> dict[str, object]:
     current = now or datetime.now(timezone.utc)
     if current.tzinfo is None:
@@ -198,7 +218,7 @@ def build_status(root: Path, ledger_path: Path, now: datetime | None = None) -> 
         "artifact_checks": artifact_checks,
         "missing_artifacts": missing_artifacts,
         "incomplete_public_gates": incomplete_public_gates,
-        "ledger_path": str(ledger_path),
+        "ledger_path": public_relative_path(root, ledger_path),
         "reference_files": [
             "docs/qwen-route-ledger.md",
             "docs/qwen-start-handoff-template.md",

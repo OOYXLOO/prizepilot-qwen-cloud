@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PrizePilot Qwen Judge Review Card</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #17202a;
+      --muted: #536273;
+      --line: #d7dde5;
+      --paper: #ffffff;
+      --wash: #f4f7fa;
+      --teal: #0f766e;
+      --blue: #2563eb;
+      --amber: #b45309;
+    }
+
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: Arial, Helvetica, sans-serif; color: var(--ink); background: var(--wash); }
+    main { width: min(980px, calc(100% - 32px)); margin: 0 auto; padding: 48px 0 64px; }
+    .eyebrow { margin: 0 0 12px; color: var(--teal); font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 0; }
+    h1 { max-width: 840px; margin: 0; font-size: clamp(34px, 5vw, 54px); line-height: 1.06; letter-spacing: 0; }
+    .dek { max-width: 760px; margin: 18px 0 0; color: var(--muted); font-size: 18px; line-height: 1.6; }
+    .grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; margin-top: 28px; }
+    .panel { min-width: 0; padding: 20px; border: 1px solid var(--line); background: var(--paper); }
+    .panel h2 { margin: 0 0 10px; font-size: 20px; letter-spacing: 0; }
+    p, li { color: var(--muted); font-size: 15px; line-height: 1.55; }
+    a { color: var(--blue); font-weight: 700; }
+    code { padding: 2px 5px; background: #eaf0f7; color: #1d2a39; }
+    .status { margin-top: 24px; padding: 16px 18px; border-left: 5px solid var(--amber); background: var(--paper); }
+    @media (max-width: 720px) { .grid { grid-template-columns: 1fr; } main { padding: 38px 0 56px; } }
+  </style>
+</head>
+<body>
+  <main>
+    <p class="eyebrow">Qwen judge review card</p>
+    <h1>PrizePilot can be reviewed in one minute without private account access.</h1>
+    <p class="dek">This page compresses the submitted Qwen Track 4 package into the shortest judge path: Devpost, demo, judge pack, Qwen contribution, and the remaining Alibaba endpoint boundary.</p>
+
+    <section class="status" aria-label="Current boundary">
+      <p><strong>Current boundary:</strong> PrizePilot is submitted and public. Live Qwen/DashScope smoke proof is recorded. Live Alibaba Cloud endpoint proof is still pending and must not be inferred until a public URL returns HTTP 200 for <code>/</code> and <code>/api/plan</code>.</p>
+    </section>
+
+    <div class="grid">
+      <section class="panel">
+        <h2>60-second path</h2>
+        <ol>
+          <li><a href="https://devpost.com/software/prizepilot-qwen-cloud">Devpost project</a></li>
+          <li><a href="https://vimeo.com/1200124146">Public Vimeo demo</a></li>
+          <li><a href="../judge-pack/">Judge evidence pack</a></li>
+          <li><a href="../qwen-contribution/">Qwen contribution map</a></li>
+          <li><a href="../alibaba-endpoint-checklist/">Alibaba endpoint checklist</a></li>
+        </ol>
+      </section>
+      <section class="panel">
+        <h2>Award thesis</h2>
+        <p>PrizePilot is strongest for the Blog Post Award because the project story is the product loop: choose a realistic cash-prize route, build public proof, and stop at human approval gates instead of inventing private/account evidence.</p>
+        <p>Honorable Mention is the secondary route because the package is public, reproducible, and honest about its one remaining high-value proof gap.</p>
+      </section>
+      <section class="panel">
+        <h2>Qwen evidence</h2>
+        <ul>
+          <li>Qwen/DashScope live smoke proof is recorded without stored secrets.</li>
+          <li><a href="../qwen-before-after/">Before/after evidence</a> shows deterministic planning, Qwen refinement, and public-copy improvements.</li>
+          <li>The baseline remains reproducible without a key.</li>
+        </ul>
+      </section>
+      <section class="panel">
+        <h2>Do not infer</h2>
+        <ul>
+          <li>No prize, payout, tax, KYC, billing, bank, or cloud-credit claim.</li>
+          <li>No live Alibaba endpoint claim until public HTTP proof exists.</li>
+          <li>No API keys, cookies, account-local storage, or private console data in the repository.</li>
+        </ul>
+      </section>
+    </div>
+  </main>
+</body>
+</html>
+

@@ -7,8 +7,8 @@ Current state on 2026-06-14:
 - Qwen Devpost project is submitted and public: https://devpost.com/software/prizepilot-qwen-cloud
 - Public repository is live: https://github.com/OOYXLOO/prizepilot-qwen-cloud
 - Public evidence hub is live: https://ooyxloo.github.io/prizepilot-qwen-cloud/
-- Public Vimeo demo is live and accepted by Devpost: https://vimeo.com/1200124146
-- Public Blog Award story, judge pack, award preflight, award evidence map, Qwen live proof, Qwen contribution map, Qwen before/after evidence, static plan JSON, and judge manifest are part of the prepared public package.
+- Public Vimeo demo page is reachable and linked from the submitted project; Devpost playback should be checked user-present before any stronger playback claim: https://vimeo.com/1200124146
+- Public Blog Award story, judge pack, judge review card, Blog Share Packet, award preflight, award evidence map, Qwen live proof, Qwen contribution map, Qwen before/after evidence, public update checklist, static plan JSON, and judge manifest are part of the prepared public package.
 - Public update digest is prepared locally at `docs/public-update-digest.md` and `docs/public-update-digest/` to explain the public baseline, local prepared update, proof improvements, and do-not-claim boundaries before any user-approved push.
 - One live Qwen/DashScope smoke proof has been captured safely with a runtime-only account-owner key.
 - The remaining high-value proof gap is a verified live Alibaba Cloud endpoint. Do not claim that endpoint until a real public URL returns HTTP 200 for `/` and `/api/plan`.

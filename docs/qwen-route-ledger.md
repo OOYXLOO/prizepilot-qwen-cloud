@@ -24,7 +24,7 @@ Use this as the non-sensitive recovery record for the Qwen backup route. Do not 
 - Qwen live check completed: yes - 2026-06-13 live Qwen/DashScope smoke test succeeded with `qwen-plus`, China Bailian endpoint, exit code 0, and runtime key removed after cleanup
 - Alibaba Cloud deployment proof: partial - Function Compute custom-container manifest prepared at deploy/alibaba-cloud/s.yaml; live Alibaba Cloud endpoint not verified
 - Public GitHub repository: yes
-- Public demo video: yes - Vimeo public URL accepted by Devpost
+- Public demo video: yes - Vimeo public page is reachable and linked from the submitted Devpost project; Devpost embedded playback should be checked user-present before any stronger playback claim
 - Public blog/social post: yes
 - Devpost final submitted: yes - Devpost confirmation displayed `Project submitted! Continue to edit your project until the hackathon deadline: July 09, 2026 at 05:00pm EDT.`
 - Public Devpost Story current: yes - checked 2026-06-11 22:06 CST; old `submission draft` wording absent and Vimeo/repo/blog links present
@@ -57,12 +57,12 @@ Use this as the non-sensitive recovery record for the Qwen backup route. Do not 
 - Generated silent demo WebM: `docs/demo-video/prizepilot-demo.webm`, 1280x720, browser playback verified locally to 3 seconds; URL candidates are in `docs/demo-video-url-candidates.md`.
 - Devpost portfolio project was created by importing the public GitHub repo through `https://devpost.com/software/add`, avoiding the earlier project-name reCAPTCHA path.
 - Qwen submission was created by importing the portfolio project into the Qwen hackathon; the project was later submitted and remains editable until the hackathon deadline.
-- Project details were unblocked by uploading the generated WebM to Vimeo and using https://vimeo.com/1200124146. Devpost accepted the URL and advanced to Additional info.
+- Project details were unblocked by uploading the generated WebM to Vimeo and using https://vimeo.com/1200124146. Devpost advanced to Additional info after the video URL step.
 - Generated local demo GIF: `docs/screenshots/prizepilot-demo.gif`.
 - Prepared Qwen Blog Post Award build journal at `docs/blog/index.html`, with a lightweight `docs/index.html` redirect/landing page for GitHub Pages publication. This is not yet marked complete until a public URL is verified.
 - Enabled GitHub Pages for `main` / `docs` and verified the public Qwen build journal at https://ooyxloo.github.io/prizepilot-qwen-cloud/blog/ with HTTP 200 and the expected title `Building PrizePilot for the Qwen Cloud Hackathon`.
 - Prepared an Alibaba Cloud Function Compute custom-container manifest at `deploy/alibaba-cloud/s.yaml` and linked it from the deployment runbook/proof template. This is only a code proof path, not live deployment proof.
-- Checked the YouTube upload path. The browser showed Google sign-in for YouTube upload, so Vimeo was used instead. The accepted public demo video is https://vimeo.com/1200124146.
+- Checked the YouTube upload path. The browser showed Google sign-in for YouTube upload, so Vimeo was used instead. The public demo page is https://vimeo.com/1200124146.
 - Started Qwen Cloud account setup from https://home.qwencloud.com/benefits using GitHub OAuth for Devpost/GitHub user `OOYXLOO`. GitHub OAuth authorized `qwencloud.com` read-only profile access, then Qwen Cloud required an email because GitHub did not return one. Entered the registered email and clicked `Send Code`; the page showed `Resend in 59s`. Later browser work moved the active tab to the Qwen Devpost draft, so Qwen Cloud verification must be reopened or restored before entering a current email code. Do not store or paste the code into local files.
 - Generated `architecture.png` from the existing architecture model for the Qwen Devpost Additional info upload. The file is local/public-package material and contains no secrets.
 - Devpost final submission completed and displayed confirmation that the project was submitted and can still be edited until July 09, 2026 at 05:00pm EDT.

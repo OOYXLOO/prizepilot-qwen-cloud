@@ -19,6 +19,9 @@ class PublicPagesTests(unittest.TestCase):
         self.assertIn("./qwen-live-proof/", hub)
         self.assertIn("./qwen-contribution/", hub)
         self.assertIn("./qwen-before-after/", hub)
+        self.assertIn("./judge-review-card/", hub)
+        self.assertIn("./blog-share-packet/", hub)
+        self.assertIn("./public-update-checklist/", hub)
         self.assertIn("./public-update-digest/", hub)
         self.assertIn("./alibaba-endpoint-checklist/", hub)
         self.assertIn("./judge-manifest.json", hub)
@@ -37,6 +40,9 @@ class PublicPagesTests(unittest.TestCase):
         self.assertIn("Qwen Live Proof", hub)
         self.assertIn("Qwen Contribution Map", hub)
         self.assertIn("Qwen Before/After Evidence", hub)
+        self.assertIn("Judge Review Card", hub)
+        self.assertIn("Blog Share Packet", hub)
+        self.assertIn("Public Update Checklist", hub)
         self.assertIn("Public Update Digest", hub)
         self.assertIn("Alibaba Endpoint Checklist", hub)
         self.assertIn("Judge Manifest JSON", hub)
@@ -54,6 +60,9 @@ class PublicPagesTests(unittest.TestCase):
         self.assertIn("../qwen-live-proof/", judge_pack)
         self.assertIn("../qwen-contribution/", judge_pack)
         self.assertIn("../qwen-before-after/", judge_pack)
+        self.assertIn("../judge-review-card/", judge_pack)
+        self.assertIn("../blog-share-packet/", judge_pack)
+        self.assertIn("../public-update-checklist/", judge_pack)
         self.assertIn("../alibaba-endpoint-checklist/", judge_pack)
         self.assertIn("../judge-manifest.json", judge_pack)
         self.assertIn("../api/plan.json", judge_pack)
@@ -79,6 +88,12 @@ class PublicPagesTests(unittest.TestCase):
         self.assertTrue((ROOT / "docs" / "qwen-contribution-map.md").is_file())
         self.assertTrue((ROOT / "docs" / "qwen-before-after" / "index.html").is_file())
         self.assertTrue((ROOT / "docs" / "qwen-before-after-evidence.md").is_file())
+        self.assertTrue((ROOT / "docs" / "judge-review-card" / "index.html").is_file())
+        self.assertTrue((ROOT / "docs" / "judge-review-card.md").is_file())
+        self.assertTrue((ROOT / "docs" / "blog-share-packet" / "index.html").is_file())
+        self.assertTrue((ROOT / "docs" / "blog-share-packet.md").is_file())
+        self.assertTrue((ROOT / "docs" / "public-update-checklist" / "index.html").is_file())
+        self.assertTrue((ROOT / "docs" / "public-update-checklist.md").is_file())
         self.assertTrue((ROOT / "docs" / "public-update-digest" / "index.html").is_file())
         self.assertTrue((ROOT / "docs" / "public-update-digest.md").is_file())
         self.assertTrue((ROOT / "docs" / "alibaba-endpoint-checklist" / "index.html").is_file())
@@ -98,6 +113,9 @@ class PublicPagesTests(unittest.TestCase):
         self.assertIn("https://ooyxloo.github.io/prizepilot-qwen-cloud/qwen-live-proof/", readme)
         self.assertIn("https://ooyxloo.github.io/prizepilot-qwen-cloud/qwen-contribution/", readme)
         self.assertIn("https://ooyxloo.github.io/prizepilot-qwen-cloud/qwen-before-after/", readme)
+        self.assertIn("https://ooyxloo.github.io/prizepilot-qwen-cloud/judge-review-card/", readme)
+        self.assertIn("https://ooyxloo.github.io/prizepilot-qwen-cloud/blog-share-packet/", readme)
+        self.assertIn("https://ooyxloo.github.io/prizepilot-qwen-cloud/public-update-checklist/", readme)
         self.assertIn("https://ooyxloo.github.io/prizepilot-qwen-cloud/public-update-digest/", readme)
         self.assertIn("https://ooyxloo.github.io/prizepilot-qwen-cloud/alibaba-endpoint-checklist/", readme)
         self.assertIn("https://ooyxloo.github.io/prizepilot-qwen-cloud/judge-manifest.json", readme)
@@ -117,9 +135,13 @@ class PublicPagesTests(unittest.TestCase):
         self.assertEqual(manifest["judge_path"][0]["label"], "Devpost project")
         self.assertEqual(manifest["judge_path"][-1]["label"], "Public update digest")
         self.assertTrue(any(item["label"] == "Qwen before/after evidence" for item in manifest["judge_path"]))
+        self.assertTrue(any(item["label"] == "Judge review card" for item in manifest["judge_path"]))
+        self.assertTrue(any(item["label"] == "Blog Share Packet" for item in manifest["judge_path"]))
+        self.assertTrue(any(item["label"] == "Public update checklist" for item in manifest["judge_path"]))
         self.assertTrue(any(item["label"] == "Public update digest" for item in manifest["judge_path"]))
         self.assertIn("Qwen/DashScope live smoke proof has been recorded without storing secrets.", manifest["completed_evidence"])
         self.assertIn("Qwen before/after evidence maps deterministic planning to Qwen-refined public copy.", manifest["completed_evidence"])
+        self.assertIn("Judge review card, Blog Share Packet, and public update checklist are prepared for faster review and safer publishing.", manifest["completed_evidence"])
         self.assertEqual(manifest["pending_evidence"][0]["gate"], "Live Alibaba Cloud endpoint proof")
         self.assertEqual(manifest["pending_evidence"][0]["status"], "pending_account_owner_approval")
         self.assertIn("Do not infer that PrizePilot has won a prize.", manifest["do_not_infer"])
@@ -134,15 +156,70 @@ class PublicPagesTests(unittest.TestCase):
         self.assertIn("Qwen Public Update Digest", markdown)
         self.assertIn("Public repository baseline", markdown)
         self.assertIn("Local prepared update", markdown)
+        self.assertIn("unpublished commits after the public baseline", markdown)
         self.assertIn("Do not claim PrizePilot has won a prize.", markdown)
         self.assertIn("Do not claim a live Alibaba Cloud public endpoint exists", markdown)
         self.assertIn("Only after the account owner is present", markdown)
         self.assertIn("PrizePilot's local update is ready, but not pushed.", page)
         self.assertIn("public repository baseline", page)
         self.assertIn("local prepared update", page)
+        self.assertIn("unpublished commits after that baseline", page)
         self.assertIn("No live Alibaba Cloud public endpoint claim", page)
         self.assertIn("../judge-manifest.json", page)
         self.assertIn("../qwen-before-after/", page)
+
+    def test_judge_review_and_share_packets_keep_claims_safe(self) -> None:
+        review_md = (ROOT / "docs" / "judge-review-card.md").read_text(encoding="utf-8")
+        review_page = (ROOT / "docs" / "judge-review-card" / "index.html").read_text(encoding="utf-8")
+        share_md = (ROOT / "docs" / "blog-share-packet.md").read_text(encoding="utf-8")
+        share_page = (ROOT / "docs" / "blog-share-packet" / "index.html").read_text(encoding="utf-8")
+        checklist_md = (ROOT / "docs" / "public-update-checklist.md").read_text(encoding="utf-8")
+        checklist_page = (ROOT / "docs" / "public-update-checklist" / "index.html").read_text(encoding="utf-8")
+
+        self.assertIn("Qwen Judge Review Card", review_md)
+        self.assertIn("60-Second Path", review_md)
+        self.assertIn("Award Thesis", review_md)
+        self.assertIn("Do not infer that PrizePilot has won a prize.", review_md)
+        self.assertIn("PrizePilot can be reviewed in one minute", review_page)
+        self.assertIn("../qwen-before-after/", review_page)
+        self.assertIn("../alibaba-endpoint-checklist/", review_page)
+
+        self.assertIn("Qwen Blog Share Packet", share_md)
+        self.assertIn("Safe Social Copy", share_md)
+        self.assertIn("Do Not Say", share_md)
+        self.assertIn("Do not say PrizePilot won", share_md)
+        self.assertIn("Share PrizePilot without overstating", share_page)
+        self.assertIn("../judge-review-card/", share_page)
+        self.assertIn("../public-update-checklist/", share_page)
+
+        self.assertIn("Qwen Public Update Checklist", checklist_md)
+        self.assertIn("Devpost embedded video playback", checklist_md)
+        self.assertIn("Edit Devpost only after the account owner is present", checklist_md)
+        self.assertIn("Do not publish stronger claims", checklist_page)
+        self.assertIn("../blog-share-packet/", checklist_page)
+        self.assertIn("../judge-manifest.json", checklist_page)
+
+    def test_public_copy_avoids_devpost_video_overclaim(self) -> None:
+        scanned_paths = [
+            ROOT / "docs" / "demo" / "index.html",
+            ROOT / "docs" / "judge-pack" / "index.html",
+            ROOT / "docs" / "publication-action-card.md",
+            ROOT / "docs" / "qwen-route-ledger.md",
+            ROOT / "docs" / "blog-share-packet.md",
+            ROOT / "docs" / "blog-share-packet" / "index.html",
+            ROOT / "docs" / "public-update-checklist.md",
+            ROOT / "docs" / "public-update-checklist" / "index.html",
+        ]
+        forbidden = [
+            "accepted by Devpost",
+            "Vimeo URL accepted",
+            "accepted public demo video",
+        ]
+
+        for path in scanned_paths:
+            text = path.read_text(encoding="utf-8")
+            for fragment in forbidden:
+                self.assertNotIn(fragment, text, msg=f"{fragment!r} found in {path}")
 
     def test_static_plan_snapshot_matches_public_claim_boundary(self) -> None:
         snapshot = json.loads((ROOT / "docs" / "api" / "plan.json").read_text(encoding="utf-8"))

@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PrizePilot Public Update Checklist</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #17202a;
+      --muted: #536273;
+      --line: #d7dde5;
+      --paper: #ffffff;
+      --wash: #f4f7fa;
+      --teal: #0f766e;
+      --blue: #2563eb;
+      --amber: #b45309;
+    }
+
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: Arial, Helvetica, sans-serif; color: var(--ink); background: var(--wash); }
+    main { width: min(980px, calc(100% - 32px)); margin: 0 auto; padding: 48px 0 64px; }
+    .eyebrow { margin: 0 0 12px; color: var(--teal); font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 0; }
+    h1 { max-width: 820px; margin: 0; font-size: clamp(34px, 5vw, 54px); line-height: 1.06; letter-spacing: 0; }
+    .dek { max-width: 760px; margin: 18px 0 0; color: var(--muted); font-size: 18px; line-height: 1.6; }
+    .grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; margin-top: 28px; }
+    .panel { min-width: 0; padding: 20px; border: 1px solid var(--line); background: var(--paper); }
+    .panel h2 { margin: 0 0 10px; font-size: 20px; letter-spacing: 0; }
+    p, li { color: var(--muted); font-size: 15px; line-height: 1.55; }
+    code { padding: 2px 5px; background: #eaf0f7; color: #1d2a39; }
+    a { color: var(--blue); font-weight: 700; }
+    .warning { border-left: 5px solid var(--amber); }
+    @media (max-width: 720px) { .grid { grid-template-columns: 1fr; } main { padding: 38px 0 56px; } }
+  </style>
+</head>
+<body>
+  <main>
+    <p class="eyebrow">Qwen public update checklist</p>
+    <h1>Do not publish stronger claims than the evidence supports.</h1>
+    <p class="dek">This checklist gates any future repository push or Devpost edit for PrizePilot. It keeps the public package useful to judges without mixing in account-only proof, billing, payout, or private console material.</p>
+
+    <div class="grid">
+      <section class="panel">
+        <h2>Local checks</h2>
+        <ul>
+          <li><code>python -m unittest discover -s tests -v</code></li>
+          <li><code>python -m compileall -q src tests tools</code></li>
+          <li><code>python -m prizepilot qwen-status</code></li>
+          <li><code>python -m prizepilot cloud-readiness</code></li>
+          <li><code>python -m json.tool docs/judge-manifest.json</code></li>
+          <li><code>git diff --check</code></li>
+        </ul>
+      </section>
+      <section class="panel">
+        <h2>Public checks</h2>
+        <ul>
+          <li>GitHub Actions are green.</li>
+          <li>GitHub Pages hub and review pages return HTTP 200.</li>
+          <li>Devpost project page still loads publicly.</li>
+          <li>Vimeo page loads publicly.</li>
+          <li>Devpost embedded video playback is checked user-present before any stronger playback claim.</li>
+        </ul>
+      </section>
+      <section class="panel warning">
+        <h2>Claim boundary</h2>
+        <ul>
+          <li>No prize, finalist, payout, tax, KYC, billing, bank, or cloud-credit claim.</li>
+          <li>No live Alibaba endpoint claim until <code>/</code> and <code>/api/plan</code> return HTTP 200 from a real Alibaba Cloud URL.</li>
+          <li>No API keys, request headers, account IDs, cookies, private email, private console screenshots, payment data, or localStorage.</li>
+        </ul>
+      </section>
+      <section class="panel">
+        <h2>Review links</h2>
+        <ul>
+          <li><a href="../judge-review-card/">Judge review card</a></li>
+          <li><a href="../blog-share-packet/">Blog Share Packet</a></li>
+          <li><a href="../public-update-digest/">Public Update Digest</a></li>
+          <li><a href="../judge-manifest.json">Judge manifest JSON</a></li>
+        </ul>
+      </section>
+    </div>
+  </main>
+</body>
+</html>

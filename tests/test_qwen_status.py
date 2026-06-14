@@ -67,7 +67,7 @@ class QwenStatusTests(unittest.TestCase):
                 live_check="yes - safe smoke test passed",
                 deployment="yes - endpoint proof recorded",
                 repo="yes - public",
-                video="yes - Vimeo URL accepted",
+                video="yes - Vimeo page linked from submitted project",
                 blog="yes - public URL",
                 submitted="yes - Devpost confirmation displayed",
             )
@@ -101,6 +101,17 @@ class QwenStatusTests(unittest.TestCase):
         self.assertIn("reCAPTCHA", status["next_action"])
         self.assertEqual(len(status["missing_artifacts"]), 0)
         self.assertGreater(len(status["incomplete_public_gates"]), 0)
+
+    def test_status_uses_repo_relative_ledger_path(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            root = Path(temp_dir)
+            write_required_artifacts(root)
+            ledger = write_ledger(root)
+
+            status = build_status(root, ledger, now=datetime(2026, 6, 20, tzinfo=timezone.utc))
+
+        self.assertEqual(status["ledger_path"], "docs/qwen-route-ledger.md")
+        self.assertNotIn(temp_dir, status["ledger_path"])
 
     def test_partial_github_repo_gets_push_specific_next_action(self) -> None:
         with tempfile.TemporaryDirectory() as temp_dir:

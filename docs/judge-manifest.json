@@ -61,12 +61,30 @@
     },
     {
       "step": 7,
+      "label": "Judge review card",
+      "url": "https://ooyxloo.github.io/prizepilot-qwen-cloud/judge-review-card/",
+      "purpose": "Use the one-minute review card for award thesis, Qwen proof, and do-not-infer boundaries."
+    },
+    {
+      "step": 8,
+      "label": "Blog Share Packet",
+      "url": "https://ooyxloo.github.io/prizepilot-qwen-cloud/blog-share-packet/",
+      "purpose": "Review safe public share copy for the Blog Post Award route."
+    },
+    {
+      "step": 9,
+      "label": "Public update checklist",
+      "url": "https://ooyxloo.github.io/prizepilot-qwen-cloud/public-update-checklist/",
+      "purpose": "Confirm local checks, public link checks, and claim boundaries before any user-approved public update."
+    },
+    {
+      "step": 10,
       "label": "Alibaba endpoint checklist",
       "url": "https://ooyxloo.github.io/prizepilot-qwen-cloud/alibaba-endpoint-checklist/",
       "purpose": "Verify that live Alibaba endpoint proof remains pending rather than overclaimed."
     },
     {
-      "step": 8,
+      "step": 11,
       "label": "Public update digest",
       "url": "https://ooyxloo.github.io/prizepilot-qwen-cloud/public-update-digest/",
       "purpose": "Review the prepared local update packet, public baseline, and do-not-claim boundaries before any user-approved push."
@@ -79,6 +97,7 @@
     "Qwen-compatible client shape is implemented and locally testable.",
     "Qwen/DashScope live smoke proof has been recorded without storing secrets.",
     "Qwen before/after evidence maps deterministic planning to Qwen-refined public copy.",
+    "Judge review card, Blog Share Packet, and public update checklist are prepared for faster review and safer publishing.",
     "Blog Post Award story, benchmark method, award preflight, and evidence map are prepared."
   ],
   "pending_evidence": [
@@ -109,6 +128,9 @@
   "related_machine_readable_files": [
     "docs/qwen-route-status.json",
     "docs/cloud-readiness-report.json",
+    "docs/judge-review-card.md",
+    "docs/blog-share-packet.md",
+    "docs/public-update-checklist.md",
     "docs/public-update-digest.md",
     "docs/api/plan.json"
   ],
