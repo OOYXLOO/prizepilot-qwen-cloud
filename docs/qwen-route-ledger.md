@@ -24,7 +24,7 @@ Use this as the non-sensitive recovery record for the Qwen backup route. Do not 
 - Qwen live check completed: yes - 2026-06-13 live Qwen/DashScope smoke test succeeded with `qwen-plus`, China Bailian endpoint, exit code 0, and runtime key removed after cleanup
 - Alibaba Cloud deployment proof: partial - Function Compute custom-container manifest prepared at deploy/alibaba-cloud/s.yaml; live Alibaba Cloud endpoint not verified
 - Public GitHub repository: yes
-- Public demo video: yes - Vimeo public page is reachable and linked from the submitted Devpost project; Devpost embedded playback should be checked user-present before any stronger playback claim
+- Public demo video: yes - Vimeo public page is reachable and linked from the submitted Devpost project; a backup Pages-hosted WebM exists at `https://ooyxloo.github.io/prizepilot-qwen-cloud/demo-video/prizepilot-demo.webm`; Devpost embedded playback should be checked user-present before any stronger playback claim
 - Public blog/social post: yes
 - Devpost final submitted: yes - Devpost confirmation displayed `Project submitted! Continue to edit your project until the hackathon deadline: July 09, 2026 at 05:00pm EDT.`
 - Public Devpost Story current: yes - checked 2026-06-11 22:06 CST; old `submission draft` wording absent and Vimeo/repo/blog links present

@@ -38,6 +38,18 @@
       "purpose": "Review the product narrative, Qwen role, and Blog Post Award fit."
     }
   ],
+  "demo_video_fallbacks": [
+    {
+      "label": "Devpost-required hosted video",
+      "url": "https://vimeo.com/1200124146",
+      "purpose": "Primary public demo URL accepted by the Qwen Devpost video field."
+    },
+    {
+      "label": "Backup Pages-hosted WebM",
+      "url": "https://ooyxloo.github.io/prizepilot-qwen-cloud/demo-video/prizepilot-demo.webm",
+      "purpose": "Silent public fallback for reviewers who cannot play the Vimeo page or embedded player. This is not a replacement for the Devpost-required hosted video."
+    }
+  ],
   "award_targets": [
     {
       "name": "Blog Post Award",
@@ -126,6 +138,7 @@
   "completed_evidence": [
     "Submitted Devpost project is public.",
     "Public repository, Pages hub, demo video, and presentation deck are live.",
+    "Backup Pages-hosted WebM demo is available for reviewer playback fallback.",
     "Static judge demo and public plan snapshot are available without login.",
     "Qwen-compatible client shape is implemented and locally testable.",
     "Qwen/DashScope live smoke proof has been recorded without storing secrets.",

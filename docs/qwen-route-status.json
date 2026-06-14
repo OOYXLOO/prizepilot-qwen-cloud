@@ -1,16 +1,16 @@
 {
-  "checked_at": "2026-06-14T19:39:00.486641+00:00",
+  "checked_at": "2026-06-14T19:56:52.826158+00:00",
   "phase": "submitted_can_still_improve",
   "severity": "OK_WITH_EVIDENCE_GAPS",
   "next_action": "Strengthen remaining evidence before judging: add verified Alibaba Cloud endpoint proof if account access and billing/credit approval are available, then update public Devpost copy only with captured evidence.",
   "deadline_utc": "2026-07-09T21:00:00+00:00",
-  "hours_until_deadline": 601.35,
+  "hours_until_deadline": 601.05,
   "artifact_checks": [
     {
       "path": "README.md",
       "description": "Project README",
       "exists": true,
-      "size": 7013
+      "size": 7400
     },
     {
       "path": "LICENSE",
@@ -70,7 +70,7 @@
       "path": "docs/index.html",
       "description": "Public build notes landing page",
       "exists": true,
-      "size": 10305
+      "size": 10578
     },
     {
       "path": "docs/blog/index.html",
@@ -82,25 +82,25 @@
       "path": "docs/judge-pack/index.html",
       "description": "Public judge evidence pack",
       "exists": true,
-      "size": 19927
+      "size": 20091
     },
     {
       "path": "docs/judge-manifest.json",
       "description": "Machine-readable judge manifest",
       "exists": true,
-      "size": 7737
+      "size": 8366
     },
     {
       "path": "docs/judge-review-card.md",
       "description": "Judge review card",
       "exists": true,
-      "size": 2305
+      "size": 2440
     },
     {
       "path": "docs/judge-review-card/index.html",
       "description": "Public judge review card page",
       "exists": true,
-      "size": 4297
+      "size": 4388
     },
     {
       "path": "docs/blog-share-packet.md",
@@ -118,13 +118,13 @@
       "path": "docs/public-update-checklist.md",
       "description": "Public update checklist",
       "exists": true,
-      "size": 1728
+      "size": 1991
     },
     {
       "path": "docs/public-update-checklist/index.html",
       "description": "Public update checklist page",
       "exists": true,
-      "size": 3951
+      "size": 4138
     },
     {
       "path": "docs/award-preflight/index.html",
@@ -220,13 +220,13 @@
       "path": "docs/public-update-digest.md",
       "description": "Public update digest",
       "exists": true,
-      "size": 3872
+      "size": 4063
     },
     {
       "path": "docs/public-update-digest/index.html",
       "description": "Public update digest page",
       "exists": true,
-      "size": 5697
+      "size": 5799
     },
     {
       "path": "docs/api/plan.json",
@@ -322,7 +322,7 @@
       "path": "docs/publication-action-card.md",
       "description": "Publication action card",
       "exists": true,
-      "size": 2785
+      "size": 2805
     },
     {
       "path": "docs/public-package-checklist.md",

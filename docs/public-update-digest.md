@@ -11,13 +11,13 @@ This digest is the non-sensitive decision packet for a future user-approved publ
 - Final local update head: verify with `git rev-parse HEAD` immediately before any user-approved push; do not rely on a manifest-embedded local commit because local quality commits may continue before approval.
 - Public baseline recheck: run `git ls-remote https://github.com/OOYXLOO/prizepilot-qwen-cloud.git HEAD` immediately before push.
 - Public status: submitted Devpost project is live and editable until the Qwen Cloud hackathon deadline.
-- Local status: update packet is prepared, verified locally, and not pushed.
+- Working-copy status: update packet is prepared and locally verified. The repository push and any Devpost edit still require account-owner approval.
 
 ## Public Link Health Boundary
 
 Latest public baseline check on 2026-06-15 found the existing review pages live, including `demo/`, `judge-pack/`, `award-preflight/`, `award-evidence-map/`, `cloud-readiness/`, `benchmark-method/`, `live-proof-gate/`, `qwen-live-proof/`, `qwen-contribution/`, `alibaba-endpoint-checklist/`, `api/plan.json`, and `blog/`.
 
-The next-update pages are intentionally not treated as public until after an approved push and HTTP 200 recheck: `qwen-before-after/`, `judge-review-card/`, `blog-share-packet/`, `public-update-checklist/`, `public-update-digest/`, and `judge-manifest.json`.
+The next-update pages must be HTTP 200 rechecked after an approved push before they are copied into Devpost: `qwen-before-after/`, `judge-review-card/`, `blog-share-packet/`, `public-update-checklist/`, `public-update-digest/`, and `judge-manifest.json`.
 
 ## What The Update Improves
 
@@ -25,6 +25,7 @@ The next-update pages are intentionally not treated as public until after an app
 - Adds a pre-push head-check policy so the account owner can confirm the exact local commit and public baseline before any public side effect.
 - Adds Qwen before/after evidence so judges can see how deterministic route planning was refined into clearer Qwen-backed public copy.
 - Adds a judge review card, Blog Share Packet, and public update checklist so reviewers and the account owner have a short path through the strongest public evidence and publishing gates.
+- Adds a Pages-hosted WebM fallback beside the Devpost-required Vimeo demo so video review does not depend on one player.
 - Links the before/after trail from README, public hub, judge pack, Blog Award story, award preflight, award evidence map, and Qwen contribution map.
 - Refreshes the public status language so the project reads as submitted and improvable, not as a draft.
 - Keeps the live Alibaba Cloud public endpoint as a pending account-owner proof gate instead of overclaiming it.

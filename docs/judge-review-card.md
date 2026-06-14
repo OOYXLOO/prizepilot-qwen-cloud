@@ -8,9 +8,10 @@ This is the 60-second review card for PrizePilot, a submitted Qwen Cloud Track 4
 
 1. Open the submitted Devpost project: https://devpost.com/software/prizepilot-qwen-cloud
 2. Watch the public Vimeo demo: https://vimeo.com/1200124146
-3. Read the judge evidence pack: https://ooyxloo.github.io/prizepilot-qwen-cloud/judge-pack/
-4. Check the Qwen contribution map: https://ooyxloo.github.io/prizepilot-qwen-cloud/qwen-contribution/
-5. Verify the remaining proof boundary: https://ooyxloo.github.io/prizepilot-qwen-cloud/alibaba-endpoint-checklist/
+3. If Vimeo is unavailable, use the backup public WebM: https://ooyxloo.github.io/prizepilot-qwen-cloud/demo-video/prizepilot-demo.webm
+4. Read the judge evidence pack: https://ooyxloo.github.io/prizepilot-qwen-cloud/judge-pack/
+5. Check the Qwen contribution map: https://ooyxloo.github.io/prizepilot-qwen-cloud/qwen-contribution/
+6. Verify the remaining proof boundary: https://ooyxloo.github.io/prizepilot-qwen-cloud/alibaba-endpoint-checklist/
 
 ## Award Thesis
 
@@ -42,4 +43,3 @@ python -m prizepilot qwen-status
 python -m prizepilot cloud-readiness
 python -m json.tool docs\judge-manifest.json
 ```
-

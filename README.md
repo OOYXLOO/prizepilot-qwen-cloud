@@ -14,13 +14,14 @@ Latest review status as of 2026-06-15: the repository, Blog Award story, present
 | --- | --- | --- |
 | Submitted identity | Visible now: Devpost project, public repository, Vimeo demo, public Pages hub, deck, Blog Award story, and static judge demo. | These establish that the project is submitted and reviewable. They do not prove prize selection or payout. |
 | Qwen live smoke proof | Visible now in the proof packet: one Qwen/DashScope `qwen-plus` run through the China Bailian endpoint with runtime-only key cleanup recorded. | This proves a live Qwen-compatible refinement path, not a live Alibaba Cloud public endpoint. |
-| Judge review/update packet | Prepared locally until a user-approved push confirms the final public URLs: judge review card, Blog Share Packet, public update digest, refreshed route status, and refreshed cloud-readiness wording. | Treat these as prepared artifacts until the public HEAD is verified after a push. |
+| Judge review/update packet | Prepared in this working copy for the next public update: judge review card, Blog Share Packet, public update digest, refreshed route status, and refreshed cloud-readiness wording. | Before a push, treat these as approval artifacts. After a user-approved push, verify the exact public HEAD and HTTP 200 links before copying them into Devpost. |
 | Alibaba Cloud endpoint proof | Prepared code only: Function Compute manifest and endpoint checklist exist. | Not live endpoint proof until a public URL returns HTTP 200 at `/` and `/api/plan`. |
 
 Baseline links verified live on 2026-06-15:
 
 - Devpost project: https://devpost.com/software/prizepilot-qwen-cloud
 - Demo video: https://vimeo.com/1200124146
+- Backup public WebM video: https://ooyxloo.github.io/prizepilot-qwen-cloud/demo-video/prizepilot-demo.webm
 - Presentation deck: https://ooyxloo.github.io/prizepilot-qwen-cloud/prizepilot-qwen-submission-deck.pptx
 - Judge demo: https://ooyxloo.github.io/prizepilot-qwen-cloud/demo/
 - Judge evidence pack: https://ooyxloo.github.io/prizepilot-qwen-cloud/judge-pack/
@@ -36,7 +37,7 @@ Baseline links verified live on 2026-06-15:
 - Blog Award story: https://ooyxloo.github.io/prizepilot-qwen-cloud/blog/
 - Repository: https://github.com/OOYXLOO/prizepilot-qwen-cloud
 
-Prepared next-update links, not public until a user-approved push and HTTP 200 recheck:
+Next-update links that must be HTTP 200 rechecked after a user-approved push:
 
 - Qwen before/after evidence: https://ooyxloo.github.io/prizepilot-qwen-cloud/qwen-before-after/
 - Judge Review Card: https://ooyxloo.github.io/prizepilot-qwen-cloud/judge-review-card/
@@ -54,6 +55,8 @@ The 3-link reviewer fast path is:
 1. Devpost project: https://devpost.com/software/prizepilot-qwen-cloud
 2. Judge Review Card: https://ooyxloo.github.io/prizepilot-qwen-cloud/judge-review-card/
 3. Blog Award story: https://ooyxloo.github.io/prizepilot-qwen-cloud/blog/
+
+Video path: use Vimeo as the Devpost-required hosted video, and keep the Pages-hosted WebM as a backup playback link if Vimeo embedding is unavailable for a reviewer.
 
 This order gives judges the submitted identity, the one-minute award thesis and do-not-infer boundary, and the Blog Post Award narrative before they decide whether to open the deeper proof boundary, benchmark, Qwen contribution, before/after, live proof, manifest, or static plan files.
 
@@ -80,6 +83,7 @@ The Mind the Product route additionally requires Novus email verification and of
 
 - Dashboard screenshots: `docs/screenshots/prizepilot-dashboard-desktop.png` and `docs/screenshots/prizepilot-dashboard-mobile.png`
 - Short demo GIF: `docs/screenshots/prizepilot-demo.gif`
+- Backup silent WebM: `docs/demo-video/prizepilot-demo.webm`
 - Editable presentation deck: `docs/prizepilot-qwen-submission-deck.pptx`
 - Static judge demo: `docs/demo/index.html`
 - Devpost architecture upload: `architecture.png`

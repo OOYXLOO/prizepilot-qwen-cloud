@@ -17,11 +17,12 @@ Use this checklist before any future public push or Devpost edit for PrizePilot.
 
 ## Public Checks After User-Approved Push
 
-- [ ] GitHub Actions are green.
+- [ ] If a GitHub Actions workflow exists on the public branch, it is green; if no workflow is present, record the local verification commands and Pages HTTP checks instead.
 - [ ] GitHub Pages hub returns HTTP 200.
 - [ ] Judge pack, judge review card, Blog Share Packet, public update digest, and Alibaba endpoint checklist return HTTP 200.
 - [ ] Devpost project page still loads publicly.
 - [ ] Vimeo page loads publicly.
+- [ ] Backup WebM demo loads publicly: `https://ooyxloo.github.io/prizepilot-qwen-cloud/demo-video/prizepilot-demo.webm`.
 - [ ] Devpost embedded video playback is checked by the account owner if the Devpost page will mention video playback.
 
 ## Claim Boundary
@@ -34,4 +35,3 @@ Use this checklist before any future public push or Devpost edit for PrizePilot.
 ## Devpost Edit Rule
 
 Edit Devpost only after the account owner is present and explicitly approves the public account action. If any public evidence link fails, do not edit Devpost.
-
