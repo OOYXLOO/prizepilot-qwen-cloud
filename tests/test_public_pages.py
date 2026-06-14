@@ -183,6 +183,8 @@ class PublicPagesTests(unittest.TestCase):
         page = (ROOT / "docs" / "public-update-digest" / "index.html").read_text(encoding="utf-8")
 
         self.assertIn("Qwen Public Update Digest", markdown)
+        self.assertIn("Last updated: 2026-06-15 (+08)", markdown)
+        self.assertNotIn("Last updated: 2026-06-14", markdown)
         self.assertIn("Public repository baseline", markdown)
         self.assertIn("Local prepared update", markdown)
         self.assertIn("Working-copy status", markdown)
@@ -211,6 +213,8 @@ class PublicPagesTests(unittest.TestCase):
         checklist_page = (ROOT / "docs" / "public-update-checklist" / "index.html").read_text(encoding="utf-8")
 
         self.assertIn("Qwen Judge Review Card", review_md)
+        self.assertIn("Last updated: 2026-06-15 (+08)", review_md)
+        self.assertNotIn("Last updated: 2026-06-14", review_md)
         self.assertIn("60-Second Path", review_md)
         self.assertIn("Award Thesis", review_md)
         self.assertIn("Do not infer that PrizePilot has won a prize.", review_md)
@@ -219,6 +223,8 @@ class PublicPagesTests(unittest.TestCase):
         self.assertIn("../alibaba-endpoint-checklist/", review_page)
 
         self.assertIn("Qwen Blog Share Packet", share_md)
+        self.assertIn("Last updated: 2026-06-15 (+08)", share_md)
+        self.assertNotIn("Last updated: 2026-06-14", share_md)
         self.assertIn("Safe Social Copy", share_md)
         self.assertIn("Do Not Say", share_md)
         self.assertIn("Do not say PrizePilot won", share_md)
@@ -227,7 +233,11 @@ class PublicPagesTests(unittest.TestCase):
         self.assertIn("../public-update-checklist/", share_page)
 
         self.assertIn("Qwen Public Update Checklist", checklist_md)
+        self.assertIn("Last updated: 2026-06-15 (+08)", checklist_md)
+        self.assertNotIn("Last updated: 2026-06-14", checklist_md)
         self.assertIn("Devpost embedded video playback", checklist_md)
+        self.assertIn("$env:PYTHONPATH='src'; python -m unittest discover -s tests -v", checklist_md)
+        self.assertIn("$env:PYTHONPATH='src'; python -m unittest discover -s tests -v", checklist_page)
         self.assertIn("Edit Devpost only after the account owner is present", checklist_md)
         self.assertIn("Do not publish stronger claims", checklist_page)
         self.assertIn("../blog-share-packet/", checklist_page)

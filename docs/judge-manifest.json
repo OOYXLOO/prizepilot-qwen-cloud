@@ -171,10 +171,10 @@
     "Do not infer that API keys, cookies, account-local storage, or private console data are stored in the repository."
   ],
   "verification_commands": [
-    "PYTHONPATH=src python -m unittest discover -s tests -v",
-    "PYTHONPATH=src python -m compileall -q src tests tools",
-    "PYTHONPATH=src python -m prizepilot qwen-status",
-    "PYTHONPATH=src python -m prizepilot cloud-readiness",
+    "$env:PYTHONPATH='src'; python -m unittest discover -s tests -v",
+    "$env:PYTHONPATH='src'; python -m compileall -q src tests tools",
+    "$env:PYTHONPATH='src'; python -m prizepilot qwen-status",
+    "$env:PYTHONPATH='src'; python -m prizepilot cloud-readiness",
     "python -m json.tool docs/judge-manifest.json"
   ],
   "related_machine_readable_files": [

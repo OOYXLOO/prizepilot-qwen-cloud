@@ -91,4 +91,4 @@ Because Qwen live proof is now captured but Alibaba endpoint proof is still miss
 - [ ] Public endpoint verified at `/` and `/api/plan`.
 - [ ] Devpost updated only with proof that actually happened.
 - [x] `docs/qwen-route-ledger.md` updated with non-sensitive status.
-- [ ] `python -m unittest discover -s tests -v` still passes.
+- [ ] `$env:PYTHONPATH='src'; python -m unittest discover -s tests -v` still passes.

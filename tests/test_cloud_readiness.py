@@ -11,6 +11,8 @@ class CloudReadinessTests(unittest.TestCase):
 
         self.assertEqual(report["overall"], "qwen_live_verified_endpoint_pending")
         self.assertEqual(report["live_claim"], "qwen_dashscope_smoke_verified_alibaba_endpoint_pending")
+        self.assertIn("T", report["checked_at_local_asia_shanghai"])
+        self.assertTrue(report["checked_at_local_asia_shanghai"].endswith("+08:00"))
         self.assertEqual(len(report["checks"]), 7)
         self.assertTrue(all(check["status"] != "fail" for check in report["checks"]))
         status_by_id = {check["id"]: check["status"] for check in report["checks"]}
@@ -29,6 +31,7 @@ class CloudReadinessTests(unittest.TestCase):
         markdown = render_markdown(build_report())
 
         self.assertIn("PrizePilot Cloud Readiness Report", markdown)
+        self.assertIn("Generated Asia/Shanghai:", markdown)
         self.assertIn("qwen_live_verified_endpoint_pending", markdown)
         self.assertIn("QWEN_RUNTIME_SECRET_BOUNDARY", markdown)
         self.assertIn("QWEN_LIVE_SMOKE_PROOF", markdown)

@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import argparse
 import json
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from typing import Any
 
@@ -11,6 +11,7 @@ from .webapp import dashboard_payload
 
 
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
+ASIA_SHANGHAI = timezone(timedelta(hours=8))
 
 
 def _read(root: Path, relative_path: str) -> str:
@@ -160,6 +161,7 @@ def build_report(root: Path | str = PROJECT_ROOT, checked_at: datetime | None = 
     overall = "qwen_live_verified_endpoint_pending" if all(item["status"] != "fail" for item in checks) else "needs_local_fix"
     return {
         "checked_at": current.isoformat(),
+        "checked_at_local_asia_shanghai": current.astimezone(ASIA_SHANGHAI).isoformat(),
         "overall": overall,
         "checks": checks,
         "live_claim": "qwen_dashscope_smoke_verified_alibaba_endpoint_pending",
@@ -177,6 +179,7 @@ def render_markdown(report: dict[str, Any]) -> str:
         "# PrizePilot Cloud Readiness Report",
         "",
         f"Generated: {report['checked_at']}",
+        f"Generated Asia/Shanghai: {report['checked_at_local_asia_shanghai']}",
         f"Overall: **{report['overall']}**",
         f"Live claim: `{report['live_claim']}`",
         "",

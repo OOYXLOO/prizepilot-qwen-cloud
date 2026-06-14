@@ -1,6 +1,6 @@
 # Qwen Judge Review Card
 
-Last updated: 2026-06-14
+Last updated: 2026-06-15 (+08)
 
 This is the 60-second review card for PrizePilot, a submitted Qwen Cloud Track 4 project. It is designed for judges who want the shortest safe path through the public evidence without account access, private consoles, API keys, or local setup.
 
@@ -42,4 +42,6 @@ python -m compileall -q src tests tools
 python -m prizepilot qwen-status
 python -m prizepilot cloud-readiness
 python -m json.tool docs\judge-manifest.json
+python -m json.tool docs\qwen-route-status.json
+python -m json.tool docs\cloud-readiness-report.json
 ```

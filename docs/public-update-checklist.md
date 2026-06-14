@@ -1,15 +1,15 @@
 # Qwen Public Update Checklist
 
-Last updated: 2026-06-14
+Last updated: 2026-06-15 (+08)
 
 Use this checklist before any future public push or Devpost edit for PrizePilot. It is intentionally conservative because public hackathon pages are part of the judged artifact.
 
 ## Local Checks
 
-- [ ] `PYTHONPATH=src python -m unittest discover -s tests -v`
-- [ ] `PYTHONPATH=src python -m compileall -q src tests tools`
-- [ ] `PYTHONPATH=src python -m prizepilot qwen-status`
-- [ ] `PYTHONPATH=src python -m prizepilot cloud-readiness`
+- [ ] `$env:PYTHONPATH='src'; python -m unittest discover -s tests -v`
+- [ ] `$env:PYTHONPATH='src'; python -m compileall -q src tests tools`
+- [ ] `$env:PYTHONPATH='src'; python -m prizepilot qwen-status`
+- [ ] `$env:PYTHONPATH='src'; python -m prizepilot cloud-readiness`
 - [ ] `python -m json.tool docs/judge-manifest.json`
 - [ ] `python -m json.tool docs/qwen-route-status.json`
 - [ ] `python -m json.tool docs/cloud-readiness-report.json`

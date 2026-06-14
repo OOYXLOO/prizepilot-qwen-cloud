@@ -1,6 +1,6 @@
 # Qwen Public Update Digest
 
-Last updated: 2026-06-14
+Last updated: 2026-06-15 (+08)
 
 This digest is the non-sensitive decision packet for a future user-approved public update. It does not push, edit Devpost, claim a prize, claim payout, claim a live Alibaba Cloud endpoint, or store secrets.
 
@@ -50,10 +50,10 @@ Only after the account owner is present and explicitly approves:
 
 Latest local verification before this digest:
 
-- `PYTHONPATH=src python -m unittest discover -s tests -v`
-- `PYTHONPATH=src python -m compileall -q src tests tools`
-- `PYTHONPATH=src python -m prizepilot qwen-status`
-- `PYTHONPATH=src python -m prizepilot cloud-readiness`
+- `$env:PYTHONPATH='src'; python -m unittest discover -s tests -v`
+- `$env:PYTHONPATH='src'; python -m compileall -q src tests tools`
+- `$env:PYTHONPATH='src'; python -m prizepilot qwen-status`
+- `$env:PYTHONPATH='src'; python -m prizepilot cloud-readiness`
 - `python -m json.tool docs/judge-manifest.json`
 
 Expected state: `submitted_can_still_improve` with `qwen_live_verified_endpoint_pending`.

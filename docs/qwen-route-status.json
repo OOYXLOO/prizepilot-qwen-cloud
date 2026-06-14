@@ -1,10 +1,11 @@
 {
-  "checked_at": "2026-06-14T19:56:52.826158+00:00",
+  "checked_at": "2026-06-14T23:28:31.809034+00:00",
+  "checked_at_local_asia_shanghai": "2026-06-15T07:28:31.809034+08:00",
   "phase": "submitted_can_still_improve",
   "severity": "OK_WITH_EVIDENCE_GAPS",
   "next_action": "Strengthen remaining evidence before judging: add verified Alibaba Cloud endpoint proof if account access and billing/credit approval are available, then update public Devpost copy only with captured evidence.",
   "deadline_utc": "2026-07-09T21:00:00+00:00",
-  "hours_until_deadline": 601.05,
+  "hours_until_deadline": 597.52,
   "artifact_checks": [
     {
       "path": "README.md",
@@ -88,13 +89,13 @@
       "path": "docs/judge-manifest.json",
       "description": "Machine-readable judge manifest",
       "exists": true,
-      "size": 8366
+      "size": 8398
     },
     {
       "path": "docs/judge-review-card.md",
       "description": "Judge review card",
       "exists": true,
-      "size": 2440
+      "size": 2547
     },
     {
       "path": "docs/judge-review-card/index.html",
@@ -106,7 +107,7 @@
       "path": "docs/blog-share-packet.md",
       "description": "Blog Share Packet",
       "exists": true,
-      "size": 1916
+      "size": 1921
     },
     {
       "path": "docs/blog-share-packet/index.html",
@@ -118,13 +119,13 @@
       "path": "docs/public-update-checklist.md",
       "description": "Public update checklist",
       "exists": true,
-      "size": 1991
+      "size": 2029
     },
     {
       "path": "docs/public-update-checklist/index.html",
       "description": "Public update checklist page",
       "exists": true,
-      "size": 4138
+      "size": 4190
     },
     {
       "path": "docs/award-preflight/index.html",
@@ -136,7 +137,7 @@
       "path": "docs/award-evidence-map/index.html",
       "description": "Public award evidence map",
       "exists": true,
-      "size": 9754
+      "size": 9786
     },
     {
       "path": "docs/benchmark-method.md",
@@ -220,7 +221,7 @@
       "path": "docs/public-update-digest.md",
       "description": "Public update digest",
       "exists": true,
-      "size": 4063
+      "size": 4101
     },
     {
       "path": "docs/public-update-digest/index.html",
@@ -292,7 +293,7 @@
       "path": "docs/live-proof-gate.md",
       "description": "Live Qwen and Alibaba proof gate",
       "exists": true,
-      "size": 4661
+      "size": 4684
     },
     {
       "path": "docs/live-proof-gate/index.html",
@@ -334,7 +335,7 @@
       "path": "docs/validation-report.md",
       "description": "Validation report",
       "exists": true,
-      "size": 3284
+      "size": 3360
     },
     {
       "path": "docs/screenshots/prizepilot-dashboard-desktop.png",

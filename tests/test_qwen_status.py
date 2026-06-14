@@ -112,6 +112,7 @@ class QwenStatusTests(unittest.TestCase):
 
         self.assertEqual(status["ledger_path"], "docs/qwen-route-ledger.md")
         self.assertNotIn(temp_dir, status["ledger_path"])
+        self.assertEqual(status["checked_at_local_asia_shanghai"], "2026-06-20T08:00:00+08:00")
 
     def test_partial_github_repo_gets_push_specific_next_action(self) -> None:
         with tempfile.TemporaryDirectory() as temp_dir:
@@ -224,6 +225,7 @@ class QwenStatusTests(unittest.TestCase):
         markdown = render_markdown(status)
 
         self.assertIn("ready_for_user_publication_steps", markdown)
+        self.assertIn("Generated Asia/Shanghai:", markdown)
         self.assertIn("docs/qwen-start-handoff-template.md", markdown)
         self.assertIn("docs/live-proof-gate.md", markdown)
         self.assertIn("docs/cloud-readiness-report.md", markdown)

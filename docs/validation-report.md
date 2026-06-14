@@ -4,14 +4,14 @@ Latest verification: 2026-06-15 after judge-fast-path and cloud-boundary refresh
 
 ## Passed Gates
 
-- Current unit test suite passes with `PYTHONPATH=src; python -m unittest discover -s tests -v`.
-- `python -m compileall -q src tests tools` passes.
+- Current unit test suite passes with `$env:PYTHONPATH='src'; python -m unittest discover -s tests -v`.
+- `$env:PYTHONPATH='src'; python -m compileall -q src tests tools` passes.
 - `python -m json.tool docs/judge-manifest.json`, `python -m json.tool docs/qwen-route-status.json`, and `python -m json.tool docs/cloud-readiness-report.json` parse the machine-readable judge packets.
 - Editable presentation deck is present at `docs/prizepilot-qwen-submission-deck.pptx`, opens as a valid PPTX archive, and contains 5 slides.
 - `python -m prizepilot plan samples/qwen_hackathon.json` targets the Blog Post Award.
 - `python -m prizepilot portfolio ...` keeps Splunk first and Qwen second when run with current sample names.
-- `python -m prizepilot qwen-status` generates `docs/qwen-route-status.md/json` with local artifacts complete, Qwen Devpost submitted, Qwen live smoke proof complete, phase `submitted_can_still_improve`, and Alibaba endpoint proof still open.
-- `python -m prizepilot cloud-readiness` generates `docs/cloud-readiness-report.md/json` with overall status `qwen_live_verified_endpoint_pending`; Qwen live smoke proof remains `pass`, while Alibaba Function Compute and public HTTP proof are classified as prepared code/proof targets rather than live endpoint evidence.
+- `$env:PYTHONPATH='src'; python -m prizepilot qwen-status` generates `docs/qwen-route-status.md/json` with local artifacts complete, Qwen Devpost submitted, Qwen live smoke proof complete, phase `submitted_can_still_improve`, and Alibaba endpoint proof still open.
+- `$env:PYTHONPATH='src'; python -m prizepilot cloud-readiness` generates `docs/cloud-readiness-report.md/json` with overall status `qwen_live_verified_endpoint_pending`; Qwen live smoke proof remains `pass`, while Alibaba Function Compute and public HTTP proof are classified as prepared code/proof targets rather than live endpoint evidence.
 - Qwen/DashScope client tests verify `DASHSCOPE_API_KEY` support, `QWEN_API_KEY` precedence, OpenAI-compatible `/chat/completions` request shape, and missing-key errors.
 - Deployable demo service checks verify `/`, `/api/plan`, JSON serializability, target prize output, submission status, agent walkthrough, judge scorecard, evidence gaps, and integrity-boundary copy.
 - Public repository, Devpost project, Vimeo demo, Blog Award story, judge pack, Qwen live proof, Qwen contribution map, Qwen before/after evidence, static plan JSON, cloud readiness report, and presentation deck are represented in the local public package.

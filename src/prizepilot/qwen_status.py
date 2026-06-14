@@ -3,10 +3,11 @@ from __future__ import annotations
 import argparse
 import json
 import re
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 QWEN_DEADLINE_UTC = datetime(2026, 7, 9, 21, 0, tzinfo=timezone.utc)
+ASIA_SHANGHAI = timezone(timedelta(hours=8))
 FIELD_RE = re.compile(r"^\s*-\s*([^:\n]+):\s*(.*)$", re.MULTILINE)
 
 REQUIRED_ARTIFACTS = {
@@ -210,6 +211,7 @@ def build_status(root: Path, ledger_path: Path, now: datetime | None = None) -> 
 
     return {
         "checked_at": current.isoformat(),
+        "checked_at_local_asia_shanghai": current.astimezone(ASIA_SHANGHAI).isoformat(),
         "phase": phase,
         "severity": severity,
         "next_action": next_action,
@@ -242,6 +244,7 @@ def render_markdown(status: dict[str, object]) -> str:
         "# Qwen PrizePilot Route Status",
         "",
         f"Generated: {status['checked_at']}",
+        f"Generated Asia/Shanghai: {status['checked_at_local_asia_shanghai']}",
         f"Phase: **{status['phase']}**",
         f"Severity: **{status['severity']}**",
         "",
