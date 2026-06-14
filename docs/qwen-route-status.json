@@ -1,16 +1,16 @@
 {
-  "checked_at": "2026-06-14T17:26:29.767134+00:00",
+  "checked_at": "2026-06-14T19:39:00.486641+00:00",
   "phase": "submitted_can_still_improve",
   "severity": "OK_WITH_EVIDENCE_GAPS",
   "next_action": "Strengthen remaining evidence before judging: add verified Alibaba Cloud endpoint proof if account access and billing/credit approval are available, then update public Devpost copy only with captured evidence.",
   "deadline_utc": "2026-07-09T21:00:00+00:00",
-  "hours_until_deadline": 603.56,
+  "hours_until_deadline": 601.35,
   "artifact_checks": [
     {
       "path": "README.md",
       "description": "Project README",
       "exists": true,
-      "size": 7005
+      "size": 7013
     },
     {
       "path": "LICENSE",
@@ -70,7 +70,7 @@
       "path": "docs/index.html",
       "description": "Public build notes landing page",
       "exists": true,
-      "size": 10066
+      "size": 10305
     },
     {
       "path": "docs/blog/index.html",
@@ -220,13 +220,13 @@
       "path": "docs/public-update-digest.md",
       "description": "Public update digest",
       "exists": true,
-      "size": 3257
+      "size": 3872
     },
     {
       "path": "docs/public-update-digest/index.html",
       "description": "Public update digest page",
       "exists": true,
-      "size": 4980
+      "size": 5697
     },
     {
       "path": "docs/api/plan.json",
