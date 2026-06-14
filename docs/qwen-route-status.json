@@ -1,10 +1,10 @@
 {
-  "checked_at": "2026-06-14T09:15:30.177979+00:00",
+  "checked_at": "2026-06-14T14:02:45.093206+00:00",
   "phase": "submitted_can_still_improve",
   "severity": "OK_WITH_EVIDENCE_GAPS",
   "next_action": "Strengthen remaining evidence before judging: add verified Alibaba Cloud endpoint proof if account access and billing/credit approval are available, then update public Devpost copy only with captured evidence.",
   "deadline_utc": "2026-07-09T21:00:00+00:00",
-  "hours_until_deadline": 611.74,
+  "hours_until_deadline": 606.95,
   "artifact_checks": [
     {
       "path": "README.md",
@@ -88,7 +88,7 @@
       "path": "docs/judge-manifest.json",
       "description": "Machine-readable judge manifest",
       "exists": true,
-      "size": 6627
+      "size": 7304
     },
     {
       "path": "docs/judge-review-card.md",
@@ -220,13 +220,13 @@
       "path": "docs/public-update-digest.md",
       "description": "Public update digest",
       "exists": true,
-      "size": 2876
+      "size": 3257
     },
     {
       "path": "docs/public-update-digest/index.html",
       "description": "Public update digest page",
       "exists": true,
-      "size": 4738
+      "size": 4980
     },
     {
       "path": "docs/api/plan.json",

@@ -1,6 +1,6 @@
 # PrizePilot Cloud Readiness Report
 
-Generated: 2026-06-14T09:15:30.683915+00:00
+Generated: 2026-06-14T14:02:45.115215+00:00
 Overall: **qwen_live_verified_endpoint_pending**
 Live claim: `qwen_dashscope_smoke_verified_alibaba_endpoint_pending`
 
