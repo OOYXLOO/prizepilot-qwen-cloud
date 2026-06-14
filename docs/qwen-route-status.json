@@ -1,16 +1,16 @@
 {
-  "checked_at": "2026-06-14T03:48:04.241046+00:00",
+  "checked_at": "2026-06-14T04:43:19.916145+00:00",
   "phase": "submitted_can_still_improve",
   "severity": "OK_WITH_EVIDENCE_GAPS",
   "next_action": "Strengthen remaining evidence before judging: add verified Alibaba Cloud endpoint proof if account access and billing/credit approval are available, then update public Devpost copy only with captured evidence.",
   "deadline_utc": "2026-07-09T21:00:00+00:00",
-  "hours_until_deadline": 617.2,
+  "hours_until_deadline": 616.28,
   "artifact_checks": [
     {
       "path": "README.md",
       "description": "Project README",
       "exists": true,
-      "size": 5436
+      "size": 5584
     },
     {
       "path": "LICENSE",
@@ -70,7 +70,7 @@
       "path": "docs/index.html",
       "description": "Public build notes landing page",
       "exists": true,
-      "size": 9201
+      "size": 9468
     },
     {
       "path": "docs/blog/index.html",
@@ -88,7 +88,7 @@
       "path": "docs/judge-manifest.json",
       "description": "Machine-readable judge manifest",
       "exists": true,
-      "size": 4632
+      "size": 4959
     },
     {
       "path": "docs/award-preflight/index.html",
@@ -238,13 +238,13 @@
       "path": "docs/publication-action-card.md",
       "description": "Publication action card",
       "exists": true,
-      "size": 2370
+      "size": 2614
     },
     {
       "path": "docs/public-package-checklist.md",
       "description": "Public package checklist",
       "exists": true,
-      "size": 1782
+      "size": 2140
     },
     {
       "path": "docs/validation-report.md",

@@ -1,0 +1,49 @@
+# Qwen Public Update Digest
+
+Last updated: 2026-06-14
+
+This digest is the non-sensitive decision packet for a future user-approved public update. It does not push, edit Devpost, claim a prize, claim payout, claim a live Alibaba Cloud endpoint, or store secrets.
+
+## Current Heads
+
+- Public repository baseline: `6329f1ba225c3a59881882e8a5c0dd1a9fb2e33d`
+- Local prepared update base: `2f764a2c0ef8d0bf44d2c91a7950978e97813634`
+- Final local update head: verify with `git rev-parse HEAD` immediately before any user-approved push.
+- Public status: submitted Devpost project is live and editable until the Qwen Cloud hackathon deadline.
+- Local status: update packet is prepared, verified locally, and not pushed.
+
+## What The Update Improves
+
+- Adds a machine-readable judge manifest that names the submitted project, award targets, judge path, completed evidence, pending evidence, and do-not-infer boundaries.
+- Adds Qwen before/after evidence so judges can see how deterministic route planning was refined into clearer Qwen-backed public copy.
+- Links the before/after trail from README, public hub, judge pack, Blog Award story, award preflight, award evidence map, and Qwen contribution map.
+- Refreshes the public status language so the project reads as submitted and improvable, not as a draft.
+- Keeps the live Alibaba Cloud public endpoint as a pending account-owner proof gate instead of overclaiming it.
+
+## What Must Not Be Claimed
+
+- Do not claim PrizePilot has won a prize.
+- Do not claim payout, tax, KYC, bank, billing, or cloud-credit setup is complete.
+- Do not claim a live Alibaba Cloud public endpoint exists until `/` and `/api/plan` return HTTP 200 from a real Alibaba Cloud URL.
+- Do not publish API keys, request headers, account IDs, cookies, private email content, console screenshots, payment data, or localStorage.
+
+## User-Present Approval Gate
+
+Only after the account owner is present and explicitly approves:
+
+1. Push the prepared repository update.
+2. Wait for GitHub Pages to publish the new hub, judge manifest, and before/after evidence links.
+3. Verify public URLs return HTTP 200.
+4. Edit Devpost only with evidence that actually exists.
+
+## Verification Snapshot
+
+Latest local verification before this digest:
+
+- `PYTHONPATH=src python -m unittest discover -s tests -v`
+- `PYTHONPATH=src python -m compileall -q src tests tools`
+- `PYTHONPATH=src python -m prizepilot qwen-status`
+- `PYTHONPATH=src python -m prizepilot cloud-readiness`
+- `python -m json.tool docs/judge-manifest.json`
+
+Expected state: `submitted_can_still_improve` with `qwen_live_verified_endpoint_pending`.

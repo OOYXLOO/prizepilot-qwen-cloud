@@ -6,7 +6,7 @@ The project is intentionally conservative: it records public repository, blog, v
 
 ## Current Public Status
 
-Latest review status as of 2026-06-13: the repository, Blog Award story, presentation deck, Qwen live proof, and route status files are the current source of truth for PrizePilot's submission state.
+Latest review status as of 2026-06-14: the repository, Blog Award story, presentation deck, Qwen live proof, public update digest, and route status files are the current source of truth for PrizePilot's submission state.
 
 - Devpost project: https://devpost.com/software/prizepilot-qwen-cloud
 - Public demo video: https://vimeo.com/1200124146
@@ -21,6 +21,7 @@ Latest review status as of 2026-06-13: the repository, Blog Award story, present
 - Public Qwen live proof: https://ooyxloo.github.io/prizepilot-qwen-cloud/qwen-live-proof/
 - Public Qwen contribution map: https://ooyxloo.github.io/prizepilot-qwen-cloud/qwen-contribution/
 - Public Qwen before/after evidence: https://ooyxloo.github.io/prizepilot-qwen-cloud/qwen-before-after/
+- Public update digest: https://ooyxloo.github.io/prizepilot-qwen-cloud/public-update-digest/
 - Public Alibaba endpoint checklist: https://ooyxloo.github.io/prizepilot-qwen-cloud/alibaba-endpoint-checklist/
 - Public judge manifest: https://ooyxloo.github.io/prizepilot-qwen-cloud/judge-manifest.json
 - Public static plan snapshot: https://ooyxloo.github.io/prizepilot-qwen-cloud/api/plan.json
@@ -55,7 +56,7 @@ python -m prizepilot.webapp --host 127.0.0.1 --port 8000
 ```
 
 Then inspect the live machine-readable planning payload at `http://127.0.0.1:8000/api/plan`.
-Review `docs/submission-story.md`, `docs/benchmark-method.md`, `docs/cloud-readiness-report.md`, `docs/qwen-live-proof.md`, `docs/qwen-contribution-map.md`, `docs/qwen-before-after-evidence.md`, `docs/live-proof-gate.md`, `docs/alibaba-endpoint-judge-checklist.md`, `docs/judge-manifest.json`, `docs/qwen-route-status.md`, and `docs/validation-report.md` for the evidence boundary.
+Review `docs/submission-story.md`, `docs/benchmark-method.md`, `docs/cloud-readiness-report.md`, `docs/qwen-live-proof.md`, `docs/qwen-contribution-map.md`, `docs/qwen-before-after-evidence.md`, `docs/public-update-digest.md`, `docs/live-proof-gate.md`, `docs/alibaba-endpoint-judge-checklist.md`, `docs/judge-manifest.json`, `docs/qwen-route-status.md`, and `docs/validation-report.md` for the evidence boundary.
 
 Live Qwen refinement has been verified once with a runtime-only key; future runs still require `DASHSCOPE_API_KEY` or `QWEN_API_KEY` at action time only.
 The Mind the Product route additionally requires Novus email verification and official Novus installation before final Devpost submission. The web service exposes `/api/novus-readiness` so that gate can be tracked without claiming completion early.
