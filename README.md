@@ -54,12 +54,12 @@ Next-update links that must be HTTP 200 rechecked after a user-approved push:
 The 3-link reviewer fast path is:
 
 1. Devpost project: https://devpost.com/software/prizepilot-qwen-cloud
-2. Judge Review Card: https://ooyxloo.github.io/prizepilot-qwen-cloud/judge-review-card/
+2. Demo video: https://vimeo.com/1200124146
 3. Blog Award story: https://ooyxloo.github.io/prizepilot-qwen-cloud/blog/
 
 Video path: use Vimeo as the Devpost-required hosted video, and keep the Pages-hosted WebM as a backup playback link if Vimeo embedding is unavailable for a reviewer.
 
-This order gives judges the submitted identity, the one-minute award thesis and do-not-infer boundary, and the Blog Post Award narrative before they decide whether to open the deeper proof boundary, benchmark, Qwen contribution, before/after, live proof, manifest, or static plan files.
+This order gives judges the submitted identity, the working demo, and the Blog Post Award narrative before they decide whether to open the Judge Review Card, proof boundary, benchmark, Qwen contribution, before/after, live proof, manifest, or static plan files.
 
 For deeper local verification, run the dashboard:
 

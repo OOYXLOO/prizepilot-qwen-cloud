@@ -1,6 +1,9 @@
 import json
+import re
 import unittest
 from pathlib import Path
+
+from prizepilot.webapp import dashboard_payload
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -29,11 +32,13 @@ class PublicPagesTests(unittest.TestCase):
         self.assertIn("./api/plan.json", hub)
         self.assertIn("./prizepilot-qwen-submission-deck.pptx", hub)
         self.assertIn("Primary judge actions", hub)
+        self.assertIn("Open Devpost", hub)
         self.assertIn("Watch Demo", hub)
         self.assertIn("Read Blog Award Story", hub)
         self.assertIn("Open Judge Card", hub)
         self.assertIn("3-link reviewer fast path", hub)
         self.assertIn("Confirm the submitted identity", hub)
+        self.assertIn("Watch the", hub)
         self.assertIn("do-not-infer boundary", hub)
         self.assertIn("Judge Evidence Pack", hub)
         self.assertIn("Award Preflight", hub)
@@ -78,6 +83,8 @@ class PublicPagesTests(unittest.TestCase):
         self.assertIn("Award Thesis Scorecard", judge_pack)
         self.assertIn("3-link reviewer fast path", judge_pack)
         self.assertIn("submitted Devpost project", judge_pack)
+        self.assertIn("watch the", judge_pack)
+        self.assertIn("Blog Award Story", judge_pack)
         self.assertIn("still-pending Alibaba endpoint proof", judge_pack)
         self.assertIn("Honorable Mention second", judge_pack)
         self.assertIn("Qwen Contribution Depth", judge_pack)
@@ -140,7 +147,8 @@ class PublicPagesTests(unittest.TestCase):
         self.assertIn("Pages-hosted WebM as a backup playback link", readme)
         self.assertIn("Blog Award story", readme)
         self.assertIn("3-link reviewer fast path", readme)
-        self.assertIn("Judge Review Card: https://ooyxloo.github.io/prizepilot-qwen-cloud/judge-review-card/", readme)
+        self.assertIn("Demo video: https://vimeo.com/1200124146", readme)
+        self.assertIn("open the Judge Review Card", readme)
 
     def test_judge_manifest_is_machine_readable_and_boundary_safe(self) -> None:
         manifest = json.loads((ROOT / "docs" / "judge-manifest.json").read_text(encoding="utf-8"))
@@ -158,8 +166,8 @@ class PublicPagesTests(unittest.TestCase):
         )
         self.assertEqual(manifest["award_targets"][0]["name"], "Blog Post Award")
         self.assertEqual(manifest["award_targets"][0]["amount_usd"], 500)
-        self.assertEqual([item["label"] for item in manifest["reviewer_fast_path"]], ["Devpost project", "Judge Review Card", "Blog Award story"])
-        self.assertIn("do-not-infer boundary", manifest["reviewer_fast_path"][1]["purpose"])
+        self.assertEqual([item["label"] for item in manifest["reviewer_fast_path"]], ["Devpost project", "Demo Video", "Blog Award story"])
+        self.assertIn("public demo", manifest["reviewer_fast_path"][1]["purpose"])
         self.assertIn("Blog Post Award fit", manifest["reviewer_fast_path"][2]["purpose"])
         self.assertEqual([item["label"] for item in manifest["demo_video_fallbacks"]], ["Devpost-required hosted video", "Backup Pages-hosted WebM"])
         self.assertIn("demo-video/prizepilot-demo.webm", manifest["demo_video_fallbacks"][1]["url"])
@@ -169,6 +177,7 @@ class PublicPagesTests(unittest.TestCase):
         self.assertIn("not live endpoint proof", manifest["alibaba_code_proof"]["boundary"])
         self.assertEqual(manifest["judge_path"][0]["label"], "Devpost project")
         self.assertEqual(manifest["judge_path"][-1]["label"], "Public update digest")
+        self.assertTrue(any(item["label"] == "Demo video" for item in manifest["judge_path"]))
         self.assertTrue(any(item["label"] == "Qwen before/after evidence" for item in manifest["judge_path"]))
         self.assertTrue(any(item["label"] == "Judge review card" for item in manifest["judge_path"]))
         self.assertTrue(any(item["label"] == "Award Thesis Scorecard" for item in manifest["judge_path"]))
@@ -330,6 +339,38 @@ class PublicPagesTests(unittest.TestCase):
             "no live endpoint has been verified",
             snapshot["evidence_gaps"][1],
         )
+        self.assertEqual(snapshot, dashboard_payload())
+
+    def test_core_static_artifacts_do_not_drift_or_break_local_refs(self) -> None:
+        checked_pages = [
+            ROOT / "web" / "index.html",
+            ROOT / "docs" / "index.html",
+            ROOT / "docs" / "demo" / "index.html",
+            ROOT / "docs" / "judge-pack" / "index.html",
+            ROOT / "docs" / "judge-review-card" / "index.html",
+            ROOT / "docs" / "blog" / "index.html",
+        ]
+        stale_copy = [
+            "public repository, public post, cloud deployment, or final Devpost submission is claimed until user approval",
+            "Last updated June 11",
+            "GitHub code push is blocked",
+            "Devpost portfolio project creation is blocked",
+        ]
+
+        for page_path in checked_pages:
+            text = page_path.read_text(encoding="utf-8")
+            for fragment in stale_copy:
+                self.assertNotIn(fragment, text, msg=f"{fragment!r} found in {page_path}")
+            for ref in re.findall(r'(?:href|src)="([^"]+)"', text):
+                if ref.startswith(("http://", "https://", "mailto:", "#")) or "${" in ref:
+                    continue
+                target = ref.split("#", 1)[0].split("?", 1)[0]
+                if not target:
+                    continue
+                resolved = (page_path.parent / target).resolve()
+                if target.endswith("/"):
+                    resolved = resolved / "index.html"
+                self.assertTrue(resolved.exists(), msg=f"{page_path} references missing local asset {ref}")
 
     def test_blog_post_award_story_has_judge_path(self) -> None:
         blog = (ROOT / "docs" / "blog" / "index.html").read_text(encoding="utf-8")

@@ -70,7 +70,7 @@
 
     .primary-actions {
       display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
       gap: 12px;
     }
 
@@ -179,6 +179,10 @@
     <p class="dek">This hub gives judges and reviewers the fastest path through the public evidence: the submitted Devpost project, the short demo video, the presentation deck, the Blog Post Award story, benchmark method, Qwen live smoke proof, and a static judge demo that separates verified proof from remaining account-gated work.</p>
 
     <nav class="primary-actions" aria-label="Primary judge actions">
+      <a href="https://devpost.com/software/prizepilot-qwen-cloud">
+        <strong>Open Devpost</strong>
+        <span>Submitted Qwen Track 4 project identity, video, deck, and source links.</span>
+      </a>
       <a href="https://vimeo.com/1200124146">
         <strong>Watch Demo</strong>
         <span>Devpost-required public Vimeo video for the submitted Qwen Track 4 project.</span>
@@ -197,9 +201,10 @@
       <h2>3-link reviewer fast path</h2>
       <ol>
         <li>Confirm the submitted identity on <a href="https://devpost.com/software/prizepilot-qwen-cloud">Devpost</a>.</li>
-        <li>Open the <a href="./judge-review-card/">Judge Review Card</a> for the one-minute award thesis and do-not-infer boundary.</li>
+        <li>Watch the <a href="https://vimeo.com/1200124146">public demo video</a>, or use the <a href="./demo-video/prizepilot-demo.webm">backup WebM</a> if Vimeo is unavailable.</li>
         <li>Read the <a href="./blog/">Blog Award story</a> for the product loop, Qwen role, and build narrative.</li>
       </ol>
+      <p>Use the <a href="./judge-review-card/">Judge Review Card</a> after those three actions for the one-minute award thesis and do-not-infer boundary.</p>
     </section>
 
     <div class="grid">

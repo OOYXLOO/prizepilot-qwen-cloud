@@ -28,9 +28,9 @@
       "purpose": "Confirm submitted project identity and public video/deck links."
     },
     {
-      "label": "Judge Review Card",
-      "url": "https://ooyxloo.github.io/prizepilot-qwen-cloud/judge-review-card/",
-      "purpose": "Review the one-minute award thesis, Qwen evidence, and do-not-infer boundary."
+      "label": "Demo Video",
+      "url": "https://vimeo.com/1200124146",
+      "purpose": "Watch the public demo linked from the submitted Devpost project."
     },
     {
       "label": "Blog Award story",
@@ -82,60 +82,66 @@
     },
     {
       "step": 3,
+      "label": "Demo video",
+      "url": "https://vimeo.com/1200124146",
+      "purpose": "Watch the public demo linked from the submitted project."
+    },
+    {
+      "step": 4,
       "label": "Blog Award story",
       "url": "https://ooyxloo.github.io/prizepilot-qwen-cloud/blog/",
       "purpose": "Review the narrative route for the Blog Post Award."
     },
     {
-      "step": 4,
-      "label": "Judge evidence pack",
-      "url": "https://ooyxloo.github.io/prizepilot-qwen-cloud/judge-pack/",
-      "purpose": "Check Track 4 fit, award thesis, and completed-vs-pending evidence."
-    },
-    {
       "step": 5,
-      "label": "Qwen contribution and live proof",
-      "url": "https://ooyxloo.github.io/prizepilot-qwen-cloud/qwen-contribution/",
-      "purpose": "Inspect how Qwen refines PrizePilot decisions and where the live smoke proof is recorded."
-    },
-    {
-      "step": 6,
-      "label": "Qwen before/after evidence",
-      "url": "https://ooyxloo.github.io/prizepilot-qwen-cloud/qwen-before-after/",
-      "purpose": "Compare deterministic route planning with the Qwen-refined public copy and proof boundary."
-    },
-    {
-      "step": 7,
       "label": "Judge review card",
       "url": "https://ooyxloo.github.io/prizepilot-qwen-cloud/judge-review-card/",
       "purpose": "Use the one-minute review card for award thesis, Qwen proof, and do-not-infer boundaries."
     },
     {
+      "step": 6,
+      "label": "Judge evidence pack",
+      "url": "https://ooyxloo.github.io/prizepilot-qwen-cloud/judge-pack/",
+      "purpose": "Check Track 4 fit, award thesis, and completed-vs-pending evidence."
+    },
+    {
+      "step": 7,
+      "label": "Qwen contribution and live proof",
+      "url": "https://ooyxloo.github.io/prizepilot-qwen-cloud/qwen-contribution/",
+      "purpose": "Inspect how Qwen refines PrizePilot decisions and where the live smoke proof is recorded."
+    },
+    {
       "step": 8,
+      "label": "Qwen before/after evidence",
+      "url": "https://ooyxloo.github.io/prizepilot-qwen-cloud/qwen-before-after/",
+      "purpose": "Compare deterministic route planning with the Qwen-refined public copy and proof boundary."
+    },
+    {
+      "step": 9,
       "label": "Award Thesis Scorecard",
       "url": "https://ooyxloo.github.io/prizepilot-qwen-cloud/award-thesis-scorecard/",
       "purpose": "Review the ranked Blog Post Award, Honorable Mention, and Track 4 thesis without treating it as a win-probability claim."
     },
     {
-      "step": 9,
+      "step": 10,
       "label": "Blog Share Packet",
       "url": "https://ooyxloo.github.io/prizepilot-qwen-cloud/blog-share-packet/",
       "purpose": "Review safe public share copy for the Blog Post Award route."
     },
     {
-      "step": 10,
+      "step": 11,
       "label": "Public update checklist",
       "url": "https://ooyxloo.github.io/prizepilot-qwen-cloud/public-update-checklist/",
       "purpose": "Confirm local checks, public link checks, and claim boundaries before any user-approved public update."
     },
     {
-      "step": 11,
+      "step": 12,
       "label": "Alibaba endpoint checklist",
       "url": "https://ooyxloo.github.io/prizepilot-qwen-cloud/alibaba-endpoint-checklist/",
       "purpose": "Verify that live Alibaba endpoint proof remains pending rather than overclaimed."
     },
     {
-      "step": 12,
+      "step": 13,
       "label": "Public update digest",
       "url": "https://ooyxloo.github.io/prizepilot-qwen-cloud/public-update-digest/",
       "purpose": "Review the prepared local update packet, public baseline, and do-not-claim boundaries before any user-approved push."
