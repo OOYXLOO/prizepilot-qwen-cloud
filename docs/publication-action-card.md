@@ -2,7 +2,7 @@
 
 Do not push, publish, edit Devpost, or change account-side proof without user confirmation at action time.
 
-Current state on 2026-06-15:
+Current state on 2026-06-16:
 
 ## Live Baseline
 
@@ -14,7 +14,7 @@ Current state on 2026-06-15:
 
 ## Prepared After Approved Push
 
-- Judge review card, Award Thesis Scorecard, Blog Share Packet, award preflight, award evidence map, Qwen contribution map, Qwen before/after evidence, public update checklist, public update digest, static plan JSON, and judge manifest are part of the prepared next-update package until pushed and rechecked.
+- Judge review card, Official Requirement Fit map, Award Thesis Scorecard, Blog Share Packet, award preflight, award evidence map, Qwen contribution map, Qwen before/after evidence, public update checklist, public update digest, static plan JSON, and judge manifest are part of the prepared next-update package until pushed and rechecked.
 - Public update digest is prepared at `docs/public-update-digest.md` and `docs/public-update-digest/` to explain the public baseline, working-copy update, proof improvements, HTTP 200 recheck requirement, and do-not-claim boundaries before any user-approved push.
 - One live Qwen/DashScope smoke proof has been captured safely with a runtime-only account-owner key.
 - The remaining high-value proof gap is a verified live Alibaba Cloud endpoint. Do not claim that endpoint until a real public URL returns HTTP 200 for `/` and `/api/plan`.

@@ -243,7 +243,8 @@ class PublicPagesTests(unittest.TestCase):
         page = (ROOT / "docs" / "public-update-digest" / "index.html").read_text(encoding="utf-8")
 
         self.assertIn("Qwen Public Update Digest", markdown)
-        self.assertIn("Last updated: 2026-06-15 (+08)", markdown)
+        self.assertIn("Last updated: 2026-06-16 (+08)", markdown)
+        self.assertNotIn("Last updated: 2026-06-15 (+08)", markdown)
         self.assertNotIn("Last updated: 2026-06-14", markdown)
         self.assertIn("Public repository baseline", markdown)
         self.assertIn("Local prepared update", markdown)
@@ -252,6 +253,9 @@ class PublicPagesTests(unittest.TestCase):
         self.assertIn("Do not claim PrizePilot has won a prize.", markdown)
         self.assertIn("Do not claim a live Alibaba Cloud public endpoint exists", markdown)
         self.assertIn("Do not claim that the award thesis scorecard predicts prize selection", markdown)
+        self.assertIn("official-requirement-fit/", markdown)
+        self.assertIn("award-thesis-scorecard/", markdown)
+        self.assertIn("Official Requirement Fit map", markdown)
         self.assertIn("Only after the account owner is present", markdown)
         self.assertIn("PrizePilot's public update packet is ready for approval.", page)
         self.assertIn("public repository baseline", page)
@@ -261,11 +265,13 @@ class PublicPagesTests(unittest.TestCase):
         self.assertIn("Recheck", page)
         self.assertIn("HTTP 200 after an approved push", page)
         self.assertIn("Backup Pages-hosted WebM", page)
+        self.assertIn("Official Requirement Fit map", page)
         self.assertIn("Award Thesis Scorecard", page)
         self.assertIn("No claim that the Award Thesis Scorecard predicts prize selection", page)
         self.assertIn("No live Alibaba Cloud public endpoint claim", page)
         self.assertIn("../judge-manifest.json", page)
         self.assertIn("../qwen-before-after/", page)
+        self.assertIn("../official-requirement-fit/", page)
         self.assertIn("../award-thesis-scorecard/", page)
 
     def test_judge_review_and_share_packets_keep_claims_safe(self) -> None:
@@ -478,12 +484,14 @@ class PublicPagesTests(unittest.TestCase):
     def test_publication_action_card_separates_live_baseline_from_prepared_push(self) -> None:
         card = (ROOT / "docs" / "publication-action-card.md").read_text(encoding="utf-8")
 
-        self.assertIn("Current state on 2026-06-15", card)
+        self.assertIn("Current state on 2026-06-16", card)
+        self.assertNotIn("Current state on 2026-06-15", card)
         self.assertNotIn("Current state on 2026-06-14", card)
         self.assertIn("## Live Baseline", card)
         self.assertIn("## Prepared After Approved Push", card)
         self.assertIn("Public baseline links currently live", card)
         self.assertIn("prepared next-update package until pushed and rechecked", card)
+        self.assertIn("Official Requirement Fit map", card)
         self.assertNotIn("part of the prepared public package", card)
 
     def test_benchmark_method_documents_scoring_limits(self) -> None:

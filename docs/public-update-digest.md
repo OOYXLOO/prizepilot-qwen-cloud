@@ -1,6 +1,6 @@
 # Qwen Public Update Digest
 
-Last updated: 2026-06-15 (+08)
+Last updated: 2026-06-16 (+08)
 
 This digest is the non-sensitive decision packet for a future user-approved public update. It does not push, edit Devpost, claim a prize, claim payout, claim a live Alibaba Cloud endpoint, or store secrets.
 
@@ -17,16 +17,16 @@ This digest is the non-sensitive decision packet for a future user-approved publ
 
 Latest public baseline check on 2026-06-15 found the existing review pages live, including `demo/`, `judge-pack/`, `award-preflight/`, `award-evidence-map/`, `cloud-readiness/`, `benchmark-method/`, `live-proof-gate/`, `qwen-live-proof/`, `qwen-contribution/`, `alibaba-endpoint-checklist/`, `api/plan.json`, and `blog/`.
 
-The next-update pages must be HTTP 200 rechecked after an approved push before they are copied into Devpost: `qwen-before-after/`, `judge-review-card/`, `blog-share-packet/`, `public-update-checklist/`, `public-update-digest/`, and `judge-manifest.json`.
+The next-update pages must be HTTP 200 rechecked after an approved push before they are copied into Devpost: `qwen-before-after/`, `judge-review-card/`, `official-requirement-fit/`, `award-thesis-scorecard/`, `blog-share-packet/`, `public-update-checklist/`, `public-update-digest/`, and `judge-manifest.json`.
 
 ## What The Update Improves
 
 - Adds a machine-readable judge manifest that names the submitted project, award targets, judge path, completed evidence, pending evidence, and do-not-infer boundaries.
 - Adds a pre-push head-check policy so the account owner can confirm the exact local commit and public baseline before any public side effect.
 - Adds Qwen before/after evidence so judges can see how deterministic route planning was refined into clearer Qwen-backed public copy.
-- Adds a judge review card, Award Thesis Scorecard, Blog Share Packet, and public update checklist so reviewers and the account owner have a short path through the strongest public evidence, ranked award thesis, and publishing gates.
+- Adds a judge review card, Official Requirement Fit map, Award Thesis Scorecard, Blog Share Packet, and public update checklist so reviewers and the account owner have a short path through the strongest public evidence, official rule fit, ranked award thesis, and publishing gates.
 - Adds a Pages-hosted WebM fallback beside the Devpost-required Vimeo demo so video review does not depend on one player.
-- Links the before/after trail from README, public hub, judge pack, Blog Award story, award preflight, award evidence map, and Qwen contribution map.
+- Links the before/after and official-fit trail from README, public hub, judge pack, Blog Award story, award preflight, award evidence map, Qwen contribution map, and Official Requirement Fit map.
 - Refreshes the public status language so the project reads as submitted and improvable, not as a draft.
 - Keeps the live Alibaba Cloud public endpoint as a pending account-owner proof gate instead of overclaiming it.
 
