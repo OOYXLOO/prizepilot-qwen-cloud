@@ -210,8 +210,9 @@ def build_status(root: Path, ledger_path: Path, now: datetime | None = None) -> 
             next_action = "Use docs/qwen-start-handoff-template.md for the remaining Qwen/Alibaba, deployment, blog/video, and final submission gates."
 
     return {
-        "checked_at": current.isoformat(),
-        "checked_at_local_asia_shanghai": current.astimezone(ASIA_SHANGHAI).isoformat(),
+        "snapshot_checked_at": current.isoformat(),
+        "snapshot_checked_at_local_asia_shanghai": current.astimezone(ASIA_SHANGHAI).isoformat(),
+        "status_snapshot_policy": "Regenerate qwen-status immediately before any user-approved public update; deadline hours and gate state are a point-in-time snapshot, not a live public claim.",
         "phase": phase,
         "severity": severity,
         "next_action": next_action,
@@ -243,8 +244,12 @@ def render_markdown(status: dict[str, object]) -> str:
     lines = [
         "# Qwen PrizePilot Route Status",
         "",
-        f"Generated: {status['checked_at']}",
-        f"Generated Asia/Shanghai: {status['checked_at_local_asia_shanghai']}",
+        f"Snapshot generated: {status['snapshot_checked_at']}",
+        f"Snapshot generated Asia/Shanghai: {status['snapshot_checked_at_local_asia_shanghai']}",
+        "",
+        f"Snapshot policy: {status['status_snapshot_policy']}",
+        "Regenerate immediately before any user-approved public update.",
+        "",
         f"Phase: **{status['phase']}**",
         f"Severity: **{status['severity']}**",
         "",
@@ -272,6 +277,15 @@ def render_markdown(status: dict[str, object]) -> str:
     lines.extend(f"- `{item}`" for item in status["reference_files"])
     return "\n".join(lines) + "\n"
 
+def render_console_summary(status: dict[str, object]) -> list[str]:
+    return [
+        f"Phase: {status['phase']}",
+        f"Severity: {status['severity']}",
+        f"Next action: {status['next_action']}",
+        f"Incomplete public/account gates: {len(status['incomplete_public_gates'])}",
+        f"Missing artifacts: {len(status['missing_artifacts'])}",
+    ]
+
 def main() -> None:
     parser = argparse.ArgumentParser(description="Qwen PrizePilot route status generator")
     parser.add_argument("--root", default=str(Path(__file__).resolve().parents[2]))
@@ -288,8 +302,8 @@ def main() -> None:
     (root / args.json_out).write_text(json.dumps(status, indent=2), encoding="utf-8")
     (root / args.md_out).write_text(render_markdown(status), encoding="utf-8")
     print(f"Wrote {args.json_out} and {args.md_out}")
-    print(f"Phase: {status['phase']}")
-    print(f"Severity: {status['severity']}")
+    for line in render_console_summary(status):
+        print(line)
 
 if __name__ == "__main__":
     main()

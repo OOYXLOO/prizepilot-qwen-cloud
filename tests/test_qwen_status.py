@@ -5,7 +5,7 @@ import unittest
 from datetime import datetime, timezone
 from pathlib import Path
 
-from prizepilot.qwen_status import REQUIRED_ARTIFACTS, build_status, parse_ledger_fields, render_markdown
+from prizepilot.qwen_status import REQUIRED_ARTIFACTS, build_status, parse_ledger_fields, render_console_summary, render_markdown
 
 LEDGER_TEXT = """# Ledger
 
@@ -112,7 +112,8 @@ class QwenStatusTests(unittest.TestCase):
 
         self.assertEqual(status["ledger_path"], "docs/qwen-route-ledger.md")
         self.assertNotIn(temp_dir, status["ledger_path"])
-        self.assertEqual(status["checked_at_local_asia_shanghai"], "2026-06-20T08:00:00+08:00")
+        self.assertEqual(status["snapshot_checked_at_local_asia_shanghai"], "2026-06-20T08:00:00+08:00")
+        self.assertIn("Regenerate qwen-status immediately before any user-approved public update", status["status_snapshot_policy"])
 
     def test_partial_github_repo_gets_push_specific_next_action(self) -> None:
         with tempfile.TemporaryDirectory() as temp_dir:
@@ -225,13 +226,41 @@ class QwenStatusTests(unittest.TestCase):
         markdown = render_markdown(status)
 
         self.assertIn("ready_for_user_publication_steps", markdown)
-        self.assertIn("Generated Asia/Shanghai:", markdown)
+        self.assertIn("Snapshot generated Asia/Shanghai:", markdown)
+        self.assertIn("Regenerate immediately before any user-approved public update.", markdown)
         self.assertIn("docs/qwen-start-handoff-template.md", markdown)
         self.assertIn("docs/live-proof-gate.md", markdown)
         self.assertIn("docs/cloud-readiness-report.md", markdown)
         self.assertIn("docs/cloud-readiness/index.html", markdown)
         self.assertIn("docs/award-evidence-map/index.html", markdown)
         self.assertIn("public github repository", markdown)
+
+    def test_console_summary_includes_next_action_and_gate_counts(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            root = Path(temp_dir)
+            write_required_artifacts(root)
+            ledger = write_ledger(
+                root,
+                joined="yes",
+                portfolio_project="yes",
+                additional_info="yes",
+                account_ready="yes",
+                live_check="yes",
+                deployment="partial - manifest prepared but live endpoint not verified",
+                repo="yes",
+                video="yes",
+                blog="yes",
+                submitted="yes",
+            )
+            status = build_status(root, ledger, now=datetime(2026, 6, 20, tzinfo=timezone.utc))
+
+        summary = "\n".join(render_console_summary(status))
+
+        self.assertIn("Phase: submitted_can_still_improve", summary)
+        self.assertIn("Severity: OK_WITH_EVIDENCE_GAPS", summary)
+        self.assertIn("Next action: Strengthen remaining evidence before judging", summary)
+        self.assertIn("Incomplete public/account gates: 1", summary)
+        self.assertIn("Missing artifacts: 0", summary)
 
 if __name__ == "__main__":
     unittest.main()

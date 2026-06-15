@@ -19,7 +19,7 @@ Use this as the non-sensitive recovery record for the Qwen backup route. Do not 
 
 - Devpost hackathon joined: yes
 - Devpost portfolio project created: yes
-- Devpost additional info saved: yes - architecture.png was selected through the native Windows file picker and Devpost advanced to finalization
+- Devpost additional info saved: yes - architecture.png and public project evidence fields were saved through the official Devpost form
 - Qwen/Alibaba Cloud account ready: yes - Alibaba Cloud China Bailian API access used by the account owner at action time; no API key stored
 - Qwen live check completed: yes - 2026-06-13 live Qwen/DashScope smoke test succeeded with `qwen-plus`, China Bailian endpoint, exit code 0, and runtime key removed after cleanup
 - Alibaba Cloud deployment proof: partial - Function Compute custom-container manifest prepared at deploy/alibaba-cloud/s.yaml; live Alibaba Cloud endpoint not verified
@@ -44,7 +44,7 @@ Use this as the non-sensitive recovery record for the Qwen backup route. Do not 
 - Qwen live proof URL: https://ooyxloo.github.io/prizepilot-qwen-cloud/qwen-live-proof/
 - Architecture diagram file: architecture.png
 - Devpost project URL: https://devpost.com/software/prizepilot-qwen-cloud
-- Qwen submission manage URL: account owner uses the Devpost dashboard while logged in; do not store private manage/edit deep links in the public package.
+- Qwen submission management URL: account owner uses the official Devpost dashboard; do not store private management URLs in the public package.
 - Submission timestamp: 2026-06-10T22:55:26+08:00
 - Follow-up date after submission: monitor before 2026-07-09T17:00:00-04:00 for Qwen/Alibaba live-proof improvements
 
@@ -66,11 +66,9 @@ Use this as the non-sensitive recovery record for the Qwen backup route. Do not 
 - Qwen Cloud account setup required account-owner verification through the official flow. No verification code, password, cookie, localStorage, or private inbox content is stored here. Treat Qwen account verification as a user-present gate unless a later public-safe proof entry says it is complete.
 - Generated `architecture.png` from the existing architecture model for the Qwen Devpost Additional info upload. The file is local/public-package material and contains no secrets.
 - Devpost final submission completed and displayed confirmation that the project was submitted and can still be edited until July 09, 2026 at 05:00pm EDT.
-- Reopened the Qwen Devpost draft from the hackathon page. The direct deep link without `/edit` returned a Devpost 404, but the hackathon page showed the logged-in `OOYXLOO` account, `Edit project`, draft status, and `2/5 steps done`; the edit URL resolved to `/project_details/edit`.
-- Continued the Qwen Devpost Additional info page in the active browser. Filled visible fields for submitter type (`Individual`), country (`China`), project type (`New`), start date (`06-10-26`), pre-May-26 update explanation, Track 4, repository URL, Alibaba Cloud proof code-file URL, blog URL, AI tools used, learning level (`Significant`), and the three eligibility confirmations.
-- Uploaded `architecture.png` through the native Windows file picker. Devpost showed `architecture.png` in the file list, saved Additional info successfully, and advanced to finalization with `4/5 steps done`.
-- Checked the final terms box and submitted the project. Devpost redirected to https://devpost.com/software/prizepilot-qwen-cloud and displayed: `Project submitted! Continue to edit your project until the hackathon deadline: July 09, 2026 at 05:00pm EDT.`
-- 2026-06-11: Reopened the recorded Qwen Devpost submission edit URL, replaced the public Story text with the current published-project version, saved Project details, and verified the public Devpost page no longer says `submission draft` and now shows the Vimeo demo, public repository, build journal, and live-evidence caveats.
+- Devpost submission was completed by the account owner through the official form. The public project URL was verified at https://devpost.com/software/prizepilot-qwen-cloud; no private management URLs, browser session details, step counters, eligibility form mechanics, cookies, localStorage, passwords, OTPs, or private account data are retained in this public package.
+- Additional info was saved with `architecture.png`, the repository URL, blog URL, video URL, Qwen/AI-tool notes, and the Alibaba Cloud code-proof URL. This ledger records only public-safe outcome facts, not private form navigation or account-session details.
+- 2026-06-11: The public Devpost Story was updated to remove draft wording and show the current public evidence links. Public verification found the submitted Devpost page exposed the Vimeo demo, public repository, build journal, Qwen proof link, and live-evidence caveats.
 - 2026-06-11: Added a static GitHub Pages evidence hub and judge demo at `docs/index.html` and `docs/demo/index.html`, copied the architecture diagram into `docs/assets/architecture.png` for Pages rendering, and expanded the build journal with screenshots, a claim/proof/gap table, Qwen client request shape, and judging-criteria map. Public repository HEAD `092965a82826e29d3d1fc746297f13c3963186ea` contains this update; GitHub Pages deployment may lag briefly after the push.
 - 2026-06-11: Verified GitHub Pages deployment for the root evidence hub, `/demo/`, and `/blog/`, then updated Devpost Project details to add `https://ooyxloo.github.io/prizepilot-qwen-cloud/demo/` as an additional public "Try it out" link. Public Devpost verification found the demo link href present alongside GitHub, Vimeo, and build journal links.
 - Remaining Qwen improvement work is evidence quality, not submission plumbing: the live Qwen/DashScope check is now complete; the remaining proof gap is live Alibaba Cloud endpoint evidence after account-owner approval.

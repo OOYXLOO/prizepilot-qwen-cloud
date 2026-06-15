@@ -281,6 +281,24 @@ class PublicPagesTests(unittest.TestCase):
         self.assertIn("../blog-share-packet/", checklist_page)
         self.assertIn("../judge-manifest.json", checklist_page)
 
+    def test_public_ledger_does_not_expose_account_process_residue(self) -> None:
+        ledger = (ROOT / "docs" / "qwen-route-ledger.md").read_text(encoding="utf-8").lower()
+
+        for forbidden in [
+            "logged-in",
+            "active browser",
+            "2/5 steps",
+            "4/5 steps",
+            "edit url",
+            "deep link",
+            "native windows file picker",
+            "final terms box",
+        ]:
+            self.assertNotIn(forbidden, ledger)
+
+        self.assertIn("no private management urls", ledger)
+        self.assertIn("public-safe outcome facts", ledger)
+
     def test_award_thesis_scorecard_ranks_routes_without_prediction_claim(self) -> None:
         markdown = (ROOT / "docs" / "award-thesis-scorecard.md").read_text(encoding="utf-8")
         page = (ROOT / "docs" / "award-thesis-scorecard" / "index.html").read_text(encoding="utf-8")

@@ -11,6 +11,7 @@ from .cloud_readiness import render_markdown as render_cloud_readiness_markdown
 from .qwen_client import QwenClient
 from .qwen_status import build_status as build_qwen_status
 from .qwen_status import parse_iso_datetime as parse_qwen_status_datetime
+from .qwen_status import render_console_summary as render_qwen_status_console_summary
 from .qwen_status import render_markdown as render_qwen_status_markdown
 
 
@@ -81,8 +82,8 @@ def main() -> None:
         status = build_qwen_status(root, (root / args.ledger).resolve(), now=now)
         (root / args.json_out).write_text(json.dumps(status, indent=2), encoding="utf-8")
         (root / args.md_out).write_text(render_qwen_status_markdown(status), encoding="utf-8")
-        print(f"Phase: {status['phase']}")
-        print(f"Severity: {status['severity']}")
+        for line in render_qwen_status_console_summary(status):
+            print(line)
         return
 
     if args.command == "cloud-readiness":
