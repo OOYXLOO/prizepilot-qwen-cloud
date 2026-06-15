@@ -2,13 +2,19 @@
 
 Do not push, publish, edit Devpost, or change account-side proof without user confirmation at action time.
 
-Current state on 2026-06-14:
+Current state on 2026-06-15:
+
+## Live Baseline
 
 - Qwen Devpost project is submitted and public: https://devpost.com/software/prizepilot-qwen-cloud
 - Public repository is live: https://github.com/OOYXLOO/prizepilot-qwen-cloud
 - Public evidence hub is live: https://ooyxloo.github.io/prizepilot-qwen-cloud/
 - Public Vimeo demo page is reachable and linked from the submitted project; Devpost playback should be checked user-present before any stronger playback claim: https://vimeo.com/1200124146
-- Public Blog Award story, judge pack, judge review card, Award Thesis Scorecard, Blog Share Packet, award preflight, award evidence map, Qwen live proof, Qwen contribution map, Qwen before/after evidence, public update checklist, static plan JSON, and judge manifest are part of the prepared public package.
+- Public baseline links currently live include the Devpost project, public repository, public evidence hub, public Vimeo demo page, Blog Award story, judge demo, and existing proof pages that have already been pushed.
+
+## Prepared After Approved Push
+
+- Judge review card, Award Thesis Scorecard, Blog Share Packet, award preflight, award evidence map, Qwen contribution map, Qwen before/after evidence, public update checklist, public update digest, static plan JSON, and judge manifest are part of the prepared next-update package until pushed and rechecked.
 - Public update digest is prepared at `docs/public-update-digest.md` and `docs/public-update-digest/` to explain the public baseline, working-copy update, proof improvements, HTTP 200 recheck requirement, and do-not-claim boundaries before any user-approved push.
 - One live Qwen/DashScope smoke proof has been captured safely with a runtime-only account-owner key.
 - The remaining high-value proof gap is a verified live Alibaba Cloud endpoint. Do not claim that endpoint until a real public URL returns HTTP 200 for `/` and `/api/plan`.
@@ -19,7 +25,7 @@ The earlier notes about GitHub push authorization, Devpost portfolio creation re
 
 Current blocker type:
 
-- Public Qwen package improvements can be prepared locally.
+- Qwen package improvements can be prepared locally.
 - Public push/Devpost edits still require explicit user approval because they change external public pages.
 - Alibaba endpoint proof requires account-owner approval for cloud account, credits or billing, deployment, and public endpoint verification.
 

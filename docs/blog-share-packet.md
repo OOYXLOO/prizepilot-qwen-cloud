@@ -6,7 +6,7 @@ This packet keeps the Blog Post Award route easy to share without overclaiming e
 
 ## Safe Title
 
-PrizePilot: Using Qwen to Choose the Most Winnable Hackathon Prize Route
+PrizePilot: Using Qwen to Choose the Most Evidence-Ready Hackathon Prize Route
 
 ## Short Summary
 

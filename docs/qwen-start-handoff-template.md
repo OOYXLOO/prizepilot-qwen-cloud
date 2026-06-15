@@ -45,10 +45,10 @@ Please strengthen the submitted Qwen PrizePilot project with live-check commands
 
 ## Current Two-Minute Unblock Prompt
 
-Use this after the Qwen Cloud verification code arrives in the registered email inbox:
+Use this only when the account owner is present with the current official Qwen Cloud verification step open:
 
 ```text
-The Qwen Cloud verification code is available in the browser/email inbox. Reopen or restore the Qwen Cloud verification page if needed, enter the current code, and continue account setup. Do not store the code in files or ledgers.
+The Qwen Cloud verification step is ready in the official browser flow. Complete the current verification code/account step yourself, then continue account setup. Do not store codes, passwords, cookies, localStorage, or private inbox content in files or ledgers.
 ```
 
 ## Separate Confirmations Needed
@@ -72,5 +72,5 @@ Please confirm I should update the already-submitted Devpost project with newly 
 1. Local package and tests pass.
 2. Public GitHub repo, blog, Vimeo demo, and Devpost submission are live and clean.
 3. Qwen/DashScope live check succeeds without storing the API key. Done once on 2026-06-13.
-4. Alibaba Cloud deployment proof exists.
+4. Alibaba Cloud deployment proof exists only after a real public endpoint proof is captured.
 5. Devpost is updated only after the new evidence exists.

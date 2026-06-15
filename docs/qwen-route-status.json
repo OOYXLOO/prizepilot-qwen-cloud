@@ -1,11 +1,11 @@
 {
-  "checked_at": "2026-06-15T04:44:04.819280+00:00",
-  "checked_at_local_asia_shanghai": "2026-06-15T12:44:04.819280+08:00",
+  "checked_at": "2026-06-15T05:52:04.011751+00:00",
+  "checked_at_local_asia_shanghai": "2026-06-15T13:52:04.011751+08:00",
   "phase": "submitted_can_still_improve",
   "severity": "OK_WITH_EVIDENCE_GAPS",
   "next_action": "Strengthen remaining evidence before judging: add verified Alibaba Cloud endpoint proof if account access and billing/credit approval are available, then update public Devpost copy only with captured evidence.",
   "deadline_utc": "2026-07-09T21:00:00+00:00",
-  "hours_until_deadline": 592.27,
+  "hours_until_deadline": 591.13,
   "artifact_checks": [
     {
       "path": "README.md",
@@ -71,13 +71,13 @@
       "path": "docs/index.html",
       "description": "Public build notes landing page",
       "exists": true,
-      "size": 11255
+      "size": 11090
     },
     {
       "path": "docs/blog/index.html",
       "description": "Public blog page for Blog Post Award",
       "exists": true,
-      "size": 23088
+      "size": 23240
     },
     {
       "path": "docs/judge-pack/index.html",
@@ -107,13 +107,13 @@
       "path": "docs/blog-share-packet.md",
       "description": "Blog Share Packet",
       "exists": true,
-      "size": 1921
+      "size": 1927
     },
     {
       "path": "docs/blog-share-packet/index.html",
       "description": "Public Blog Share Packet page",
       "exists": true,
-      "size": 4392
+      "size": 4397
     },
     {
       "path": "docs/public-update-checklist.md",
@@ -269,7 +269,7 @@
       "path": "docs/demo-video-upload-pack.md",
       "description": "Demo video host upload metadata",
       "exists": true,
-      "size": 2307
+      "size": 2445
     },
     {
       "path": "tools/record_demo_webm.mjs",
@@ -287,7 +287,7 @@
       "path": "docs/qwen-start-handoff-template.md",
       "description": "User launch handoff template",
       "exists": true,
-      "size": 4462
+      "size": 4568
     },
     {
       "path": "docs/live-proof-gate.md",
@@ -323,7 +323,7 @@
       "path": "docs/publication-action-card.md",
       "description": "Publication action card",
       "exists": true,
-      "size": 2829
+      "size": 3092
     },
     {
       "path": "docs/public-package-checklist.md",
@@ -335,25 +335,25 @@
       "path": "docs/validation-report.md",
       "description": "Validation report",
       "exists": true,
-      "size": 3360
+      "size": 3432
     },
     {
       "path": "docs/screenshots/prizepilot-dashboard-desktop.png",
       "description": "Desktop dashboard screenshot",
       "exists": true,
-      "size": 95749
+      "size": 68468
     },
     {
       "path": "docs/screenshots/prizepilot-dashboard-mobile.png",
       "description": "Mobile dashboard screenshot",
       "exists": true,
-      "size": 85665
+      "size": 40933
     },
     {
       "path": "docs/screenshots/prizepilot-demo.gif",
       "description": "Demo GIF",
       "exists": true,
-      "size": 279896
+      "size": 232737
     }
   ],
   "missing_artifacts": [],

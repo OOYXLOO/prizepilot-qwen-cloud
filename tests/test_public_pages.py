@@ -35,10 +35,11 @@ class PublicPagesTests(unittest.TestCase):
         self.assertIn("Open Devpost", hub)
         self.assertIn("Watch Demo", hub)
         self.assertIn("Read Blog Award Story", hub)
-        self.assertIn("Open Judge Card", hub)
+        self.assertNotIn("<strong>Open Judge Card</strong>", hub)
         self.assertIn("3-link reviewer fast path", hub)
         self.assertIn("Confirm the submitted identity", hub)
         self.assertIn("Watch the", hub)
+        self.assertIn("After those three actions", hub)
         self.assertIn("do-not-infer boundary", hub)
         self.assertIn("Judge Evidence Pack", hub)
         self.assertIn("Award Preflight", hub)
@@ -257,9 +258,13 @@ class PublicPagesTests(unittest.TestCase):
         self.assertIn("Last updated: 2026-06-15 (+08)", share_md)
         self.assertNotIn("Last updated: 2026-06-14", share_md)
         self.assertIn("Safe Social Copy", share_md)
+        self.assertIn("Most Evidence-Ready", share_md)
+        self.assertNotIn("Most Winnable", share_md)
         self.assertIn("Do Not Say", share_md)
         self.assertIn("Do not say PrizePilot won", share_md)
         self.assertIn("Share PrizePilot without overstating", share_page)
+        self.assertIn("Most Evidence-Ready", share_page)
+        self.assertNotIn("Most Winnable", share_page)
         self.assertIn("../judge-review-card/", share_page)
         self.assertIn("../public-update-checklist/", share_page)
 
@@ -308,11 +313,22 @@ class PublicPagesTests(unittest.TestCase):
             ROOT / "docs" / "blog-share-packet" / "index.html",
             ROOT / "docs" / "public-update-checklist.md",
             ROOT / "docs" / "public-update-checklist" / "index.html",
+            ROOT / "docs" / "demo-video-upload-pack.md",
+            ROOT / "docs" / "demo-recording-runbook.md",
+            ROOT / "docs" / "qwen-route-ledger.md",
+            ROOT / "docs" / "qwen-start-handoff-template.md",
         ]
         forbidden = [
             "accepted by Devpost",
             "Vimeo URL accepted",
             "accepted public demo video",
+            "Accepted public Vimeo URL",
+            "accepted by the submitted Devpost project",
+            "Alibaba Cloud deployment proof exists.",
+            "browser/email inbox",
+            "GitHub OAuth authorized",
+            "clicked `Send Code`",
+            "Most Winnable",
         ]
 
         for path in scanned_paths:
@@ -377,14 +393,30 @@ class PublicPagesTests(unittest.TestCase):
 
         self.assertIn("Qwen Cloud Hackathon blog award story", blog)
         self.assertIn("Blog Post Award reader path", blog)
+        self.assertIn("fastest review path is three steps", blog)
         self.assertIn("../judge-pack/", blog)
         self.assertIn("../cloud-readiness/", blog)
         self.assertIn("../qwen-before-after/", blog)
         self.assertIn("https://vimeo.com/1200124146", blog)
         self.assertIn("https://github.com/OOYXLOO/prizepilot-qwen-cloud", blog)
+        self.assertIn("As of June 15, 2026", blog)
+        self.assertIn("Last updated June 15, 2026", blog)
+        self.assertNotIn("As of June 13, 2026", blog)
+        self.assertNotIn("Last updated June 13, 2026", blog)
         self.assertIn("what remains account-gated", blog)
         self.assertIn("../benchmark-method/", blog)
         self.assertIn("Benchmark method", blog)
+
+    def test_publication_action_card_separates_live_baseline_from_prepared_push(self) -> None:
+        card = (ROOT / "docs" / "publication-action-card.md").read_text(encoding="utf-8")
+
+        self.assertIn("Current state on 2026-06-15", card)
+        self.assertNotIn("Current state on 2026-06-14", card)
+        self.assertIn("## Live Baseline", card)
+        self.assertIn("## Prepared After Approved Push", card)
+        self.assertIn("Public baseline links currently live", card)
+        self.assertIn("prepared next-update package until pushed and rechecked", card)
+        self.assertNotIn("part of the prepared public package", card)
 
     def test_benchmark_method_documents_scoring_limits(self) -> None:
         markdown = (ROOT / "docs" / "benchmark-method.md").read_text(encoding="utf-8")

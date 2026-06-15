@@ -1,6 +1,6 @@
 # Validation Report
 
-Latest verification: 2026-06-15 after judge-fast-path and cloud-boundary refresh.
+Latest verification: 2026-06-15 after judge-fast-path, cloud-boundary, and screenshot refresh.
 
 ## Passed Gates
 
@@ -16,9 +16,10 @@ Latest verification: 2026-06-15 after judge-fast-path and cloud-boundary refresh
 - Deployable demo service checks verify `/`, `/api/plan`, JSON serializability, target prize output, submission status, agent walkthrough, judge scorecard, evidence gaps, and integrity-boundary copy.
 - Public repository, Devpost project, Vimeo demo, Blog Award story, judge pack, Qwen live proof, Qwen contribution map, Qwen before/after evidence, static plan JSON, cloud readiness report, and presentation deck are represented in the local public package.
 - Playwright browser layout checks pass on desktop and 390px mobile for the public hub, judge pack, Qwen before/after evidence, Qwen contribution map, Blog Award story, award evidence map, and award preflight, with no console errors or horizontal overflow.
-- Screenshots rebuilt from the local web service are included:
+- Screenshots and GIF rebuilt from the current local web service are included:
   - `docs/screenshots/prizepilot-dashboard-desktop.png`
   - `docs/screenshots/prizepilot-dashboard-mobile.png`
+  - `docs/screenshots/prizepilot-demo.gif`
 
 ## Current Evidence Boundary
 

@@ -29,7 +29,7 @@ Generated asset: run `node tools/record_demo_webm.mjs` from the repo root to cre
 ## Upload Checklist
 
 - Public repository URL is live.
-- Alibaba Cloud deployment proof exists.
+- Alibaba Cloud deployment proof exists only if a real public endpoint proof has been captured; otherwise keep this as pending.
 - Qwen live check result is recorded and linked through the public Qwen live proof page.
 - No passwords, API keys, OTPs, account recovery data, billing data, tax/KYC data, or private URLs are visible.
 - The Devpost project links to the public repository, deployment URL, blog/social post, and demo video URL.

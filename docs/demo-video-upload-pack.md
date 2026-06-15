@@ -45,13 +45,13 @@ Qwen Cloud, hackathon, AI agent, autopilot agent, Devpost, Alibaba Cloud, PrizeP
 
 ## Devpost Video Field
 
-Accepted public Vimeo URL:
+Current public Vimeo URL linked from Devpost:
 
 ```text
 https://vimeo.com/1200124146
 ```
 
-The same URL is recorded in `docs/qwen-route-ledger.md` under `Demo video URL` and accepted by the submitted Devpost project.
+The same URL is recorded in `docs/qwen-route-ledger.md` under `Demo video URL` and linked from the submitted public Devpost project. Embedded playback and any stronger Devpost playback claim should be checked while the account owner is present.
 
 ## Do Not Claim
 
