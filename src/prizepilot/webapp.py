@@ -54,6 +54,44 @@ def dashboard_payload() -> dict[str, Any]:
             "qwen_live_proof_url": "https://ooyxloo.github.io/prizepilot-qwen-cloud/qwen-live-proof/",
             "deadline": "July 09, 2026 at 05:00pm EDT",
         },
+        "qwen_agent_flow": [
+            {
+                "stage": "1. Public prize page",
+                "input": "Rules, awards, dates, required artifacts, and account-gated actions.",
+                "qwen_role": "Frames the opportunity as a judge-facing story instead of a loose TODO list.",
+                "proof": "samples/qwen_hackathon.json and qwen-before-after evidence.",
+            },
+            {
+                "stage": "2. Deterministic rank",
+                "input": "Prize amount, winner count, deadline pressure, blockers, and evidence gaps.",
+                "qwen_role": "Receives an auditable route plan rather than inventing the target from memory.",
+                "proof": "portfolio ranking in /api/plan and docs/api/plan.json.",
+            },
+            {
+                "stage": "3. Qwen refinement",
+                "input": "Blog Post Award route plus verified public artifact list.",
+                "qwen_role": "Tightens the public narrative, risk wording, and update copy for judges.",
+                "proof": "live qwen-plus smoke receipt with non-sensitive output excerpt.",
+            },
+            {
+                "stage": "4. Approval gate",
+                "input": "Any secret, public posting, cloud billing, payout, tax, or KYC step.",
+                "qwen_role": "Stops before irreversible account actions and records the human-controlled gate.",
+                "proof": "approval queue and integrity boundary in this dashboard.",
+            },
+            {
+                "stage": "5. Public proof packet",
+                "input": "Repo, Devpost, Vimeo, blog, judge hub, static plan JSON, and proof pages.",
+                "qwen_role": "Turns the chosen route into a reviewable evidence trail without overclaiming.",
+                "proof": "judge pack, award evidence map, contribution map, and live proof page.",
+            },
+        ],
+        "qwen_proof_snapshot": {
+            "verified": "One Qwen/DashScope qwen-plus refinement pass ran with a runtime-only key and published non-sensitive evidence.",
+            "current_public_artifacts": "Devpost, GitHub repository, Vimeo demo, Blog Award story, Pages hub, static judge demo, static plan JSON, Qwen contribution map, and Qwen live proof.",
+            "still_pending": "Live Alibaba Cloud endpoint proof remains unclaimed until a public URL returns HTTP 200 at / and /api/plan.",
+            "judge_takeaway": "PrizePilot is strongest as an honest autopilot: it accelerates route choice and submission evidence while keeping risky account actions visible.",
+        },
         "agent_walkthrough": [
             {
                 "role": "Contest Analyst",
@@ -163,6 +201,20 @@ def render_dashboard(payload: dict[str, Any]) -> str:
         f"<tr><td data-label=\"Action\">{item['action']}</td><td data-label=\"Status\">{item['status']}</td><td data-label=\"Risk\">{item['risk']}</td></tr>"
         for item in payload["approval_queue"]
     )
+    qwen_flow = "\n".join(
+        f"<section class=\"flow-step\"><h3>{item['stage']}</h3><p><strong>Input:</strong> {item['input']}</p><p><strong>Qwen role:</strong> {item['qwen_role']}</p><p><strong>Proof:</strong> {item['proof']}</p></section>"
+        for item in payload["qwen_agent_flow"]
+    )
+    qwen_proof = payload["qwen_proof_snapshot"]
+    qwen_proof_rows = "\n".join(
+        f"<li><strong>{label}:</strong> {qwen_proof[key]}</li>"
+        for label, key in [
+            ("Verified", "verified"),
+            ("Public artifacts", "current_public_artifacts"),
+            ("Still pending", "still_pending"),
+            ("Judge takeaway", "judge_takeaway"),
+        ]
+    )
     gaps = "\n".join(f"<li>{item}</li>" for item in payload["evidence_gaps"])
     benchmark = "\n".join(
         f"<tr><td data-label=\"Metric\">{item['metric']}</td><td data-label=\"Manual\">{item['baseline']}</td><td data-label=\"PrizePilot\">{item['prizepilot']}</td></tr>"
@@ -196,7 +248,15 @@ def render_dashboard(payload: dict[str, Any]) -> str:
     .tile {{ background: white; border: 1px solid #d9e2ec; padding: 16px; min-height: 148px; }}
     .tile h3 {{ margin: 0 0 8px; font-size: 17px; }}
     .tile strong {{ display: block; color: #16202a; font-size: 13px; line-height: 1.4; }}
+    .flow {{ display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 10px; margin-top: 16px; }}
+    .flow-step {{ background: white; border: 1px solid #d9e2ec; border-top: 5px solid #0f766e; padding: 14px; min-width: 0; }}
+    .flow-step h3 {{ margin: 0 0 8px; font-size: 15px; }}
+    .flow-step p {{ margin: 8px 0 0; font-size: 13px; line-height: 1.42; }}
+    .flow-step strong {{ color: #16202a; }}
     code {{ background: #e8eef5; padding: 2px 5px; }}
+    @media (max-width: 900px) {{
+      .flow {{ grid-template-columns: repeat(2, minmax(0, 1fr)); }}
+    }}
     @media (max-width: 620px) {{
       h1 {{ font-size: 24px; line-height: 1.16; }}
       h2 {{ font-size: 24px; }}
@@ -206,6 +266,7 @@ def render_dashboard(payload: dict[str, Any]) -> str:
       .tile {{ min-height: 0; }}
       .tile strong {{ font-size: 12px; }}
       .grid {{ grid-template-columns: 1fr; }}
+      .flow {{ grid-template-columns: 1fr; }}
       .table-wrap {{ overflow-x: visible; }}
       table {{ min-width: 0; }}
       thead {{ display: none; }}
@@ -229,6 +290,12 @@ def render_dashboard(payload: dict[str, Any]) -> str:
   </div>
   <div class="panel">
     <strong>Current Qwen target:</strong> {qwen_target.get('name')} - USD {qwen_target.get('amount_usd')} x {qwen_target.get('winners')} winners.
+  </div>
+  <h2>Qwen Agent Flow</h2>
+  <div class="flow">{qwen_flow}</div>
+  <div class="panel">
+    <strong>Qwen proof snapshot:</strong>
+    <ul>{qwen_proof_rows}</ul>
   </div>
   <div class="panel">
     <strong>Mind the Product target:</strong> {mtp_target.get('name')} - USD {mtp_target.get('amount_usd')} cash. Novus status: {'installed' if novus.get('novus_installed') else 'email verification required'}.

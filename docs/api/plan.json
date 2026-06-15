@@ -581,6 +581,44 @@
     "qwen_live_proof_url": "https://ooyxloo.github.io/prizepilot-qwen-cloud/qwen-live-proof/",
     "deadline": "July 09, 2026 at 05:00pm EDT"
   },
+  "qwen_agent_flow": [
+    {
+      "stage": "1. Public prize page",
+      "input": "Rules, awards, dates, required artifacts, and account-gated actions.",
+      "qwen_role": "Frames the opportunity as a judge-facing story instead of a loose TODO list.",
+      "proof": "samples/qwen_hackathon.json and qwen-before-after evidence."
+    },
+    {
+      "stage": "2. Deterministic rank",
+      "input": "Prize amount, winner count, deadline pressure, blockers, and evidence gaps.",
+      "qwen_role": "Receives an auditable route plan rather than inventing the target from memory.",
+      "proof": "portfolio ranking in /api/plan and docs/api/plan.json."
+    },
+    {
+      "stage": "3. Qwen refinement",
+      "input": "Blog Post Award route plus verified public artifact list.",
+      "qwen_role": "Tightens the public narrative, risk wording, and update copy for judges.",
+      "proof": "live qwen-plus smoke receipt with non-sensitive output excerpt."
+    },
+    {
+      "stage": "4. Approval gate",
+      "input": "Any secret, public posting, cloud billing, payout, tax, or KYC step.",
+      "qwen_role": "Stops before irreversible account actions and records the human-controlled gate.",
+      "proof": "approval queue and integrity boundary in this dashboard."
+    },
+    {
+      "stage": "5. Public proof packet",
+      "input": "Repo, Devpost, Vimeo, blog, judge hub, static plan JSON, and proof pages.",
+      "qwen_role": "Turns the chosen route into a reviewable evidence trail without overclaiming.",
+      "proof": "judge pack, award evidence map, contribution map, and live proof page."
+    }
+  ],
+  "qwen_proof_snapshot": {
+    "verified": "One Qwen/DashScope qwen-plus refinement pass ran with a runtime-only key and published non-sensitive evidence.",
+    "current_public_artifacts": "Devpost, GitHub repository, Vimeo demo, Blog Award story, Pages hub, static judge demo, static plan JSON, Qwen contribution map, and Qwen live proof.",
+    "still_pending": "Live Alibaba Cloud endpoint proof remains unclaimed until a public URL returns HTTP 200 at / and /api/plan.",
+    "judge_takeaway": "PrizePilot is strongest as an honest autopilot: it accelerates route choice and submission evidence while keeping risky account actions visible."
+  },
   "agent_walkthrough": [
     {
       "role": "Contest Analyst",
