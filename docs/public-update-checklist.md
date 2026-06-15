@@ -19,7 +19,7 @@ Use this checklist before any future public push or Devpost edit for PrizePilot.
 
 - [ ] If a GitHub Actions workflow exists on the public branch, it is green; if no workflow is present, record the local verification commands and Pages HTTP checks instead.
 - [ ] GitHub Pages hub returns HTTP 200.
-- [ ] Judge pack, judge review card, Blog Share Packet, public update digest, and Alibaba endpoint checklist return HTTP 200.
+- [ ] Judge pack, judge review card, Award Thesis Scorecard, Blog Share Packet, public update digest, and Alibaba endpoint checklist return HTTP 200.
 - [ ] Devpost project page still loads publicly.
 - [ ] Vimeo page loads publicly.
 - [ ] Backup WebM demo loads publicly: `https://ooyxloo.github.io/prizepilot-qwen-cloud/demo-video/prizepilot-demo.webm`.
@@ -29,6 +29,7 @@ Use this checklist before any future public push or Devpost edit for PrizePilot.
 
 - [ ] No prize, finalist, payout, tax, KYC, billing, bank, or cloud-credit claim.
 - [ ] No live Alibaba endpoint claim until `/` and `/api/plan` return HTTP 200 from a real Alibaba Cloud URL.
+- [ ] No claim that the Award Thesis Scorecard predicts prize selection or payout.
 - [ ] No API keys, request headers, account IDs, cookies, private email, private console screenshots, payment data, or localStorage.
 - [ ] Public copy describes only evidence that actually exists.
 

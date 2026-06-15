@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PrizePilot Qwen Award Thesis Scorecard</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #17202a;
+      --muted: #536273;
+      --line: #d7dde5;
+      --paper: #ffffff;
+      --wash: #f4f7fa;
+      --teal: #0f766e;
+      --blue: #2563eb;
+      --green: #047857;
+      --amber: #b45309;
+    }
+
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: Arial, Helvetica, sans-serif; color: var(--ink); background: var(--wash); }
+    header { padding: 48px 0 30px; background: var(--paper); border-bottom: 1px solid var(--line); }
+    main { padding: 30px 0 64px; }
+    .wrap { width: min(1080px, calc(100% - 32px)); margin: 0 auto; }
+    .eyebrow { margin: 0 0 12px; color: var(--teal); font-size: 14px; font-weight: 700; letter-spacing: 0; text-transform: uppercase; }
+    h1 { max-width: 920px; margin: 0; font-size: clamp(34px, 5vw, 56px); line-height: 1.06; letter-spacing: 0; }
+    .dek { max-width: 830px; margin: 18px 0 0; color: var(--muted); font-size: 18px; line-height: 1.6; }
+    section { padding: 28px 0; border-bottom: 1px solid var(--line); }
+    section:first-child { padding-top: 0; }
+    h2 { margin: 0 0 14px; font-size: 26px; line-height: 1.2; letter-spacing: 0; }
+    p, li, td { color: var(--muted); font-size: 15px; line-height: 1.58; }
+    a { color: var(--blue); font-weight: 700; }
+    code { padding: 2px 5px; background: #eaf0f7; color: #1d2a39; }
+    .rank-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; margin-top: 24px; }
+    .rank-card, .callout { min-width: 0; padding: 18px; border: 1px solid var(--line); background: var(--paper); }
+    .rank-card strong { display: block; color: var(--green); font-size: 28px; line-height: 1; margin-bottom: 10px; }
+    .rank-card h2 { margin-bottom: 8px; font-size: 21px; }
+    .table-wrap { overflow-x: auto; border: 1px solid var(--line); background: var(--paper); margin-top: 16px; }
+    table { width: 100%; min-width: 820px; border-collapse: collapse; }
+    th, td { padding: 13px 14px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }
+    th { color: var(--muted); font-size: 13px; text-transform: uppercase; }
+    tr:last-child td { border-bottom: 0; }
+    .ready { color: var(--green); font-weight: 700; }
+    .gated { color: var(--amber); font-weight: 700; }
+    .callout { border-left: 5px solid var(--amber); }
+    .callout strong { color: var(--ink); }
+
+    @media (max-width: 820px) {
+      .rank-grid { grid-template-columns: 1fr; }
+      table { min-width: 0; }
+      thead { display: none; }
+      tr, td { display: block; }
+      td::before {
+        content: attr(data-label);
+        display: block;
+        margin-bottom: 4px;
+        color: var(--ink);
+        font-size: 12px;
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <p class="eyebrow">Qwen award thesis scorecard</p>
+      <h1>PrizePilot's strongest route is the Blog Post Award, with Honorable Mention as the secondary route.</h1>
+      <p class="dek">This scorecard compresses the submitted package into the award thesis a judge can verify quickly: public story, Qwen contribution, reproducible planner, and an honest boundary around the remaining Alibaba endpoint proof.</p>
+      <div class="rank-grid" aria-label="Award thesis summary">
+        <div class="rank-card"><strong>1</strong><h2>Blog Post Award</h2><p>Strongest route because the build journal is the product loop: choose a reachable cash-prize path, build public proof, and stop at human gates.</p></div>
+        <div class="rank-card"><strong>2</strong><h2>Honorable Mention</h2><p>Secondary route because the project is public, reproducible, and explicit about what remains account-gated.</p></div>
+        <div class="rank-card"><strong>0</strong><h2>Endpoint overclaim</h2><p>No live Alibaba endpoint claim exists until a real public URL returns HTTP 200 at <code>/</code> and <code>/api/plan</code>.</p></div>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section>
+      <h2>Ranked Award Thesis</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Rank</th>
+              <th>Award route</th>
+              <th>Why this is strongest</th>
+              <th>Evidence</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td data-label="Rank">1</td>
+              <td data-label="Award route">Blog Post Award</td>
+              <td data-label="Why">The story is the product loop: PrizePilot uses Qwen to choose a realistic cash-prize route, build public proof, and stop at human approval gates instead of inventing private/account evidence.</td>
+              <td data-label="Evidence"><a href="../blog/">Blog story</a>, <a href="../blog-share-packet/">share packet</a>, <a href="../qwen-before-after/">before/after evidence</a>, <a href="../qwen-contribution/">Qwen contribution map</a></td>
+            </tr>
+            <tr>
+              <td data-label="Rank">2</td>
+              <td data-label="Award route">Top 10 Honorable Mention Projects</td>
+              <td data-label="Why">The submission is public, reproducible, and clear about completed evidence versus pending sponsor proof.</td>
+              <td data-label="Evidence"><a href="../judge-pack/">judge pack</a>, <a href="../award-evidence-map/">evidence map</a>, <a href="../cloud-readiness/">cloud readiness</a>, <a href="../judge-manifest.json">judge manifest</a></td>
+            </tr>
+            <tr>
+              <td data-label="Rank">3</td>
+              <td data-label="Award route">Track 4 Autopilot Agent fit</td>
+              <td data-label="Why">The core product is an autopilot agent for route triage, artifact planning, and human gate management.</td>
+              <td data-label="Evidence"><code>src/prizepilot/agent.py</code>, <code>src/prizepilot/qwen_client.py</code>, <a href="../api/plan.json">static plan JSON</a>, tests</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section>
+      <h2>Judge-Visible Strengths</h2>
+      <ul>
+        <li><span class="ready">Public submission identity:</span> Devpost, GitHub repo, Vimeo demo, Pages hub, deck, static demo, and public blog are reviewable without private account access.</li>
+        <li><span class="ready">Qwen contribution:</span> live Qwen/DashScope smoke proof exists, and before/after evidence shows how Qwen sharpens route language, story clarity, and risk wording.</li>
+        <li><span class="ready">Reproducibility:</span> deterministic planning still works without a model key, so Qwen refinement improves the narrative without hiding the baseline.</li>
+        <li><span class="gated">Integrity boundary:</span> Alibaba endpoint proof remains pending until a real public URL returns HTTP 200 at <code>/</code> and <code>/api/plan</code>.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Do Not Infer</h2>
+      <div class="callout">
+        <strong>Boundary:</strong> this scorecard is an award-thesis summary, not a statistical prediction of winning and not a prize, payout, tax, KYC, billing, bank, or cloud-credit claim.
+      </div>
+      <ul>
+        <li>Do not infer PrizePilot has won, been shortlisted, or received a payout.</li>
+        <li>Do not infer a live Alibaba Cloud public endpoint exists until public HTTP proof is captured.</li>
+        <li>Do not publish API keys, request headers, account IDs, cookies, private console screenshots, private email, payment data, or localStorage.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Verification</h2>
+      <p>Local verification remains the existing no-secret test path: <code>$env:PYTHONPATH='src'; python -m unittest discover -s tests -v</code>, <code>python -m compileall -q src tests tools</code>, <code>python -m prizepilot qwen-status</code>, <code>python -m prizepilot cloud-readiness</code>, and <code>python -m json.tool docs\judge-manifest.json</code>.</p>
+    </section>
+  </main>
+</body>
+</html>

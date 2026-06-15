@@ -24,7 +24,7 @@ The next-update pages must be HTTP 200 rechecked after an approved push before t
 - Adds a machine-readable judge manifest that names the submitted project, award targets, judge path, completed evidence, pending evidence, and do-not-infer boundaries.
 - Adds a pre-push head-check policy so the account owner can confirm the exact local commit and public baseline before any public side effect.
 - Adds Qwen before/after evidence so judges can see how deterministic route planning was refined into clearer Qwen-backed public copy.
-- Adds a judge review card, Blog Share Packet, and public update checklist so reviewers and the account owner have a short path through the strongest public evidence and publishing gates.
+- Adds a judge review card, Award Thesis Scorecard, Blog Share Packet, and public update checklist so reviewers and the account owner have a short path through the strongest public evidence, ranked award thesis, and publishing gates.
 - Adds a Pages-hosted WebM fallback beside the Devpost-required Vimeo demo so video review does not depend on one player.
 - Links the before/after trail from README, public hub, judge pack, Blog Award story, award preflight, award evidence map, and Qwen contribution map.
 - Refreshes the public status language so the project reads as submitted and improvable, not as a draft.
@@ -35,6 +35,7 @@ The next-update pages must be HTTP 200 rechecked after an approved push before t
 - Do not claim PrizePilot has won a prize.
 - Do not claim payout, tax, KYC, bank, billing, or cloud-credit setup is complete.
 - Do not claim a live Alibaba Cloud public endpoint exists until `/` and `/api/plan` return HTTP 200 from a real Alibaba Cloud URL.
+- Do not claim that the award thesis scorecard predicts prize selection; it is a review summary, not a win probability model.
 - Do not publish API keys, request headers, account IDs, cookies, private email content, console screenshots, payment data, or localStorage.
 
 ## User-Present Approval Gate

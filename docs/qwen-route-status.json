@@ -1,17 +1,17 @@
 {
-  "checked_at": "2026-06-14T23:28:31.809034+00:00",
-  "checked_at_local_asia_shanghai": "2026-06-15T07:28:31.809034+08:00",
+  "checked_at": "2026-06-15T02:19:31.920712+00:00",
+  "checked_at_local_asia_shanghai": "2026-06-15T10:19:31.920712+08:00",
   "phase": "submitted_can_still_improve",
   "severity": "OK_WITH_EVIDENCE_GAPS",
   "next_action": "Strengthen remaining evidence before judging: add verified Alibaba Cloud endpoint proof if account access and billing/credit approval are available, then update public Devpost copy only with captured evidence.",
   "deadline_utc": "2026-07-09T21:00:00+00:00",
-  "hours_until_deadline": 597.52,
+  "hours_until_deadline": 594.67,
   "artifact_checks": [
     {
       "path": "README.md",
       "description": "Project README",
       "exists": true,
-      "size": 7400
+      "size": 7556
     },
     {
       "path": "LICENSE",
@@ -71,7 +71,7 @@
       "path": "docs/index.html",
       "description": "Public build notes landing page",
       "exists": true,
-      "size": 10578
+      "size": 10828
     },
     {
       "path": "docs/blog/index.html",
@@ -83,25 +83,25 @@
       "path": "docs/judge-pack/index.html",
       "description": "Public judge evidence pack",
       "exists": true,
-      "size": 20091
+      "size": 20400
     },
     {
       "path": "docs/judge-manifest.json",
       "description": "Machine-readable judge manifest",
       "exists": true,
-      "size": 8398
+      "size": 8760
     },
     {
       "path": "docs/judge-review-card.md",
       "description": "Judge review card",
       "exists": true,
-      "size": 2547
+      "size": 2755
     },
     {
       "path": "docs/judge-review-card/index.html",
       "description": "Public judge review card page",
       "exists": true,
-      "size": 4388
+      "size": 4571
     },
     {
       "path": "docs/blog-share-packet.md",
@@ -119,13 +119,13 @@
       "path": "docs/public-update-checklist.md",
       "description": "Public update checklist",
       "exists": true,
-      "size": 2029
+      "size": 2136
     },
     {
       "path": "docs/public-update-checklist/index.html",
       "description": "Public update checklist page",
       "exists": true,
-      "size": 4190
+      "size": 4369
     },
     {
       "path": "docs/award-preflight/index.html",
@@ -161,13 +161,13 @@
       "path": "docs/cloud-readiness-report.md",
       "description": "Cloud readiness report",
       "exists": true,
-      "size": 2848
+      "size": 2907
     },
     {
       "path": "docs/cloud-readiness-report.json",
       "description": "Machine-readable cloud readiness report",
       "exists": true,
-      "size": 3779
+      "size": 3852
     },
     {
       "path": "docs/qwen-live-proof.md",
@@ -221,13 +221,13 @@
       "path": "docs/public-update-digest.md",
       "description": "Public update digest",
       "exists": true,
-      "size": 4101
+      "size": 4273
     },
     {
       "path": "docs/public-update-digest/index.html",
       "description": "Public update digest page",
       "exists": true,
-      "size": 5799
+      "size": 6054
     },
     {
       "path": "docs/api/plan.json",
@@ -323,7 +323,7 @@
       "path": "docs/publication-action-card.md",
       "description": "Publication action card",
       "exists": true,
-      "size": 2805
+      "size": 2829
     },
     {
       "path": "docs/public-package-checklist.md",

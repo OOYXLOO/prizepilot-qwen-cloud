@@ -10,14 +10,15 @@ This is the 60-second review card for PrizePilot, a submitted Qwen Cloud Track 4
 2. Watch the public Vimeo demo: https://vimeo.com/1200124146
 3. If Vimeo is unavailable, use the backup public WebM: https://ooyxloo.github.io/prizepilot-qwen-cloud/demo-video/prizepilot-demo.webm
 4. Read the judge evidence pack: https://ooyxloo.github.io/prizepilot-qwen-cloud/judge-pack/
-5. Check the Qwen contribution map: https://ooyxloo.github.io/prizepilot-qwen-cloud/qwen-contribution/
-6. Verify the remaining proof boundary: https://ooyxloo.github.io/prizepilot-qwen-cloud/alibaba-endpoint-checklist/
+5. Open the award thesis scorecard: https://ooyxloo.github.io/prizepilot-qwen-cloud/award-thesis-scorecard/
+6. Check the Qwen contribution map: https://ooyxloo.github.io/prizepilot-qwen-cloud/qwen-contribution/
+7. Verify the remaining proof boundary: https://ooyxloo.github.io/prizepilot-qwen-cloud/alibaba-endpoint-checklist/
 
 ## Award Thesis
 
 PrizePilot is strongest for the Blog Post Award because the project story is itself the product: an agent choosing a realistic cash-prize route, building public proof, and stopping at human approval gates instead of inventing private/account evidence.
 
-The secondary route is Honorable Mention because the package is public, reproducible, and honest about its one remaining high-value gap: live Alibaba Cloud endpoint proof.
+The secondary route is Honorable Mention because the package is public, reproducible, and honest about its one remaining high-value gap: live Alibaba Cloud endpoint proof. The award thesis scorecard ranks these routes without claiming that prize selection is predictable.
 
 ## Qwen Evidence
 
