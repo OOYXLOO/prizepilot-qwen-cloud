@@ -1,11 +1,11 @@
 {
-  "checked_at": "2026-06-15T08:57:41.181506+00:00",
-  "checked_at_local_asia_shanghai": "2026-06-15T16:57:41.181506+08:00",
+  "checked_at": "2026-06-15T12:57:37.412815+00:00",
+  "checked_at_local_asia_shanghai": "2026-06-15T20:57:37.412815+08:00",
   "phase": "submitted_can_still_improve",
   "severity": "OK_WITH_EVIDENCE_GAPS",
   "next_action": "Strengthen remaining evidence before judging: add verified Alibaba Cloud endpoint proof if account access and billing/credit approval are available, then update public Devpost copy only with captured evidence.",
   "deadline_utc": "2026-07-09T21:00:00+00:00",
-  "hours_until_deadline": 588.04,
+  "hours_until_deadline": 584.04,
   "artifact_checks": [
     {
       "path": "README.md",
