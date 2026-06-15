@@ -1,11 +1,11 @@
 {
-  "checked_at": "2026-06-15T05:52:04.011751+00:00",
-  "checked_at_local_asia_shanghai": "2026-06-15T13:52:04.011751+08:00",
+  "checked_at": "2026-06-15T08:57:41.181506+00:00",
+  "checked_at_local_asia_shanghai": "2026-06-15T16:57:41.181506+08:00",
   "phase": "submitted_can_still_improve",
   "severity": "OK_WITH_EVIDENCE_GAPS",
   "next_action": "Strengthen remaining evidence before judging: add verified Alibaba Cloud endpoint proof if account access and billing/credit approval are available, then update public Devpost copy only with captured evidence.",
   "deadline_utc": "2026-07-09T21:00:00+00:00",
-  "hours_until_deadline": 591.13,
+  "hours_until_deadline": 588.04,
   "artifact_checks": [
     {
       "path": "README.md",
@@ -77,7 +77,7 @@
       "path": "docs/blog/index.html",
       "description": "Public blog page for Blog Post Award",
       "exists": true,
-      "size": 23240
+      "size": 23179
     },
     {
       "path": "docs/judge-pack/index.html",
@@ -233,7 +233,7 @@
       "path": "docs/api/plan.json",
       "description": "Static public dashboard API snapshot",
       "exists": true,
-      "size": 25112
+      "size": 27408
     },
     {
       "path": "docs/prizepilot-qwen-submission-deck.pptx",
