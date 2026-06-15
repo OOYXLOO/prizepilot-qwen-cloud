@@ -6,13 +6,19 @@ This is the 60-second review card for PrizePilot, a submitted Qwen Cloud Track 4
 
 ## 60-Second Path
 
-1. Open the submitted Devpost project: https://devpost.com/software/prizepilot-qwen-cloud
-2. Watch the public Vimeo demo: https://vimeo.com/1200124146
-3. If Vimeo is unavailable, use the backup public WebM: https://ooyxloo.github.io/prizepilot-qwen-cloud/demo-video/prizepilot-demo.webm
-4. Read the judge evidence pack: https://ooyxloo.github.io/prizepilot-qwen-cloud/judge-pack/
-5. Open the award thesis scorecard: https://ooyxloo.github.io/prizepilot-qwen-cloud/award-thesis-scorecard/
-6. Check the Qwen contribution map: https://ooyxloo.github.io/prizepilot-qwen-cloud/qwen-contribution/
-7. Verify the remaining proof boundary: https://ooyxloo.github.io/prizepilot-qwen-cloud/alibaba-endpoint-checklist/
+1. Confirm the submitted Devpost identity: https://devpost.com/software/prizepilot-qwen-cloud
+2. Watch the demo: https://vimeo.com/1200124146
+3. Read the Blog Award story: https://ooyxloo.github.io/prizepilot-qwen-cloud/blog/
+
+If the Vimeo player is unavailable, use the backup public WebM: https://ooyxloo.github.io/prizepilot-qwen-cloud/demo-video/prizepilot-demo.webm
+
+## Deeper Review
+
+- Judge evidence pack: https://ooyxloo.github.io/prizepilot-qwen-cloud/judge-pack/
+- Award thesis scorecard: https://ooyxloo.github.io/prizepilot-qwen-cloud/award-thesis-scorecard/
+- Qwen before/after evidence: https://ooyxloo.github.io/prizepilot-qwen-cloud/qwen-before-after/
+- Qwen contribution map: https://ooyxloo.github.io/prizepilot-qwen-cloud/qwen-contribution/
+- Remaining Alibaba endpoint boundary: https://ooyxloo.github.io/prizepilot-qwen-cloud/alibaba-endpoint-checklist/
 
 ## Award Thesis
 
