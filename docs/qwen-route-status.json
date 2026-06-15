@@ -1,18 +1,18 @@
 {
-  "snapshot_checked_at": "2026-06-15T16:21:56.577597+00:00",
-  "snapshot_checked_at_local_asia_shanghai": "2026-06-16T00:21:56.577597+08:00",
+  "snapshot_checked_at": "2026-06-15T16:44:48.519395+00:00",
+  "snapshot_checked_at_local_asia_shanghai": "2026-06-16T00:44:48.519395+08:00",
   "status_snapshot_policy": "Regenerate qwen-status immediately before any user-approved public update; deadline hours and gate state are a point-in-time snapshot, not a live public claim.",
   "phase": "submitted_can_still_improve",
   "severity": "OK_WITH_EVIDENCE_GAPS",
   "next_action": "Strengthen remaining evidence before judging: add verified Alibaba Cloud endpoint proof if account access and billing/credit approval are available, then update public Devpost copy only with captured evidence.",
   "deadline_utc": "2026-07-09T21:00:00+00:00",
-  "hours_until_deadline": 580.63,
+  "hours_until_deadline": 580.25,
   "artifact_checks": [
     {
       "path": "README.md",
       "description": "Project README",
       "exists": true,
-      "size": 7755
+      "size": 8010
     },
     {
       "path": "LICENSE",
@@ -120,13 +120,13 @@
       "path": "docs/public-update-checklist.md",
       "description": "Public update checklist",
       "exists": true,
-      "size": 2136
+      "size": 2275
     },
     {
       "path": "docs/public-update-checklist/index.html",
       "description": "Public update checklist page",
       "exists": true,
-      "size": 4369
+      "size": 4528
     },
     {
       "path": "docs/award-preflight/index.html",
@@ -156,7 +156,7 @@
       "path": "docs/cloud-readiness/index.html",
       "description": "Public cloud readiness page",
       "exists": true,
-      "size": 10268
+      "size": 10510
     },
     {
       "path": "docs/cloud-readiness-report.md",
@@ -234,13 +234,13 @@
       "path": "docs/public-update-digest.md",
       "description": "Public update digest",
       "exists": true,
-      "size": 4425
+      "size": 4561
     },
     {
       "path": "docs/public-update-digest/index.html",
       "description": "Public update digest page",
       "exists": true,
-      "size": 6266
+      "size": 6415
     },
     {
       "path": "docs/api/plan.json",
@@ -336,7 +336,7 @@
       "path": "docs/publication-action-card.md",
       "description": "Publication action card",
       "exists": true,
-      "size": 3122
+      "size": 3327
     },
     {
       "path": "docs/public-package-checklist.md",
@@ -348,7 +348,7 @@
       "path": "docs/validation-report.md",
       "description": "Validation report",
       "exists": true,
-      "size": 3432
+      "size": 3695
     },
     {
       "path": "docs/screenshots/prizepilot-dashboard-desktop.png",

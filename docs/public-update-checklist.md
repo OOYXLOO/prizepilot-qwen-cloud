@@ -10,6 +10,7 @@ Use this checklist before any future public push or Devpost edit for PrizePilot.
 - [ ] `$env:PYTHONPATH='src'; python -m compileall -q src tests tools`
 - [ ] `$env:PYTHONPATH='src'; python -m prizepilot qwen-status`
 - [ ] `$env:PYTHONPATH='src'; python -m prizepilot cloud-readiness`
+- [ ] Optional deterministic diff rebuild: `$env:PYTHONPATH='src'; python -m prizepilot cloud-readiness --checked-at 2026-06-15T12:30:00Z`
 - [ ] `python -m json.tool docs/judge-manifest.json`
 - [ ] `python -m json.tool docs/qwen-route-status.json`
 - [ ] `python -m json.tool docs/cloud-readiness-report.json`

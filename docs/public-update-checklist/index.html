@@ -47,6 +47,7 @@
 <li><code>$env:PYTHONPATH='src'; python -m compileall -q src tests tools</code></li>
 <li><code>$env:PYTHONPATH='src'; python -m prizepilot qwen-status</code></li>
 <li><code>$env:PYTHONPATH='src'; python -m prizepilot cloud-readiness</code></li>
+<li><code>$env:PYTHONPATH='src'; python -m prizepilot cloud-readiness --checked-at 2026-06-15T12:30:00Z</code> for optional deterministic evidence diffs.</li>
           <li><code>python -m json.tool docs/judge-manifest.json</code></li>
           <li><code>git diff --check</code></li>
         </ul>

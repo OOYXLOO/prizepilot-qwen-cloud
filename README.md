@@ -72,10 +72,12 @@ python -m prizepilot plan samples/qwen_hackathon.json
 python -m prizepilot plan samples/mindtheproduct_world_product_day.json
 python -m prizepilot portfolio samples/splunk_agentic_ops.json samples/qwen_hackathon.json samples/mindtheproduct_world_product_day.json samples/uipath_agenthack.json samples/algora_onyx_bounty.json samples/arm_ai_optimization.json
 python -m prizepilot cloud-readiness
+python -m prizepilot cloud-readiness --checked-at 2026-06-15T12:30:00Z
 python -m prizepilot.webapp --host 127.0.0.1 --port 8000
 ```
 
 Then inspect the local runtime machine-readable planning payload at `http://127.0.0.1:8000/api/plan`. This local server payload is not live Alibaba endpoint proof.
+Use `--checked-at` only when a deterministic evidence rebuild is needed for review or diffing; live public updates should regenerate the report with the current action-time timestamp.
 Review `docs/submission-story.md`, `docs/benchmark-method.md`, `docs/cloud-readiness-report.md`, `docs/qwen-live-proof.md`, `docs/qwen-contribution-map.md`, `docs/qwen-before-after-evidence.md`, `docs/judge-review-card.md`, `docs/official-requirement-fit.md`, `docs/award-thesis-scorecard.md`, `docs/blog-share-packet.md`, `docs/public-update-checklist.md`, `docs/public-update-digest.md`, `docs/live-proof-gate.md`, `docs/alibaba-endpoint-judge-checklist.md`, `docs/judge-manifest.json`, `docs/qwen-route-status.md`, and `docs/validation-report.md` for the evidence boundary.
 
 Live Qwen refinement has been verified once with a runtime-only key; future runs still require `DASHSCOPE_API_KEY` or `QWEN_API_KEY` at action time only.

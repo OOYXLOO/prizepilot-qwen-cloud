@@ -45,7 +45,8 @@ python -m unittest discover -s tests -v
 python -m compileall -q src tests tools
 python -m prizepilot qwen-status
 python -m prizepilot cloud-readiness
+python -m prizepilot cloud-readiness --checked-at 2026-06-15T12:30:00Z
 python -m json.tool docs/judge-manifest.json
 ```
 
-Then push and verify public URLs before editing Devpost. If GitHub Pages or any public evidence link returns a non-200 status, do not update Devpost.
+The `--checked-at` command is an optional deterministic diff check, not a substitute for the fresh action-time `cloud-readiness` run. Then push and verify public URLs before editing Devpost. If GitHub Pages or any public evidence link returns a non-200 status, do not update Devpost.

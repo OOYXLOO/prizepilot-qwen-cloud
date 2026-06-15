@@ -177,9 +177,10 @@
       <p>From the repository root:</p>
       <pre><code>$env:PYTHONPATH='src'
 python -m prizepilot cloud-readiness
+python -m prizepilot cloud-readiness --checked-at 2026-06-15T12:30:00Z
 python -m prizepilot qwen-status
 python -m unittest discover -s tests -v</code></pre>
-      <p>These commands do not require a Qwen key, Alibaba login, billing data, or any private account storage.</p>
+      <p>These commands do not require a Qwen key, Alibaba login, billing data, or any private account storage. Use <code>--checked-at</code> only for deterministic evidence rebuilds and diffs; live public updates should regenerate the report with the current action-time timestamp.</p>
     </section>
   </main>
 </body>

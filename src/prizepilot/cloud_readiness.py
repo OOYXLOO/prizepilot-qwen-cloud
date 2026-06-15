@@ -22,6 +22,13 @@ def _has_all(text: str, fragments: list[str]) -> bool:
     return all(fragment in text for fragment in fragments)
 
 
+def parse_checked_at(value: str) -> datetime:
+    parsed = datetime.fromisoformat(value.replace("Z", "+00:00"))
+    if parsed.tzinfo is None:
+        return parsed.replace(tzinfo=timezone.utc)
+    return parsed.astimezone(timezone.utc)
+
+
 def _check(
     check_id: str,
     label: str,
@@ -202,12 +209,14 @@ def render_markdown(report: dict[str, Any]) -> str:
 def main() -> None:
     parser = argparse.ArgumentParser(description="Generate PrizePilot cloud readiness evidence without live secrets.")
     parser.add_argument("--root", default=str(PROJECT_ROOT))
+    parser.add_argument("--checked-at", help="UTC or offset-aware ISO timestamp for deterministic report generation.")
     parser.add_argument("--json-out", default="docs/cloud-readiness-report.json")
     parser.add_argument("--md-out", default="docs/cloud-readiness-report.md")
     args = parser.parse_args()
 
     root = Path(args.root).resolve()
-    report = build_report(root)
+    checked_at = parse_checked_at(args.checked_at) if args.checked_at else None
+    report = build_report(root, checked_at=checked_at)
     (root / args.json_out).write_text(json.dumps(report, indent=2), encoding="utf-8")
     (root / args.md_out).write_text(render_markdown(report), encoding="utf-8")
     print(f"Overall: {report['overall']}")

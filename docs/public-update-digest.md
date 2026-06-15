@@ -55,6 +55,7 @@ Latest local verification before this digest:
 - `$env:PYTHONPATH='src'; python -m compileall -q src tests tools`
 - `$env:PYTHONPATH='src'; python -m prizepilot qwen-status`
 - `$env:PYTHONPATH='src'; python -m prizepilot cloud-readiness`
+- Optional deterministic evidence diff: `$env:PYTHONPATH='src'; python -m prizepilot cloud-readiness --checked-at 2026-06-15T12:30:00Z`
 - `python -m json.tool docs/judge-manifest.json`
 
 Expected state: `submitted_can_still_improve` with `qwen_live_verified_endpoint_pending`.
