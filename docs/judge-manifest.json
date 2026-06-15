@@ -118,33 +118,61 @@
     },
     {
       "step": 9,
+      "label": "Official Requirement Fit",
+      "url": "https://ooyxloo.github.io/prizepilot-qwen-cloud/official-requirement-fit/",
+      "purpose": "Map official Qwen Cloud requirements and judging signals to public evidence, prepared code proof, and the remaining Alibaba endpoint gate."
+    },
+    {
+      "step": 10,
       "label": "Award Thesis Scorecard",
       "url": "https://ooyxloo.github.io/prizepilot-qwen-cloud/award-thesis-scorecard/",
       "purpose": "Review the ranked Blog Post Award, Honorable Mention, and Track 4 thesis without treating it as a win-probability claim."
     },
     {
-      "step": 10,
+      "step": 11,
       "label": "Blog Share Packet",
       "url": "https://ooyxloo.github.io/prizepilot-qwen-cloud/blog-share-packet/",
       "purpose": "Review safe public share copy for the Blog Post Award route."
     },
     {
-      "step": 11,
+      "step": 12,
       "label": "Public update checklist",
       "url": "https://ooyxloo.github.io/prizepilot-qwen-cloud/public-update-checklist/",
       "purpose": "Confirm local checks, public link checks, and claim boundaries before any user-approved public update."
     },
     {
-      "step": 12,
+      "step": 13,
       "label": "Alibaba endpoint checklist",
       "url": "https://ooyxloo.github.io/prizepilot-qwen-cloud/alibaba-endpoint-checklist/",
       "purpose": "Verify that live Alibaba endpoint proof remains pending rather than overclaimed."
     },
     {
-      "step": 13,
+      "step": 14,
       "label": "Public update digest",
       "url": "https://ooyxloo.github.io/prizepilot-qwen-cloud/public-update-digest/",
       "purpose": "Review the prepared local update packet, public baseline, and do-not-claim boundaries before any user-approved push."
+    }
+  ],
+  "official_requirement_fit": [
+    {
+      "requirement": "Qwen model use",
+      "evidence": "src/prizepilot/qwen_client.py, tests, qwen-live-proof, qwen-contribution map, and qwen-before-after evidence",
+      "status": "verified_qwen_dashscope_smoke_proof_captured"
+    },
+    {
+      "requirement": "Track 4 Autopilot Agent",
+      "evidence": "agent planner, webapp dashboard, static plan JSON, judge demo, approval queue, and evidence gap register",
+      "status": "public_review_ready"
+    },
+    {
+      "requirement": "Alibaba Cloud proof",
+      "evidence": "deploy/alibaba-cloud/s.yaml, deployment runbook, proof template, and endpoint checklist",
+      "status": "prepared_code_proof_only_live_endpoint_pending"
+    },
+    {
+      "requirement": "Public presentation assets",
+      "evidence": "Devpost project, repository, license, README, architecture diagram, Vimeo demo, deck, public blog, and judge hub",
+      "status": "public_baseline_live_local_update_requires_approved_push"
     }
   ],
   "completed_evidence": [
@@ -155,6 +183,7 @@
     "Qwen-compatible client shape is implemented and locally testable.",
     "Qwen/DashScope live smoke proof has been recorded without storing secrets.",
     "Qwen before/after evidence maps deterministic planning to Qwen-refined public copy.",
+    "Official Requirement Fit map connects Qwen rules and judging signals to public evidence while preserving the endpoint boundary.",
     "Judge review card, Award Thesis Scorecard, Blog Share Packet, and public update checklist are prepared for faster review and safer publishing.",
     "Blog Post Award story, benchmark method, award preflight, and evidence map are prepared."
   ],
@@ -193,6 +222,7 @@
     "docs/qwen-route-status.json",
     "docs/cloud-readiness-report.json",
     "docs/judge-review-card.md",
+    "docs/official-requirement-fit.md",
     "docs/award-thesis-scorecard.md",
     "docs/blog-share-packet.md",
     "docs/public-update-checklist.md",

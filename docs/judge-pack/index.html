@@ -319,6 +319,7 @@
         <a class="link-tile" href="../qwen-live-proof/">Qwen Live Proof<span>Verified runtime Qwen/DashScope smoke proof with key cleanup.</span></a>
         <a class="link-tile" href="../qwen-contribution/">Qwen Contribution Map<span>How Qwen improves route reasoning, story clarity, and risk wording without replacing proof gates.</span></a>
         <a class="link-tile" href="../qwen-before-after/">Qwen Before/After<span>Deterministic plan to Qwen refinement to concrete public copy improvements.</span></a>
+        <a class="link-tile" href="../official-requirement-fit/">Official Requirement Fit<span>Maps official Qwen requirements to public evidence and the remaining Alibaba endpoint gate.</span></a>
         <a class="link-tile" href="../award-thesis-scorecard/">Award Thesis Scorecard<span>Ranked Blog Award, Honorable Mention, and Track 4 thesis with evidence links.</span></a>
         <a class="link-tile" href="../blog-share-packet/">Blog Share Packet<span>Safe title, summary, link order, social copy, and do-not-say list.</span></a>
         <a class="link-tile" href="../public-update-checklist/">Public Update Checklist<span>Pre-push and Devpost-edit checks for tests, public links, and claim boundaries.</span></a>
@@ -339,7 +340,15 @@
         <div class="metric"><strong>1</strong><span>remaining account-gated proof: live Alibaba endpoint.</span></div>
       </div>
       <div class="callout">
-        <strong>Current boundary:</strong> the public project is submitted and reviewable. Use the <a href="../award-preflight/">Award Preflight</a> and <a href="../award-evidence-map/">Award Evidence Map</a> for the shortest Blog Post Award / Honorable Mention readiness check. PrizePilot claims only the completed live Qwen/DashScope smoke proof and does not claim a live Alibaba Cloud endpoint until official deployment proof exists.
+        <strong>Current boundary:</strong> the public project is submitted and reviewable. Use the <a href="../award-preflight/">Award Preflight</a>, <a href="../award-evidence-map/">Award Evidence Map</a>, and <a href="../official-requirement-fit/">Official Requirement Fit</a> for the shortest Blog Post Award / Honorable Mention readiness check. PrizePilot claims only the completed live Qwen/DashScope smoke proof and does not claim a live Alibaba Cloud endpoint until official deployment proof exists.
+      </div>
+    </section>
+
+    <section>
+      <h2>Official Requirement Fit</h2>
+      <p>The shortest sponsor-compliance read is the <a href="../official-requirement-fit/">Official Requirement Fit</a> map. It ties each official Qwen judging signal to a public artifact: Qwen model use, Track 4 Autopilot Agent workflow, public repo and license, architecture diagram, public demo video, Blog Post Award story, and the prepared Alibaba Function Compute path.</p>
+      <div class="callout warning">
+        <strong>One remaining gate:</strong> Alibaba Cloud endpoint proof is still prepared code proof only. Do not infer a live public endpoint until a URL returns HTTP 200 at <code>/</code> and <code>/api/plan</code>.
       </div>
     </section>
 
@@ -417,7 +426,7 @@
             </tr>
             <tr>
               <td data-label="Judging Signal">Public proof and reproducibility</td>
-              <td data-label="Public Evidence">README quickstart, presentation deck, validation report, screenshots, demo GIF, public judge demo, static <a href="../api/plan.json">plan JSON</a>, and live machine-readable <code>/api/plan</code> payload.</td>
+              <td data-label="Public Evidence">README quickstart, presentation deck, validation report, screenshots, demo GIF, public judge demo, static <a href="../api/plan.json">plan JSON</a>, and local runtime <code>/api/plan</code> payload when the repo server is run locally. This is not live Alibaba endpoint proof.</td>
               <td data-label="Status">Available without login.</td>
             </tr>
             <tr>
@@ -446,7 +455,7 @@ python -m unittest discover -s tests -v
 python -m prizepilot plan samples/qwen_hackathon.json
 python -m prizepilot qwen-status
 python -m prizepilot.webapp --host 127.0.0.1 --port 8000</code></pre>
-      <p>For a setup-free version of the same payload, open <a href="../api/plan.json">the static plan snapshot</a>. Then open <code>http://127.0.0.1:8000/api/plan</code> after running the local server to inspect the live machine-readable plan and route ranking.</p>
+      <p>For a setup-free version of the same payload, open <a href="../api/plan.json">the static plan snapshot</a>. Then open <code>http://127.0.0.1:8000/api/plan</code> after running the local server to inspect the local runtime machine-readable plan and route ranking. This local endpoint is not live Alibaba endpoint proof.</p>
     </section>
 
     <section>

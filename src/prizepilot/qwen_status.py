@@ -44,6 +44,8 @@ REQUIRED_ARTIFACTS = {
     "docs/qwen-contribution/index.html": "Public Qwen contribution map page",
     "docs/qwen-before-after-evidence.md": "Qwen before/after evidence",
     "docs/qwen-before-after/index.html": "Public Qwen before/after evidence page",
+    "docs/official-requirement-fit.md": "Official Qwen requirement fit map",
+    "docs/official-requirement-fit/index.html": "Public official requirement fit page",
     "docs/alibaba-endpoint-judge-checklist.md": "Alibaba endpoint judge checklist",
     "docs/alibaba-endpoint-checklist/index.html": "Public Alibaba endpoint checklist page",
     "docs/public-update-digest.md": "Public update digest",

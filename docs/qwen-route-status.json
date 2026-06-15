@@ -1,18 +1,18 @@
 {
-  "snapshot_checked_at": "2026-06-15T13:35:55.619713+00:00",
-  "snapshot_checked_at_local_asia_shanghai": "2026-06-15T21:35:55.619713+08:00",
+  "snapshot_checked_at": "2026-06-15T15:45:18.329255+00:00",
+  "snapshot_checked_at_local_asia_shanghai": "2026-06-15T23:45:18.329255+08:00",
   "status_snapshot_policy": "Regenerate qwen-status immediately before any user-approved public update; deadline hours and gate state are a point-in-time snapshot, not a live public claim.",
   "phase": "submitted_can_still_improve",
   "severity": "OK_WITH_EVIDENCE_GAPS",
   "next_action": "Strengthen remaining evidence before judging: add verified Alibaba Cloud endpoint proof if account access and billing/credit approval are available, then update public Devpost copy only with captured evidence.",
   "deadline_utc": "2026-07-09T21:00:00+00:00",
-  "hours_until_deadline": 583.4,
+  "hours_until_deadline": 581.24,
   "artifact_checks": [
     {
       "path": "README.md",
       "description": "Project README",
       "exists": true,
-      "size": 7486
+      "size": 7755
     },
     {
       "path": "LICENSE",
@@ -72,7 +72,7 @@
       "path": "docs/index.html",
       "description": "Public build notes landing page",
       "exists": true,
-      "size": 11090
+      "size": 11436
     },
     {
       "path": "docs/blog/index.html",
@@ -84,13 +84,13 @@
       "path": "docs/judge-pack/index.html",
       "description": "Public judge evidence pack",
       "exists": true,
-      "size": 20671
+      "size": 21793
     },
     {
       "path": "docs/judge-manifest.json",
       "description": "Machine-readable judge manifest",
       "exists": true,
-      "size": 8883
+      "size": 10390
     },
     {
       "path": "docs/judge-review-card.md",
@@ -132,7 +132,7 @@
       "path": "docs/award-preflight/index.html",
       "description": "Public award preflight page",
       "exists": true,
-      "size": 9408
+      "size": 9663
     },
     {
       "path": "docs/award-evidence-map/index.html",
@@ -205,6 +205,18 @@
       "description": "Public Qwen before/after evidence page",
       "exists": true,
       "size": 8821
+    },
+    {
+      "path": "docs/official-requirement-fit.md",
+      "description": "Official Qwen requirement fit map",
+      "exists": true,
+      "size": 4216
+    },
+    {
+      "path": "docs/official-requirement-fit/index.html",
+      "description": "Public official requirement fit page",
+      "exists": true,
+      "size": 9900
     },
     {
       "path": "docs/alibaba-endpoint-judge-checklist.md",
@@ -330,7 +342,7 @@
       "path": "docs/public-package-checklist.md",
       "description": "Public package checklist",
       "exists": true,
-      "size": 2140
+      "size": 2537
     },
     {
       "path": "docs/validation-report.md",
