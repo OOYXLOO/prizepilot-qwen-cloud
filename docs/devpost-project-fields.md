@@ -14,11 +14,11 @@ An autopilot agent that ranks cash-prize opportunities, prepares submission asse
 
 ## Stronger First Paragraph For Devpost
 
-PrizePilot is a Qwen Cloud Track 4 Autopilot Agent that turns hackathon and bounty prize pages into ranked execution plans, public submission assets, and human approval gates. The public project includes a submitted Devpost page, Vimeo demo, GitHub Pages judge hub, Blog Award story, benchmark method, static plan JSON, verified Qwen/DashScope live smoke proof, and a prepared Alibaba Function Compute deployment path. It is intentionally honest about the remaining sponsor proof: live Alibaba endpoint evidence is not claimed until a public URL returns HTTP 200 at `/` and `/api/plan`.
+PrizePilot is a Qwen Cloud Track 4 Autopilot Agent that turns hackathon and bounty prize pages into ranked execution plans, Qwen-refined public submission copy, and human approval gates. The clearest judge proof is the before/after chain: a deterministic planner picked the Blog Post Award route, a live Qwen/DashScope pass refined the public story and risk language, and the product turned that into a submitted Devpost page, Blog Award story, judge hub, benchmark method, static plan JSON, and no-secret cloud-readiness packet. It is intentionally honest about the remaining sponsor proof: live Alibaba endpoint evidence is not claimed until a public URL returns HTTP 200 at `/` and `/api/plan`.
 
 ## Devpost Update Snippet While Endpoint Is Pending
 
-PrizePilot now has a clearer public judge path: the Qwen contribution map explains how the live Qwen/DashScope pass refined the Blog Award route, risk wording, and evidence packaging, while the Alibaba endpoint checklist shows the exact remaining public HTTP proof gate. Verified today: public repo, demo, Blog Award story, Qwen live smoke proof, benchmark method, and no-secret cloud readiness. Still pending: account-owner-approved Alibaba endpoint proof.
+PrizePilot now has a tighter public judge path around Qwen contribution evidence: deterministic ranking chose the Blog Post Award route, Qwen refined the public-facing story and safety language, and the before/after evidence shows exactly what changed before the update packet goes public. Verified today: public repo, demo, Blog Award story, Qwen live smoke proof, benchmark method, no-secret cloud readiness, and a prepared Alibaba Function Compute manifest. Still pending: account-owner-approved Alibaba endpoint proof.
 
 ## Built With
 

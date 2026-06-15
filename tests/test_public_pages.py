@@ -481,6 +481,14 @@ class PublicPagesTests(unittest.TestCase):
     def test_devpost_fields_do_not_publish_identity_inferences(self) -> None:
         fields = (ROOT / "docs" / "devpost-project-fields.md").read_text(encoding="utf-8")
 
+        self.assertIn("Qwen-refined public submission copy", fields)
+        self.assertIn("before/after chain", fields)
+        self.assertIn("a deterministic planner picked the Blog Post Award route", fields)
+        self.assertIn("a live Qwen/DashScope pass refined the public story and risk language", fields)
+        self.assertIn("deterministic ranking chose the Blog Post Award route", fields)
+        self.assertIn("before/after evidence shows exactly what changed", fields)
+        self.assertIn("Still pending: account-owner-approved Alibaba endpoint proof.", fields)
+
         forbidden_fragments = [
             "phone number",
             "Asia/Shanghai",
