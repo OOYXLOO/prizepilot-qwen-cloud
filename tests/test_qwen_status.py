@@ -113,7 +113,7 @@ class QwenStatusTests(unittest.TestCase):
         self.assertEqual(status["ledger_path"], "docs/qwen-route-ledger.md")
         self.assertNotIn(temp_dir, status["ledger_path"])
         self.assertEqual(status["snapshot_checked_at_local_asia_shanghai"], "2026-06-20T08:00:00+08:00")
-        self.assertIn("Regenerate qwen-status immediately before any user-approved public update", status["status_snapshot_policy"])
+        self.assertIn("Regenerate qwen-status immediately before any public claim or Devpost copy update", status["status_snapshot_policy"])
 
     def test_partial_github_repo_gets_push_specific_next_action(self) -> None:
         with tempfile.TemporaryDirectory() as temp_dir:
@@ -123,7 +123,7 @@ class QwenStatusTests(unittest.TestCase):
 
             status = build_status(root, ledger, now=datetime(2026, 6, 20, tzinfo=timezone.utc))
 
-        self.assertIn("Authorize GitHub", status["next_action"])
+        self.assertIn("Push the prepared package", status["next_action"])
         github_gate = next(item for item in status["incomplete_public_gates"] if item["gate"] == "public github repository")
         self.assertIn("git push", github_gate["next_action"])
 
@@ -227,7 +227,7 @@ class QwenStatusTests(unittest.TestCase):
 
         self.assertIn("ready_for_user_publication_steps", markdown)
         self.assertIn("Snapshot generated Asia/Shanghai:", markdown)
-        self.assertIn("Regenerate immediately before any user-approved public update.", markdown)
+        self.assertIn("Regenerate immediately before any public claim or Devpost copy update.", markdown)
         self.assertIn("docs/qwen-start-handoff-template.md", markdown)
         self.assertIn("docs/live-proof-gate.md", markdown)
         self.assertIn("docs/cloud-readiness-report.md", markdown)

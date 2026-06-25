@@ -36,15 +36,15 @@
 <body>
   <main>
     <p class="eyebrow">Qwen public update decision packet</p>
-    <h1>PrizePilot's public update packet is ready for approval.</h1>
+    <h1>PrizePilot's repository update packet is ready for public link checks.</h1>
     <p class="dek">This page tells the account owner and judges what this update adds: a machine-readable judge manifest, Qwen before/after evidence, official requirement fit map, award thesis scorecard, clearer submitted-state language, backup WebM playback, and an explicit Alibaba endpoint proof boundary.</p>
 
     <section class="status" aria-label="Current public update status">
-      <p><strong>Status:</strong> public repository baseline is <code>6329f1ba225c3a59881882e8a5c0dd1a9fb2e33d</code>; the working copy contains prepared commits after that baseline and this digest intentionally avoids treating an older local commit as final. Verify the final prepared head with <code>git rev-parse HEAD</code> and the public baseline with <code>git ls-remote https://github.com/OOYXLOO/prizepilot-qwen-cloud.git HEAD</code> immediately before any user-approved push. Do not push or edit Devpost without action-time user approval.</p>
+      <p><strong>Status:</strong> previous public repository baseline is <code>6329f1ba225c3a59881882e8a5c0dd1a9fb2e33d</code>; the repository update packet contains prepared review commits after that baseline. Verify the local update head with <code>git rev-parse HEAD</code> and the pushed public head with <code>git ls-remote https://github.com/OOYXLOO/prizepilot-qwen-cloud.git HEAD</code> before copying any new link into Devpost. Do not edit Devpost without action-time account-owner approval.</p>
     </section>
 
     <section class="status" aria-label="Public link health boundary">
-      <p><strong>Link health boundary:</strong> the 2026-06-15 public baseline check found the existing review pages live, including <code>demo/</code>, <code>judge-pack/</code>, <code>qwen-live-proof/</code>, <code>cloud-readiness/</code>, <code>alibaba-endpoint-checklist/</code>, <code>api/plan.json</code>, and <code>blog/</code>. Recheck <code>qwen-before-after/</code>, <code>judge-review-card/</code>, <code>official-requirement-fit/</code>, <code>award-thesis-scorecard/</code>, <code>blog-share-packet/</code>, <code>public-update-checklist/</code>, <code>public-update-digest/</code>, and <code>judge-manifest.json</code> for HTTP 200 after an approved push before copying them into Devpost.</p>
+      <p><strong>Link health boundary:</strong> the 2026-06-15 public baseline check found the existing review pages live, including <code>demo/</code>, <code>judge-pack/</code>, <code>qwen-live-proof/</code>, <code>cloud-readiness/</code>, <code>alibaba-endpoint-checklist/</code>, <code>api/plan.json</code>, and <code>blog/</code>. Recheck <code>qwen-before-after/</code>, <code>judge-review-card/</code>, <code>official-requirement-fit/</code>, <code>award-thesis-scorecard/</code>, <code>blog-share-packet/</code>, <code>public-update-checklist/</code>, <code>public-update-digest/</code>, and <code>judge-manifest.json</code> for HTTP 200 after the repository update before copying them into Devpost.</p>
     </section>
 
     <div class="grid">
@@ -52,7 +52,7 @@
         <h2>What improves</h2>
         <ul>
           <li>Judge manifest names award targets, evidence, pending gates, and do-not-infer boundaries.</li>
-          <li>Pre-push head checks make the exact local commit and public baseline explicit before any public side effect.</li>
+          <li>Head checks make the exact local commit and pushed public baseline explicit before any Devpost side effect.</li>
           <li>Qwen before/after evidence shows how deterministic route planning became clearer Qwen-backed public copy.</li>
           <li>Judge review card, Official Requirement Fit map, Award Thesis Scorecard, Blog Share Packet, and public update checklist make the review path, official-rule evidence, and publishing gate easier to audit.</li>
           <li>Backup Pages-hosted WebM gives reviewers a fallback if the Vimeo player is unavailable.</li>

@@ -391,7 +391,7 @@
             "public submission"
           ],
           "notes": [
-            "Longer-horizon evidence route, not a fast USD 200 target."
+            "Longer-horizon evidence route with heavier setup and benchmarking cost."
           ]
         },
         "target_prize": {
@@ -417,7 +417,7 @@
           "public submission"
         ],
         "notes": [
-          "Longer-horizon evidence route, not a fast USD 200 target."
+          "Longer-horizon evidence route with heavier setup and benchmarking cost."
         ]
       },
       {
@@ -662,7 +662,7 @@
     {
       "criterion": "Problem Value",
       "weight": "25%",
-      "proof": "Turns a real money-seeking workflow into auditable actions and evidence gates.",
+      "proof": "Turns real prize-route work into auditable actions and evidence gates.",
       "gap": "Add more post-submission feedback if maintainers or judges request changes."
     },
     {

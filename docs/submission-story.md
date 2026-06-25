@@ -4,7 +4,7 @@
 
 Hackathon agents are usually judged by the app they produce. PrizePilot looks at the work before the app exists: deciding which prize route is actually reachable, which proof is missing, and which actions should stay gated because they affect accounts, public pages, cloud billing, or payout eligibility.
 
-I built PrizePilot around a real portfolio: a near-term USD 200 feedback prize, the Qwen Blog Post Award / Honorable Mention route, and higher-friction open-source bounty backups. The goal is to make an autopilot agent useful without letting it overclaim evidence or press irreversible buttons blindly.
+I built PrizePilot around a real portfolio: a near-term feedback prize, the Qwen Blog Post Award / Honorable Mention route, and higher-friction open-source bounty backups. The goal is to make an autopilot agent useful without letting it overclaim evidence or press irreversible buttons blindly.
 
 The public Qwen project is now submitted on Devpost with a repository, Vimeo demo, build journal, and a verified Qwen/DashScope smoke proof. The remaining work is focused on strengthening live sponsor evidence before judging with a verified Alibaba Cloud endpoint if account access and deployment approval are available in time.
 
@@ -35,7 +35,7 @@ The repository includes an Alibaba Cloud deployment adapter at `deploy/alibaba-c
 
 ## Challenges
 
-The hardest part was designing the integrity boundary. A money-seeking agent can easily blur "prepared", "submitted", "deployed", and "won". PrizePilot keeps those states separate, records public URLs only after verification, and treats CAPTCHA, OTP, API keys, cloud spending, payout, and final submission as checkpoints.
+The hardest part was designing the integrity boundary. A prize-route agent can easily blur "prepared", "submitted", "deployed", and "won". PrizePilot keeps those states separate, records public URLs only after verification, and treats CAPTCHA, OTP, API keys, cloud spending, payout, and final submission as checkpoints.
 
 ## What I learned
 

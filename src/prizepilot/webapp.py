@@ -135,7 +135,7 @@ def dashboard_payload() -> dict[str, Any]:
             {
                 "criterion": "Problem Value",
                 "weight": "25%",
-                "proof": "Turns a real money-seeking workflow into auditable actions and evidence gates.",
+                "proof": "Turns real prize-route work into auditable actions and evidence gates.",
                 "gap": "Add more post-submission feedback if maintainers or judges request changes.",
             },
             {

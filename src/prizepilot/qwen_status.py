@@ -107,7 +107,7 @@ def is_yes(value: str) -> bool:
 def public_gate_next_action(gate: str, status: str, default_action: str) -> str:
     normalized = status.strip().lower()
     if gate == "public github repository" and "partial" in normalized:
-        return "Authorize GitHub push/publication, then run `git push -u origin main` to publish the prepared package."
+        return "Run `git push -u origin main` to publish the prepared package, then recheck the public Pages links."
     if gate == "devpost portfolio project created" and ("recaptcha" in normalized or "captcha" in normalized):
         return "Complete the visible Devpost reCAPTCHA, save the PrizePilot portfolio project, then continue the Qwen import/submission flow."
     if gate == "devpost additional info saved" and "partial" in normalized:
@@ -203,7 +203,7 @@ def build_status(root: Path, ledger_path: Path, now: datetime | None = None) -> 
         elif "partial" in fields.get("qwen/alibaba cloud account ready", "").lower():
             next_action = "Open or restore the Qwen Cloud email verification page, enter the current email code, then continue account setup until benefits/console access is verified."
         elif "partial" in fields.get("public github repository", "").lower():
-            next_action = "Authorize GitHub publication and push the prepared local package to the existing public repository."
+            next_action = "Push the prepared package to the existing public repository, then recheck the public Pages links."
         elif "partial" in fields.get("public demo video", "").lower():
             next_action = "Upload the generated WebM demo to YouTube, Facebook Video, or Vimeo, then add that accepted video URL to the Qwen Devpost draft."
         elif "partial" in fields.get("public blog/social post", "").lower():
@@ -214,7 +214,7 @@ def build_status(root: Path, ledger_path: Path, now: datetime | None = None) -> 
     return {
         "snapshot_checked_at": current.isoformat(),
         "snapshot_checked_at_local_asia_shanghai": current.astimezone(ASIA_SHANGHAI).isoformat(),
-        "status_snapshot_policy": "Regenerate qwen-status immediately before any user-approved public update; deadline hours and gate state are a point-in-time snapshot, not a live public claim.",
+        "status_snapshot_policy": "Regenerate qwen-status immediately before any public claim or Devpost copy update; deadline hours and gate state are a point-in-time snapshot, not a live public claim.",
         "phase": phase,
         "severity": severity,
         "next_action": next_action,
@@ -250,7 +250,7 @@ def render_markdown(status: dict[str, object]) -> str:
         f"Snapshot generated Asia/Shanghai: {status['snapshot_checked_at_local_asia_shanghai']}",
         "",
         f"Snapshot policy: {status['status_snapshot_policy']}",
-        "Regenerate immediately before any user-approved public update.",
+        "Regenerate immediately before any public claim or Devpost copy update.",
         "",
         f"Phase: **{status['phase']}**",
         f"Severity: **{status['severity']}**",

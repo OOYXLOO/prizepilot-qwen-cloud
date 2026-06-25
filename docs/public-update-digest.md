@@ -1,23 +1,21 @@
 # Qwen Public Update Digest
 
-Last updated: 2026-06-16 (+08)
+Last updated: 2026-06-26 (+08)
 
-This digest is the non-sensitive decision packet for a future user-approved public update. It does not push, edit Devpost, claim a prize, claim payout, claim a live Alibaba Cloud endpoint, or store secrets.
+This digest is the non-sensitive decision packet for the public repository update. It does not edit Devpost, claim a prize, claim payout, claim a live Alibaba Cloud endpoint, or store secrets.
 
 ## Current Heads
 
-- Public repository baseline: `6329f1ba225c3a59881882e8a5c0dd1a9fb2e33d`
-- Local prepared update: unpublished commits after the public baseline; this digest intentionally avoids treating an older local commit as final.
-- Final local update head: verify with `git rev-parse HEAD` immediately before any user-approved push; do not rely on a manifest-embedded local commit because local quality commits may continue before approval.
-- Public baseline recheck: run `git ls-remote https://github.com/OOYXLOO/prizepilot-qwen-cloud.git HEAD` immediately before push.
+- Previous public repository baseline: `6329f1ba225c3a59881882e8a5c0dd1a9fb2e33d`
+- Repository update head: verify with `git rev-parse HEAD` locally and `git ls-remote https://github.com/OOYXLOO/prizepilot-qwen-cloud.git HEAD` after push.
 - Public status: submitted Devpost project is live and editable until the Qwen Cloud hackathon deadline.
-- Working-copy status: update packet is prepared and locally verified. The repository push and any Devpost edit still require account-owner approval.
+- Working-copy status: update packet is locally verified. Any Devpost edit remains a separate account-side action and should happen only after public URL rechecks.
 
 ## Public Link Health Boundary
 
 Latest public baseline check on 2026-06-15 found the existing review pages live, including `demo/`, `judge-pack/`, `award-preflight/`, `award-evidence-map/`, `cloud-readiness/`, `benchmark-method/`, `live-proof-gate/`, `qwen-live-proof/`, `qwen-contribution/`, `alibaba-endpoint-checklist/`, `api/plan.json`, and `blog/`.
 
-The next-update pages must be HTTP 200 rechecked after an approved push before they are copied into Devpost: `qwen-before-after/`, `judge-review-card/`, `official-requirement-fit/`, `award-thesis-scorecard/`, `blog-share-packet/`, `public-update-checklist/`, `public-update-digest/`, and `judge-manifest.json`.
+The new review pages must be HTTP 200 rechecked after the repository update before they are copied into Devpost: `qwen-before-after/`, `judge-review-card/`, `official-requirement-fit/`, `award-thesis-scorecard/`, `blog-share-packet/`, `public-update-checklist/`, `public-update-digest/`, and `judge-manifest.json`.
 
 ## What The Update Improves
 
@@ -38,11 +36,11 @@ The next-update pages must be HTTP 200 rechecked after an approved push before t
 - Do not claim that the award thesis scorecard predicts prize selection; it is a review summary, not a win probability model.
 - Do not publish API keys, request headers, account IDs, cookies, private email content, console screenshots, payment data, or localStorage.
 
-## User-Present Approval Gate
+## Devpost And Cloud Gate
 
-Only after the account owner is present and explicitly approves:
+Only after the account owner is present and the public URLs are rechecked:
 
-1. Push the prepared repository update.
+1. Confirm the repository update has been pushed.
 2. Wait for GitHub Pages to publish the new hub, judge manifest, and before/after evidence links.
 3. Verify public URLs return HTTP 200.
 4. Edit Devpost only with evidence that actually exists.

@@ -3,22 +3,22 @@
   "hackathon": "Global AI Hackathon Series with Qwen Cloud",
   "submission_status": "submitted_can_still_improve",
   "public_baseline_head": "6329f1ba225c3a59881882e8a5c0dd1a9fb2e33d",
-  "prepared_head_policy": "Do not treat any embedded local commit as final. Verify the final prepared head at action time with git rev-parse HEAD before any user-approved public push.",
+  "prepared_head_policy": "Do not treat any embedded local commit as final. Verify the local head with git rev-parse HEAD and the pushed public head with git ls-remote before any Devpost copy update.",
   "pre_push_required_checks": [
     {
       "label": "Final local prepared head",
       "command": "git rev-parse HEAD",
-      "purpose": "Capture the exact commit being pushed after all local quality commits are complete."
+      "purpose": "Capture the exact local commit after all quality commits are complete."
     },
     {
       "label": "Current public baseline",
       "command": "git ls-remote https://github.com/OOYXLOO/prizepilot-qwen-cloud.git HEAD",
-      "purpose": "Confirm the public repository baseline has not changed unexpectedly before pushing."
+      "purpose": "Confirm the public repository head after pushing."
     },
     {
       "label": "Public side-effect approval",
-      "command": "account owner explicitly approves push and any Devpost edit while present",
-      "purpose": "Prevent unapproved public repository or Devpost changes."
+      "command": "account owner explicitly approves any Devpost edit while present",
+      "purpose": "Prevent unapproved Devpost changes."
     }
   ],
   "reviewer_fast_path": [
@@ -138,7 +138,7 @@
       "step": 12,
       "label": "Public update checklist",
       "url": "https://ooyxloo.github.io/prizepilot-qwen-cloud/public-update-checklist/",
-      "purpose": "Confirm local checks, public link checks, and claim boundaries before any user-approved public update."
+      "purpose": "Confirm local checks, public link checks, and claim boundaries before any Devpost copy update."
     },
     {
       "step": 13,
@@ -150,7 +150,7 @@
       "step": 14,
       "label": "Public update digest",
       "url": "https://ooyxloo.github.io/prizepilot-qwen-cloud/public-update-digest/",
-      "purpose": "Review the prepared local update packet, public baseline, and do-not-claim boundaries before any user-approved push."
+      "purpose": "Review the repository update packet, public baseline, and do-not-claim boundaries before any Devpost copy update."
     }
   ],
   "official_requirement_fit": [
@@ -172,7 +172,7 @@
     {
       "requirement": "Public presentation assets",
       "evidence": "Devpost project, repository, license, README, architecture diagram, Vimeo demo, deck, public blog, and judge hub",
-      "status": "public_baseline_live_local_update_requires_approved_push"
+      "status": "repository_update_ready_public_link_recheck_required"
     }
   ],
   "completed_evidence": [

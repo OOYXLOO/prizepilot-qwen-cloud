@@ -3,442 +3,147 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>PrizePilot Judge Demo</title>
+  <title>PrizePilot Qwen Demo</title>
   <style>
-    :root {
-      color-scheme: light;
-      --ink: #17202a;
-      --muted: #536273;
-      --line: #d7dde5;
-      --paper: #ffffff;
-      --wash: #f4f7fa;
-      --teal: #0f766e;
-      --blue: #2563eb;
-      --amber: #b45309;
+    *, *::before, *::after { box-sizing: border-box; }
+    body { margin: 0; font-family: Arial, sans-serif; background: #f6f8fb; color: #16202a; overflow-x: hidden; }
+    main { width: 100%; max-width: 980px; margin: 0 auto; padding: 44px 24px 64px; }
+    h1 { font-size: 42px; line-height: 1.1; margin: 0 0 16px; }
+    h2 { margin-top: 34px; }
+    main, h1, h2, h3, p, li, td, strong, a, .panel, .tile, .table-wrap, table { min-width: 0; overflow-wrap: anywhere; }
+    p, li { color: #526173; line-height: 1.55; }
+    a { color: #0f766e; font-weight: 700; }
+    .table-wrap { border: 1px solid #d9e2ec; background: white; overflow-x: auto; }
+    table { width: 100%; border-collapse: collapse; min-width: 680px; }
+    th, td { padding: 13px 14px; border-bottom: 1px solid #d9e2ec; text-align: left; }
+    th { color: #526173; font-size: 13px; }
+    .pill { display: inline-block; margin: 6px 8px 18px 0; padding: 8px 12px; background: #0f766e; color: white; font-weight: 700; font-size: 13px; }
+    .pill.alt { background: #b45309; }
+    .panel { background: white; border-left: 6px solid #0f766e; padding: 18px 22px; margin-top: 20px; box-shadow: 0 1px 2px rgba(15, 23, 42, 0.08); }
+    .panel.warn { border-left-color: #b45309; }
+    .grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; margin-top: 16px; }
+    .tile { background: white; border: 1px solid #d9e2ec; padding: 16px; min-height: 148px; }
+    .tile h3 { margin: 0 0 8px; font-size: 17px; }
+    .tile strong { display: block; color: #16202a; font-size: 13px; line-height: 1.4; }
+    .flow { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 10px; margin-top: 16px; }
+    .flow-step { background: white; border: 1px solid #d9e2ec; border-top: 5px solid #0f766e; padding: 14px; min-width: 0; }
+    .flow-step h3 { margin: 0 0 8px; font-size: 15px; }
+    .flow-step p { margin: 8px 0 0; font-size: 13px; line-height: 1.42; }
+    .flow-step strong { color: #16202a; }
+    code { background: #e8eef5; padding: 2px 5px; }
+    @media (max-width: 900px) {
+      .flow { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     }
-
-    * { box-sizing: border-box; }
-
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      color: var(--ink);
-      background: var(--wash);
-    }
-
-    header, footer {
-      background: var(--paper);
-      border-bottom: 1px solid var(--line);
-    }
-
-    footer {
-      border-top: 1px solid var(--line);
-      border-bottom: 0;
-      color: var(--muted);
-    }
-
-    .wrap {
-      width: min(1120px, calc(100% - 32px));
-      margin: 0 auto;
-    }
-
-    .hero {
-      padding: 48px 0 32px;
-    }
-
-    .eyebrow {
-      margin: 0 0 12px;
-      color: var(--teal);
-      font-size: 14px;
-      font-weight: 700;
-      letter-spacing: 0;
-      text-transform: uppercase;
-    }
-
-    h1 {
-      max-width: 900px;
-      margin: 0;
-      font-size: clamp(34px, 5vw, 58px);
-      line-height: 1.06;
-      letter-spacing: 0;
-    }
-
-    .dek {
-      max-width: 820px;
-      margin: 18px 0 0;
-      color: var(--muted);
-      font-size: 18px;
-      line-height: 1.6;
-    }
-
-    main {
-      padding: 32px 0 64px;
-    }
-
-    section {
-      padding: 26px 0;
-      border-bottom: 1px solid var(--line);
-    }
-
-    section:first-child {
-      padding-top: 0;
-    }
-
-    h2 {
-      margin: 0 0 14px;
-      font-size: 26px;
-      line-height: 1.2;
-      letter-spacing: 0;
-    }
-
-    h3 {
-      margin: 0 0 8px;
-      font-size: 18px;
-      line-height: 1.25;
-      letter-spacing: 0;
-    }
-
-    p, li {
-      color: var(--muted);
-      font-size: 16px;
-      line-height: 1.62;
-    }
-
-    a {
-      color: var(--blue);
-      font-weight: 700;
-    }
-
-    code, pre {
-      font-family: Consolas, Monaco, monospace;
-    }
-
-    code {
-      padding: 2px 5px;
-      background: #eaf0f7;
-      color: #1d2a39;
-      font-size: 0.94em;
-    }
-
-    pre {
-      overflow-x: auto;
-      padding: 16px;
-      background: #17202a;
-      color: #eff6ff;
-      font-size: 14px;
-      line-height: 1.5;
-    }
-
-    .links {
-      display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 10px;
-      margin-top: 22px;
-    }
-
-    .link-tile {
-      min-height: 92px;
-      padding: 14px;
-      border: 1px solid var(--line);
-      background: var(--paper);
-    }
-
-    .link-tile span {
-      display: block;
-      margin-top: 7px;
-      color: var(--muted);
-      font-size: 13px;
-      line-height: 1.45;
-    }
-
-    .proof-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 14px;
-      margin-top: 16px;
-    }
-
-    .proof {
-      padding: 16px;
-      border: 1px solid var(--line);
-      background: var(--paper);
-      min-height: 160px;
-    }
-
-    .proof strong {
-      display: block;
-      margin-bottom: 8px;
-    }
-
-    .media-grid {
-      display: grid;
-      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-      gap: 18px;
-      align-items: start;
-      margin-top: 16px;
-    }
-
-    figure {
-      margin: 0;
-      padding: 14px;
-      border: 1px solid var(--line);
-      background: var(--paper);
-    }
-
-    img {
-      display: block;
-      width: 100%;
-      height: auto;
-      border: 1px solid var(--line);
-    }
-
-    figcaption {
-      margin-top: 10px;
-      color: var(--muted);
-      font-size: 13px;
-      line-height: 1.45;
-    }
-
-    .table-wrap {
-      overflow-x: auto;
-      border: 1px solid var(--line);
-      background: var(--paper);
-    }
-
-    table {
-      width: 100%;
-      min-width: 760px;
-      border-collapse: collapse;
-    }
-
-    th, td {
-      padding: 13px 14px;
-      border-bottom: 1px solid var(--line);
-      text-align: left;
-      vertical-align: top;
-      font-size: 15px;
-      line-height: 1.45;
-    }
-
-    th {
-      color: var(--muted);
-      font-size: 13px;
-      text-transform: uppercase;
-    }
-
-    tr:last-child td {
-      border-bottom: 0;
-    }
-
-    .callout {
-      margin-top: 18px;
-      padding: 16px 18px;
-      border-left: 5px solid var(--teal);
-      background: var(--paper);
-    }
-
-    .callout.warning {
-      border-color: var(--amber);
-    }
-
-    .footer-inner {
-      padding: 24px 0;
-      font-size: 14px;
-    }
-
-    @media (max-width: 820px) {
-      .links, .proof-grid, .media-grid {
-        grid-template-columns: 1fr;
-      }
-
-      table {
-        min-width: 0;
-      }
-
-      thead {
-        display: none;
-      }
-
-      tbody, tr, td {
-        display: block;
-      }
-
-      tr {
-        padding: 10px 0;
-        border-bottom: 1px solid var(--line);
-      }
-
-      tr:last-child {
-        border-bottom: 0;
-      }
-
-      td {
-        display: grid;
-        grid-template-columns: minmax(92px, 120px) minmax(0, 1fr);
-        gap: 10px;
-        border-bottom: 0;
-        overflow-wrap: anywhere;
-      }
-
-      td::before {
-        content: attr(data-label);
-        color: var(--muted);
-        font-weight: 700;
-      }
+    @media (max-width: 620px) {
+      h1 { font-size: 24px; line-height: 1.16; }
+      h2 { font-size: 24px; }
+      p, li, td { font-size: 15px; }
+      main { padding: 30px 16px 48px; }
+      .panel { padding: 16px 20px; }
+      .tile { min-height: 0; }
+      .tile strong { font-size: 12px; }
+      .grid { grid-template-columns: 1fr; }
+      .flow { grid-template-columns: 1fr; }
+      .table-wrap { overflow-x: visible; }
+      table { min-width: 0; }
+      thead { display: none; }
+      tbody, tr, td { display: block; }
+      tr { border-bottom: 1px solid #d9e2ec; padding: 8px 0; }
+      tr:last-child { border-bottom: 0; }
+      td { border-bottom: 0; display: grid; grid-template-columns: minmax(64px, 82px) minmax(0, 1fr); gap: 10px; padding: 8px 14px; }
+      td::before { content: attr(data-label); color: #526173; font-weight: 700; }
     }
   </style>
 </head>
 <body>
-  <header>
-    <div class="wrap hero">
-      <p class="eyebrow">Judge demo and evidence pack</p>
-      <h1>PrizePilot ranks cash-prize routes and shows exactly which actions still need human proof.</h1>
-      <p class="dek">This static page gives judges a fast review path for the submitted Qwen Cloud Track 4 project without requiring local setup, API keys, account access, or cloud billing.</p>
-      <div class="links" aria-label="Public links">
-        <a class="link-tile" href="https://devpost.com/software/prizepilot-qwen-cloud">Devpost project<span>Submitted and editable until the Qwen deadline.</span></a>
-        <a class="link-tile" href="https://vimeo.com/1200124146">Vimeo demo<span>Public demo page linked from the submitted project.</span></a>
-        <a class="link-tile" href="https://github.com/OOYXLOO/prizepilot-qwen-cloud">Repository<span>Source, tests, docs, and deployment manifest.</span></a>
-        <a class="link-tile" href="../blog/">Build journal<span>Prize-targeted narrative and evidence boundary.</span></a>
-        <a class="link-tile" href="../qwen-live-proof/">Qwen proof<span>Live smoke proof with non-sensitive model, endpoint, and cleanup evidence.</span></a>
-        <a class="link-tile" href="../api/plan.json">Static plan JSON<span>Machine-readable plan snapshot without local setup.</span></a>
-        <a class="link-tile" href="../judge-review-card/">Judge review card<span>One-minute path and do-not-infer boundary.</span></a>
-        <a class="link-tile" href="../public-update-checklist/">Update checklist<span>Public push and Devpost edit gate.</span></a>
-      </div>
-    </div>
-  </header>
-
-  <main class="wrap">
-    <section>
-      <h2>What Judges Can Verify Now</h2>
-      <div class="proof-grid">
-        <div class="proof">
-          <strong>Autopilot workflow</strong>
-          <p>PrizePilot compares opportunities, picks the most reachable cash-prize target, and creates public artifact and approval checkpoints.</p>
-        </div>
-        <div class="proof">
-          <strong>Qwen live integration</strong>
-          <p>The repository contains an OpenAI-compatible DashScope client, runtime-only key handling, request-shape tests, and a completed live smoke proof.</p>
-        </div>
-        <div class="proof">
-          <strong>Evidence boundary</strong>
-          <p>Secrets, OAuth verification, cloud billing, payout, tax, and KYC are held outside automation and marked as human-gated steps.</p>
-        </div>
-      </div>
-      <div class="callout warning">
-        <strong>Remaining live proof:</strong> the project now claims one completed live Qwen/DashScope smoke proof. It does not claim a live Alibaba Cloud endpoint yet; endpoint proof still needs official account and deployment approval.
-      </div>
-    </section>
-
-    <section>
-      <h2>Visual Walkthrough</h2>
-      <div class="media-grid">
-        <figure>
-          <img src="../screenshots/prizepilot-demo.gif" alt="PrizePilot dashboard walkthrough">
-          <figcaption>The demo follows a real portfolio of cash-prize routes and highlights why lower-friction multi-winner prizes can outrank larger but heavier contests.</figcaption>
-        </figure>
-        <figure>
-          <img src="../assets/architecture.png" alt="PrizePilot architecture">
-          <figcaption>The architecture separates deterministic planning, Qwen refinement, public evidence, and human-gated external actions.</figcaption>
-        </figure>
-      </div>
-    </section>
-
-    <section>
-      <h2>Plan Snapshot</h2>
-      <p>The same machine-readable data is available as a setup-free static snapshot at <a href="../api/plan.json"><code>docs/api/plan.json</code></a> and as live <code>/api/plan</code> after running the local service.</p>
-      <div class="table-wrap">
-        <table>
-          <thead>
-            <tr>
-              <th>Route</th>
-              <th>Target</th>
-              <th>Prize Shape</th>
-              <th>Current Gate</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td data-label="Route">Splunk Agentic Ops</td>
-              <td data-label="Target">Most Valuable Feedback</td>
-              <td data-label="Prize Shape">USD 200 x 5</td>
-              <td data-label="Current Gate">Submitted; waiting for judging and official prize notices.</td>
-            </tr>
-            <tr>
-              <td data-label="Route">Qwen Cloud Global AI Hackathon</td>
-              <td data-label="Target">Blog Post Award / Honorable Mention</td>
-              <td data-label="Prize Shape">USD 500 x 10 for each target</td>
-              <td data-label="Current Gate">Submitted; Qwen live proof captured; improve Alibaba endpoint proof only after official account and deployment approval.</td>
-            </tr>
-            <tr>
-              <td data-label="Route">UiPath AgentHack</td>
-              <td data-label="Target">Product Feedback / People's Choice</td>
-              <td data-label="Prize Shape">USD 500+ targets</td>
-              <td data-label="Current Gate">Waiting for Labs sandbox access and real product-usage evidence.</td>
-            </tr>
-            <tr>
-              <td data-label="Route">GitHub bounties</td>
-              <td data-label="Target">Merged PR rewards</td>
-              <td data-label="Prize Shape">USD 250-700 backups</td>
-              <td data-label="Current Gate">PRs submitted; waiting for maintainer review and bounty decisions.</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
-
-    <section>
-      <h2>Qwen Client Conformance</h2>
-      <p>The Qwen path is deliberately isolated from the deterministic planner. A local run works without secrets; a runtime key upgrades the same plan with Qwen/DashScope refinement.</p>
-      <pre><code>payload = {
-    "model": self.model,
-    "messages": list(messages),
-    "temperature": 0.2,
-}
-POST {base_url}/chat/completions
-Authorization: Bearer &lt;runtime key only&gt;</code></pre>
-      <p>Relevant files: <code>src/prizepilot/qwen_client.py</code>, <code>tests/test_qwen_client.py</code>, and <code>docs/qwen-cloud-live-check.md</code>.</p>
-    </section>
-
-    <section>
-      <h2>Judge Scorecard Map</h2>
-      <div class="table-wrap">
-        <table>
-          <thead>
-            <tr>
-              <th>Criterion</th>
-              <th>Current Evidence</th>
-              <th>Open Gap</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td data-label="Criterion">Innovation</td>
-              <td data-label="Current Evidence">Applies autopilot agents to a money-seeking workflow with route ranking, artifact planning, and approval queues.</td>
-              <td data-label="Open Gap">Turn the captured Qwen live proof into tighter public Devpost copy.</td>
-            </tr>
-            <tr>
-              <td data-label="Criterion">Technical depth</td>
-              <td data-label="Current Evidence">Deterministic planner, portfolio ranking, HTTP dashboard/API, Qwen-compatible client, Dockerfile, Alibaba manifest.</td>
-              <td data-label="Open Gap">A verified Alibaba Cloud endpoint is prepared but not yet claimed.</td>
-            </tr>
-            <tr>
-              <td data-label="Criterion">Problem value</td>
-              <td data-label="Current Evidence">Tracks real constraints: deadlines, winner count, eligibility, public artifacts, review status, payout risk, and KYC gates.</td>
-              <td data-label="Open Gap">More live product feedback can be added if sponsors respond before judging.</td>
-            </tr>
-            <tr>
-              <td data-label="Criterion">Presentation</td>
-              <td data-label="Current Evidence">Devpost Story, Vimeo demo, GitHub Pages blog, repository, screenshots, and this judge demo.</td>
-              <td data-label="Open Gap">Refresh media only if the dashboard changes materially.</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="wrap footer-inner">PrizePilot Judge Demo. Last updated June 15, 2026.</div>
-  </footer>
+<main>
+  <span class="pill">Qwen Cloud Track 4</span>
+  <span class="pill alt">Autopilot Agent</span>
+  <h1>PrizePilot turns prize pages into accountable execution plans.</h1>
+  <p>This submitted demo presents the same deterministic planning payload used by the CLI. It is designed for a fast judge review while keeping unverified sponsor evidence clearly separated from completed public artifacts.</p>
+  <div class="panel">
+    <strong>Submission status:</strong> submitted_can_still_improve through Devpost. Public repo, Vimeo demo, and build journal are live; the project can still be improved until July 09, 2026 at 05:00pm EDT.
+    <ul><li><a href="https://devpost.com/software/prizepilot-qwen-cloud">Devpost project</a></li>
+<li><a href="https://github.com/OOYXLOO/prizepilot-qwen-cloud">Repository</a></li>
+<li><a href="https://vimeo.com/1200124146">Vimeo demo</a></li>
+<li><a href="https://ooyxloo.github.io/prizepilot-qwen-cloud/blog/">Build journal</a></li>
+<li><a href="https://ooyxloo.github.io/prizepilot-qwen-cloud/qwen-live-proof/">Qwen live proof</a></li></ul>
+  </div>
+  <div class="panel">
+    <strong>Current Qwen target:</strong> Blog Post Award - USD 500 x 10 winners.
+  </div>
+  <h2>Qwen Agent Flow</h2>
+  <div class="flow"><section class="flow-step"><h3>1. Public prize page</h3><p><strong>Input:</strong> Rules, awards, dates, required artifacts, and account-gated actions.</p><p><strong>Qwen role:</strong> Frames the opportunity as a judge-facing story instead of a loose TODO list.</p><p><strong>Proof:</strong> samples/qwen_hackathon.json and qwen-before-after evidence.</p></section>
+<section class="flow-step"><h3>2. Deterministic rank</h3><p><strong>Input:</strong> Prize amount, winner count, deadline pressure, blockers, and evidence gaps.</p><p><strong>Qwen role:</strong> Receives an auditable route plan rather than inventing the target from memory.</p><p><strong>Proof:</strong> portfolio ranking in /api/plan and docs/api/plan.json.</p></section>
+<section class="flow-step"><h3>3. Qwen refinement</h3><p><strong>Input:</strong> Blog Post Award route plus verified public artifact list.</p><p><strong>Qwen role:</strong> Tightens the public narrative, risk wording, and update copy for judges.</p><p><strong>Proof:</strong> live qwen-plus smoke receipt with non-sensitive output excerpt.</p></section>
+<section class="flow-step"><h3>4. Approval gate</h3><p><strong>Input:</strong> Any secret, public posting, cloud billing, payout, tax, or KYC step.</p><p><strong>Qwen role:</strong> Stops before irreversible account actions and records the human-controlled gate.</p><p><strong>Proof:</strong> approval queue and integrity boundary in this dashboard.</p></section>
+<section class="flow-step"><h3>5. Public proof packet</h3><p><strong>Input:</strong> Repo, Devpost, Vimeo, blog, judge hub, static plan JSON, and proof pages.</p><p><strong>Qwen role:</strong> Turns the chosen route into a reviewable evidence trail without overclaiming.</p><p><strong>Proof:</strong> judge pack, award evidence map, contribution map, and live proof page.</p></section></div>
+  <div class="panel">
+    <strong>Qwen proof snapshot:</strong>
+    <ul><li><strong>Verified:</strong> One Qwen/DashScope qwen-plus refinement pass ran with a runtime-only key and published non-sensitive evidence.</li>
+<li><strong>Public artifacts:</strong> Devpost, GitHub repository, Vimeo demo, Blog Award story, Pages hub, static judge demo, static plan JSON, Qwen contribution map, and Qwen live proof.</li>
+<li><strong>Still pending:</strong> Live Alibaba Cloud endpoint proof remains unclaimed until a public URL returns HTTP 200 at / and /api/plan.</li>
+<li><strong>Judge takeaway:</strong> PrizePilot is strongest as an honest autopilot: it accelerates route choice and submission evidence while keeping risky account actions visible.</li></ul>
+  </div>
+  <div class="panel">
+    <strong>Mind the Product target:</strong> First Place - USD 5000 cash. Novus status: email verification required.
+  </div>
+  <h2>Autopilot Walkthrough</h2>
+  <div class="grid"><section class="tile"><h3>Contest Analyst</h3><p>Normalize prize pages into comparable opportunity records.</p><strong>Deadline, prize, winner-count, blocker, and evidence fields.</strong></section>
+<section class="tile"><h3>Competitor Scout</h3><p>Compare the route against public winning-project patterns.</p><strong>Differentiators that judges can understand in under five minutes.</strong></section>
+<section class="tile"><h3>Differentiation Strategist</h3><p>Choose the most reachable target instead of chasing the largest headline pool.</p><strong>Blog Post Award / Honorable Mention path with explicit proof needs.</strong></section>
+<section class="tile"><h3>Submission Coach</h3><p>Draft Devpost, blog, video, and deployment evidence assets.</p><strong>Public links, scripts, runbooks, and update-ready copy.</strong></section>
+<section class="tile"><h3>Risk Reviewer</h3><p>Hold account, billing, public posting, payout, tax, and KYC actions for human control.</p><strong>Approval queue and evidence gap register.</strong></section></div>
+  <h2>Portfolio Ranking</h2>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>#</th><th>Route</th><th>Target</th><th>Amount</th></tr></thead>
+      <tbody><tr><td data-label="#">1</td><td data-label="Route">Splunk Agentic Ops Hackathon</td><td data-label="Target">Most Valuable Feedback</td><td data-label="Amount">USD 200</td></tr>
+<tr><td data-label="#">2</td><td data-label="Route">Global AI Hackathon Series with Qwen Cloud</td><td data-label="Target">Blog Post Award</td><td data-label="Amount">USD 500</td></tr>
+<tr><td data-label="#">3</td><td data-label="Route">UiPath AgentHack</td><td data-label="Target">People's Choice</td><td data-label="Amount">USD 500</td></tr>
+<tr><td data-label="#">4</td><td data-label="Route">Arm Create AI Optimization Challenge</td><td data-label="Target">Best in Category: Cloud AI</td><td data-label="Amount">USD 1000</td></tr></tbody>
+    </table>
+  </div>
+  <h2>Judge Scorecard</h2>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Criterion</th><th>Weight</th><th>Proof</th><th>Gap</th></tr></thead>
+      <tbody><tr><td data-label="Criterion">Innovation</td><td data-label="Weight">30%</td><td data-label="Proof">Autopilot for prize-route execution plus verified live Qwen refinement.</td><td data-label="Gap">Turn the live proof into tighter public Devpost copy before judging.</td></tr>
+<tr><td data-label="Criterion">Technical Depth</td><td data-label="Weight">30%</td><td data-label="Proof">Deterministic planner, Qwen-compatible client, HTTP API, Docker, Alibaba manifest.</td><td data-label="Gap">Capture verified Alibaba Cloud endpoint proof.</td></tr>
+<tr><td data-label="Criterion">Problem Value</td><td data-label="Weight">25%</td><td data-label="Proof">Turns real prize-route work into auditable actions and evidence gates.</td><td data-label="Gap">Add more post-submission feedback if maintainers or judges request changes.</td></tr>
+<tr><td data-label="Criterion">Presentation</td><td data-label="Weight">15%</td><td data-label="Proof">Public Devpost, Vimeo demo, blog, repo, and judge quickstart.</td><td data-label="Gap">Refresh screenshots if the dashboard changes materially.</td></tr></tbody>
+    </table>
+  </div>
+  <h2>Trust and Control</h2>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Action</th><th>Status</th><th>Risk</th></tr></thead>
+      <tbody><tr><td data-label="Action">Runtime Qwen/DashScope API key</td><td data-label="Status">completed once; future runs stay human-gated</td><td data-label="Risk">secret</td></tr>
+<tr><td data-label="Action">Alibaba Cloud live deployment</td><td data-label="Status">human-gated</td><td data-label="Risk">billing/account</td></tr>
+<tr><td data-label="Action">Devpost submission updates</td><td data-label="Status">allowed after review</td><td data-label="Risk">public claim</td></tr>
+<tr><td data-label="Action">Prize payout, tax, or KYC</td><td data-label="Status">user-only</td><td data-label="Risk">financial identity</td></tr></tbody>
+    </table>
+  </div>
+  <div class="panel warn">
+    <strong>Evidence gaps before judging:</strong>
+    <ul><li>Qwen/DashScope live refinement is verified with a runtime key and no stored secret.</li>
+<li>Alibaba Cloud Function Compute manifest exists, but no live endpoint has been verified.</li></ul>
+  </div>
+  <h2>Manual vs PrizePilot</h2>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Metric</th><th>Manual</th><th>PrizePilot</th></tr></thead>
+      <tbody><tr><td data-label="Metric">Manual prize triage</td><td data-label="Manual">60-90 minutes</td><td data-label="PrizePilot">one structured plan run</td></tr>
+<tr><td data-label="Metric">Evidence tracking</td><td data-label="Manual">spread across tabs and memory</td><td data-label="PrizePilot">status ledger plus dashboard</td></tr>
+<tr><td data-label="Metric">Risky actions</td><td data-label="Manual">easy to mix with automation</td><td data-label="PrizePilot">explicit approval queue</td></tr></tbody>
+    </table>
+  </div>
+  <h2>Integrity Boundary</h2>
+  <ul><li>No API key is stored in the deployed app.</li>
+<li>Public repository, video, blog post, and Devpost submission are recorded only after verification.</li>
+<li>Live Qwen Cloud usage is captured as non-sensitive proof; Alibaba Cloud endpoint proof must still be captured before that claim is strengthened.</li>
+<li>Novus is not claimed as installed until the official Novus account is verified and connected.</li></ul>
+  <p>Machine-readable plan: <code>/api/plan</code></p>
+</main>
 </body>
 </html>

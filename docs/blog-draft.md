@@ -24,7 +24,7 @@ This makes the agent useful as an autopilot system while still preserving human 
 
 ## Current Planning Behavior
 
-The local deterministic planner ranks opportunities by prize amount, number of winners, deadline pressure, and blockers. In the current sample portfolio, the agent keeps a near-deadline USD 200 Splunk feedback route first because it is a multi-winner, low-friction prize. The Qwen Cloud Blog Post Award is ranked as the second wave because it has higher upside, but it requires a qualified Devpost project, public repo, demo/video, blog/social URL, Qwen Cloud usage, and Alibaba Cloud deployment proof.
+The local deterministic planner ranks opportunities by prize amount, number of winners, deadline pressure, and blockers. In the current sample portfolio, the agent keeps a near-deadline Splunk feedback route first because it is a multi-winner, low-friction prize. The Qwen Cloud Blog Post Award is ranked as the second wave because it has higher upside, but it requires a qualified Devpost project, public repo, demo/video, blog/social URL, Qwen Cloud usage, and Alibaba Cloud deployment proof.
 
 That distinction is the whole product thesis: the best agent should not chase the largest headline pool. It should help the builder choose the route that can actually be completed with honest evidence.
 

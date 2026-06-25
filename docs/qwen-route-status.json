@@ -1,18 +1,18 @@
 {
-  "snapshot_checked_at": "2026-06-15T16:44:48.519395+00:00",
-  "snapshot_checked_at_local_asia_shanghai": "2026-06-16T00:44:48.519395+08:00",
-  "status_snapshot_policy": "Regenerate qwen-status immediately before any user-approved public update; deadline hours and gate state are a point-in-time snapshot, not a live public claim.",
+  "snapshot_checked_at": "2026-06-25T21:57:53.747981+00:00",
+  "snapshot_checked_at_local_asia_shanghai": "2026-06-26T05:57:53.747981+08:00",
+  "status_snapshot_policy": "Regenerate qwen-status immediately before any public claim or Devpost copy update; deadline hours and gate state are a point-in-time snapshot, not a live public claim.",
   "phase": "submitted_can_still_improve",
   "severity": "OK_WITH_EVIDENCE_GAPS",
   "next_action": "Strengthen remaining evidence before judging: add verified Alibaba Cloud endpoint proof if account access and billing/credit approval are available, then update public Devpost copy only with captured evidence.",
   "deadline_utc": "2026-07-09T21:00:00+00:00",
-  "hours_until_deadline": 580.25,
+  "hours_until_deadline": 335.04,
   "artifact_checks": [
     {
       "path": "README.md",
       "description": "Project README",
       "exists": true,
-      "size": 8010
+      "size": 7940
     },
     {
       "path": "LICENSE",
@@ -72,13 +72,13 @@
       "path": "docs/index.html",
       "description": "Public build notes landing page",
       "exists": true,
-      "size": 11436
+      "size": 11408
     },
     {
       "path": "docs/blog/index.html",
       "description": "Public blog page for Blog Post Award",
       "exists": true,
-      "size": 23179
+      "size": 23178
     },
     {
       "path": "docs/judge-pack/index.html",
@@ -90,7 +90,7 @@
       "path": "docs/judge-manifest.json",
       "description": "Machine-readable judge manifest",
       "exists": true,
-      "size": 10390
+      "size": 10314
     },
     {
       "path": "docs/judge-review-card.md",
@@ -144,13 +144,13 @@
       "path": "docs/benchmark-method.md",
       "description": "Benchmark method",
       "exists": true,
-      "size": 4421
+      "size": 4406
     },
     {
       "path": "docs/benchmark-method/index.html",
       "description": "Public benchmark method page",
       "exists": true,
-      "size": 9188
+      "size": 9181
     },
     {
       "path": "docs/cloud-readiness/index.html",
@@ -210,13 +210,13 @@
       "path": "docs/official-requirement-fit.md",
       "description": "Official Qwen requirement fit map",
       "exists": true,
-      "size": 4216
+      "size": 4236
     },
     {
       "path": "docs/official-requirement-fit/index.html",
       "description": "Public official requirement fit page",
       "exists": true,
-      "size": 9900
+      "size": 9911
     },
     {
       "path": "docs/alibaba-endpoint-judge-checklist.md",
@@ -234,19 +234,19 @@
       "path": "docs/public-update-digest.md",
       "description": "Public update digest",
       "exists": true,
-      "size": 4561
+      "size": 4260
     },
     {
       "path": "docs/public-update-digest/index.html",
       "description": "Public update digest page",
       "exists": true,
-      "size": 6415
+      "size": 6385
     },
     {
       "path": "docs/api/plan.json",
       "description": "Static public dashboard API snapshot",
       "exists": true,
-      "size": 27408
+      "size": 27426
     },
     {
       "path": "docs/prizepilot-qwen-submission-deck.pptx",
@@ -258,7 +258,7 @@
       "path": "docs/blog-draft.md",
       "description": "Blog/social post draft",
       "exists": true,
-      "size": 6082
+      "size": 6074
     },
     {
       "path": "docs/demo-video-script.md",
@@ -336,7 +336,7 @@
       "path": "docs/publication-action-card.md",
       "description": "Publication action card",
       "exists": true,
-      "size": 3327
+      "size": 3233
     },
     {
       "path": "docs/public-package-checklist.md",

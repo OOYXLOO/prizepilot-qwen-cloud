@@ -13,5 +13,5 @@
     }
   ],
   "human_blockers": ["Arm64 environment", "benchmark evidence", "public submission"],
-  "notes": ["Longer-horizon evidence route, not a fast USD 200 target."]
+  "notes": ["Longer-horizon evidence route with heavier setup and benchmarking cost."]
 }

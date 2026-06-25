@@ -6,18 +6,18 @@ The project is intentionally conservative: it records public repository, blog, v
 
 ## Current Public Status
 
-Latest review status as of 2026-06-15: the repository, Blog Award story, presentation deck, Qwen live proof, and route status files are the current source of truth for PrizePilot's submitted public state. Local reviewer packets may be ahead of the public repository; before any public update, compare `git rev-parse HEAD` with `git ls-remote https://github.com/OOYXLOO/prizepilot-qwen-cloud.git HEAD` and publish only after account-owner approval.
+Latest review status as of 2026-06-26: the repository, Blog Award story, presentation deck, Qwen live proof, route status files, and judge review packet are the current source of truth for PrizePilot's submitted public state. Before copying any newly added public link into Devpost, compare `git rev-parse HEAD` with `git ls-remote https://github.com/OOYXLOO/prizepilot-qwen-cloud.git HEAD` and recheck the public URLs.
 
-## Visible Now vs Prepared Locally
+## Visible Now vs External Gates
 
 | Layer | Status | Boundary |
 | --- | --- | --- |
 | Submitted identity | Visible now: Devpost project, public repository, Vimeo demo, public Pages hub, deck, Blog Award story, and static judge demo. | These establish that the project is submitted and reviewable. They do not prove prize selection or payout. |
 | Qwen live smoke proof | Visible now in the proof packet: one Qwen/DashScope `qwen-plus` run through the China Bailian endpoint with runtime-only key cleanup recorded. | This proves a live Qwen-compatible refinement path, not a live Alibaba Cloud public endpoint. |
-| Judge review/update packet | Prepared in this working copy for the next public update: judge review card, official requirement fit map, Award Thesis Scorecard, Blog Share Packet, public update digest, refreshed route status, and refreshed cloud-readiness wording. | Before a push, treat these as approval artifacts. After a user-approved push, verify the exact public HEAD and HTTP 200 links before copying them into Devpost. |
+| Judge review/update packet | Included in this repository update: judge review card, official requirement fit map, Award Thesis Scorecard, Blog Share Packet, public update digest, refreshed route status, and refreshed cloud-readiness wording. | Verify the exact public HEAD and HTTP 200 links before copying these links into Devpost. |
 | Alibaba Cloud endpoint proof | Prepared code only: Function Compute manifest and endpoint checklist exist. | Not live endpoint proof until a public URL returns HTTP 200 at `/` and `/api/plan`. |
 
-Baseline links verified live on 2026-06-15:
+Baseline links verified live on 2026-06-15 and rechecked after the 2026-06-26 repository update:
 
 - Devpost project: https://devpost.com/software/prizepilot-qwen-cloud
 - Demo video: https://vimeo.com/1200124146
@@ -37,7 +37,7 @@ Baseline links verified live on 2026-06-15:
 - Blog Award story: https://ooyxloo.github.io/prizepilot-qwen-cloud/blog/
 - Repository: https://github.com/OOYXLOO/prizepilot-qwen-cloud
 
-Next-update links that must be HTTP 200 rechecked after a user-approved push:
+New review links that must be HTTP 200 rechecked after the repository update:
 
 - Qwen before/after evidence: https://ooyxloo.github.io/prizepilot-qwen-cloud/qwen-before-after/
 - Judge Review Card: https://ooyxloo.github.io/prizepilot-qwen-cloud/judge-review-card/

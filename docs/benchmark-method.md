@@ -23,7 +23,7 @@ The current portfolio uses six structured examples:
 
 | Route | Target | Why It Is Included |
 | --- | --- | --- |
-| Splunk Agentic Ops | Most Valuable Feedback | Near-term USD 200 route with multiple winners and low build friction |
+| Splunk Agentic Ops | Most Valuable Feedback | Near-term multi-winner feedback route with low build friction |
 | Qwen Cloud | Blog Post Award / Honorable Mention | Submitted Qwen project route with USD 500 upside and sponsor-tool evidence requirements |
 | Mind the Product World Product Day | Product analytics path | Example of a product route blocked by third-party account verification |
 | UiPath AgentHack | Agent/product feedback route | Higher prize pool but access and product setup gates |
@@ -61,7 +61,7 @@ The public setup-free equivalent is `docs/api/plan.json`.
 
 ## Current Result
 
-The current sample ranking keeps Splunk first because it is a near-term, multi-winner feedback route with limited build friction. Qwen is the stronger submitted project route because it has public assets, a verified Qwen/DashScope smoke proof, and USD 500 Blog Post Award / Honorable Mention upside, but it still has one account-gated improvement: live Alibaba Cloud endpoint proof.
+The current sample ranking keeps Splunk first because it is a near-term, multi-winner feedback route with limited build friction. Qwen is the stronger submitted project route because it has public assets, a verified Qwen/DashScope smoke proof, and Blog Post Award / Honorable Mention upside, but it still has one account-gated improvement: live Alibaba Cloud endpoint proof.
 
 ## Limits
 
