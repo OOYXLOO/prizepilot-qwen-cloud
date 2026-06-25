@@ -1,18 +1,18 @@
 {
-  "snapshot_checked_at": "2026-06-25T21:57:53.747981+00:00",
-  "snapshot_checked_at_local_asia_shanghai": "2026-06-26T05:57:53.747981+08:00",
+  "snapshot_checked_at": "2026-06-25T22:02:17.315712+00:00",
+  "snapshot_checked_at_local_asia_shanghai": "2026-06-26T06:02:17.315712+08:00",
   "status_snapshot_policy": "Regenerate qwen-status immediately before any public claim or Devpost copy update; deadline hours and gate state are a point-in-time snapshot, not a live public claim.",
   "phase": "submitted_can_still_improve",
   "severity": "OK_WITH_EVIDENCE_GAPS",
   "next_action": "Strengthen remaining evidence before judging: add verified Alibaba Cloud endpoint proof if account access and billing/credit approval are available, then update public Devpost copy only with captured evidence.",
   "deadline_utc": "2026-07-09T21:00:00+00:00",
-  "hours_until_deadline": 335.04,
+  "hours_until_deadline": 334.96,
   "artifact_checks": [
     {
       "path": "README.md",
       "description": "Project README",
       "exists": true,
-      "size": 7940
+      "size": 8484
     },
     {
       "path": "LICENSE",

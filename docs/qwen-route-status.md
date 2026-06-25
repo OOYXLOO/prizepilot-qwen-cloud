@@ -1,7 +1,7 @@
 # Qwen PrizePilot Route Status
 
-Snapshot generated: 2026-06-25T21:57:53.747981+00:00
-Snapshot generated Asia/Shanghai: 2026-06-26T05:57:53.747981+08:00
+Snapshot generated: 2026-06-25T22:02:17.315712+00:00
+Snapshot generated Asia/Shanghai: 2026-06-26T06:02:17.315712+08:00
 
 Snapshot policy: Regenerate qwen-status immediately before any public claim or Devpost copy update; deadline hours and gate state are a point-in-time snapshot, not a live public claim.
 Regenerate immediately before any public claim or Devpost copy update.
@@ -14,7 +14,7 @@ Next action: Strengthen remaining evidence before judging: add verified Alibaba 
 ## Deadline
 
 - Deadline UTC: `2026-07-09T21:00:00+00:00`
-- Hours until deadline: `335.04`
+- Hours until deadline: `334.96`
 
 ## Local Artifact Gate
 
