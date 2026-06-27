@@ -50,6 +50,8 @@ REQUIRED_ARTIFACTS = {
     "docs/alibaba-endpoint-checklist/index.html": "Public Alibaba endpoint checklist page",
     "docs/public-update-digest.md": "Public update digest",
     "docs/public-update-digest/index.html": "Public update digest page",
+    "docs/final-judge-one-page.md": "Final judge one-page",
+    "docs/final-judge-one-page/index.html": "Public final judge one-page",
     "docs/api/plan.json": "Static public dashboard API snapshot",
     "docs/prizepilot-qwen-submission-deck.pptx": "Editable presentation deck",
     "docs/blog-draft.md": "Blog/social post draft",

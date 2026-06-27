@@ -50,6 +50,7 @@ New review links that must be HTTP 200 rechecked after the repository update:
 - Blog Share Packet: https://ooyxloo.github.io/prizepilot-qwen-cloud/blog-share-packet/
 - Public update checklist: https://ooyxloo.github.io/prizepilot-qwen-cloud/public-update-checklist/
 - Public update digest: https://ooyxloo.github.io/prizepilot-qwen-cloud/public-update-digest/
+- Final judge one-page: https://ooyxloo.github.io/prizepilot-qwen-cloud/final-judge-one-page/
 - Judge manifest: https://ooyxloo.github.io/prizepilot-qwen-cloud/judge-manifest.json
 - Submission state: submitted to Devpost; still editable until the Qwen Cloud hackathon deadline.
 - Evidence gap: verified live Alibaba Cloud endpoint proof still needs to be captured before judging if account access, credit, and billing approval are available.
@@ -64,7 +65,8 @@ The 3-link reviewer fast path is:
 
 Video path: use Vimeo as the Devpost-required hosted video, and keep the Pages-hosted WebM as a backup playback link if Vimeo embedding is unavailable for a reviewer.
 
-This order gives judges the submitted identity, the working demo, and the Blog Post Award narrative before they decide whether to open the Judge Review Card, Official Requirement Fit map, proof boundary, benchmark, Qwen contribution, before/after, live proof, manifest, or static plan files.
+This order gives judges the submitted identity, the working demo, and the Blog Post Award narrative before they decide whether to open the Final Judge One-Page, Judge Review Card, Official Requirement Fit map, proof boundary, benchmark, Qwen contribution, before/after, live proof, manifest, or static plan files.
+If they only have one extra minute after the fast path, open the Judge Review Card first; if they need the shortest cross-link summary, open the Final Judge One-Page.
 
 For deeper local verification, run the dashboard:
 
@@ -82,7 +84,7 @@ python -m prizepilot.webapp --host 127.0.0.1 --port 8000
 
 Then inspect the local runtime machine-readable planning payload at `http://127.0.0.1:8000/api/plan`. This local server payload is not live Alibaba endpoint proof.
 Use `--checked-at` only when a deterministic evidence rebuild is needed for review or diffing; live public updates should regenerate the report with the current action-time timestamp.
-Review `docs/submission-story.md`, `docs/benchmark-method.md`, `docs/cloud-readiness-report.md`, `docs/qwen-live-proof.md`, `docs/qwen-contribution-map.md`, `docs/qwen-before-after-evidence.md`, `docs/judge-review-card.md`, `docs/official-requirement-fit.md`, `docs/award-thesis-scorecard.md`, `docs/blog-share-packet.md`, `docs/public-update-checklist.md`, `docs/public-update-digest.md`, `docs/live-proof-gate.md`, `docs/alibaba-endpoint-judge-checklist.md`, `docs/judge-manifest.json`, `docs/qwen-route-status.md`, and `docs/validation-report.md` for the evidence boundary.
+Review `docs/submission-story.md`, `docs/benchmark-method.md`, `docs/cloud-readiness-report.md`, `docs/qwen-live-proof.md`, `docs/qwen-contribution-map.md`, `docs/qwen-before-after-evidence.md`, `docs/final-judge-one-page.md`, `docs/judge-review-card.md`, `docs/official-requirement-fit.md`, `docs/award-thesis-scorecard.md`, `docs/blog-share-packet.md`, `docs/public-update-checklist.md`, `docs/public-update-digest.md`, `docs/live-proof-gate.md`, `docs/alibaba-endpoint-judge-checklist.md`, `docs/judge-manifest.json`, `docs/qwen-route-status.md`, and `docs/validation-report.md` for the evidence boundary.
 
 Live Qwen refinement has been verified once with a runtime-only key; future runs still require `DASHSCOPE_API_KEY` or `QWEN_API_KEY` at action time only.
 The Mind the Product route additionally requires Novus email verification and official Novus installation before final Devpost submission. The web service exposes `/api/novus-readiness` so that gate can be tracked without claiming completion early.

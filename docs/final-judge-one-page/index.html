@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PrizePilot Final Judge One-Page</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #17202a;
+      --muted: #536273;
+      --line: #d7dde5;
+      --paper: #ffffff;
+      --wash: #f4f7fa;
+      --teal: #0f766e;
+      --blue: #2563eb;
+      --amber: #b45309;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--wash);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+    }
+    main {
+      width: min(960px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 48px 0;
+    }
+    h1 {
+      max-width: 760px;
+      margin: 0;
+      font-size: clamp(34px, 5vw, 54px);
+      line-height: 1.08;
+      letter-spacing: 0;
+    }
+    h2 {
+      margin: 0 0 10px;
+      font-size: 22px;
+      letter-spacing: 0;
+    }
+    p, li { color: var(--muted); }
+    a { color: var(--blue); font-weight: 700; }
+    .eyebrow {
+      margin: 0 0 12px;
+      color: var(--teal);
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0;
+      text-transform: uppercase;
+    }
+    .dek {
+      max-width: 760px;
+      margin: 18px 0 0;
+      font-size: 18px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 28px;
+    }
+    .panel {
+      padding: 20px;
+      border: 1px solid var(--line);
+      background: var(--paper);
+    }
+    .panel.warning { border-left: 5px solid var(--amber); }
+    .wide { grid-column: 1 / -1; }
+    .fast-path {
+      margin-top: 24px;
+      padding: 18px 20px;
+      border-left: 5px solid var(--teal);
+      background: var(--paper);
+    }
+    code, pre {
+      font-family: Consolas, "SFMono-Regular", monospace;
+      white-space: pre-wrap;
+    }
+    pre {
+      margin: 0;
+      padding: 14px;
+      border: 1px solid var(--line);
+      background: #fbfcfd;
+      color: var(--ink);
+    }
+    @media (max-width: 760px) {
+      main { padding: 36px 0; }
+      .grid { grid-template-columns: 1fr; }
+      .wide { grid-column: auto; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <p class="eyebrow">Final judge one-page</p>
+    <h1>PrizePilot's Qwen Cloud review path in one page.</h1>
+    <p class="dek">This page compresses the submitted Devpost identity, Track 4 Autopilot Agent fit, Qwen evidence, Blog Post Award thesis, and the still pending Alibaba endpoint boundary.</p>
+
+    <section class="fast-path" aria-label="Reviewer fast path">
+      <h2>Reviewer fast path</h2>
+      <ol>
+        <li>Confirm the <a href="https://devpost.com/software/prizepilot-qwen-cloud">submitted Devpost project</a>.</li>
+        <li>Watch the <a href="https://vimeo.com/1200124146">public demo video</a>.</li>
+        <li>Read the <a href="../blog/">Blog Award Story</a>.</li>
+      </ol>
+    </section>
+
+    <section class="grid">
+      <article class="panel">
+        <h2>Core award case</h2>
+        <p>PrizePilot is a Track 4 Autopilot Agent submission. It turns hackathon and bounty opportunities into ranked execution plans, artifact drafts, evidence boundaries, and human approval checkpoints.</p>
+        <p>The strongest award route remains the Blog Post Award. Top 10 Honorable Mention Projects remains the secondary route because the product is a working agent-style planning tool with a reproducible public demo.</p>
+      </article>
+
+      <article class="panel">
+        <h2>Qwen evidence</h2>
+        <ul>
+          <li>Qwen/DashScope live smoke proof exists without storing secrets.</li>
+          <li>Qwen contribution mapping explains refinement of route framing and risk language.</li>
+          <li>Qwen before/after evidence shows deterministic planning, Qwen refinement, and public review copy.</li>
+          <li>Official Requirement Fit maps Qwen requirements to public evidence.</li>
+        </ul>
+      </article>
+
+      <article class="panel warning wide">
+        <h2>What is still pending</h2>
+        <p>Before copying this page into Devpost, compare it with the current public repository baseline and recheck the public URLs; the repository update packet contains prepared review commits after that baseline.</p>
+        <p><strong>Link health boundary:</strong> Recheck the GitHub Pages URL, raw Markdown URL, and Devpost update text in the same review window before treating this prepared artifact as the current public package; each public URL should return HTTP 200 after the repository update.</p>
+        <pre>git ls-remote https://github.com/OOYXLOO/prizepilot-qwen-cloud.git HEAD</pre>
+        <p>Do not claim a live Alibaba Cloud public endpoint exists until a real public URL returns HTTP 200 at <code>/</code> and <code>/api/plan</code>.</p>
+        <p>Do not infer prize selection, payout, tax/KYC completion, billing readiness, or bank setup from the public evidence packet.</p>
+      </article>
+
+      <article class="panel wide">
+        <h2>Deep links</h2>
+        <ul>
+          <li><a href="../judge-pack/">Judge evidence pack</a></li>
+          <li><a href="../qwen-live-proof/">Qwen live proof</a></li>
+          <li><a href="../qwen-before-after/">Qwen before/after evidence</a></li>
+          <li><a href="../official-requirement-fit/">Official Requirement Fit map</a></li>
+          <li><a href="../award-thesis-scorecard/">Award Thesis Scorecard</a></li>
+          <li><a href="../media/prizepilot-qwen-cloud-demo.webm">Backup Pages-hosted WebM</a></li>
+          <li><a href="../alibaba-endpoint-checklist/">Alibaba endpoint checklist</a></li>
+          <li><a href="../judge-manifest.json">Judge manifest JSON</a></li>
+        </ul>
+        <p>No claim that the Award Thesis Scorecard predicts prize selection. No live Alibaba Cloud public endpoint claim.</p>
+      </article>
+
+      <article class="panel wide">
+        <h2>Suggested Devpost update note</h2>
+        <pre>Added a final judge one-page that compresses the submitted PrizePilot evidence path: Devpost identity, demo, Blog Award story, Qwen/DashScope live smoke proof, Qwen contribution map, official requirement fit, and the still-pending Alibaba endpoint boundary.</pre>
+      </article>
+    </section>
+  </main>
+</body>
+</html>
